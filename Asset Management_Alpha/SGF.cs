@@ -46,7 +46,6 @@ namespace Asset_Management_Alpha
         string Current_Cell;
         string Updated_Cell;
         string HeaderSelectedCell;
-        string update_signal;
 
         //void MrC_XuLi()
         // {
@@ -834,6 +833,10 @@ namespace Asset_Management_Alpha
             Application.Exit();
         }
 
-        
+        public void CheckTenDangNhap(string tendangnhap)//check ten dang nhap tu form dang nhap truyen vao
+        {
+            SFG SGF_Form_Name = new SFG();
+            SGF_Form_Name.Text = tendangnhap.ToString();
+        }
     }
 }

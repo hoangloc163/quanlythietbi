@@ -72,7 +72,7 @@
             // 
             // btn_ok
             // 
-            this.btn_ok.Location = new System.Drawing.Point(41, 117);
+            this.btn_ok.Location = new System.Drawing.Point(39, 114);
             this.btn_ok.Name = "btn_ok";
             this.btn_ok.Size = new System.Drawing.Size(75, 23);
             this.btn_ok.TabIndex = 8;
@@ -82,7 +82,7 @@
             // 
             // btn_huy
             // 
-            this.btn_huy.Location = new System.Drawing.Point(174, 117);
+            this.btn_huy.Location = new System.Drawing.Point(172, 114);
             this.btn_huy.Name = "btn_huy";
             this.btn_huy.Size = new System.Drawing.Size(75, 23);
             this.btn_huy.TabIndex = 9;
@@ -97,7 +97,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_thongbao.AutoSize = true;
             this.lbl_thongbao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_thongbao.Location = new System.Drawing.Point(54, 93);
+            this.lbl_thongbao.Location = new System.Drawing.Point(53, 82);
             this.lbl_thongbao.Name = "lbl_thongbao";
             this.lbl_thongbao.Size = new System.Drawing.Size(0, 20);
             this.lbl_thongbao.TabIndex = 10;
@@ -115,7 +115,8 @@
             this.Controls.Add(this.txt_DatabaseName);
             this.Controls.Add(this.cbx_sername);
             this.Name = "ConnectToDataBaseForm";
-            this.Text = "ConnectToDataBaseForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Connect To Data Base";
             this.Load += new System.EventHandler(this.ConnectToDataBaseForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

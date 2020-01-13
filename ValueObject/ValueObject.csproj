@@ -66,6 +66,7 @@
     <Compile Include="IPC.cs" />
     <Compile Include="LBLPRT.cs" />
     <Compile Include="MO.cs" />
+    <Compile Include="NhanVien.cs" />
     <Compile Include="PC.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

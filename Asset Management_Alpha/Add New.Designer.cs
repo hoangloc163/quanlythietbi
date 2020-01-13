@@ -30,9 +30,6 @@
         {
             this.bt_Add_Dev = new System.Windows.Forms.Button();
             this.bt_Cancel_Dev = new System.Windows.Forms.Button();
-            this.txt_Brand = new System.Windows.Forms.TextBox();
-            this.txt_Devices = new System.Windows.Forms.TextBox();
-            this.txt_Warranty = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -54,11 +51,14 @@
             this.label11 = new System.Windows.Forms.Label();
             this.dt_invoice = new System.Windows.Forms.DateTimePicker();
             this.dt_handover = new System.Windows.Forms.DateTimePicker();
+            this.cb_Brand_MrC = new System.Windows.Forms.ComboBox();
+            this.cb_Warranty_MrC = new System.Windows.Forms.ComboBox();
+            this.cb_Devices_MrC = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // bt_Add_Dev
             // 
-            this.bt_Add_Dev.Location = new System.Drawing.Point(611, 148);
+            this.bt_Add_Dev.Location = new System.Drawing.Point(571, 143);
             this.bt_Add_Dev.Name = "bt_Add_Dev";
             this.bt_Add_Dev.Size = new System.Drawing.Size(75, 23);
             this.bt_Add_Dev.TabIndex = 9;
@@ -68,34 +68,13 @@
             // 
             // bt_Cancel_Dev
             // 
-            this.bt_Cancel_Dev.Location = new System.Drawing.Point(611, 191);
+            this.bt_Cancel_Dev.Location = new System.Drawing.Point(571, 179);
             this.bt_Cancel_Dev.Name = "bt_Cancel_Dev";
             this.bt_Cancel_Dev.Size = new System.Drawing.Size(75, 23);
             this.bt_Cancel_Dev.TabIndex = 10;
             this.bt_Cancel_Dev.Text = "Cancel";
             this.bt_Cancel_Dev.UseVisualStyleBackColor = true;
             this.bt_Cancel_Dev.Click += new System.EventHandler(this.bt_Cancel_Dev_Click);
-            // 
-            // txt_Brand
-            // 
-            this.txt_Brand.Location = new System.Drawing.Point(72, 145);
-            this.txt_Brand.Name = "txt_Brand";
-            this.txt_Brand.Size = new System.Drawing.Size(100, 20);
-            this.txt_Brand.TabIndex = 4;
-            // 
-            // txt_Devices
-            // 
-            this.txt_Devices.Location = new System.Drawing.Point(72, 65);
-            this.txt_Devices.Name = "txt_Devices";
-            this.txt_Devices.Size = new System.Drawing.Size(100, 20);
-            this.txt_Devices.TabIndex = 2;
-            // 
-            // txt_Warranty
-            // 
-            this.txt_Warranty.Location = new System.Drawing.Point(544, 23);
-            this.txt_Warranty.Name = "txt_Warranty";
-            this.txt_Warranty.Size = new System.Drawing.Size(134, 20);
-            this.txt_Warranty.TabIndex = 5;
             // 
             // label1
             // 
@@ -190,7 +169,7 @@
             this.txt_remark.Location = new System.Drawing.Point(315, 145);
             this.txt_remark.Multiline = true;
             this.txt_remark.Name = "txt_remark";
-            this.txt_remark.Size = new System.Drawing.Size(195, 69);
+            this.txt_remark.Size = new System.Drawing.Size(213, 56);
             this.txt_remark.TabIndex = 8;
             // 
             // txt_Serial
@@ -199,6 +178,7 @@
             this.txt_Serial.Name = "txt_Serial";
             this.txt_Serial.Size = new System.Drawing.Size(142, 20);
             this.txt_Serial.TabIndex = 18;
+            this.txt_Serial.TextChanged += new System.EventHandler(this.txt_Serial_TextChanged);
             // 
             // label9
             // 
@@ -212,9 +192,11 @@
             // txt_macaddr
             // 
             this.txt_macaddr.Location = new System.Drawing.Point(544, 65);
+            this.txt_macaddr.MaxLength = 17;
             this.txt_macaddr.Name = "txt_macaddr";
-            this.txt_macaddr.Size = new System.Drawing.Size(142, 20);
+            this.txt_macaddr.Size = new System.Drawing.Size(121, 20);
             this.txt_macaddr.TabIndex = 20;
+            this.txt_macaddr.TextChanged += new System.EventHandler(this.txt_macaddr_TextChanged);
             // 
             // label8
             // 
@@ -248,6 +230,7 @@
             this.txt_Model.Name = "txt_Model";
             this.txt_Model.Size = new System.Drawing.Size(210, 20);
             this.txt_Model.TabIndex = 25;
+            this.txt_Model.TextChanged += new System.EventHandler(this.txt_Model_TextChanged);
             // 
             // label11
             // 
@@ -272,11 +255,51 @@
             this.dt_handover.Size = new System.Drawing.Size(142, 20);
             this.dt_handover.TabIndex = 28;
             // 
+            // cb_Brand_MrC
+            // 
+            this.cb_Brand_MrC.FormattingEnabled = true;
+            this.cb_Brand_MrC.Location = new System.Drawing.Point(72, 145);
+            this.cb_Brand_MrC.Name = "cb_Brand_MrC";
+            this.cb_Brand_MrC.Size = new System.Drawing.Size(121, 21);
+            this.cb_Brand_MrC.TabIndex = 29;
+            this.cb_Brand_MrC.TextChanged += new System.EventHandler(this.cb_Brand_MrC_TextChanged);
+            // 
+            // cb_Warranty_MrC
+            // 
+            this.cb_Warranty_MrC.FormattingEnabled = true;
+            this.cb_Warranty_MrC.Items.AddRange(new object[] {
+            "1 Month",
+            "3 Months",
+            "6 Months",
+            "1 Year",
+            "2 Years",
+            "3 Years",
+            "5 Years",
+            "10 Years",
+            "Life Time",
+            "No Warranty"});
+            this.cb_Warranty_MrC.Location = new System.Drawing.Point(544, 23);
+            this.cb_Warranty_MrC.Name = "cb_Warranty_MrC";
+            this.cb_Warranty_MrC.Size = new System.Drawing.Size(121, 21);
+            this.cb_Warranty_MrC.TabIndex = 30;
+            // 
+            // cb_Devices_MrC
+            // 
+            this.cb_Devices_MrC.FormattingEnabled = true;
+            this.cb_Devices_MrC.Location = new System.Drawing.Point(72, 65);
+            this.cb_Devices_MrC.Name = "cb_Devices_MrC";
+            this.cb_Devices_MrC.Size = new System.Drawing.Size(121, 21);
+            this.cb_Devices_MrC.TabIndex = 31;
+            this.cb_Devices_MrC.TextChanged += new System.EventHandler(this.cb_Devices_MrC_TextChanged);
+            // 
             // Add_New
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(714, 226);
+            this.ClientSize = new System.Drawing.Size(681, 213);
+            this.Controls.Add(this.cb_Devices_MrC);
+            this.Controls.Add(this.cb_Warranty_MrC);
+            this.Controls.Add(this.cb_Brand_MrC);
             this.Controls.Add(this.dt_handover);
             this.Controls.Add(this.dt_invoice);
             this.Controls.Add(this.label11);
@@ -298,14 +321,11 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txt_Warranty);
-            this.Controls.Add(this.txt_Devices);
-            this.Controls.Add(this.txt_Brand);
             this.Controls.Add(this.bt_Cancel_Dev);
             this.Controls.Add(this.bt_Add_Dev);
             this.Name = "Add_New";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Add_New";
+            this.Text = "Add New";
             this.Load += new System.EventHandler(this.Add_New_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -316,9 +336,6 @@
 
         private System.Windows.Forms.Button bt_Add_Dev;
         private System.Windows.Forms.Button bt_Cancel_Dev;
-        private System.Windows.Forms.TextBox txt_Brand;
-        private System.Windows.Forms.TextBox txt_Devices;
-        private System.Windows.Forms.TextBox txt_Warranty;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -340,5 +357,8 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.DateTimePicker dt_invoice;
         private System.Windows.Forms.DateTimePicker dt_handover;
+        private System.Windows.Forms.ComboBox cb_Brand_MrC;
+        private System.Windows.Forms.ComboBox cb_Warranty_MrC;
+        private System.Windows.Forms.ComboBox cb_Devices_MrC;
     }
 }

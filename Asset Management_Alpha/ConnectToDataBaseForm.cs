@@ -23,12 +23,6 @@ namespace Asset_Management_Alpha
             InitializeComponent();
         }
 
-        ConnectObj ObjConnect = new ConnectObj();
-        DevicesBUS busDevices = new DevicesBUS();
-
-        //public String ConnectString = "";
-        //public SqlConnection conn;
-
         private void ConnectToDataBaseForm_Load(object sender, EventArgs e)
         {
             LoadTenSRV();
@@ -78,33 +72,12 @@ namespace Asset_Management_Alpha
 
             try
             {
-                //db.Connect2DB(cbx_sername.SelectedItem.ToString(), txt_DatabaseName.Text, info , error);
+                ConnectObj ObjConnect = new ConnectObj();
+                DevicesBUS busDevices = new DevicesBUS();
+
                 message = busDevices.connect(cbx_sername.SelectedItem.ToString(), txt_DatabaseName.Text, message);
-
-                //ConnectString = "Data Source=" + cbx_sername.SelectedItem.ToString() + ";Initial Catalog=" + txt_DatabaseName.Text + ";Integrated Security=True";
-                //conn = new SqlConnection(ConnectString);
-                //conn.Open();
-
-                //RegistryKey key = Registry.CurrentUser.CreateSubKey("Software\\QLVT_test");
-
-                //key.SetValue("ServerName", cbx_sername.SelectedItem.ToString());
-                //key.SetValue("DatabaseName", txt_DatabaseName.Text);
-                //key.SetValue("WSLCheck", "Off");
-                //key.SetValue("WSLValue", "100");
-                //key.SetValue("WHSDCheck", "Off");
-                //key.SetValue("WHSDValue", "30");
-                //key.SetValue("MCNCheck", "Off");
-                //key.SetValue("WHHCheck", "Off");
-                //key.SetValue("MCNValue", "15000000");
-
-                //key.Close();
-
                 MessageBox.Show(message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show(message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
             finally
             {
                 //if (conn.State == ConnectionState.Open)

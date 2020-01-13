@@ -11,34 +11,23 @@ namespace DataAccessLayer
 {
     public class dbConnect
     {
-        private SqlConnection conn;
+        static SqlConnection conn;
         private String ConnectString = "";
+       
         public dbConnect() //code ket noi
         {
-        //    // sua lai chuoi ket noi cho phu hop database và sua lai AppConfig
-        //    //conn = new SqlConnection("Data Source=DESKTOP-6JMGM38\\SQLEXPRESS;Initial Catalog=QLPT_test3;Integrated Security=True");
-            conn = new SqlConnection("Data Source=JR163\\SQLEXPRESS;Initial Catalog=QLVT_test;Integrated Security=True");
-            //conn = new SqlConnection();
-        //    TestRegister();
-        }
-
-        void TestRegister()
-        {
-            var localMachine = RegistryKey.OpenBaseKey(RegistryHive.LocalMachine, RegistryView.Registry64);
-            var rk = localMachine.OpenSubKey("SOFTWARE\\Microsoft\\Microsoft SQL Server");
-            var ServerList = (String[])rk.GetValue("InstalledInstances");
-            //RegistryKey key1 = cast(Registry.CurrentUser.OpenSubKey("Software\\QLVT_test").GetValue("DatabaseName"));
-            //RegistryKey key2 = Registry.CurrentUser.OpenSubKey("Software\\QLVT_test").GetValue("ServerName");
-            //if (key1 == null)
-            //{
-            //   // ConnectToDataBaseForm frm = new ConnectToDataBaseForm();
-            //   // frm.ShowDialog();
-               
-            //}
-            //else
-            //{
-            //    key.Close();
-            //}
+            // sua lai chuoi ket noi cho phu hop database và sua lai AppConfig
+            //conn = new SqlConnection("Data Source=JR163\\SQLEXPRESS;Initial Catalog=QLVT_test;Integrated Security=True");
+            RegistryKey key = Registry.CurrentUser.OpenSubKey("Software\\QLVT_test");
+            if (key != null) 
+            {
+                var localMachine = RegistryKey.OpenBaseKey(RegistryHive.CurrentUser, RegistryView.Registry64);
+                var rk = localMachine.OpenSubKey("SOFTWARE\\QLVT_test");
+                var DataBaseName = rk.GetValue("DatabaseName");
+                var ComputerName = rk.GetValue("ComputerName");
+                var ServerSQL = rk.GetValue("ServerName");
+                conn = new SqlConnection("Data Source=" + ServerSQL.ToString() + ";Initial Catalog=" + DataBaseName.ToString() + ";Integrated Security=True");
+            }
         }
 
         public string Connect2DB(string sername, string DatabaseName, string message)
@@ -50,9 +39,10 @@ namespace DataAccessLayer
                 conn.Open();
 
                 RegistryKey key = Registry.CurrentUser.CreateSubKey("Software\\QLVT_test");
-
+                
                 key.SetValue("ServerName", sername);
                 key.SetValue("DatabaseName", DatabaseName);
+                key.SetValue("ComputerName", sername.Substring(0,sername.IndexOf("\\")));
                 key.SetValue("WSLCheck", "Off");
                 key.SetValue("WSLValue", "100");
                 key.SetValue("WHSDCheck", "Off");
@@ -130,6 +120,24 @@ namespace DataAccessLayer
             int row = cmd.ExecuteNonQuery(); //NonQuery chi dung cho insert,update,delete
             conn.Close();
             return row;
+        }
+
+        public string ExecuteSQL1(string procName, SqlParameter[] para, string check)
+        {
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = procName;
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = conn;
+            if (para != null)
+            {
+                cmd.Parameters.AddRange(para);
+                cmd.Parameters.Add("@kiemtra", SqlDbType.Bit).Direction = ParameterDirection.Output;
+            }
+            conn.Open();
+            cmd.ExecuteNonQuery(); //NonQuery chi dung cho insert,update,delete
+            check = cmd.Parameters["@kiemtra"].Value.ToString();
+            conn.Close();
+            return check;
         }
 
         public string ExecuteSQL3(string procName, SqlParameter[] para, string mess)

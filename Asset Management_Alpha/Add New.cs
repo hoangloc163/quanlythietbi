@@ -11,6 +11,7 @@ using ValueObject;
 using BussinessLogicLayer;
 using Asset_Management_Alpha;
 using static Asset_Management_Alpha.SFG;
+using System.Text.RegularExpressions;
 
 namespace Asset_Management_Alpha
 {
@@ -60,13 +61,13 @@ namespace Asset_Management_Alpha
         void ViewToObj()
         {
             objDevices.darea = cb_Area.Text; 
-            objDevices.dtype = txt_Devices.Text; 
-            objDevices.brand = txt_Brand.Text;
+            objDevices.dtype = cb_Devices_MrC.Text; 
+            objDevices.brand = cb_Brand_MrC.Text;
             objDevices.model = txt_Model.Text;
             objDevices.serial = txt_Serial.Text.Trim();// han che viec de rong
             objDevices.invoice_date = dt_invoice.Value.ToString("yyyy/MM/dd");
             objDevices.handover_date = dt_handover.Value.ToString("yyyy/MM/dd");
-            objDevices.warranty = txt_Warranty.Text;
+            objDevices.warranty = cb_Warranty_MrC.Text;
             objDevices.supplies = cb_Supplier.Text;
             objDevices.remark = txt_remark.Text;
             objDevices.mac_addr = txt_macaddr.Text;
@@ -76,8 +77,8 @@ namespace Asset_Management_Alpha
         void cleartxt()
         {
             txt_Serial.Clear();
-            txt_Warranty.Clear();
             txt_macaddr.Clear();
+            txt_remark.Clear();
         }
 
         public void loadcb_Area()
@@ -91,5 +92,45 @@ namespace Asset_Management_Alpha
             cb_Supplier.DataSource = busDevices.GetData4Cb_Supplier();
             cb_Supplier.DisplayMember = "supplies".Trim();
         }
+
+        private void txt_Serial_TextChanged(object sender, EventArgs e)
+        {
+            txt_Serial.CharacterCasing = CharacterCasing.Upper;
+        }
+        
+        private void txt_Model_TextChanged(object sender, EventArgs e)
+        {
+            txt_Model.CharacterCasing = CharacterCasing.Upper;
+        }
+
+        private void txt_macaddr_TextChanged(object sender, EventArgs e)
+        {
+            txt_macaddr.CharacterCasing = CharacterCasing.Upper;
+            int count_text = txt_macaddr.Text.Length;
+            // code cho de go dia chi MAC
+            if(count_text == 2 || count_text == 5 || count_text == 8 || count_text == 11 || count_text == 14)
+                {
+                    txt_macaddr.Text = txt_macaddr.Text + ":";
+                }
+            // code dua con tro ve cuoi
+            txt_macaddr.Focus();
+            txt_macaddr.SelectionStart = txt_macaddr.Text.Length;
+        }
+
+        private void cb_Brand_MrC_TextChanged(object sender, EventArgs e)
+        {
+            string upper = cb_Brand_MrC.Text.ToUpper();
+            if (upper != cb_Brand_MrC.Text)
+                cb_Brand_MrC.Text = upper;
+        }
+
+        private void cb_Devices_MrC_TextChanged(object sender, EventArgs e)
+        {
+            string upper = cb_Devices_MrC.Text.ToUpper();
+            if (upper != cb_Devices_MrC.Text)
+                cb_Devices_MrC.Text = upper;
+        }
+
+        
     }
 }

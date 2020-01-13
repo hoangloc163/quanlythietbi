@@ -65,6 +65,7 @@
     <Compile Include="IpcBUS.cs" />
     <Compile Include="LblprtBUS.cs" />
     <Compile Include="MoBUS.cs" />
+    <Compile Include="NhanVienBUS.cs" />
     <Compile Include="PcBUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

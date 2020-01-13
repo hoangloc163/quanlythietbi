@@ -83,6 +83,12 @@
     <Compile Include="ConnectToDataBaseForm.Designer.cs">
       <DependentUpon>ConnectToDataBaseForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="LogIn_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogIn_Form.Designer.cs">
+      <DependentUpon>LogIn_Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="QLVT_testDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -109,6 +115,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ConnectToDataBaseForm.resx">
       <DependentUpon>ConnectToDataBaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogIn_Form.resx">
+      <DependentUpon>LogIn_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SGF.resx">
       <DependentUpon>SGF.cs</DependentUpon>

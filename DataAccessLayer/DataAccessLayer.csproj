@@ -66,6 +66,7 @@
     <Compile Include="IpcDAO.cs" />
     <Compile Include="LblprtDAO.cs" />
     <Compile Include="MoDAO.cs" />
+    <Compile Include="NhanVienDAO.cs" />
     <Compile Include="PcDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
