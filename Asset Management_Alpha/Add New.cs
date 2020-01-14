@@ -10,7 +10,8 @@ using System.Windows.Forms;
 using ValueObject;
 using BussinessLogicLayer;
 using Asset_Management_Alpha;
-using static Asset_Management_Alpha.SFG;
+using static Asset_Management_Alpha.AM_Main_Form;
+//using static Asset_Management_Alpha.SFG; // link ve form SGF
 using System.Text.RegularExpressions;
 
 namespace Asset_Management_Alpha
@@ -32,13 +33,19 @@ namespace Asset_Management_Alpha
                 string message = "";
                 ViewToObj();
                 message = busDevices.Insert_Form(objDevices, message); // lấy ra message từ proc của sql
-                // dataGridView2.Refresh();
-                //MessageBox.Show("Insert Successfully!");
                 MessageBox.Show(message + " " + txt_Serial.Text);
                 cleartxt();
-                SFG SGF_Form = new SFG();
+
+                //// add qua form SGF
+                //SFG SGF_Form = new SFG();
+                //SGF_Form.UpdateForm("update");
+                //SGF_Form.Refesh_dtgv();
+
+                // add qua form AM_Main_Form
+                AM_Main_Form SGF_Form = new AM_Main_Form();
                 SGF_Form.UpdateForm("update");
                 SGF_Form.Refesh_dtgv();
+
                 RefreshDtgvCallback();
             }
             else

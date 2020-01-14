@@ -30,6 +30,83 @@
         {
             this.components = new System.ComponentModel.Container();
             this.Tab_SGF = new System.Windows.Forms.TabControl();
+            this.Tab_MrChau = new System.Windows.Forms.TabPage();
+            this.cb_Status_MrC = new System.Windows.Forms.ComboBox();
+            this.label98 = new System.Windows.Forms.Label();
+            this.label97 = new System.Windows.Forms.Label();
+            this.label96 = new System.Windows.Forms.Label();
+            this.txt_Serial_MrC = new System.Windows.Forms.TextBox();
+            this.bt_Refresh_MrC = new System.Windows.Forms.Button();
+            this.bt_Insert_MrC = new System.Windows.Forms.Button();
+            this.MrC_BT_Cancel = new System.Windows.Forms.Button();
+            this.rbt_Or_Check = new System.Windows.Forms.RadioButton();
+            this.rbt_And_Check = new System.Windows.Forms.RadioButton();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.col_darea_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_devices_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_brand_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_Supplies_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_model_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_serial_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_hostname_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_invoice_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_handover_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_Warranty_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_dstatus_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_remark_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_location_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_assetcode_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_username_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_position_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_memory_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_hdd_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_macaddr_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_ipaddr_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_dns_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_defaultgw_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_logname_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_password_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dEVICESTBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.qLVT_testDataSet1 = new Asset_Management_Alpha.QLVT_testDataSet1();
+            this.MrC_BT_Search = new System.Windows.Forms.Button();
+            this.label95 = new System.Windows.Forms.Label();
+            this.cb_Position_MrC = new System.Windows.Forms.ComboBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn35 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn36 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn37 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn38 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn39 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn40 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn41 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn42 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn43 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn44 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn45 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn46 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn47 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn48 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn49 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn50 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn51 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mACADDRDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iPADDRDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dNSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dEFAULTGWDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lOGNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pASSWRDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dTYPEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dSTATUSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label94 = new System.Windows.Forms.Label();
+            this.label93 = new System.Windows.Forms.Label();
+            this.label92 = new System.Windows.Forms.Label();
+            this.label91 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.cb_Brand_MrC = new System.Windows.Forms.ComboBox();
+            this.cb_Supplier_MrC = new System.Windows.Forms.ComboBox();
+            this.cb_Devices_MrC = new System.Windows.Forms.ComboBox();
+            this.cb_Area_MrC = new System.Windows.Forms.ComboBox();
+            this.txt_UserName_MrC = new System.Windows.Forms.TextBox();
             this.tab_PC = new System.Windows.Forms.TabPage();
             this.PC_dtgv = new System.Windows.Forms.DataGridView();
             this.col_area_pc = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -385,90 +462,18 @@
             this.tab_UPSPC = new System.Windows.Forms.TabPage();
             this.tab_UPSSAP = new System.Windows.Forms.TabPage();
             this.tab_UPSSRV = new System.Windows.Forms.TabPage();
-            this.Tab_MrChau = new System.Windows.Forms.TabPage();
-            this.cb_Status_MrC = new System.Windows.Forms.ComboBox();
-            this.label98 = new System.Windows.Forms.Label();
-            this.label97 = new System.Windows.Forms.Label();
-            this.label96 = new System.Windows.Forms.Label();
-            this.txt_Serial_MrC = new System.Windows.Forms.TextBox();
-            this.bt_Refresh_MrC = new System.Windows.Forms.Button();
-            this.bt_Insert_MrC = new System.Windows.Forms.Button();
-            this.MrC_BT_Cancel = new System.Windows.Forms.Button();
-            this.rbt_Or_Check = new System.Windows.Forms.RadioButton();
-            this.rbt_And_Check = new System.Windows.Forms.RadioButton();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dEVICESTBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.qLVT_testDataSet1 = new Asset_Management_Alpha.QLVT_testDataSet1();
-            this.MrC_BT_Search = new System.Windows.Forms.Button();
-            this.label95 = new System.Windows.Forms.Label();
-            this.cb_Position_MrC = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn35 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn36 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn37 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn38 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn39 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn40 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn41 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn42 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn43 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn44 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn45 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn46 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn47 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn48 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn49 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn50 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn51 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mACADDRDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iPADDRDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dNSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dEFAULTGWDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lOGNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pASSWRDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dTYPEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dSTATUSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label94 = new System.Windows.Forms.Label();
-            this.label93 = new System.Windows.Forms.Label();
-            this.label92 = new System.Windows.Forms.Label();
-            this.label91 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.cb_Brand_MrC = new System.Windows.Forms.ComboBox();
-            this.cb_Supplier_MrC = new System.Windows.Forms.ComboBox();
-            this.cb_Devices_MrC = new System.Windows.Forms.ComboBox();
-            this.cb_Area_MrC = new System.Windows.Forms.ComboBox();
-            this.txt_UserName_MrC = new System.Windows.Forms.TextBox();
             this.pCTBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.qLVT_testDataSet = new Asset_Management_Alpha.QLVT_testDataSet();
             this.pC_TBLTableAdapter = new Asset_Management_Alpha.QLVT_testDataSetTableAdapters.PC_TBLTableAdapter();
             this.pCTBLBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.qLVTtestDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dEVICES_TBLTableAdapter = new Asset_Management_Alpha.QLVT_testDataSet1TableAdapters.DEVICES_TBLTableAdapter();
-            this.col_darea_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_devices_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_brand_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_Supplies_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_model_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_serial_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_hostname_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_invoice_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_handover_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_Warranty_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_dstatus_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_remark_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_location_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_assetcode_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_username_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_position_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_memory_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_hdd_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_macaddr_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_ipaddr_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_dns_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_defaultgw_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_logname_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_password_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tab_SGF.SuspendLayout();
+            this.Tab_MrChau.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dEVICESTBLBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qLVT_testDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tab_PC.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PC_dtgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PC_DEVICES_dtgv)).BeginInit();
@@ -483,11 +488,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.CCTV_dtgv)).BeginInit();
             this.tab_FW.SuspendLayout();
             this.tab_IPC.SuspendLayout();
-            this.Tab_MrChau.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dEVICESTBLBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qLVT_testDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pCTBLBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.qLVT_testDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pCTBLBindingSource1)).BeginInit();
@@ -521,6 +521,667 @@
             this.Tab_SGF.SelectedIndex = 0;
             this.Tab_SGF.Size = new System.Drawing.Size(1216, 618);
             this.Tab_SGF.TabIndex = 0;
+            // 
+            // Tab_MrChau
+            // 
+            this.Tab_MrChau.Controls.Add(this.cb_Status_MrC);
+            this.Tab_MrChau.Controls.Add(this.label98);
+            this.Tab_MrChau.Controls.Add(this.label97);
+            this.Tab_MrChau.Controls.Add(this.label96);
+            this.Tab_MrChau.Controls.Add(this.txt_Serial_MrC);
+            this.Tab_MrChau.Controls.Add(this.bt_Refresh_MrC);
+            this.Tab_MrChau.Controls.Add(this.bt_Insert_MrC);
+            this.Tab_MrChau.Controls.Add(this.MrC_BT_Cancel);
+            this.Tab_MrChau.Controls.Add(this.rbt_Or_Check);
+            this.Tab_MrChau.Controls.Add(this.rbt_And_Check);
+            this.Tab_MrChau.Controls.Add(this.dataGridView2);
+            this.Tab_MrChau.Controls.Add(this.MrC_BT_Search);
+            this.Tab_MrChau.Controls.Add(this.label95);
+            this.Tab_MrChau.Controls.Add(this.cb_Position_MrC);
+            this.Tab_MrChau.Controls.Add(this.dataGridView1);
+            this.Tab_MrChau.Controls.Add(this.label94);
+            this.Tab_MrChau.Controls.Add(this.label93);
+            this.Tab_MrChau.Controls.Add(this.label92);
+            this.Tab_MrChau.Controls.Add(this.label91);
+            this.Tab_MrChau.Controls.Add(this.label17);
+            this.Tab_MrChau.Controls.Add(this.cb_Brand_MrC);
+            this.Tab_MrChau.Controls.Add(this.cb_Supplier_MrC);
+            this.Tab_MrChau.Controls.Add(this.cb_Devices_MrC);
+            this.Tab_MrChau.Controls.Add(this.cb_Area_MrC);
+            this.Tab_MrChau.Controls.Add(this.txt_UserName_MrC);
+            this.Tab_MrChau.Location = new System.Drawing.Point(4, 22);
+            this.Tab_MrChau.Name = "Tab_MrChau";
+            this.Tab_MrChau.Size = new System.Drawing.Size(1208, 592);
+            this.Tab_MrChau.TabIndex = 19;
+            this.Tab_MrChau.Text = "Mr.Chau";
+            this.Tab_MrChau.UseVisualStyleBackColor = true;
+            // 
+            // cb_Status_MrC
+            // 
+            this.cb_Status_MrC.FormattingEnabled = true;
+            this.cb_Status_MrC.Location = new System.Drawing.Point(681, 54);
+            this.cb_Status_MrC.Name = "cb_Status_MrC";
+            this.cb_Status_MrC.Size = new System.Drawing.Size(141, 21);
+            this.cb_Status_MrC.TabIndex = 51;
+            // 
+            // label98
+            // 
+            this.label98.AutoSize = true;
+            this.label98.Location = new System.Drawing.Point(638, 57);
+            this.label98.Name = "label98";
+            this.label98.Size = new System.Drawing.Size(37, 13);
+            this.label98.TabIndex = 50;
+            this.label98.Text = "Status";
+            // 
+            // label97
+            // 
+            this.label97.AutoSize = true;
+            this.label97.Location = new System.Drawing.Point(821, 496);
+            this.label97.Name = "label97";
+            this.label97.Size = new System.Drawing.Size(43, 13);
+            this.label97.TabIndex = 48;
+            this.label97.Text = "0 Rows";
+            // 
+            // label96
+            // 
+            this.label96.AutoSize = true;
+            this.label96.Location = new System.Drawing.Point(638, 22);
+            this.label96.Name = "label96";
+            this.label96.Size = new System.Drawing.Size(33, 13);
+            this.label96.TabIndex = 47;
+            this.label96.Text = "Serial";
+            // 
+            // txt_Serial_MrC
+            // 
+            this.txt_Serial_MrC.Location = new System.Drawing.Point(681, 18);
+            this.txt_Serial_MrC.Name = "txt_Serial_MrC";
+            this.txt_Serial_MrC.Size = new System.Drawing.Size(141, 20);
+            this.txt_Serial_MrC.TabIndex = 46;
+            // 
+            // bt_Refresh_MrC
+            // 
+            this.bt_Refresh_MrC.Location = new System.Drawing.Point(849, 17);
+            this.bt_Refresh_MrC.Name = "bt_Refresh_MrC";
+            this.bt_Refresh_MrC.Size = new System.Drawing.Size(49, 53);
+            this.bt_Refresh_MrC.TabIndex = 45;
+            this.bt_Refresh_MrC.Text = "Refesh";
+            this.bt_Refresh_MrC.UseVisualStyleBackColor = true;
+            this.bt_Refresh_MrC.Click += new System.EventHandler(this.bt_Refresh_MrC_Click);
+            // 
+            // bt_Insert_MrC
+            // 
+            this.bt_Insert_MrC.Location = new System.Drawing.Point(1112, 14);
+            this.bt_Insert_MrC.Name = "bt_Insert_MrC";
+            this.bt_Insert_MrC.Size = new System.Drawing.Size(75, 23);
+            this.bt_Insert_MrC.TabIndex = 44;
+            this.bt_Insert_MrC.Text = "ADD";
+            this.bt_Insert_MrC.UseVisualStyleBackColor = true;
+            this.bt_Insert_MrC.Click += new System.EventHandler(this.bt_Insert_MrC_Click);
+            // 
+            // MrC_BT_Cancel
+            // 
+            this.MrC_BT_Cancel.Location = new System.Drawing.Point(1112, 43);
+            this.MrC_BT_Cancel.Name = "MrC_BT_Cancel";
+            this.MrC_BT_Cancel.Size = new System.Drawing.Size(75, 23);
+            this.MrC_BT_Cancel.TabIndex = 43;
+            this.MrC_BT_Cancel.Text = "Cancel";
+            this.MrC_BT_Cancel.UseVisualStyleBackColor = true;
+            this.MrC_BT_Cancel.Click += new System.EventHandler(this.MrC_BT_Cancel_Click);
+            // 
+            // rbt_Or_Check
+            // 
+            this.rbt_Or_Check.AutoSize = true;
+            this.rbt_Or_Check.Location = new System.Drawing.Point(917, 46);
+            this.rbt_Or_Check.Name = "rbt_Or_Check";
+            this.rbt_Or_Check.Size = new System.Drawing.Size(94, 17);
+            this.rbt_Or_Check.TabIndex = 42;
+            this.rbt_Or_Check.Text = "Relative Value";
+            this.rbt_Or_Check.UseVisualStyleBackColor = true;
+            // 
+            // rbt_And_Check
+            // 
+            this.rbt_And_Check.AutoSize = true;
+            this.rbt_And_Check.Checked = true;
+            this.rbt_And_Check.Location = new System.Drawing.Point(917, 17);
+            this.rbt_And_Check.Name = "rbt_And_Check";
+            this.rbt_And_Check.Size = new System.Drawing.Size(96, 17);
+            this.rbt_And_Check.TabIndex = 41;
+            this.rbt_And_Check.TabStop = true;
+            this.rbt_And_Check.Text = "Absolute Value";
+            this.rbt_And_Check.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AutoGenerateColumns = false;
+            this.dataGridView2.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.col_darea_MrC,
+            this.col_devices_MrC,
+            this.col_brand_MrC,
+            this.col_Supplies_MrC,
+            this.col_model_MrC,
+            this.col_serial_MrC,
+            this.col_hostname_MrC,
+            this.col_invoice_MrC,
+            this.col_handover_MrC,
+            this.col_Warranty_MrC,
+            this.col_dstatus_MrC,
+            this.col_remark_MrC,
+            this.col_location_MrC,
+            this.col_assetcode_MrC,
+            this.col_username_MrC,
+            this.col_position_MrC,
+            this.col_memory_MrC,
+            this.col_hdd_MrC,
+            this.col_macaddr_MrC,
+            this.col_ipaddr_MrC,
+            this.col_dns_MrC,
+            this.col_defaultgw_MrC,
+            this.col_logname_MrC,
+            this.col_password_MrC});
+            this.dataGridView2.DataSource = this.dEVICESTBLBindingSource;
+            this.dataGridView2.EnableHeadersVisualStyles = false;
+            this.dataGridView2.Location = new System.Drawing.Point(3, 82);
+            this.dataGridView2.MultiSelect = false;
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowHeadersVisible = false;
+            this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView2.Size = new System.Drawing.Size(1202, 408);
+            this.dataGridView2.TabIndex = 40;
+            this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
+            this.dataGridView2.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellEndEdit);
+            this.dataGridView2.UserDeletedRow += new System.Windows.Forms.DataGridViewRowEventHandler(this.dataGridView2_UserDeletedRow);
+            // 
+            // col_darea_MrC
+            // 
+            this.col_darea_MrC.DataPropertyName = "DAREA";
+            this.col_darea_MrC.Frozen = true;
+            this.col_darea_MrC.HeaderText = "AREA";
+            this.col_darea_MrC.MaxInputLength = 3;
+            this.col_darea_MrC.Name = "col_darea_MrC";
+            this.col_darea_MrC.Width = 61;
+            // 
+            // col_devices_MrC
+            // 
+            this.col_devices_MrC.DataPropertyName = "DTYPE";
+            this.col_devices_MrC.Frozen = true;
+            this.col_devices_MrC.HeaderText = "DEVICES";
+            this.col_devices_MrC.Name = "col_devices_MrC";
+            this.col_devices_MrC.Width = 78;
+            // 
+            // col_brand_MrC
+            // 
+            this.col_brand_MrC.DataPropertyName = "BRAND";
+            this.col_brand_MrC.Frozen = true;
+            this.col_brand_MrC.HeaderText = "BRAND";
+            this.col_brand_MrC.Name = "col_brand_MrC";
+            this.col_brand_MrC.Width = 70;
+            // 
+            // col_Supplies_MrC
+            // 
+            this.col_Supplies_MrC.DataPropertyName = "SUPPLIES";
+            this.col_Supplies_MrC.Frozen = true;
+            this.col_Supplies_MrC.HeaderText = "SUPPLIES";
+            this.col_Supplies_MrC.Name = "col_Supplies_MrC";
+            this.col_Supplies_MrC.Width = 84;
+            // 
+            // col_model_MrC
+            // 
+            this.col_model_MrC.DataPropertyName = "MODEL";
+            this.col_model_MrC.Frozen = true;
+            this.col_model_MrC.HeaderText = "MODEL";
+            this.col_model_MrC.Name = "col_model_MrC";
+            this.col_model_MrC.Width = 70;
+            // 
+            // col_serial_MrC
+            // 
+            this.col_serial_MrC.DataPropertyName = "SERIAL";
+            this.col_serial_MrC.HeaderText = "SERIAL";
+            this.col_serial_MrC.Name = "col_serial_MrC";
+            this.col_serial_MrC.ReadOnly = true;
+            this.col_serial_MrC.Width = 70;
+            // 
+            // col_hostname_MrC
+            // 
+            this.col_hostname_MrC.DataPropertyName = "HOSTNAME";
+            this.col_hostname_MrC.HeaderText = "HOST NAME";
+            this.col_hostname_MrC.Name = "col_hostname_MrC";
+            this.col_hostname_MrC.Width = 96;
+            // 
+            // col_invoice_MrC
+            // 
+            this.col_invoice_MrC.DataPropertyName = "INVOICE_DATE";
+            this.col_invoice_MrC.HeaderText = "INVOICE DATE";
+            this.col_invoice_MrC.MaxInputLength = 10;
+            this.col_invoice_MrC.Name = "col_invoice_MrC";
+            this.col_invoice_MrC.Width = 98;
+            // 
+            // col_handover_MrC
+            // 
+            this.col_handover_MrC.DataPropertyName = "HANDOVER_DATE";
+            this.col_handover_MrC.HeaderText = "HAND-OVER DATE";
+            this.col_handover_MrC.MaxInputLength = 10;
+            this.col_handover_MrC.Name = "col_handover_MrC";
+            this.col_handover_MrC.Width = 117;
+            // 
+            // col_Warranty_MrC
+            // 
+            this.col_Warranty_MrC.DataPropertyName = "WARANTY";
+            this.col_Warranty_MrC.HeaderText = "WARRANTY";
+            this.col_Warranty_MrC.Name = "col_Warranty_MrC";
+            this.col_Warranty_MrC.Width = 95;
+            // 
+            // col_dstatus_MrC
+            // 
+            this.col_dstatus_MrC.DataPropertyName = "DSTATUS";
+            this.col_dstatus_MrC.HeaderText = "STATUS";
+            this.col_dstatus_MrC.Name = "col_dstatus_MrC";
+            this.col_dstatus_MrC.Width = 75;
+            // 
+            // col_remark_MrC
+            // 
+            this.col_remark_MrC.DataPropertyName = "REMARK";
+            this.col_remark_MrC.HeaderText = "REMARK";
+            this.col_remark_MrC.Name = "col_remark_MrC";
+            this.col_remark_MrC.Width = 78;
+            // 
+            // col_location_MrC
+            // 
+            this.col_location_MrC.DataPropertyName = "LOCATION";
+            this.col_location_MrC.HeaderText = "LOCATION";
+            this.col_location_MrC.Name = "col_location_MrC";
+            this.col_location_MrC.Width = 86;
+            // 
+            // col_assetcode_MrC
+            // 
+            this.col_assetcode_MrC.DataPropertyName = "ASSETCODE";
+            this.col_assetcode_MrC.HeaderText = "ASSET CODE";
+            this.col_assetcode_MrC.Name = "col_assetcode_MrC";
+            this.col_assetcode_MrC.Width = 92;
+            // 
+            // col_username_MrC
+            // 
+            this.col_username_MrC.DataPropertyName = "USRNAME";
+            this.col_username_MrC.HeaderText = "USERNAME";
+            this.col_username_MrC.Name = "col_username_MrC";
+            this.col_username_MrC.Width = 93;
+            // 
+            // col_position_MrC
+            // 
+            this.col_position_MrC.DataPropertyName = "POSITION";
+            this.col_position_MrC.HeaderText = "POSITION";
+            this.col_position_MrC.Name = "col_position_MrC";
+            this.col_position_MrC.Width = 83;
+            // 
+            // col_memory_MrC
+            // 
+            this.col_memory_MrC.DataPropertyName = "MEMORY";
+            this.col_memory_MrC.HeaderText = "MEMORY";
+            this.col_memory_MrC.Name = "col_memory_MrC";
+            this.col_memory_MrC.Width = 80;
+            // 
+            // col_hdd_MrC
+            // 
+            this.col_hdd_MrC.DataPropertyName = "HDD";
+            this.col_hdd_MrC.HeaderText = "HDD";
+            this.col_hdd_MrC.Name = "col_hdd_MrC";
+            this.col_hdd_MrC.Width = 56;
+            // 
+            // col_macaddr_MrC
+            // 
+            this.col_macaddr_MrC.DataPropertyName = "MAC_ADDR";
+            this.col_macaddr_MrC.HeaderText = "MAC Address";
+            this.col_macaddr_MrC.MaxInputLength = 17;
+            this.col_macaddr_MrC.Name = "col_macaddr_MrC";
+            this.col_macaddr_MrC.Width = 88;
+            // 
+            // col_ipaddr_MrC
+            // 
+            this.col_ipaddr_MrC.DataPropertyName = "IP_ADDR";
+            this.col_ipaddr_MrC.HeaderText = "IP Address";
+            this.col_ipaddr_MrC.MaxInputLength = 15;
+            this.col_ipaddr_MrC.Name = "col_ipaddr_MrC";
+            this.col_ipaddr_MrC.Width = 77;
+            // 
+            // col_dns_MrC
+            // 
+            this.col_dns_MrC.DataPropertyName = "DNS";
+            this.col_dns_MrC.HeaderText = "DNS";
+            this.col_dns_MrC.Name = "col_dns_MrC";
+            this.col_dns_MrC.Width = 55;
+            // 
+            // col_defaultgw_MrC
+            // 
+            this.col_defaultgw_MrC.DataPropertyName = "DEFAULT_GW";
+            this.col_defaultgw_MrC.HeaderText = "DEFAULT GATEWAY";
+            this.col_defaultgw_MrC.MaxInputLength = 15;
+            this.col_defaultgw_MrC.Name = "col_defaultgw_MrC";
+            this.col_defaultgw_MrC.Width = 126;
+            // 
+            // col_logname_MrC
+            // 
+            this.col_logname_MrC.DataPropertyName = "LOG_NAME";
+            this.col_logname_MrC.HeaderText = "LOGIN NAME";
+            this.col_logname_MrC.Name = "col_logname_MrC";
+            this.col_logname_MrC.Width = 91;
+            // 
+            // col_password_MrC
+            // 
+            this.col_password_MrC.DataPropertyName = "PASSWRD";
+            this.col_password_MrC.HeaderText = "PASSWORD";
+            this.col_password_MrC.Name = "col_password_MrC";
+            this.col_password_MrC.Width = 95;
+            // 
+            // dEVICESTBLBindingSource
+            // 
+            this.dEVICESTBLBindingSource.DataMember = "DEVICES_TBL";
+            this.dEVICESTBLBindingSource.DataSource = this.qLVT_testDataSet1;
+            // 
+            // qLVT_testDataSet1
+            // 
+            this.qLVT_testDataSet1.DataSetName = "QLVT_testDataSet1";
+            this.qLVT_testDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // MrC_BT_Search
+            // 
+            this.MrC_BT_Search.Location = new System.Drawing.Point(1017, 14);
+            this.MrC_BT_Search.Name = "MrC_BT_Search";
+            this.MrC_BT_Search.Size = new System.Drawing.Size(75, 53);
+            this.MrC_BT_Search.TabIndex = 39;
+            this.MrC_BT_Search.Text = "Search";
+            this.MrC_BT_Search.UseVisualStyleBackColor = true;
+            this.MrC_BT_Search.Click += new System.EventHandler(this.MrC_BT_Search_Click);
+            // 
+            // label95
+            // 
+            this.label95.AutoSize = true;
+            this.label95.Location = new System.Drawing.Point(188, 58);
+            this.label95.Name = "label95";
+            this.label95.Size = new System.Drawing.Size(35, 13);
+            this.label95.TabIndex = 37;
+            this.label95.Text = "Brand";
+            // 
+            // cb_Position_MrC
+            // 
+            this.cb_Position_MrC.FormattingEnabled = true;
+            this.cb_Position_MrC.Location = new System.Drawing.Point(439, 54);
+            this.cb_Position_MrC.Name = "cb_Position_MrC";
+            this.cb_Position_MrC.Size = new System.Drawing.Size(170, 21);
+            this.cb_Position_MrC.TabIndex = 36;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn35,
+            this.dataGridViewTextBoxColumn36,
+            this.dataGridViewTextBoxColumn37,
+            this.dataGridViewTextBoxColumn38,
+            this.dataGridViewTextBoxColumn39,
+            this.dataGridViewTextBoxColumn40,
+            this.dataGridViewTextBoxColumn41,
+            this.dataGridViewTextBoxColumn42,
+            this.dataGridViewTextBoxColumn43,
+            this.dataGridViewTextBoxColumn44,
+            this.dataGridViewTextBoxColumn45,
+            this.dataGridViewTextBoxColumn46,
+            this.dataGridViewTextBoxColumn47,
+            this.dataGridViewTextBoxColumn48,
+            this.dataGridViewTextBoxColumn49,
+            this.dataGridViewTextBoxColumn50,
+            this.dataGridViewTextBoxColumn51,
+            this.mACADDRDataGridViewTextBoxColumn,
+            this.iPADDRDataGridViewTextBoxColumn,
+            this.dNSDataGridViewTextBoxColumn,
+            this.dEFAULTGWDataGridViewTextBoxColumn,
+            this.lOGNAMEDataGridViewTextBoxColumn,
+            this.pASSWRDDataGridViewTextBoxColumn,
+            this.dTYPEDataGridViewTextBoxColumn,
+            this.dSTATUSDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.dEVICESTBLBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 515);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(1202, 59);
+            this.dataGridView1.TabIndex = 35;
+            // 
+            // dataGridViewTextBoxColumn35
+            // 
+            this.dataGridViewTextBoxColumn35.DataPropertyName = "DAREA";
+            this.dataGridViewTextBoxColumn35.HeaderText = "AREA";
+            this.dataGridViewTextBoxColumn35.Name = "dataGridViewTextBoxColumn35";
+            // 
+            // dataGridViewTextBoxColumn36
+            // 
+            this.dataGridViewTextBoxColumn36.DataPropertyName = "DTYPE";
+            this.dataGridViewTextBoxColumn36.HeaderText = "DEVICES";
+            this.dataGridViewTextBoxColumn36.Name = "dataGridViewTextBoxColumn36";
+            // 
+            // dataGridViewTextBoxColumn37
+            // 
+            this.dataGridViewTextBoxColumn37.DataPropertyName = "HOSTNAME";
+            this.dataGridViewTextBoxColumn37.HeaderText = "HOST NAME";
+            this.dataGridViewTextBoxColumn37.Name = "dataGridViewTextBoxColumn37";
+            // 
+            // dataGridViewTextBoxColumn38
+            // 
+            this.dataGridViewTextBoxColumn38.DataPropertyName = "BRAND";
+            this.dataGridViewTextBoxColumn38.HeaderText = "BRAND";
+            this.dataGridViewTextBoxColumn38.Name = "dataGridViewTextBoxColumn38";
+            // 
+            // dataGridViewTextBoxColumn39
+            // 
+            this.dataGridViewTextBoxColumn39.DataPropertyName = "MODEL";
+            this.dataGridViewTextBoxColumn39.HeaderText = "MODEL";
+            this.dataGridViewTextBoxColumn39.Name = "dataGridViewTextBoxColumn39";
+            // 
+            // dataGridViewTextBoxColumn40
+            // 
+            this.dataGridViewTextBoxColumn40.DataPropertyName = "SERIAL";
+            this.dataGridViewTextBoxColumn40.HeaderText = "SERIAL";
+            this.dataGridViewTextBoxColumn40.Name = "dataGridViewTextBoxColumn40";
+            // 
+            // dataGridViewTextBoxColumn41
+            // 
+            this.dataGridViewTextBoxColumn41.DataPropertyName = "INVOICE_DATE";
+            this.dataGridViewTextBoxColumn41.HeaderText = "INVOICE DATE";
+            this.dataGridViewTextBoxColumn41.Name = "dataGridViewTextBoxColumn41";
+            // 
+            // dataGridViewTextBoxColumn42
+            // 
+            this.dataGridViewTextBoxColumn42.DataPropertyName = "HANDOVER_DATE";
+            this.dataGridViewTextBoxColumn42.HeaderText = "HAND-OVER DATE";
+            this.dataGridViewTextBoxColumn42.Name = "dataGridViewTextBoxColumn42";
+            // 
+            // dataGridViewTextBoxColumn43
+            // 
+            this.dataGridViewTextBoxColumn43.DataPropertyName = "WARANTY";
+            this.dataGridViewTextBoxColumn43.HeaderText = "WARRANTY";
+            this.dataGridViewTextBoxColumn43.Name = "dataGridViewTextBoxColumn43";
+            // 
+            // dataGridViewTextBoxColumn44
+            // 
+            this.dataGridViewTextBoxColumn44.DataPropertyName = "SUPPLIES";
+            this.dataGridViewTextBoxColumn44.HeaderText = "SUPPLIES";
+            this.dataGridViewTextBoxColumn44.Name = "dataGridViewTextBoxColumn44";
+            // 
+            // dataGridViewTextBoxColumn45
+            // 
+            this.dataGridViewTextBoxColumn45.DataPropertyName = "REMARK";
+            this.dataGridViewTextBoxColumn45.HeaderText = "REMARK";
+            this.dataGridViewTextBoxColumn45.Name = "dataGridViewTextBoxColumn45";
+            // 
+            // dataGridViewTextBoxColumn46
+            // 
+            this.dataGridViewTextBoxColumn46.DataPropertyName = "LOCATION";
+            this.dataGridViewTextBoxColumn46.HeaderText = "LOCATION";
+            this.dataGridViewTextBoxColumn46.Name = "dataGridViewTextBoxColumn46";
+            // 
+            // dataGridViewTextBoxColumn47
+            // 
+            this.dataGridViewTextBoxColumn47.DataPropertyName = "ASSETCODE";
+            this.dataGridViewTextBoxColumn47.HeaderText = "ASSET CODE";
+            this.dataGridViewTextBoxColumn47.Name = "dataGridViewTextBoxColumn47";
+            // 
+            // dataGridViewTextBoxColumn48
+            // 
+            this.dataGridViewTextBoxColumn48.DataPropertyName = "USRNAME";
+            this.dataGridViewTextBoxColumn48.HeaderText = "USERNAME";
+            this.dataGridViewTextBoxColumn48.Name = "dataGridViewTextBoxColumn48";
+            // 
+            // dataGridViewTextBoxColumn49
+            // 
+            this.dataGridViewTextBoxColumn49.DataPropertyName = "POSITION";
+            this.dataGridViewTextBoxColumn49.HeaderText = "POSITION";
+            this.dataGridViewTextBoxColumn49.Name = "dataGridViewTextBoxColumn49";
+            // 
+            // dataGridViewTextBoxColumn50
+            // 
+            this.dataGridViewTextBoxColumn50.DataPropertyName = "MEMORY";
+            this.dataGridViewTextBoxColumn50.HeaderText = "MEMORY";
+            this.dataGridViewTextBoxColumn50.Name = "dataGridViewTextBoxColumn50";
+            // 
+            // dataGridViewTextBoxColumn51
+            // 
+            this.dataGridViewTextBoxColumn51.DataPropertyName = "HDD";
+            this.dataGridViewTextBoxColumn51.HeaderText = "HDD";
+            this.dataGridViewTextBoxColumn51.Name = "dataGridViewTextBoxColumn51";
+            // 
+            // mACADDRDataGridViewTextBoxColumn
+            // 
+            this.mACADDRDataGridViewTextBoxColumn.DataPropertyName = "MAC_ADDR";
+            this.mACADDRDataGridViewTextBoxColumn.HeaderText = "MAC Address";
+            this.mACADDRDataGridViewTextBoxColumn.Name = "mACADDRDataGridViewTextBoxColumn";
+            // 
+            // iPADDRDataGridViewTextBoxColumn
+            // 
+            this.iPADDRDataGridViewTextBoxColumn.DataPropertyName = "IP_ADDR";
+            this.iPADDRDataGridViewTextBoxColumn.HeaderText = "IP Address";
+            this.iPADDRDataGridViewTextBoxColumn.Name = "iPADDRDataGridViewTextBoxColumn";
+            // 
+            // dNSDataGridViewTextBoxColumn
+            // 
+            this.dNSDataGridViewTextBoxColumn.DataPropertyName = "DNS";
+            this.dNSDataGridViewTextBoxColumn.HeaderText = "DNS";
+            this.dNSDataGridViewTextBoxColumn.Name = "dNSDataGridViewTextBoxColumn";
+            // 
+            // dEFAULTGWDataGridViewTextBoxColumn
+            // 
+            this.dEFAULTGWDataGridViewTextBoxColumn.DataPropertyName = "DEFAULT_GW";
+            this.dEFAULTGWDataGridViewTextBoxColumn.HeaderText = "DEFAULT GATEWAY";
+            this.dEFAULTGWDataGridViewTextBoxColumn.Name = "dEFAULTGWDataGridViewTextBoxColumn";
+            // 
+            // lOGNAMEDataGridViewTextBoxColumn
+            // 
+            this.lOGNAMEDataGridViewTextBoxColumn.DataPropertyName = "LOG_NAME";
+            this.lOGNAMEDataGridViewTextBoxColumn.HeaderText = "LOGIN NAME";
+            this.lOGNAMEDataGridViewTextBoxColumn.Name = "lOGNAMEDataGridViewTextBoxColumn";
+            // 
+            // pASSWRDDataGridViewTextBoxColumn
+            // 
+            this.pASSWRDDataGridViewTextBoxColumn.DataPropertyName = "PASSWRD";
+            this.pASSWRDDataGridViewTextBoxColumn.HeaderText = "PASSWORD";
+            this.pASSWRDDataGridViewTextBoxColumn.Name = "pASSWRDDataGridViewTextBoxColumn";
+            // 
+            // dTYPEDataGridViewTextBoxColumn
+            // 
+            this.dTYPEDataGridViewTextBoxColumn.DataPropertyName = "DTYPE";
+            this.dTYPEDataGridViewTextBoxColumn.HeaderText = "TYPE";
+            this.dTYPEDataGridViewTextBoxColumn.Name = "dTYPEDataGridViewTextBoxColumn";
+            // 
+            // dSTATUSDataGridViewTextBoxColumn
+            // 
+            this.dSTATUSDataGridViewTextBoxColumn.DataPropertyName = "DSTATUS";
+            this.dSTATUSDataGridViewTextBoxColumn.HeaderText = "STATUS";
+            this.dSTATUSDataGridViewTextBoxColumn.Name = "dSTATUSDataGridViewTextBoxColumn";
+            // 
+            // label94
+            // 
+            this.label94.AutoSize = true;
+            this.label94.Location = new System.Drawing.Point(373, 21);
+            this.label94.Name = "label94";
+            this.label94.Size = new System.Drawing.Size(60, 13);
+            this.label94.TabIndex = 10;
+            this.label94.Text = "User Name";
+            // 
+            // label93
+            // 
+            this.label93.AutoSize = true;
+            this.label93.Location = new System.Drawing.Point(373, 57);
+            this.label93.Name = "label93";
+            this.label93.Size = new System.Drawing.Size(44, 13);
+            this.label93.TabIndex = 9;
+            this.label93.Text = "Position";
+            // 
+            // label92
+            // 
+            this.label92.AutoSize = true;
+            this.label92.Location = new System.Drawing.Point(177, 22);
+            this.label92.Name = "label92";
+            this.label92.Size = new System.Drawing.Size(45, 13);
+            this.label92.TabIndex = 8;
+            this.label92.Text = "Supplier";
+            // 
+            // label91
+            // 
+            this.label91.AutoSize = true;
+            this.label91.Location = new System.Drawing.Point(16, 58);
+            this.label91.Name = "label91";
+            this.label91.Size = new System.Drawing.Size(46, 13);
+            this.label91.TabIndex = 7;
+            this.label91.Text = "Devices";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(16, 22);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(32, 13);
+            this.label17.TabIndex = 6;
+            this.label17.Text = " Area";
+            // 
+            // cb_Brand_MrC
+            // 
+            this.cb_Brand_MrC.FormattingEnabled = true;
+            this.cb_Brand_MrC.Location = new System.Drawing.Point(243, 55);
+            this.cb_Brand_MrC.Name = "cb_Brand_MrC";
+            this.cb_Brand_MrC.Size = new System.Drawing.Size(103, 21);
+            this.cb_Brand_MrC.TabIndex = 5;
+            // 
+            // cb_Supplier_MrC
+            // 
+            this.cb_Supplier_MrC.FormattingEnabled = true;
+            this.cb_Supplier_MrC.Location = new System.Drawing.Point(243, 19);
+            this.cb_Supplier_MrC.Name = "cb_Supplier_MrC";
+            this.cb_Supplier_MrC.Size = new System.Drawing.Size(103, 21);
+            this.cb_Supplier_MrC.TabIndex = 4;
+            // 
+            // cb_Devices_MrC
+            // 
+            this.cb_Devices_MrC.FormattingEnabled = true;
+            this.cb_Devices_MrC.Location = new System.Drawing.Point(72, 55);
+            this.cb_Devices_MrC.Name = "cb_Devices_MrC";
+            this.cb_Devices_MrC.Size = new System.Drawing.Size(91, 21);
+            this.cb_Devices_MrC.TabIndex = 3;
+            // 
+            // cb_Area_MrC
+            // 
+            this.cb_Area_MrC.FormattingEnabled = true;
+            this.cb_Area_MrC.Location = new System.Drawing.Point(72, 19);
+            this.cb_Area_MrC.Name = "cb_Area_MrC";
+            this.cb_Area_MrC.Size = new System.Drawing.Size(62, 21);
+            this.cb_Area_MrC.TabIndex = 2;
+            // 
+            // txt_UserName_MrC
+            // 
+            this.txt_UserName_MrC.Location = new System.Drawing.Point(439, 18);
+            this.txt_UserName_MrC.Name = "txt_UserName_MrC";
+            this.txt_UserName_MrC.Size = new System.Drawing.Size(170, 20);
+            this.txt_UserName_MrC.TabIndex = 1;
             // 
             // tab_PC
             // 
@@ -3723,487 +4384,6 @@
             this.tab_UPSSRV.Text = "UPSSRV";
             this.tab_UPSSRV.UseVisualStyleBackColor = true;
             // 
-            // Tab_MrChau
-            // 
-            this.Tab_MrChau.Controls.Add(this.cb_Status_MrC);
-            this.Tab_MrChau.Controls.Add(this.label98);
-            this.Tab_MrChau.Controls.Add(this.label97);
-            this.Tab_MrChau.Controls.Add(this.label96);
-            this.Tab_MrChau.Controls.Add(this.txt_Serial_MrC);
-            this.Tab_MrChau.Controls.Add(this.bt_Refresh_MrC);
-            this.Tab_MrChau.Controls.Add(this.bt_Insert_MrC);
-            this.Tab_MrChau.Controls.Add(this.MrC_BT_Cancel);
-            this.Tab_MrChau.Controls.Add(this.rbt_Or_Check);
-            this.Tab_MrChau.Controls.Add(this.rbt_And_Check);
-            this.Tab_MrChau.Controls.Add(this.dataGridView2);
-            this.Tab_MrChau.Controls.Add(this.MrC_BT_Search);
-            this.Tab_MrChau.Controls.Add(this.label95);
-            this.Tab_MrChau.Controls.Add(this.cb_Position_MrC);
-            this.Tab_MrChau.Controls.Add(this.dataGridView1);
-            this.Tab_MrChau.Controls.Add(this.label94);
-            this.Tab_MrChau.Controls.Add(this.label93);
-            this.Tab_MrChau.Controls.Add(this.label92);
-            this.Tab_MrChau.Controls.Add(this.label91);
-            this.Tab_MrChau.Controls.Add(this.label17);
-            this.Tab_MrChau.Controls.Add(this.cb_Brand_MrC);
-            this.Tab_MrChau.Controls.Add(this.cb_Supplier_MrC);
-            this.Tab_MrChau.Controls.Add(this.cb_Devices_MrC);
-            this.Tab_MrChau.Controls.Add(this.cb_Area_MrC);
-            this.Tab_MrChau.Controls.Add(this.txt_UserName_MrC);
-            this.Tab_MrChau.Location = new System.Drawing.Point(4, 22);
-            this.Tab_MrChau.Name = "Tab_MrChau";
-            this.Tab_MrChau.Size = new System.Drawing.Size(1208, 592);
-            this.Tab_MrChau.TabIndex = 19;
-            this.Tab_MrChau.Text = "Mr.Chau";
-            this.Tab_MrChau.UseVisualStyleBackColor = true;
-            // 
-            // cb_Status_MrC
-            // 
-            this.cb_Status_MrC.FormattingEnabled = true;
-            this.cb_Status_MrC.Location = new System.Drawing.Point(681, 54);
-            this.cb_Status_MrC.Name = "cb_Status_MrC";
-            this.cb_Status_MrC.Size = new System.Drawing.Size(141, 21);
-            this.cb_Status_MrC.TabIndex = 51;
-            // 
-            // label98
-            // 
-            this.label98.AutoSize = true;
-            this.label98.Location = new System.Drawing.Point(638, 57);
-            this.label98.Name = "label98";
-            this.label98.Size = new System.Drawing.Size(37, 13);
-            this.label98.TabIndex = 50;
-            this.label98.Text = "Status";
-            // 
-            // label97
-            // 
-            this.label97.AutoSize = true;
-            this.label97.Location = new System.Drawing.Point(821, 496);
-            this.label97.Name = "label97";
-            this.label97.Size = new System.Drawing.Size(41, 13);
-            this.label97.TabIndex = 48;
-            this.label97.Text = "label97";
-            // 
-            // label96
-            // 
-            this.label96.AutoSize = true;
-            this.label96.Location = new System.Drawing.Point(638, 22);
-            this.label96.Name = "label96";
-            this.label96.Size = new System.Drawing.Size(33, 13);
-            this.label96.TabIndex = 47;
-            this.label96.Text = "Serial";
-            // 
-            // txt_Serial_MrC
-            // 
-            this.txt_Serial_MrC.Location = new System.Drawing.Point(681, 18);
-            this.txt_Serial_MrC.Name = "txt_Serial_MrC";
-            this.txt_Serial_MrC.Size = new System.Drawing.Size(141, 20);
-            this.txt_Serial_MrC.TabIndex = 46;
-            // 
-            // bt_Refresh_MrC
-            // 
-            this.bt_Refresh_MrC.Location = new System.Drawing.Point(849, 17);
-            this.bt_Refresh_MrC.Name = "bt_Refresh_MrC";
-            this.bt_Refresh_MrC.Size = new System.Drawing.Size(49, 53);
-            this.bt_Refresh_MrC.TabIndex = 45;
-            this.bt_Refresh_MrC.Text = "Refesh";
-            this.bt_Refresh_MrC.UseVisualStyleBackColor = true;
-            this.bt_Refresh_MrC.Click += new System.EventHandler(this.bt_Refresh_MrC_Click);
-            // 
-            // bt_Insert_MrC
-            // 
-            this.bt_Insert_MrC.Location = new System.Drawing.Point(1112, 14);
-            this.bt_Insert_MrC.Name = "bt_Insert_MrC";
-            this.bt_Insert_MrC.Size = new System.Drawing.Size(75, 23);
-            this.bt_Insert_MrC.TabIndex = 44;
-            this.bt_Insert_MrC.Text = "ADD";
-            this.bt_Insert_MrC.UseVisualStyleBackColor = true;
-            this.bt_Insert_MrC.Click += new System.EventHandler(this.bt_Insert_MrC_Click);
-            // 
-            // MrC_BT_Cancel
-            // 
-            this.MrC_BT_Cancel.Location = new System.Drawing.Point(1112, 43);
-            this.MrC_BT_Cancel.Name = "MrC_BT_Cancel";
-            this.MrC_BT_Cancel.Size = new System.Drawing.Size(75, 23);
-            this.MrC_BT_Cancel.TabIndex = 43;
-            this.MrC_BT_Cancel.Text = "Cancel";
-            this.MrC_BT_Cancel.UseVisualStyleBackColor = true;
-            this.MrC_BT_Cancel.Click += new System.EventHandler(this.MrC_BT_Cancel_Click);
-            // 
-            // rbt_Or_Check
-            // 
-            this.rbt_Or_Check.AutoSize = true;
-            this.rbt_Or_Check.Location = new System.Drawing.Point(917, 46);
-            this.rbt_Or_Check.Name = "rbt_Or_Check";
-            this.rbt_Or_Check.Size = new System.Drawing.Size(94, 17);
-            this.rbt_Or_Check.TabIndex = 42;
-            this.rbt_Or_Check.Text = "Relative Value";
-            this.rbt_Or_Check.UseVisualStyleBackColor = true;
-            // 
-            // rbt_And_Check
-            // 
-            this.rbt_And_Check.AutoSize = true;
-            this.rbt_And_Check.Checked = true;
-            this.rbt_And_Check.Location = new System.Drawing.Point(917, 17);
-            this.rbt_And_Check.Name = "rbt_And_Check";
-            this.rbt_And_Check.Size = new System.Drawing.Size(96, 17);
-            this.rbt_And_Check.TabIndex = 41;
-            this.rbt_And_Check.TabStop = true;
-            this.rbt_And_Check.Text = "Absolute Value";
-            this.rbt_And_Check.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.AllowUserToAddRows = false;
-            this.dataGridView2.AutoGenerateColumns = false;
-            this.dataGridView2.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.col_darea_MrC,
-            this.col_devices_MrC,
-            this.col_brand_MrC,
-            this.col_Supplies_MrC,
-            this.col_model_MrC,
-            this.col_serial_MrC,
-            this.col_hostname_MrC,
-            this.col_invoice_MrC,
-            this.col_handover_MrC,
-            this.col_Warranty_MrC,
-            this.col_dstatus_MrC,
-            this.col_remark_MrC,
-            this.col_location_MrC,
-            this.col_assetcode_MrC,
-            this.col_username_MrC,
-            this.col_position_MrC,
-            this.col_memory_MrC,
-            this.col_hdd_MrC,
-            this.col_macaddr_MrC,
-            this.col_ipaddr_MrC,
-            this.col_dns_MrC,
-            this.col_defaultgw_MrC,
-            this.col_logname_MrC,
-            this.col_password_MrC});
-            this.dataGridView2.DataSource = this.dEVICESTBLBindingSource;
-            this.dataGridView2.EnableHeadersVisualStyles = false;
-            this.dataGridView2.Location = new System.Drawing.Point(3, 82);
-            this.dataGridView2.MultiSelect = false;
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersVisible = false;
-            this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView2.Size = new System.Drawing.Size(1202, 408);
-            this.dataGridView2.TabIndex = 40;
-            this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
-            this.dataGridView2.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellEndEdit);
-            this.dataGridView2.UserDeletedRow += new System.Windows.Forms.DataGridViewRowEventHandler(this.dataGridView2_UserDeletedRow);
-            // 
-            // dEVICESTBLBindingSource
-            // 
-            this.dEVICESTBLBindingSource.DataMember = "DEVICES_TBL";
-            this.dEVICESTBLBindingSource.DataSource = this.qLVT_testDataSet1;
-            // 
-            // qLVT_testDataSet1
-            // 
-            this.qLVT_testDataSet1.DataSetName = "QLVT_testDataSet1";
-            this.qLVT_testDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // MrC_BT_Search
-            // 
-            this.MrC_BT_Search.Location = new System.Drawing.Point(1017, 14);
-            this.MrC_BT_Search.Name = "MrC_BT_Search";
-            this.MrC_BT_Search.Size = new System.Drawing.Size(75, 53);
-            this.MrC_BT_Search.TabIndex = 39;
-            this.MrC_BT_Search.Text = "Search";
-            this.MrC_BT_Search.UseVisualStyleBackColor = true;
-            this.MrC_BT_Search.Click += new System.EventHandler(this.MrC_BT_Search_Click);
-            // 
-            // label95
-            // 
-            this.label95.AutoSize = true;
-            this.label95.Location = new System.Drawing.Point(188, 58);
-            this.label95.Name = "label95";
-            this.label95.Size = new System.Drawing.Size(35, 13);
-            this.label95.TabIndex = 37;
-            this.label95.Text = "Brand";
-            // 
-            // cb_Position_MrC
-            // 
-            this.cb_Position_MrC.FormattingEnabled = true;
-            this.cb_Position_MrC.Location = new System.Drawing.Point(439, 54);
-            this.cb_Position_MrC.Name = "cb_Position_MrC";
-            this.cb_Position_MrC.Size = new System.Drawing.Size(170, 21);
-            this.cb_Position_MrC.TabIndex = 36;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn35,
-            this.dataGridViewTextBoxColumn36,
-            this.dataGridViewTextBoxColumn37,
-            this.dataGridViewTextBoxColumn38,
-            this.dataGridViewTextBoxColumn39,
-            this.dataGridViewTextBoxColumn40,
-            this.dataGridViewTextBoxColumn41,
-            this.dataGridViewTextBoxColumn42,
-            this.dataGridViewTextBoxColumn43,
-            this.dataGridViewTextBoxColumn44,
-            this.dataGridViewTextBoxColumn45,
-            this.dataGridViewTextBoxColumn46,
-            this.dataGridViewTextBoxColumn47,
-            this.dataGridViewTextBoxColumn48,
-            this.dataGridViewTextBoxColumn49,
-            this.dataGridViewTextBoxColumn50,
-            this.dataGridViewTextBoxColumn51,
-            this.mACADDRDataGridViewTextBoxColumn,
-            this.iPADDRDataGridViewTextBoxColumn,
-            this.dNSDataGridViewTextBoxColumn,
-            this.dEFAULTGWDataGridViewTextBoxColumn,
-            this.lOGNAMEDataGridViewTextBoxColumn,
-            this.pASSWRDDataGridViewTextBoxColumn,
-            this.dTYPEDataGridViewTextBoxColumn,
-            this.dSTATUSDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.dEVICESTBLBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 515);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1202, 59);
-            this.dataGridView1.TabIndex = 35;
-            // 
-            // dataGridViewTextBoxColumn35
-            // 
-            this.dataGridViewTextBoxColumn35.DataPropertyName = "DAREA";
-            this.dataGridViewTextBoxColumn35.HeaderText = "AREA";
-            this.dataGridViewTextBoxColumn35.Name = "dataGridViewTextBoxColumn35";
-            // 
-            // dataGridViewTextBoxColumn36
-            // 
-            this.dataGridViewTextBoxColumn36.DataPropertyName = "DTYPE";
-            this.dataGridViewTextBoxColumn36.HeaderText = "DEVICES";
-            this.dataGridViewTextBoxColumn36.Name = "dataGridViewTextBoxColumn36";
-            // 
-            // dataGridViewTextBoxColumn37
-            // 
-            this.dataGridViewTextBoxColumn37.DataPropertyName = "HOSTNAME";
-            this.dataGridViewTextBoxColumn37.HeaderText = "HOST NAME";
-            this.dataGridViewTextBoxColumn37.Name = "dataGridViewTextBoxColumn37";
-            // 
-            // dataGridViewTextBoxColumn38
-            // 
-            this.dataGridViewTextBoxColumn38.DataPropertyName = "BRAND";
-            this.dataGridViewTextBoxColumn38.HeaderText = "BRAND";
-            this.dataGridViewTextBoxColumn38.Name = "dataGridViewTextBoxColumn38";
-            // 
-            // dataGridViewTextBoxColumn39
-            // 
-            this.dataGridViewTextBoxColumn39.DataPropertyName = "MODEL";
-            this.dataGridViewTextBoxColumn39.HeaderText = "MODEL";
-            this.dataGridViewTextBoxColumn39.Name = "dataGridViewTextBoxColumn39";
-            // 
-            // dataGridViewTextBoxColumn40
-            // 
-            this.dataGridViewTextBoxColumn40.DataPropertyName = "SERIAL";
-            this.dataGridViewTextBoxColumn40.HeaderText = "SERIAL";
-            this.dataGridViewTextBoxColumn40.Name = "dataGridViewTextBoxColumn40";
-            // 
-            // dataGridViewTextBoxColumn41
-            // 
-            this.dataGridViewTextBoxColumn41.DataPropertyName = "INVOICE_DATE";
-            this.dataGridViewTextBoxColumn41.HeaderText = "INVOICE DATE";
-            this.dataGridViewTextBoxColumn41.Name = "dataGridViewTextBoxColumn41";
-            // 
-            // dataGridViewTextBoxColumn42
-            // 
-            this.dataGridViewTextBoxColumn42.DataPropertyName = "HANDOVER_DATE";
-            this.dataGridViewTextBoxColumn42.HeaderText = "HAND-OVER DATE";
-            this.dataGridViewTextBoxColumn42.Name = "dataGridViewTextBoxColumn42";
-            // 
-            // dataGridViewTextBoxColumn43
-            // 
-            this.dataGridViewTextBoxColumn43.DataPropertyName = "WARANTY";
-            this.dataGridViewTextBoxColumn43.HeaderText = "WARRANTY";
-            this.dataGridViewTextBoxColumn43.Name = "dataGridViewTextBoxColumn43";
-            // 
-            // dataGridViewTextBoxColumn44
-            // 
-            this.dataGridViewTextBoxColumn44.DataPropertyName = "SUPPLIES";
-            this.dataGridViewTextBoxColumn44.HeaderText = "SUPPLIES";
-            this.dataGridViewTextBoxColumn44.Name = "dataGridViewTextBoxColumn44";
-            // 
-            // dataGridViewTextBoxColumn45
-            // 
-            this.dataGridViewTextBoxColumn45.DataPropertyName = "REMARK";
-            this.dataGridViewTextBoxColumn45.HeaderText = "REMARK";
-            this.dataGridViewTextBoxColumn45.Name = "dataGridViewTextBoxColumn45";
-            // 
-            // dataGridViewTextBoxColumn46
-            // 
-            this.dataGridViewTextBoxColumn46.DataPropertyName = "LOCATION";
-            this.dataGridViewTextBoxColumn46.HeaderText = "LOCATION";
-            this.dataGridViewTextBoxColumn46.Name = "dataGridViewTextBoxColumn46";
-            // 
-            // dataGridViewTextBoxColumn47
-            // 
-            this.dataGridViewTextBoxColumn47.DataPropertyName = "ASSETCODE";
-            this.dataGridViewTextBoxColumn47.HeaderText = "ASSET CODE";
-            this.dataGridViewTextBoxColumn47.Name = "dataGridViewTextBoxColumn47";
-            // 
-            // dataGridViewTextBoxColumn48
-            // 
-            this.dataGridViewTextBoxColumn48.DataPropertyName = "USRNAME";
-            this.dataGridViewTextBoxColumn48.HeaderText = "USERNAME";
-            this.dataGridViewTextBoxColumn48.Name = "dataGridViewTextBoxColumn48";
-            // 
-            // dataGridViewTextBoxColumn49
-            // 
-            this.dataGridViewTextBoxColumn49.DataPropertyName = "POSITION";
-            this.dataGridViewTextBoxColumn49.HeaderText = "POSITION";
-            this.dataGridViewTextBoxColumn49.Name = "dataGridViewTextBoxColumn49";
-            // 
-            // dataGridViewTextBoxColumn50
-            // 
-            this.dataGridViewTextBoxColumn50.DataPropertyName = "MEMORY";
-            this.dataGridViewTextBoxColumn50.HeaderText = "MEMORY";
-            this.dataGridViewTextBoxColumn50.Name = "dataGridViewTextBoxColumn50";
-            // 
-            // dataGridViewTextBoxColumn51
-            // 
-            this.dataGridViewTextBoxColumn51.DataPropertyName = "HDD";
-            this.dataGridViewTextBoxColumn51.HeaderText = "HDD";
-            this.dataGridViewTextBoxColumn51.Name = "dataGridViewTextBoxColumn51";
-            // 
-            // mACADDRDataGridViewTextBoxColumn
-            // 
-            this.mACADDRDataGridViewTextBoxColumn.DataPropertyName = "MAC_ADDR";
-            this.mACADDRDataGridViewTextBoxColumn.HeaderText = "MAC Address";
-            this.mACADDRDataGridViewTextBoxColumn.Name = "mACADDRDataGridViewTextBoxColumn";
-            // 
-            // iPADDRDataGridViewTextBoxColumn
-            // 
-            this.iPADDRDataGridViewTextBoxColumn.DataPropertyName = "IP_ADDR";
-            this.iPADDRDataGridViewTextBoxColumn.HeaderText = "IP Address";
-            this.iPADDRDataGridViewTextBoxColumn.Name = "iPADDRDataGridViewTextBoxColumn";
-            // 
-            // dNSDataGridViewTextBoxColumn
-            // 
-            this.dNSDataGridViewTextBoxColumn.DataPropertyName = "DNS";
-            this.dNSDataGridViewTextBoxColumn.HeaderText = "DNS";
-            this.dNSDataGridViewTextBoxColumn.Name = "dNSDataGridViewTextBoxColumn";
-            // 
-            // dEFAULTGWDataGridViewTextBoxColumn
-            // 
-            this.dEFAULTGWDataGridViewTextBoxColumn.DataPropertyName = "DEFAULT_GW";
-            this.dEFAULTGWDataGridViewTextBoxColumn.HeaderText = "DEFAULT GATEWAY";
-            this.dEFAULTGWDataGridViewTextBoxColumn.Name = "dEFAULTGWDataGridViewTextBoxColumn";
-            // 
-            // lOGNAMEDataGridViewTextBoxColumn
-            // 
-            this.lOGNAMEDataGridViewTextBoxColumn.DataPropertyName = "LOG_NAME";
-            this.lOGNAMEDataGridViewTextBoxColumn.HeaderText = "LOGIN NAME";
-            this.lOGNAMEDataGridViewTextBoxColumn.Name = "lOGNAMEDataGridViewTextBoxColumn";
-            // 
-            // pASSWRDDataGridViewTextBoxColumn
-            // 
-            this.pASSWRDDataGridViewTextBoxColumn.DataPropertyName = "PASSWRD";
-            this.pASSWRDDataGridViewTextBoxColumn.HeaderText = "PASSWORD";
-            this.pASSWRDDataGridViewTextBoxColumn.Name = "pASSWRDDataGridViewTextBoxColumn";
-            // 
-            // dTYPEDataGridViewTextBoxColumn
-            // 
-            this.dTYPEDataGridViewTextBoxColumn.DataPropertyName = "DTYPE";
-            this.dTYPEDataGridViewTextBoxColumn.HeaderText = "TYPE";
-            this.dTYPEDataGridViewTextBoxColumn.Name = "dTYPEDataGridViewTextBoxColumn";
-            // 
-            // dSTATUSDataGridViewTextBoxColumn
-            // 
-            this.dSTATUSDataGridViewTextBoxColumn.DataPropertyName = "DSTATUS";
-            this.dSTATUSDataGridViewTextBoxColumn.HeaderText = "STATUS";
-            this.dSTATUSDataGridViewTextBoxColumn.Name = "dSTATUSDataGridViewTextBoxColumn";
-            // 
-            // label94
-            // 
-            this.label94.AutoSize = true;
-            this.label94.Location = new System.Drawing.Point(373, 21);
-            this.label94.Name = "label94";
-            this.label94.Size = new System.Drawing.Size(60, 13);
-            this.label94.TabIndex = 10;
-            this.label94.Text = "User Name";
-            // 
-            // label93
-            // 
-            this.label93.AutoSize = true;
-            this.label93.Location = new System.Drawing.Point(373, 57);
-            this.label93.Name = "label93";
-            this.label93.Size = new System.Drawing.Size(44, 13);
-            this.label93.TabIndex = 9;
-            this.label93.Text = "Position";
-            // 
-            // label92
-            // 
-            this.label92.AutoSize = true;
-            this.label92.Location = new System.Drawing.Point(177, 22);
-            this.label92.Name = "label92";
-            this.label92.Size = new System.Drawing.Size(45, 13);
-            this.label92.TabIndex = 8;
-            this.label92.Text = "Supplier";
-            // 
-            // label91
-            // 
-            this.label91.AutoSize = true;
-            this.label91.Location = new System.Drawing.Point(16, 58);
-            this.label91.Name = "label91";
-            this.label91.Size = new System.Drawing.Size(46, 13);
-            this.label91.TabIndex = 7;
-            this.label91.Text = "Devices";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(16, 22);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(32, 13);
-            this.label17.TabIndex = 6;
-            this.label17.Text = " Area";
-            // 
-            // cb_Brand_MrC
-            // 
-            this.cb_Brand_MrC.FormattingEnabled = true;
-            this.cb_Brand_MrC.Location = new System.Drawing.Point(243, 55);
-            this.cb_Brand_MrC.Name = "cb_Brand_MrC";
-            this.cb_Brand_MrC.Size = new System.Drawing.Size(103, 21);
-            this.cb_Brand_MrC.TabIndex = 5;
-            // 
-            // cb_Supplier_MrC
-            // 
-            this.cb_Supplier_MrC.FormattingEnabled = true;
-            this.cb_Supplier_MrC.Location = new System.Drawing.Point(243, 19);
-            this.cb_Supplier_MrC.Name = "cb_Supplier_MrC";
-            this.cb_Supplier_MrC.Size = new System.Drawing.Size(103, 21);
-            this.cb_Supplier_MrC.TabIndex = 4;
-            // 
-            // cb_Devices_MrC
-            // 
-            this.cb_Devices_MrC.FormattingEnabled = true;
-            this.cb_Devices_MrC.Location = new System.Drawing.Point(72, 55);
-            this.cb_Devices_MrC.Name = "cb_Devices_MrC";
-            this.cb_Devices_MrC.Size = new System.Drawing.Size(91, 21);
-            this.cb_Devices_MrC.TabIndex = 3;
-            // 
-            // cb_Area_MrC
-            // 
-            this.cb_Area_MrC.FormattingEnabled = true;
-            this.cb_Area_MrC.Location = new System.Drawing.Point(72, 19);
-            this.cb_Area_MrC.Name = "cb_Area_MrC";
-            this.cb_Area_MrC.Size = new System.Drawing.Size(62, 21);
-            this.cb_Area_MrC.TabIndex = 2;
-            // 
-            // txt_UserName_MrC
-            // 
-            this.txt_UserName_MrC.Location = new System.Drawing.Point(439, 18);
-            this.txt_UserName_MrC.Name = "txt_UserName_MrC";
-            this.txt_UserName_MrC.Size = new System.Drawing.Size(170, 20);
-            this.txt_UserName_MrC.TabIndex = 1;
-            // 
             // pCTBLBindingSource
             // 
             this.pCTBLBindingSource.DataMember = "PC_TBL";
@@ -4232,186 +4412,6 @@
             // 
             this.dEVICES_TBLTableAdapter.ClearBeforeFill = true;
             // 
-            // col_darea_MrC
-            // 
-            this.col_darea_MrC.DataPropertyName = "DAREA";
-            this.col_darea_MrC.Frozen = true;
-            this.col_darea_MrC.HeaderText = "AREA";
-            this.col_darea_MrC.MaxInputLength = 3;
-            this.col_darea_MrC.Name = "col_darea_MrC";
-            this.col_darea_MrC.Width = 61;
-            // 
-            // col_devices_MrC
-            // 
-            this.col_devices_MrC.DataPropertyName = "DTYPE";
-            this.col_devices_MrC.Frozen = true;
-            this.col_devices_MrC.HeaderText = "DEVICES";
-            this.col_devices_MrC.Name = "col_devices_MrC";
-            this.col_devices_MrC.Width = 78;
-            // 
-            // col_brand_MrC
-            // 
-            this.col_brand_MrC.DataPropertyName = "BRAND";
-            this.col_brand_MrC.Frozen = true;
-            this.col_brand_MrC.HeaderText = "BRAND";
-            this.col_brand_MrC.Name = "col_brand_MrC";
-            this.col_brand_MrC.Width = 70;
-            // 
-            // col_Supplies_MrC
-            // 
-            this.col_Supplies_MrC.DataPropertyName = "SUPPLIES";
-            this.col_Supplies_MrC.Frozen = true;
-            this.col_Supplies_MrC.HeaderText = "SUPPLIES";
-            this.col_Supplies_MrC.Name = "col_Supplies_MrC";
-            this.col_Supplies_MrC.Width = 84;
-            // 
-            // col_model_MrC
-            // 
-            this.col_model_MrC.DataPropertyName = "MODEL";
-            this.col_model_MrC.Frozen = true;
-            this.col_model_MrC.HeaderText = "MODEL";
-            this.col_model_MrC.Name = "col_model_MrC";
-            this.col_model_MrC.Width = 70;
-            // 
-            // col_serial_MrC
-            // 
-            this.col_serial_MrC.DataPropertyName = "SERIAL";
-            this.col_serial_MrC.HeaderText = "SERIAL";
-            this.col_serial_MrC.Name = "col_serial_MrC";
-            this.col_serial_MrC.ReadOnly = true;
-            this.col_serial_MrC.Width = 70;
-            // 
-            // col_hostname_MrC
-            // 
-            this.col_hostname_MrC.DataPropertyName = "HOSTNAME";
-            this.col_hostname_MrC.HeaderText = "HOST NAME";
-            this.col_hostname_MrC.Name = "col_hostname_MrC";
-            this.col_hostname_MrC.Width = 96;
-            // 
-            // col_invoice_MrC
-            // 
-            this.col_invoice_MrC.DataPropertyName = "INVOICE_DATE";
-            this.col_invoice_MrC.HeaderText = "INVOICE DATE";
-            this.col_invoice_MrC.MaxInputLength = 10;
-            this.col_invoice_MrC.Name = "col_invoice_MrC";
-            this.col_invoice_MrC.Width = 98;
-            // 
-            // col_handover_MrC
-            // 
-            this.col_handover_MrC.DataPropertyName = "HANDOVER_DATE";
-            this.col_handover_MrC.HeaderText = "HAND-OVER DATE";
-            this.col_handover_MrC.MaxInputLength = 10;
-            this.col_handover_MrC.Name = "col_handover_MrC";
-            this.col_handover_MrC.Width = 117;
-            // 
-            // col_Warranty_MrC
-            // 
-            this.col_Warranty_MrC.DataPropertyName = "WARANTY";
-            this.col_Warranty_MrC.HeaderText = "WARRANTY";
-            this.col_Warranty_MrC.Name = "col_Warranty_MrC";
-            this.col_Warranty_MrC.Width = 95;
-            // 
-            // col_dstatus_MrC
-            // 
-            this.col_dstatus_MrC.DataPropertyName = "DSTATUS";
-            this.col_dstatus_MrC.HeaderText = "STATUS";
-            this.col_dstatus_MrC.Name = "col_dstatus_MrC";
-            this.col_dstatus_MrC.Width = 75;
-            // 
-            // col_remark_MrC
-            // 
-            this.col_remark_MrC.DataPropertyName = "REMARK";
-            this.col_remark_MrC.HeaderText = "REMARK";
-            this.col_remark_MrC.Name = "col_remark_MrC";
-            this.col_remark_MrC.Width = 78;
-            // 
-            // col_location_MrC
-            // 
-            this.col_location_MrC.DataPropertyName = "LOCATION";
-            this.col_location_MrC.HeaderText = "LOCATION";
-            this.col_location_MrC.Name = "col_location_MrC";
-            this.col_location_MrC.Width = 86;
-            // 
-            // col_assetcode_MrC
-            // 
-            this.col_assetcode_MrC.DataPropertyName = "ASSETCODE";
-            this.col_assetcode_MrC.HeaderText = "ASSET CODE";
-            this.col_assetcode_MrC.Name = "col_assetcode_MrC";
-            this.col_assetcode_MrC.Width = 92;
-            // 
-            // col_username_MrC
-            // 
-            this.col_username_MrC.DataPropertyName = "USRNAME";
-            this.col_username_MrC.HeaderText = "USERNAME";
-            this.col_username_MrC.Name = "col_username_MrC";
-            this.col_username_MrC.Width = 93;
-            // 
-            // col_position_MrC
-            // 
-            this.col_position_MrC.DataPropertyName = "POSITION";
-            this.col_position_MrC.HeaderText = "POSITION";
-            this.col_position_MrC.Name = "col_position_MrC";
-            this.col_position_MrC.Width = 83;
-            // 
-            // col_memory_MrC
-            // 
-            this.col_memory_MrC.DataPropertyName = "MEMORY";
-            this.col_memory_MrC.HeaderText = "MEMORY";
-            this.col_memory_MrC.Name = "col_memory_MrC";
-            this.col_memory_MrC.Width = 80;
-            // 
-            // col_hdd_MrC
-            // 
-            this.col_hdd_MrC.DataPropertyName = "HDD";
-            this.col_hdd_MrC.HeaderText = "HDD";
-            this.col_hdd_MrC.Name = "col_hdd_MrC";
-            this.col_hdd_MrC.Width = 56;
-            // 
-            // col_macaddr_MrC
-            // 
-            this.col_macaddr_MrC.DataPropertyName = "MAC_ADDR";
-            this.col_macaddr_MrC.HeaderText = "MAC Address";
-            this.col_macaddr_MrC.MaxInputLength = 17;
-            this.col_macaddr_MrC.Name = "col_macaddr_MrC";
-            this.col_macaddr_MrC.Width = 88;
-            // 
-            // col_ipaddr_MrC
-            // 
-            this.col_ipaddr_MrC.DataPropertyName = "IP_ADDR";
-            this.col_ipaddr_MrC.HeaderText = "IP Address";
-            this.col_ipaddr_MrC.MaxInputLength = 15;
-            this.col_ipaddr_MrC.Name = "col_ipaddr_MrC";
-            this.col_ipaddr_MrC.Width = 77;
-            // 
-            // col_dns_MrC
-            // 
-            this.col_dns_MrC.DataPropertyName = "DNS";
-            this.col_dns_MrC.HeaderText = "DNS";
-            this.col_dns_MrC.Name = "col_dns_MrC";
-            this.col_dns_MrC.Width = 55;
-            // 
-            // col_defaultgw_MrC
-            // 
-            this.col_defaultgw_MrC.DataPropertyName = "DEFAULT_GW";
-            this.col_defaultgw_MrC.HeaderText = "DEFAULT GATEWAY";
-            this.col_defaultgw_MrC.MaxInputLength = 15;
-            this.col_defaultgw_MrC.Name = "col_defaultgw_MrC";
-            this.col_defaultgw_MrC.Width = 126;
-            // 
-            // col_logname_MrC
-            // 
-            this.col_logname_MrC.DataPropertyName = "LOG_NAME";
-            this.col_logname_MrC.HeaderText = "LOGIN NAME";
-            this.col_logname_MrC.Name = "col_logname_MrC";
-            this.col_logname_MrC.Width = 91;
-            // 
-            // col_password_MrC
-            // 
-            this.col_password_MrC.DataPropertyName = "PASSWRD";
-            this.col_password_MrC.HeaderText = "PASSWORD";
-            this.col_password_MrC.Name = "col_password_MrC";
-            this.col_password_MrC.Width = 95;
-            // 
             // SFG
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -4423,6 +4423,12 @@
             this.Text = "Asset Management";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Tab_SGF.ResumeLayout(false);
+            this.Tab_MrChau.ResumeLayout(false);
+            this.Tab_MrChau.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dEVICESTBLBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qLVT_testDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tab_PC.ResumeLayout(false);
             this.tab_PC.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PC_dtgv)).EndInit();
@@ -4443,12 +4449,6 @@
             this.tab_FW.PerformLayout();
             this.tab_IPC.ResumeLayout(false);
             this.tab_IPC.PerformLayout();
-            this.Tab_MrChau.ResumeLayout(false);
-            this.Tab_MrChau.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dEVICESTBLBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qLVT_testDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pCTBLBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.qLVT_testDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pCTBLBindingSource1)).EndInit();

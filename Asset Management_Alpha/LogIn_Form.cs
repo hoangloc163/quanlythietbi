@@ -58,8 +58,13 @@ namespace Asset_Management_Alpha
                 if (check == "True") //phai la True mới dc, con true la ko dc
                 {
                     MessageBox.Show("Chào mừng bạn");
-                    // mo form ke tiep
-                    SFG SGF_Form = new SFG();
+                    //// mo form ke tiep (SGF)
+                    //SFG SGF_Form = new SFG();
+                    //SGF_Form.CheckTenDangNhap(txt_tendangnhap.Text.ToString());
+                    //SGF_Form.Show();
+
+                    // mo form ke tiep (AM_Main_Form)
+                    AM_Main_Form SGF_Form = new AM_Main_Form();
                     SGF_Form.CheckTenDangNhap(txt_tendangnhap.Text.ToString());
                     SGF_Form.Show();
                     this.Hide();

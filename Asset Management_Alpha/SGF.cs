@@ -798,9 +798,10 @@ namespace Asset_Management_Alpha
         public delegate void SetParameterValueDelegate(string value);
         private void bt_Insert_MrC_Click(object sender, EventArgs e)
         {
-            Add_New FormAddNew = new Add_New();
-            FormAddNew.RefreshDtgvCallback = new RefreshDtgvDelegate(this.Refresh_dtgv_Fn);
-            FormAddNew.Show();
+            // refresh form (Hiện đang kich hoạt bên form AM_Main_Form
+            //Add_New FormAddNew = new Add_New();
+            //FormAddNew.RefreshDtgvCallback = new RefreshDtgvDelegate(this.Refresh_dtgv_Fn);
+            //FormAddNew.Show();
         }
         public SetParameterValueDelegate SetParameterValueCallback;
         public delegate void RefreshDtgvDelegate();
