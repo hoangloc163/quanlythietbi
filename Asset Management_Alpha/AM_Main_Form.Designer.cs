@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AM_Main_Form));
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.cb_Status_MrC = new System.Windows.Forms.ComboBox();
             this.label98 = new System.Windows.Forms.Label();
@@ -533,6 +534,7 @@
             this.Controls.Add(this.cb_Area_MrC);
             this.Controls.Add(this.txt_UserName_MrC);
             this.Controls.Add(this.dataGridView2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AM_Main_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Asset Management";
