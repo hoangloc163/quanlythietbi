@@ -18,11 +18,11 @@ namespace DataAccessLayer
         {
             // sua lai chuoi ket noi cho phu hop database và sua lai AppConfig
             //conn = new SqlConnection("Data Source=JR163\\SQLEXPRESS;Initial Catalog=QLVT_test;Integrated Security=True");
-            RegistryKey key = Registry.CurrentUser.OpenSubKey("Software\\QLVT_test");
+            RegistryKey key = Registry.CurrentUser.OpenSubKey("Software\\Asset Management");
             if (key != null) 
             {
                 var localMachine = RegistryKey.OpenBaseKey(RegistryHive.CurrentUser, RegistryView.Registry64);
-                var rk = localMachine.OpenSubKey("SOFTWARE\\QLVT_test");
+                var rk = localMachine.OpenSubKey("SOFTWARE\\Asset Management");
                 var DataBaseName = rk.GetValue("DatabaseName");
                 var ComputerName = rk.GetValue("ComputerName");
                 var ServerSQL = rk.GetValue("ServerName");
@@ -38,7 +38,7 @@ namespace DataAccessLayer
                 conn = new SqlConnection(ConnectString);
                 conn.Open();
 
-                RegistryKey key = Registry.CurrentUser.CreateSubKey("Software\\QLVT_test");
+                RegistryKey key = Registry.CurrentUser.CreateSubKey("Software\\Asset Management");
                 
                 key.SetValue("ServerName", sername);
                 key.SetValue("DatabaseName", DatabaseName);

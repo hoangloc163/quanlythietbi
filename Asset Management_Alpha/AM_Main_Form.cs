@@ -50,7 +50,7 @@ namespace Asset_Management_Alpha
 
         void TestRegister()
         {
-            RegistryKey key = Registry.CurrentUser.OpenSubKey("Software\\QLVT_test");
+            RegistryKey key = Registry.CurrentUser.OpenSubKey("Software\\Asset Management");
             if (key == null)
             {
                 ConnectToDataBaseForm frm = new ConnectToDataBaseForm();
