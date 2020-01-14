@@ -37,6 +37,7 @@ namespace Asset_Management_Alpha
 
             //MrC_XuLi();
             HienThiDataGridView2(SQLQuery);
+            label97.Text = dataGridView2.Rows.Count.ToString() + " Rows";
 
             // hien thi cb box
             loadcb_Area();
@@ -170,6 +171,7 @@ namespace Asset_Management_Alpha
             loadcb_Position();
             loadcb_Supplier();
             loadcb_Status();
+            label97.Text = dataGridView2.Rows.Count.ToString() + " Rows";
         }
 
         private void dataGridView2_CellEndEdit(object sender, DataGridViewCellEventArgs e)
@@ -210,12 +212,14 @@ namespace Asset_Management_Alpha
         private void Refresh_dtgv_Fn()
         {
             Refesh_dtgv();
+            label97.Text = dataGridView2.Rows.Count.ToString() + " Rows";
         }
 
         public void Refesh_dtgv()
         {
             HienThiDataGridView2(SQLQuery);
             dataGridView2.Refresh();
+            label97.Text = dataGridView2.Rows.Count.ToString() + " Rows";
         }
 
         private void MrC_BT_Search_Click(object sender, EventArgs e)
