@@ -360,6 +360,28 @@ namespace Asset_Management_Alpha
             loadcb_Supplier();
             loadcb_Status();
         }
+        private void txt_Serial_MrC_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txt_Serial_MrC.Text = txt_Serial_MrC.Text.Trim();
+                // code dua con tro ve cuoi
+                txt_Serial_MrC.Focus();
+                txt_Serial_MrC.SelectionStart = txt_Serial_MrC.Text.Length;
+            }
+        }
+
+        private void txt_UserName_MrC_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txt_UserName_MrC.Text = txt_UserName_MrC.Text.Trim();
+                // code dua con tro ve cuoi
+                txt_UserName_MrC.Focus();
+                txt_UserName_MrC.SelectionStart = txt_UserName_MrC.Text.Length;
+            }
+        }
+
         #endregion
     }
 }
