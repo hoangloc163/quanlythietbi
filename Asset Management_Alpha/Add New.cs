@@ -63,6 +63,9 @@ namespace Asset_Management_Alpha
         {
             loadcb_Area();
             loadcb_Supplier();
+            loadcb_Status();
+            loadcb_Devices();
+            loadcb_Brand();
         }
 
         void ViewToObj()
@@ -88,23 +91,50 @@ namespace Asset_Management_Alpha
             txt_remark.Clear();
         }
 
+        #region load Combobox
         public void loadcb_Area()
         {
             cb_Area.DataSource = busDevices.GetData4Cb_Area();
             cb_Area.DisplayMember = "darea".Trim();
         }
-
+        public void loadcb_Devices()
+        {
+            cb_Devices_MrC.DataSource = busDevices.GetData4Cb_Devices();
+            cb_Devices_MrC.DisplayMember = "dtype".Trim();
+        }
+        public void loadcb_Brand()
+        {
+            cb_Brand_MrC.DataSource = busDevices.GetData4Cb_Brand();
+            cb_Brand_MrC.DisplayMember = "brand".Trim();
+        }
         public void loadcb_Supplier()
         {
             cb_Supplier.DataSource = busDevices.GetData4Cb_Supplier();
             cb_Supplier.DisplayMember = "supplies".Trim();
         }
+        public void loadcb_Status()
+        {
+            cb_Status.DataSource = busDevices.GetData4Cb_Status();
+            cb_Status.DisplayMember = "dstatus".Trim();
+        }
+        #endregion
 
         private void txt_Serial_TextChanged(object sender, EventArgs e)
         {
             txt_Serial.CharacterCasing = CharacterCasing.Upper;
         }
-        
+
+        private void txt_Serial_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txt_Serial.Text = txt_Serial.Text.Trim();
+                // code dua con tro ve cuoi
+                txt_Serial.Focus();
+                txt_Serial.SelectionStart = txt_Serial.Text.Length;
+            }
+        }
+
         private void txt_Model_TextChanged(object sender, EventArgs e)
         {
             txt_Model.CharacterCasing = CharacterCasing.Upper;
@@ -122,6 +152,33 @@ namespace Asset_Management_Alpha
             // code dua con tro ve cuoi
             txt_macaddr.Focus();
             txt_macaddr.SelectionStart = txt_macaddr.Text.Length;
+        }
+
+        private void txt_macaddr_KeyDown(object sender, KeyEventArgs e)
+        {
+            int count_text = txt_macaddr.Text.Length;
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (!string.IsNullOrEmpty(txt_macaddr.Text))
+                {
+                    if (count_text < 17)
+                    {
+                        if (count_text == 12)
+                        {
+                            // chen dau ':' vao chuoi dia chi MAC
+                            txt_macaddr.Text = Regex.Replace(txt_macaddr.Text.ToString(), ".{2}", "$0:");
+                            txt_macaddr.Text = txt_macaddr.Text.Substring(0, 17);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Vui lòng kiểm tra lại địa chỉ MAC");
+                        }
+                    }
+                }
+                // code dua con tro ve cuoi
+                txt_macaddr.Focus();
+                txt_macaddr.SelectionStart = txt_macaddr.Text.Length;
+            }
         }
 
         private void cb_Brand_MrC_TextChanged(object sender, EventArgs e)

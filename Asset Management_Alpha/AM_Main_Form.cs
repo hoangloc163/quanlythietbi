@@ -19,6 +19,7 @@ namespace Asset_Management_Alpha
         {
             InitializeComponent();
         }
+
         #region Var and Object
         Devices objDevices = new Devices();
         DevicesBUS busDevices = new DevicesBUS();

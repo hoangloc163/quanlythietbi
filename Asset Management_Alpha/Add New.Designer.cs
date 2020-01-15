@@ -179,6 +179,7 @@
             this.txt_Serial.Size = new System.Drawing.Size(142, 20);
             this.txt_Serial.TabIndex = 18;
             this.txt_Serial.TextChanged += new System.EventHandler(this.txt_Serial_TextChanged);
+            this.txt_Serial.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_Serial_KeyDown);
             // 
             // label9
             // 
@@ -197,6 +198,7 @@
             this.txt_macaddr.Size = new System.Drawing.Size(121, 20);
             this.txt_macaddr.TabIndex = 20;
             this.txt_macaddr.TextChanged += new System.EventHandler(this.txt_macaddr_TextChanged);
+            this.txt_macaddr.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_macaddr_KeyDown);
             // 
             // label8
             // 
