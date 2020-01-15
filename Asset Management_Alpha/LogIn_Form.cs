@@ -85,6 +85,8 @@ namespace Asset_Management_Alpha
         {
             //check connect database
             TestRegister();
+
+            this.AcceptButton = bt_Login;
         }
     }
 }
