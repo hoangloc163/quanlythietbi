@@ -32,6 +32,30 @@
             Asset_Management_Alpha.QLVT_testDataSet1 qLVT_testDataSet1;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AM_Main_Form));
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.col_darea_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_devices_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_brand_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_Supplies_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_model_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_serial_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_hostname_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_invoice_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_handover_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_Warranty_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_dstatus_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_remark_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_location_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_assetcode_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_username_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_position_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_memory_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_hdd_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_macaddr_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_ipaddr_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_dns_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_defaultgw_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_logname_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_password_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dEVICESTBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cb_Status_MrC = new System.Windows.Forms.ComboBox();
             this.label98 = new System.Windows.Forms.Label();
@@ -57,35 +81,17 @@
             this.MrC_BT_Cancel = new System.Windows.Forms.Button();
             this.label97 = new System.Windows.Forms.Label();
             this.dEVICES_TBLTableAdapter = new Asset_Management_Alpha.QLVT_testDataSet1TableAdapters.DEVICES_TBLTableAdapter();
-            this.col_darea_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_devices_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_brand_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_Supplies_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_model_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_serial_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_hostname_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_invoice_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_handover_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_Warranty_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_dstatus_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_remark_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_location_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_assetcode_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_username_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_position_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_memory_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_hdd_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_macaddr_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_ipaddr_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_dns_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_defaultgw_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_logname_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_password_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.chk_Area = new System.Windows.Forms.CheckBox();
             qLVT_testDataSet1 = new Asset_Management_Alpha.QLVT_testDataSet1();
+            ((System.ComponentModel.ISupportInitialize)(qLVT_testDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dEVICESTBLBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(qLVT_testDataSet1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // qLVT_testDataSet1
+            // 
+            qLVT_testDataSet1.DataSetName = "QLVT_testDataSet1";
+            qLVT_testDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // dataGridView2
             // 
@@ -132,14 +138,201 @@
             this.dataGridView2.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellEndEdit);
             this.dataGridView2.UserDeletedRow += new System.Windows.Forms.DataGridViewRowEventHandler(this.dataGridView2_UserDeletedRow);
             // 
+            // col_darea_MrC
+            // 
+            this.col_darea_MrC.DataPropertyName = "DAREA";
+            this.col_darea_MrC.Frozen = true;
+            this.col_darea_MrC.HeaderText = "AREA";
+            this.col_darea_MrC.MaxInputLength = 3;
+            this.col_darea_MrC.Name = "col_darea_MrC";
+            this.col_darea_MrC.Width = 41;
+            // 
+            // col_devices_MrC
+            // 
+            this.col_devices_MrC.DataPropertyName = "DTYPE";
+            this.col_devices_MrC.Frozen = true;
+            this.col_devices_MrC.HeaderText = "DEVICES";
+            this.col_devices_MrC.MaxInputLength = 20;
+            this.col_devices_MrC.Name = "col_devices_MrC";
+            this.col_devices_MrC.Width = 68;
+            // 
+            // col_brand_MrC
+            // 
+            this.col_brand_MrC.DataPropertyName = "BRAND";
+            this.col_brand_MrC.Frozen = true;
+            this.col_brand_MrC.HeaderText = "BRAND";
+            this.col_brand_MrC.MaxInputLength = 10;
+            this.col_brand_MrC.Name = "col_brand_MrC";
+            this.col_brand_MrC.Width = 60;
+            // 
+            // col_Supplies_MrC
+            // 
+            this.col_Supplies_MrC.DataPropertyName = "SUPPLIES";
+            this.col_Supplies_MrC.Frozen = true;
+            this.col_Supplies_MrC.HeaderText = "SUPPLIER";
+            this.col_Supplies_MrC.MaxInputLength = 20;
+            this.col_Supplies_MrC.Name = "col_Supplies_MrC";
+            this.col_Supplies_MrC.Width = 84;
+            // 
+            // col_model_MrC
+            // 
+            this.col_model_MrC.DataPropertyName = "MODEL";
+            this.col_model_MrC.Frozen = true;
+            this.col_model_MrC.HeaderText = "MODEL";
+            this.col_model_MrC.MaxInputLength = 100;
+            this.col_model_MrC.Name = "col_model_MrC";
+            this.col_model_MrC.Width = 70;
+            // 
+            // col_serial_MrC
+            // 
+            this.col_serial_MrC.DataPropertyName = "SERIAL";
+            this.col_serial_MrC.Frozen = true;
+            this.col_serial_MrC.HeaderText = "SERIAL";
+            this.col_serial_MrC.MaxInputLength = 50;
+            this.col_serial_MrC.Name = "col_serial_MrC";
+            this.col_serial_MrC.ReadOnly = true;
+            this.col_serial_MrC.Width = 70;
+            // 
+            // col_hostname_MrC
+            // 
+            this.col_hostname_MrC.DataPropertyName = "HOSTNAME";
+            this.col_hostname_MrC.Frozen = true;
+            this.col_hostname_MrC.HeaderText = "HOST NAME";
+            this.col_hostname_MrC.MaxInputLength = 20;
+            this.col_hostname_MrC.Name = "col_hostname_MrC";
+            this.col_hostname_MrC.Width = 76;
+            // 
+            // col_invoice_MrC
+            // 
+            this.col_invoice_MrC.DataPropertyName = "INVOICE_DATE";
+            this.col_invoice_MrC.HeaderText = "INVOICE DATE";
+            this.col_invoice_MrC.MaxInputLength = 10;
+            this.col_invoice_MrC.Name = "col_invoice_MrC";
+            this.col_invoice_MrC.Width = 80;
+            // 
+            // col_handover_MrC
+            // 
+            this.col_handover_MrC.DataPropertyName = "HANDOVER_DATE";
+            this.col_handover_MrC.HeaderText = "HAND-OVER DATE";
+            this.col_handover_MrC.MaxInputLength = 10;
+            this.col_handover_MrC.Name = "col_handover_MrC";
+            this.col_handover_MrC.Width = 87;
+            // 
+            // col_Warranty_MrC
+            // 
+            this.col_Warranty_MrC.DataPropertyName = "WARANTY";
+            this.col_Warranty_MrC.HeaderText = "WARRANTY";
+            this.col_Warranty_MrC.MaxInputLength = 10;
+            this.col_Warranty_MrC.Name = "col_Warranty_MrC";
+            this.col_Warranty_MrC.Width = 85;
+            // 
+            // col_dstatus_MrC
+            // 
+            this.col_dstatus_MrC.DataPropertyName = "DSTATUS";
+            this.col_dstatus_MrC.HeaderText = "STATUS";
+            this.col_dstatus_MrC.MaxInputLength = 5;
+            this.col_dstatus_MrC.Name = "col_dstatus_MrC";
+            // 
+            // col_remark_MrC
+            // 
+            this.col_remark_MrC.DataPropertyName = "REMARK";
+            this.col_remark_MrC.HeaderText = "REMARK";
+            this.col_remark_MrC.MaxInputLength = 150;
+            this.col_remark_MrC.Name = "col_remark_MrC";
+            this.col_remark_MrC.Width = 78;
+            // 
+            // col_location_MrC
+            // 
+            this.col_location_MrC.DataPropertyName = "LOCATION";
+            this.col_location_MrC.HeaderText = "LOCATION";
+            this.col_location_MrC.MaxInputLength = 30;
+            this.col_location_MrC.Name = "col_location_MrC";
+            this.col_location_MrC.Width = 86;
+            // 
+            // col_assetcode_MrC
+            // 
+            this.col_assetcode_MrC.DataPropertyName = "ASSETCODE";
+            this.col_assetcode_MrC.HeaderText = "ASSET CODE";
+            this.col_assetcode_MrC.MaxInputLength = 20;
+            this.col_assetcode_MrC.Name = "col_assetcode_MrC";
+            this.col_assetcode_MrC.Width = 92;
+            // 
+            // col_username_MrC
+            // 
+            this.col_username_MrC.DataPropertyName = "USRNAME";
+            this.col_username_MrC.HeaderText = "USER NAME";
+            this.col_username_MrC.MaxInputLength = 50;
+            this.col_username_MrC.Name = "col_username_MrC";
+            this.col_username_MrC.Width = 93;
+            // 
+            // col_position_MrC
+            // 
+            this.col_position_MrC.DataPropertyName = "POSITION";
+            this.col_position_MrC.HeaderText = "POSITION";
+            this.col_position_MrC.MaxInputLength = 30;
+            this.col_position_MrC.Name = "col_position_MrC";
+            this.col_position_MrC.Width = 83;
+            // 
+            // col_memory_MrC
+            // 
+            this.col_memory_MrC.DataPropertyName = "MEMORY";
+            this.col_memory_MrC.HeaderText = "MEMORY";
+            this.col_memory_MrC.MaxInputLength = 5;
+            this.col_memory_MrC.Name = "col_memory_MrC";
+            this.col_memory_MrC.Width = 80;
+            // 
+            // col_hdd_MrC
+            // 
+            this.col_hdd_MrC.DataPropertyName = "HDD";
+            this.col_hdd_MrC.HeaderText = "HDD";
+            this.col_hdd_MrC.MaxInputLength = 5;
+            this.col_hdd_MrC.Name = "col_hdd_MrC";
+            this.col_hdd_MrC.Width = 56;
+            // 
+            // col_macaddr_MrC
+            // 
+            this.col_macaddr_MrC.DataPropertyName = "MAC_ADDR";
+            this.col_macaddr_MrC.HeaderText = "MAC ADDRESS";
+            this.col_macaddr_MrC.MaxInputLength = 17;
+            this.col_macaddr_MrC.Name = "col_macaddr_MrC";
+            // 
+            // col_ipaddr_MrC
+            // 
+            this.col_ipaddr_MrC.DataPropertyName = "IP_ADDR";
+            this.col_ipaddr_MrC.HeaderText = "IP ADDRESS";
+            this.col_ipaddr_MrC.MaxInputLength = 15;
+            this.col_ipaddr_MrC.Name = "col_ipaddr_MrC";
+            // 
+            // col_dns_MrC
+            // 
+            this.col_dns_MrC.DataPropertyName = "DNS";
+            this.col_dns_MrC.HeaderText = "DNS";
+            this.col_dns_MrC.MaxInputLength = 15;
+            this.col_dns_MrC.Name = "col_dns_MrC";
+            // 
+            // col_defaultgw_MrC
+            // 
+            this.col_defaultgw_MrC.DataPropertyName = "DEFAULT_GW";
+            this.col_defaultgw_MrC.HeaderText = "DEFAULT GW";
+            this.col_defaultgw_MrC.MaxInputLength = 15;
+            this.col_defaultgw_MrC.Name = "col_defaultgw_MrC";
+            // 
+            // col_logname_MrC
+            // 
+            this.col_logname_MrC.DataPropertyName = "LOG_NAME";
+            this.col_logname_MrC.HeaderText = "LOGIN NAME";
+            this.col_logname_MrC.MaxInputLength = 20;
+            this.col_logname_MrC.Name = "col_logname_MrC";
+            // 
+            // col_password_MrC
+            // 
+            this.col_password_MrC.DataPropertyName = "PASSWRD";
+            this.col_password_MrC.HeaderText = "PASSWORD";
+            this.col_password_MrC.Name = "col_password_MrC";
+            // 
             // dEVICESTBLBindingSource
             // 
             this.dEVICESTBLBindingSource.AllowNew = false;
-            // 
-            // qLVT_testDataSet1
-            // 
-            qLVT_testDataSet1.DataSetName = "QLVT_testDataSet1";
-            qLVT_testDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // cb_Status_MrC
             // 
@@ -366,203 +559,22 @@
             // 
             this.dEVICES_TBLTableAdapter.ClearBeforeFill = true;
             // 
-            // col_darea_MrC
+            // chk_Area
             // 
-            this.col_darea_MrC.DataPropertyName = "DAREA";
-            this.col_darea_MrC.Frozen = true;
-            this.col_darea_MrC.HeaderText = "AREA";
-            this.col_darea_MrC.MaxInputLength = 3;
-            this.col_darea_MrC.Name = "col_darea_MrC";
-            this.col_darea_MrC.Width = 41;
-            // 
-            // col_devices_MrC
-            // 
-            this.col_devices_MrC.DataPropertyName = "DTYPE";
-            this.col_devices_MrC.Frozen = true;
-            this.col_devices_MrC.HeaderText = "DEVICES";
-            this.col_devices_MrC.MaxInputLength = 20;
-            this.col_devices_MrC.Name = "col_devices_MrC";
-            this.col_devices_MrC.Width = 68;
-            // 
-            // col_brand_MrC
-            // 
-            this.col_brand_MrC.DataPropertyName = "BRAND";
-            this.col_brand_MrC.Frozen = true;
-            this.col_brand_MrC.HeaderText = "BRAND";
-            this.col_brand_MrC.MaxInputLength = 10;
-            this.col_brand_MrC.Name = "col_brand_MrC";
-            this.col_brand_MrC.Width = 60;
-            // 
-            // col_Supplies_MrC
-            // 
-            this.col_Supplies_MrC.DataPropertyName = "SUPPLIES";
-            this.col_Supplies_MrC.Frozen = true;
-            this.col_Supplies_MrC.HeaderText = "SUPPLIER";
-            this.col_Supplies_MrC.MaxInputLength = 20;
-            this.col_Supplies_MrC.Name = "col_Supplies_MrC";
-            this.col_Supplies_MrC.Width = 84;
-            // 
-            // col_model_MrC
-            // 
-            this.col_model_MrC.DataPropertyName = "MODEL";
-            this.col_model_MrC.Frozen = true;
-            this.col_model_MrC.HeaderText = "MODEL";
-            this.col_model_MrC.MaxInputLength = 100;
-            this.col_model_MrC.Name = "col_model_MrC";
-            this.col_model_MrC.Width = 70;
-            // 
-            // col_serial_MrC
-            // 
-            this.col_serial_MrC.DataPropertyName = "SERIAL";
-            this.col_serial_MrC.Frozen = true;
-            this.col_serial_MrC.HeaderText = "SERIAL";
-            this.col_serial_MrC.MaxInputLength = 50;
-            this.col_serial_MrC.Name = "col_serial_MrC";
-            this.col_serial_MrC.ReadOnly = true;
-            this.col_serial_MrC.Width = 70;
-            // 
-            // col_hostname_MrC
-            // 
-            this.col_hostname_MrC.DataPropertyName = "HOSTNAME";
-            this.col_hostname_MrC.Frozen = true;
-            this.col_hostname_MrC.HeaderText = "HOST NAME";
-            this.col_hostname_MrC.MaxInputLength = 20;
-            this.col_hostname_MrC.Name = "col_hostname_MrC";
-            this.col_hostname_MrC.Width = 76;
-            // 
-            // col_invoice_MrC
-            // 
-            this.col_invoice_MrC.DataPropertyName = "INVOICE_DATE";
-            this.col_invoice_MrC.HeaderText = "INVOICE DATE";
-            this.col_invoice_MrC.MaxInputLength = 10;
-            this.col_invoice_MrC.Name = "col_invoice_MrC";
-            this.col_invoice_MrC.Width = 80;
-            // 
-            // col_handover_MrC
-            // 
-            this.col_handover_MrC.DataPropertyName = "HANDOVER_DATE";
-            this.col_handover_MrC.HeaderText = "HAND-OVER DATE";
-            this.col_handover_MrC.MaxInputLength = 10;
-            this.col_handover_MrC.Name = "col_handover_MrC";
-            this.col_handover_MrC.Width = 87;
-            // 
-            // col_Warranty_MrC
-            // 
-            this.col_Warranty_MrC.DataPropertyName = "WARANTY";
-            this.col_Warranty_MrC.HeaderText = "WARRANTY";
-            this.col_Warranty_MrC.MaxInputLength = 10;
-            this.col_Warranty_MrC.Name = "col_Warranty_MrC";
-            this.col_Warranty_MrC.Width = 85;
-            // 
-            // col_dstatus_MrC
-            // 
-            this.col_dstatus_MrC.DataPropertyName = "DSTATUS";
-            this.col_dstatus_MrC.HeaderText = "STATUS";
-            this.col_dstatus_MrC.MaxInputLength = 5;
-            this.col_dstatus_MrC.Name = "col_dstatus_MrC";
-            // 
-            // col_remark_MrC
-            // 
-            this.col_remark_MrC.DataPropertyName = "REMARK";
-            this.col_remark_MrC.HeaderText = "REMARK";
-            this.col_remark_MrC.MaxInputLength = 150;
-            this.col_remark_MrC.Name = "col_remark_MrC";
-            this.col_remark_MrC.Width = 78;
-            // 
-            // col_location_MrC
-            // 
-            this.col_location_MrC.DataPropertyName = "LOCATION";
-            this.col_location_MrC.HeaderText = "LOCATION";
-            this.col_location_MrC.MaxInputLength = 30;
-            this.col_location_MrC.Name = "col_location_MrC";
-            this.col_location_MrC.Width = 86;
-            // 
-            // col_assetcode_MrC
-            // 
-            this.col_assetcode_MrC.DataPropertyName = "ASSETCODE";
-            this.col_assetcode_MrC.HeaderText = "ASSET CODE";
-            this.col_assetcode_MrC.MaxInputLength = 20;
-            this.col_assetcode_MrC.Name = "col_assetcode_MrC";
-            this.col_assetcode_MrC.Width = 92;
-            // 
-            // col_username_MrC
-            // 
-            this.col_username_MrC.DataPropertyName = "USRNAME";
-            this.col_username_MrC.HeaderText = "USER NAME";
-            this.col_username_MrC.MaxInputLength = 50;
-            this.col_username_MrC.Name = "col_username_MrC";
-            this.col_username_MrC.Width = 93;
-            // 
-            // col_position_MrC
-            // 
-            this.col_position_MrC.DataPropertyName = "POSITION";
-            this.col_position_MrC.HeaderText = "POSITION";
-            this.col_position_MrC.MaxInputLength = 30;
-            this.col_position_MrC.Name = "col_position_MrC";
-            this.col_position_MrC.Width = 83;
-            // 
-            // col_memory_MrC
-            // 
-            this.col_memory_MrC.DataPropertyName = "MEMORY";
-            this.col_memory_MrC.HeaderText = "MEMORY";
-            this.col_memory_MrC.MaxInputLength = 5;
-            this.col_memory_MrC.Name = "col_memory_MrC";
-            this.col_memory_MrC.Width = 80;
-            // 
-            // col_hdd_MrC
-            // 
-            this.col_hdd_MrC.DataPropertyName = "HDD";
-            this.col_hdd_MrC.HeaderText = "HDD";
-            this.col_hdd_MrC.MaxInputLength = 5;
-            this.col_hdd_MrC.Name = "col_hdd_MrC";
-            this.col_hdd_MrC.Width = 56;
-            // 
-            // col_macaddr_MrC
-            // 
-            this.col_macaddr_MrC.DataPropertyName = "MAC_ADDR";
-            this.col_macaddr_MrC.HeaderText = "MAC ADDRESS";
-            this.col_macaddr_MrC.MaxInputLength = 17;
-            this.col_macaddr_MrC.Name = "col_macaddr_MrC";
-            // 
-            // col_ipaddr_MrC
-            // 
-            this.col_ipaddr_MrC.DataPropertyName = "IP_ADDR";
-            this.col_ipaddr_MrC.HeaderText = "IP ADDRESS";
-            this.col_ipaddr_MrC.MaxInputLength = 15;
-            this.col_ipaddr_MrC.Name = "col_ipaddr_MrC";
-            // 
-            // col_dns_MrC
-            // 
-            this.col_dns_MrC.DataPropertyName = "DNS";
-            this.col_dns_MrC.HeaderText = "DNS";
-            this.col_dns_MrC.MaxInputLength = 15;
-            this.col_dns_MrC.Name = "col_dns_MrC";
-            // 
-            // col_defaultgw_MrC
-            // 
-            this.col_defaultgw_MrC.DataPropertyName = "DEFAULT_GW";
-            this.col_defaultgw_MrC.HeaderText = "DEFAULT GW";
-            this.col_defaultgw_MrC.MaxInputLength = 15;
-            this.col_defaultgw_MrC.Name = "col_defaultgw_MrC";
-            // 
-            // col_logname_MrC
-            // 
-            this.col_logname_MrC.DataPropertyName = "LOG_NAME";
-            this.col_logname_MrC.HeaderText = "LOGIN NAME";
-            this.col_logname_MrC.MaxInputLength = 20;
-            this.col_logname_MrC.Name = "col_logname_MrC";
-            // 
-            // col_password_MrC
-            // 
-            this.col_password_MrC.DataPropertyName = "PASSWRD";
-            this.col_password_MrC.HeaderText = "PASSWORD";
-            this.col_password_MrC.Name = "col_password_MrC";
+            this.chk_Area.AutoSize = true;
+            this.chk_Area.Location = new System.Drawing.Point(134, 17);
+            this.chk_Area.Name = "chk_Area";
+            this.chk_Area.Size = new System.Drawing.Size(15, 14);
+            this.chk_Area.TabIndex = 75;
+            this.chk_Area.UseVisualStyleBackColor = true;
+            this.chk_Area.CheckedChanged += new System.EventHandler(this.chk_Area_CheckedChanged);
             // 
             // AM_Main_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1229, 587);
+            this.Controls.Add(this.chk_Area);
             this.Controls.Add(this.label97);
             this.Controls.Add(this.bt_Insert_MrC);
             this.Controls.Add(this.MrC_BT_Cancel);
@@ -592,9 +604,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Asset Management";
             this.Load += new System.EventHandler(this.AM_Main_Form_Load);
+            ((System.ComponentModel.ISupportInitialize)(qLVT_testDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dEVICESTBLBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(qLVT_testDataSet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -652,5 +664,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn col_defaultgw_MrC;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_logname_MrC;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_password_MrC;
+        private System.Windows.Forms.CheckBox chk_Area;
     }
 }

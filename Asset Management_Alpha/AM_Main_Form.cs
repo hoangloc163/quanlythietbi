@@ -236,9 +236,12 @@ namespace Asset_Management_Alpha
             string filter = "";
             if (rbt_And_Check.Checked == true)
             {
-                if (!string.IsNullOrEmpty(cb_Area_MrC.Text))
+                if (chk_Area.Checked == false)
                 {
-                    filter += "DAREA" /*+ dataGridView2.Columns["col_mrc_area"].HeaderText.ToString()*/ + " LIKE '" + cb_Area_MrC.Text.Trim() + "' ";
+                    if (!string.IsNullOrEmpty(cb_Area_MrC.Text))
+                    {
+                        filter += "DAREA" /*+ dataGridView2.Columns["col_mrc_area"].HeaderText.ToString()*/ + " LIKE '" + cb_Area_MrC.Text.Trim() + "' ";
+                    }
                 }
                 if (!string.IsNullOrEmpty(cb_Devices_MrC.Text))
                 {
@@ -384,5 +387,17 @@ namespace Asset_Management_Alpha
         }
 
         #endregion
+
+        private void chk_Area_CheckedChanged(object sender, EventArgs e)
+        {
+            if(chk_Area.Checked == true)
+            {
+                cb_Area_MrC.Enabled = false;
+            }
+            else
+            {
+                cb_Area_MrC.Enabled = true;
+            }
+        }
     }
 }
