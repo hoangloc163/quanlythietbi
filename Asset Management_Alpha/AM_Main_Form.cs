@@ -32,6 +32,11 @@ namespace Asset_Management_Alpha
         #region Check on Form
         private void AM_Main_Form_Load(object sender, EventArgs e)
         {
+            /* fix loi Frozen column phai insert Datasource vao
+            // TODO: This line of code loads data into the 'qLVT_testDataSet1.DEVICES_TBL' table. You can move, or remove it, as needed.
+            //this.dEVICES_TBLTableAdapter.Fill(this.qLVT_testDataSet1.DEVICES_TBL);
+            */
+            
             //connect database
             TestRegister();
 
@@ -232,42 +237,60 @@ namespace Asset_Management_Alpha
             {
                 if (!string.IsNullOrEmpty(cb_Area_MrC.Text))
                 {
-                    filter += "DAREA" /*+ dataGridView2.Columns["col_mrc_area"].HeaderText.ToString()*/ + " LIKE '%" + cb_Area_MrC.Text.Trim() + "%' ";
+                    filter += "DAREA" /*+ dataGridView2.Columns["col_mrc_area"].HeaderText.ToString()*/ + " LIKE '" + cb_Area_MrC.Text.Trim() + "' ";
                 }
                 if (!string.IsNullOrEmpty(cb_Devices_MrC.Text))
                 {
                     if (filter.Length > 0) filter += "AND "; // dk AND
-                    filter += "DTYPE" + " LIKE '%" + cb_Devices_MrC.Text.Trim() + "%' ";
+                    filter += "DTYPE" + " LIKE '" + cb_Devices_MrC.Text.Trim() + "' ";
                 }
                 if (!string.IsNullOrEmpty(cb_Brand_MrC.Text))
                 {
-                    if (filter.Length > 0) filter += "AND ";
-                    filter += "BRAND" /*dataGridView2.Columns["col_mrc_brand"].HeaderText.ToString()*/ + " LIKE '%" + cb_Brand_MrC.Text.Trim() + "%' ";
+                    if (!string.IsNullOrWhiteSpace(cb_Brand_MrC.Text))
+                    {
+                        if (filter.Length > 0) filter += "AND ";
+                        filter += "BRAND" /*dataGridView2.Columns["col_mrc_brand"].HeaderText.ToString()*/ + " LIKE '" + cb_Brand_MrC.Text.Trim() + "' ";
+                    }
                 }
                 if (!string.IsNullOrEmpty(cb_Supplier_MrC.Text))
                 {
-                    if (filter.Length > 0) filter += "AND ";
-                    filter += "SUPPLIES" + " LIKE '%" + cb_Supplier_MrC.Text.Trim() + "%' ";
+                    if (!string.IsNullOrWhiteSpace(cb_Supplier_MrC.Text))
+                    {
+                        if (filter.Length > 0) filter += "AND ";
+                        filter += "SUPPLIES" + " LIKE '" + cb_Supplier_MrC.Text.Trim() + "' ";
+                    }
                 }
                 if (!string.IsNullOrEmpty(cb_Position_MrC.Text))
                 {
-                    if (filter.Length > 0) filter += "AND ";
-                    filter += /*dataGridView2.Columns["col_mrc_position"].HeaderText.ToString()*/ "POSITION" + " LIKE '%" + cb_Position_MrC.Text.Trim() + "%' ";
+                    if (!string.IsNullOrWhiteSpace(cb_Position_MrC.Text))
+                    {
+                        if (filter.Length > 0) filter += "AND ";
+                        filter += /*dataGridView2.Columns["col_mrc_position"].HeaderText.ToString()*/ "POSITION" + " LIKE '" + cb_Position_MrC.Text.Trim() + "' ";
+                    }
                 }
                 if (!string.IsNullOrEmpty(txt_UserName_MrC.Text))
                 {
-                    if (filter.Length > 0) filter += "AND ";
-                    filter += "USRNAME" + " LIKE '%" + txt_UserName_MrC.Text.Trim() + "%' ";
+                    if (!string.IsNullOrWhiteSpace(txt_UserName_MrC.Text))
+                    {
+                        if (filter.Length > 0) filter += "AND ";
+                        filter += "USRNAME" + " LIKE '%" + txt_UserName_MrC.Text.Trim() + "%' ";
+                    }
                 }
                 if (!string.IsNullOrEmpty(txt_Serial_MrC.Text))
                 {
-                    if (filter.Length > 0) filter += "AND ";
-                    filter += "SERIAL" + " LIKE '%" + txt_Serial_MrC.Text.Trim() + "%' ";
+                    if (!string.IsNullOrWhiteSpace(txt_Serial_MrC.Text))
+                    {
+                        if (filter.Length > 0) filter += "AND ";
+                        filter += "SERIAL" + " LIKE '%" + txt_Serial_MrC.Text.Trim() + "%' ";
+                    }
                 }
                 if (!string.IsNullOrEmpty(cb_Status_MrC.Text))
                 {
-                    if (filter.Length > 0) filter += "AND ";
-                    filter += "DSTATUS" + " LIKE '%" + cb_Status_MrC.Text.Trim() + "%' ";
+                    if(!string.IsNullOrWhiteSpace(cb_Status_MrC.Text))
+                    {
+                        if (filter.Length > 0) filter += "AND ";
+                        filter += "DSTATUS" + " LIKE '" + cb_Status_MrC.Text.Trim() + "' ";
+                    }
                 }
             }
 
@@ -276,27 +299,27 @@ namespace Asset_Management_Alpha
             {
                 if (!string.IsNullOrEmpty(cb_Area_MrC.Text))
                 {
-                    filter += "DAREA" /*+ dataGridView2.Columns["col_mrc_area"].HeaderText.ToString()*/ + " LIKE '%" + cb_Area_MrC.Text.Trim() + "%' ";
+                    filter += "DAREA" /*+ dataGridView2.Columns["col_mrc_area"].HeaderText.ToString()*/ + " LIKE '" + cb_Area_MrC.Text.Trim() + "' ";
                 }
                 if (!string.IsNullOrEmpty(cb_Devices_MrC.Text))
                 {
                     if (filter.Length > 0) filter += "OR "; // dk AND
-                    filter += "DTYPE" + " LIKE '%" + cb_Devices_MrC.Text.Trim() + "%' ";
+                    filter += "DTYPE" + " LIKE '" + cb_Devices_MrC.Text.Trim() + "' ";
                 }
                 if (!string.IsNullOrEmpty(cb_Brand_MrC.Text))
                 {
                     if (filter.Length > 0) filter += "OR ";
-                    filter += "BRAND" /*dataGridView2.Columns["col_mrc_brand"].HeaderText.ToString()*/ + " LIKE '%" + cb_Brand_MrC.Text.Trim() + "%' ";
+                    filter += "BRAND" /*dataGridView2.Columns["col_mrc_brand"].HeaderText.ToString()*/ + " LIKE '" + cb_Brand_MrC.Text.Trim() + "' ";
                 }
                 if (!string.IsNullOrEmpty(cb_Supplier_MrC.Text))
                 {
                     if (filter.Length > 0) filter += "OR ";
-                    filter += "SUPPLIES" + " LIKE '%" + cb_Supplier_MrC.Text.Trim() + "%' ";
+                    filter += "SUPPLIES" + " LIKE '" + cb_Supplier_MrC.Text.Trim() + "' ";
                 }
                 if (!string.IsNullOrEmpty(cb_Position_MrC.Text))
                 {
                     if (filter.Length > 0) filter += "OR ";
-                    filter += /*dataGridView2.Columns["col_mrc_position"].HeaderText.ToString()*/ "POSITION" + " LIKE '%" + cb_Position_MrC.Text.Trim() + "%' ";
+                    filter += /*dataGridView2.Columns["col_mrc_position"].HeaderText.ToString()*/ "POSITION" + " LIKE '" + cb_Position_MrC.Text.Trim() + "' ";
                 }
                 if (!string.IsNullOrEmpty(txt_UserName_MrC.Text))
                 {
@@ -311,7 +334,7 @@ namespace Asset_Management_Alpha
                 if (!string.IsNullOrEmpty(cb_Status_MrC.Text))
                 {
                     if (filter.Length > 0) filter += "OR ";
-                    filter += "DSTATUS" + " LIKE '%" + cb_Status_MrC.Text.Trim() + "%' ";
+                    filter += "DSTATUS" + " LIKE '" + cb_Status_MrC.Text.Trim() + "' ";
                 }
             }
             bs.Filter = filter;

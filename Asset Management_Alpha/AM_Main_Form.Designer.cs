@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AM_Main_Form));
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.cb_Status_MrC = new System.Windows.Forms.ComboBox();
@@ -53,6 +54,9 @@
             this.bt_Insert_MrC = new System.Windows.Forms.Button();
             this.MrC_BT_Cancel = new System.Windows.Forms.Button();
             this.label97 = new System.Windows.Forms.Label();
+            this.qLVT_testDataSet1 = new Asset_Management_Alpha.QLVT_testDataSet1();
+            this.dEVICESTBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dEVICES_TBLTableAdapter = new Asset_Management_Alpha.QLVT_testDataSet1TableAdapters.DEVICES_TBLTableAdapter();
             this.col_darea_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_devices_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_brand_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -77,12 +81,37 @@
             this.col_defaultgw_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_logname_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_password_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sERIALDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hOSTNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bRANDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mODELDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iNVOICEDATEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hANDOVERDATEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.wARANTYDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sUPPLIESDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rEMARKDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.aSSETCODEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mEMORYDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hDDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mACADDRDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iPADDRDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dNSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dEFAULTGWDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pASSWRDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lOGNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dTYPEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dSTATUSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dAREADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.uSRNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qLVT_testDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dEVICESTBLBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView2
             // 
             this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AutoGenerateColumns = false;
             this.dataGridView2.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -110,7 +139,30 @@
             this.col_dns_MrC,
             this.col_defaultgw_MrC,
             this.col_logname_MrC,
-            this.col_password_MrC});
+            this.col_password_MrC,
+            this.sERIALDataGridViewTextBoxColumn,
+            this.hOSTNAMEDataGridViewTextBoxColumn,
+            this.bRANDDataGridViewTextBoxColumn,
+            this.mODELDataGridViewTextBoxColumn,
+            this.iNVOICEDATEDataGridViewTextBoxColumn,
+            this.hANDOVERDATEDataGridViewTextBoxColumn,
+            this.wARANTYDataGridViewTextBoxColumn,
+            this.sUPPLIESDataGridViewTextBoxColumn,
+            this.rEMARKDataGridViewTextBoxColumn,
+            this.aSSETCODEDataGridViewTextBoxColumn,
+            this.mEMORYDataGridViewTextBoxColumn,
+            this.hDDDataGridViewTextBoxColumn,
+            this.mACADDRDataGridViewTextBoxColumn,
+            this.iPADDRDataGridViewTextBoxColumn,
+            this.dNSDataGridViewTextBoxColumn,
+            this.dEFAULTGWDataGridViewTextBoxColumn,
+            this.pASSWRDDataGridViewTextBoxColumn,
+            this.lOGNAMEDataGridViewTextBoxColumn,
+            this.dTYPEDataGridViewTextBoxColumn,
+            this.dSTATUSDataGridViewTextBoxColumn,
+            this.dAREADataGridViewTextBoxColumn,
+            this.uSRNAMEDataGridViewTextBoxColumn});
+            this.dataGridView2.DataSource = this.dEVICESTBLBindingSource;
             this.dataGridView2.EnableHeadersVisualStyles = false;
             this.dataGridView2.Location = new System.Drawing.Point(12, 85);
             this.dataGridView2.MultiSelect = false;
@@ -340,9 +392,24 @@
             this.label97.TabIndex = 74;
             this.label97.Text = "0 Rows";
             // 
+            // qLVT_testDataSet1
+            // 
+            this.qLVT_testDataSet1.DataSetName = "QLVT_testDataSet1";
+            this.qLVT_testDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dEVICESTBLBindingSource
+            // 
+            this.dEVICESTBLBindingSource.DataMember = "DEVICES_TBL";
+            this.dEVICESTBLBindingSource.DataSource = this.qLVT_testDataSet1;
+            // 
+            // dEVICES_TBLTableAdapter
+            // 
+            this.dEVICES_TBLTableAdapter.ClearBeforeFill = true;
+            // 
             // col_darea_MrC
             // 
             this.col_darea_MrC.DataPropertyName = "DAREA";
+            this.col_darea_MrC.Frozen = true;
             this.col_darea_MrC.HeaderText = "AREA";
             this.col_darea_MrC.MaxInputLength = 3;
             this.col_darea_MrC.Name = "col_darea_MrC";
@@ -351,35 +418,45 @@
             // col_devices_MrC
             // 
             this.col_devices_MrC.DataPropertyName = "DTYPE";
+            this.col_devices_MrC.Frozen = true;
             this.col_devices_MrC.HeaderText = "DEVICES";
+            this.col_devices_MrC.MaxInputLength = 20;
             this.col_devices_MrC.Name = "col_devices_MrC";
             this.col_devices_MrC.Width = 78;
             // 
             // col_brand_MrC
             // 
             this.col_brand_MrC.DataPropertyName = "BRAND";
+            this.col_brand_MrC.Frozen = true;
             this.col_brand_MrC.HeaderText = "BRAND";
+            this.col_brand_MrC.MaxInputLength = 10;
             this.col_brand_MrC.Name = "col_brand_MrC";
             this.col_brand_MrC.Width = 70;
             // 
             // col_Supplies_MrC
             // 
             this.col_Supplies_MrC.DataPropertyName = "SUPPLIES";
+            this.col_Supplies_MrC.Frozen = true;
             this.col_Supplies_MrC.HeaderText = "SUPPLIER";
+            this.col_Supplies_MrC.MaxInputLength = 20;
             this.col_Supplies_MrC.Name = "col_Supplies_MrC";
             this.col_Supplies_MrC.Width = 84;
             // 
             // col_model_MrC
             // 
             this.col_model_MrC.DataPropertyName = "MODEL";
+            this.col_model_MrC.Frozen = true;
             this.col_model_MrC.HeaderText = "MODEL";
+            this.col_model_MrC.MaxInputLength = 100;
             this.col_model_MrC.Name = "col_model_MrC";
             this.col_model_MrC.Width = 70;
             // 
             // col_serial_MrC
             // 
             this.col_serial_MrC.DataPropertyName = "SERIAL";
+            this.col_serial_MrC.Frozen = true;
             this.col_serial_MrC.HeaderText = "SERIAL";
+            this.col_serial_MrC.MaxInputLength = 50;
             this.col_serial_MrC.Name = "col_serial_MrC";
             this.col_serial_MrC.ReadOnly = true;
             this.col_serial_MrC.Width = 70;
@@ -387,13 +464,16 @@
             // col_hostname_MrC
             // 
             this.col_hostname_MrC.DataPropertyName = "HOSTNAME";
+            this.col_hostname_MrC.Frozen = true;
             this.col_hostname_MrC.HeaderText = "HOST NAME";
+            this.col_hostname_MrC.MaxInputLength = 20;
             this.col_hostname_MrC.Name = "col_hostname_MrC";
             this.col_hostname_MrC.Width = 96;
             // 
             // col_invoice_MrC
             // 
             this.col_invoice_MrC.DataPropertyName = "INVOICE_DATE";
+            this.col_invoice_MrC.Frozen = true;
             this.col_invoice_MrC.HeaderText = "INVOICE DATE";
             this.col_invoice_MrC.MaxInputLength = 10;
             this.col_invoice_MrC.Name = "col_invoice_MrC";
@@ -402,6 +482,7 @@
             // col_handover_MrC
             // 
             this.col_handover_MrC.DataPropertyName = "HANDOVER_DATE";
+            this.col_handover_MrC.Frozen = true;
             this.col_handover_MrC.HeaderText = "HAND-OVER DATE";
             this.col_handover_MrC.MaxInputLength = 10;
             this.col_handover_MrC.Name = "col_handover_MrC";
@@ -410,20 +491,25 @@
             // col_Warranty_MrC
             // 
             this.col_Warranty_MrC.DataPropertyName = "WARANTY";
+            this.col_Warranty_MrC.Frozen = true;
             this.col_Warranty_MrC.HeaderText = "WARRANTY";
+            this.col_Warranty_MrC.MaxInputLength = 10;
             this.col_Warranty_MrC.Name = "col_Warranty_MrC";
             this.col_Warranty_MrC.Width = 95;
             // 
             // col_dstatus_MrC
             // 
             this.col_dstatus_MrC.DataPropertyName = "DSTATUS";
+            this.col_dstatus_MrC.Frozen = true;
             this.col_dstatus_MrC.HeaderText = "STATUS";
+            this.col_dstatus_MrC.MaxInputLength = 5;
             this.col_dstatus_MrC.Name = "col_dstatus_MrC";
             // 
             // col_remark_MrC
             // 
             this.col_remark_MrC.DataPropertyName = "REMARK";
             this.col_remark_MrC.HeaderText = "REMARK";
+            this.col_remark_MrC.MaxInputLength = 150;
             this.col_remark_MrC.Name = "col_remark_MrC";
             this.col_remark_MrC.Width = 78;
             // 
@@ -431,6 +517,7 @@
             // 
             this.col_location_MrC.DataPropertyName = "LOCATION";
             this.col_location_MrC.HeaderText = "LOCATION";
+            this.col_location_MrC.MaxInputLength = 30;
             this.col_location_MrC.Name = "col_location_MrC";
             this.col_location_MrC.Width = 86;
             // 
@@ -438,6 +525,7 @@
             // 
             this.col_assetcode_MrC.DataPropertyName = "ASSETCODE";
             this.col_assetcode_MrC.HeaderText = "ASSET CODE";
+            this.col_assetcode_MrC.MaxInputLength = 20;
             this.col_assetcode_MrC.Name = "col_assetcode_MrC";
             this.col_assetcode_MrC.Width = 92;
             // 
@@ -445,6 +533,7 @@
             // 
             this.col_username_MrC.DataPropertyName = "USRNAME";
             this.col_username_MrC.HeaderText = "USER NAME";
+            this.col_username_MrC.MaxInputLength = 50;
             this.col_username_MrC.Name = "col_username_MrC";
             this.col_username_MrC.Width = 93;
             // 
@@ -452,6 +541,7 @@
             // 
             this.col_position_MrC.DataPropertyName = "POSITION";
             this.col_position_MrC.HeaderText = "POSITION";
+            this.col_position_MrC.MaxInputLength = 30;
             this.col_position_MrC.Name = "col_position_MrC";
             this.col_position_MrC.Width = 83;
             // 
@@ -459,6 +549,7 @@
             // 
             this.col_memory_MrC.DataPropertyName = "MEMORY";
             this.col_memory_MrC.HeaderText = "MEMORY";
+            this.col_memory_MrC.MaxInputLength = 5;
             this.col_memory_MrC.Name = "col_memory_MrC";
             this.col_memory_MrC.Width = 80;
             // 
@@ -466,6 +557,7 @@
             // 
             this.col_hdd_MrC.DataPropertyName = "HDD";
             this.col_hdd_MrC.HeaderText = "HDD";
+            this.col_hdd_MrC.MaxInputLength = 5;
             this.col_hdd_MrC.Name = "col_hdd_MrC";
             this.col_hdd_MrC.Width = 56;
             // 
@@ -473,30 +565,35 @@
             // 
             this.col_macaddr_MrC.DataPropertyName = "MAC_ADDR";
             this.col_macaddr_MrC.HeaderText = "MAC ADDRESS";
+            this.col_macaddr_MrC.MaxInputLength = 17;
             this.col_macaddr_MrC.Name = "col_macaddr_MrC";
             // 
             // col_ipaddr_MrC
             // 
             this.col_ipaddr_MrC.DataPropertyName = "IP_ADDR";
             this.col_ipaddr_MrC.HeaderText = "IP ADDRESS";
+            this.col_ipaddr_MrC.MaxInputLength = 15;
             this.col_ipaddr_MrC.Name = "col_ipaddr_MrC";
             // 
             // col_dns_MrC
             // 
             this.col_dns_MrC.DataPropertyName = "DNS";
             this.col_dns_MrC.HeaderText = "DNS";
+            this.col_dns_MrC.MaxInputLength = 15;
             this.col_dns_MrC.Name = "col_dns_MrC";
             // 
             // col_defaultgw_MrC
             // 
             this.col_defaultgw_MrC.DataPropertyName = "DEFAULT_GW";
             this.col_defaultgw_MrC.HeaderText = "DEFAULT GW";
+            this.col_defaultgw_MrC.MaxInputLength = 15;
             this.col_defaultgw_MrC.Name = "col_defaultgw_MrC";
             // 
             // col_logname_MrC
             // 
             this.col_logname_MrC.DataPropertyName = "LOG_NAME";
             this.col_logname_MrC.HeaderText = "LOGIN NAME";
+            this.col_logname_MrC.MaxInputLength = 20;
             this.col_logname_MrC.Name = "col_logname_MrC";
             // 
             // col_password_MrC
@@ -504,6 +601,138 @@
             this.col_password_MrC.DataPropertyName = "PASSWRD";
             this.col_password_MrC.HeaderText = "PASSWORD";
             this.col_password_MrC.Name = "col_password_MrC";
+            // 
+            // sERIALDataGridViewTextBoxColumn
+            // 
+            this.sERIALDataGridViewTextBoxColumn.DataPropertyName = "SERIAL";
+            this.sERIALDataGridViewTextBoxColumn.HeaderText = "SERIAL";
+            this.sERIALDataGridViewTextBoxColumn.Name = "sERIALDataGridViewTextBoxColumn";
+            // 
+            // hOSTNAMEDataGridViewTextBoxColumn
+            // 
+            this.hOSTNAMEDataGridViewTextBoxColumn.DataPropertyName = "HOSTNAME";
+            this.hOSTNAMEDataGridViewTextBoxColumn.HeaderText = "HOSTNAME";
+            this.hOSTNAMEDataGridViewTextBoxColumn.Name = "hOSTNAMEDataGridViewTextBoxColumn";
+            // 
+            // bRANDDataGridViewTextBoxColumn
+            // 
+            this.bRANDDataGridViewTextBoxColumn.DataPropertyName = "BRAND";
+            this.bRANDDataGridViewTextBoxColumn.HeaderText = "BRAND";
+            this.bRANDDataGridViewTextBoxColumn.Name = "bRANDDataGridViewTextBoxColumn";
+            // 
+            // mODELDataGridViewTextBoxColumn
+            // 
+            this.mODELDataGridViewTextBoxColumn.DataPropertyName = "MODEL";
+            this.mODELDataGridViewTextBoxColumn.HeaderText = "MODEL";
+            this.mODELDataGridViewTextBoxColumn.Name = "mODELDataGridViewTextBoxColumn";
+            // 
+            // iNVOICEDATEDataGridViewTextBoxColumn
+            // 
+            this.iNVOICEDATEDataGridViewTextBoxColumn.DataPropertyName = "INVOICE_DATE";
+            this.iNVOICEDATEDataGridViewTextBoxColumn.HeaderText = "INVOICE_DATE";
+            this.iNVOICEDATEDataGridViewTextBoxColumn.Name = "iNVOICEDATEDataGridViewTextBoxColumn";
+            // 
+            // hANDOVERDATEDataGridViewTextBoxColumn
+            // 
+            this.hANDOVERDATEDataGridViewTextBoxColumn.DataPropertyName = "HANDOVER_DATE";
+            this.hANDOVERDATEDataGridViewTextBoxColumn.HeaderText = "HANDOVER_DATE";
+            this.hANDOVERDATEDataGridViewTextBoxColumn.Name = "hANDOVERDATEDataGridViewTextBoxColumn";
+            // 
+            // wARANTYDataGridViewTextBoxColumn
+            // 
+            this.wARANTYDataGridViewTextBoxColumn.DataPropertyName = "WARANTY";
+            this.wARANTYDataGridViewTextBoxColumn.HeaderText = "WARANTY";
+            this.wARANTYDataGridViewTextBoxColumn.Name = "wARANTYDataGridViewTextBoxColumn";
+            // 
+            // sUPPLIESDataGridViewTextBoxColumn
+            // 
+            this.sUPPLIESDataGridViewTextBoxColumn.DataPropertyName = "SUPPLIES";
+            this.sUPPLIESDataGridViewTextBoxColumn.HeaderText = "SUPPLIES";
+            this.sUPPLIESDataGridViewTextBoxColumn.Name = "sUPPLIESDataGridViewTextBoxColumn";
+            // 
+            // rEMARKDataGridViewTextBoxColumn
+            // 
+            this.rEMARKDataGridViewTextBoxColumn.DataPropertyName = "REMARK";
+            this.rEMARKDataGridViewTextBoxColumn.HeaderText = "REMARK";
+            this.rEMARKDataGridViewTextBoxColumn.Name = "rEMARKDataGridViewTextBoxColumn";
+            // 
+            // aSSETCODEDataGridViewTextBoxColumn
+            // 
+            this.aSSETCODEDataGridViewTextBoxColumn.DataPropertyName = "ASSET_CODE";
+            this.aSSETCODEDataGridViewTextBoxColumn.HeaderText = "ASSET_CODE";
+            this.aSSETCODEDataGridViewTextBoxColumn.Name = "aSSETCODEDataGridViewTextBoxColumn";
+            // 
+            // mEMORYDataGridViewTextBoxColumn
+            // 
+            this.mEMORYDataGridViewTextBoxColumn.DataPropertyName = "MEMORY";
+            this.mEMORYDataGridViewTextBoxColumn.HeaderText = "MEMORY";
+            this.mEMORYDataGridViewTextBoxColumn.Name = "mEMORYDataGridViewTextBoxColumn";
+            // 
+            // hDDDataGridViewTextBoxColumn
+            // 
+            this.hDDDataGridViewTextBoxColumn.DataPropertyName = "HDD";
+            this.hDDDataGridViewTextBoxColumn.HeaderText = "HDD";
+            this.hDDDataGridViewTextBoxColumn.Name = "hDDDataGridViewTextBoxColumn";
+            // 
+            // mACADDRDataGridViewTextBoxColumn
+            // 
+            this.mACADDRDataGridViewTextBoxColumn.DataPropertyName = "MAC_ADDR";
+            this.mACADDRDataGridViewTextBoxColumn.HeaderText = "MAC_ADDR";
+            this.mACADDRDataGridViewTextBoxColumn.Name = "mACADDRDataGridViewTextBoxColumn";
+            // 
+            // iPADDRDataGridViewTextBoxColumn
+            // 
+            this.iPADDRDataGridViewTextBoxColumn.DataPropertyName = "IP_ADDR";
+            this.iPADDRDataGridViewTextBoxColumn.HeaderText = "IP_ADDR";
+            this.iPADDRDataGridViewTextBoxColumn.Name = "iPADDRDataGridViewTextBoxColumn";
+            // 
+            // dNSDataGridViewTextBoxColumn
+            // 
+            this.dNSDataGridViewTextBoxColumn.DataPropertyName = "DNS";
+            this.dNSDataGridViewTextBoxColumn.HeaderText = "DNS";
+            this.dNSDataGridViewTextBoxColumn.Name = "dNSDataGridViewTextBoxColumn";
+            // 
+            // dEFAULTGWDataGridViewTextBoxColumn
+            // 
+            this.dEFAULTGWDataGridViewTextBoxColumn.DataPropertyName = "DEFAULT_GW";
+            this.dEFAULTGWDataGridViewTextBoxColumn.HeaderText = "DEFAULT_GW";
+            this.dEFAULTGWDataGridViewTextBoxColumn.Name = "dEFAULTGWDataGridViewTextBoxColumn";
+            // 
+            // pASSWRDDataGridViewTextBoxColumn
+            // 
+            this.pASSWRDDataGridViewTextBoxColumn.DataPropertyName = "PASSWRD";
+            this.pASSWRDDataGridViewTextBoxColumn.HeaderText = "PASSWRD";
+            this.pASSWRDDataGridViewTextBoxColumn.Name = "pASSWRDDataGridViewTextBoxColumn";
+            // 
+            // lOGNAMEDataGridViewTextBoxColumn
+            // 
+            this.lOGNAMEDataGridViewTextBoxColumn.DataPropertyName = "LOG_NAME";
+            this.lOGNAMEDataGridViewTextBoxColumn.HeaderText = "LOG_NAME";
+            this.lOGNAMEDataGridViewTextBoxColumn.Name = "lOGNAMEDataGridViewTextBoxColumn";
+            // 
+            // dTYPEDataGridViewTextBoxColumn
+            // 
+            this.dTYPEDataGridViewTextBoxColumn.DataPropertyName = "DTYPE";
+            this.dTYPEDataGridViewTextBoxColumn.HeaderText = "DTYPE";
+            this.dTYPEDataGridViewTextBoxColumn.Name = "dTYPEDataGridViewTextBoxColumn";
+            // 
+            // dSTATUSDataGridViewTextBoxColumn
+            // 
+            this.dSTATUSDataGridViewTextBoxColumn.DataPropertyName = "DSTATUS";
+            this.dSTATUSDataGridViewTextBoxColumn.HeaderText = "DSTATUS";
+            this.dSTATUSDataGridViewTextBoxColumn.Name = "dSTATUSDataGridViewTextBoxColumn";
+            // 
+            // dAREADataGridViewTextBoxColumn
+            // 
+            this.dAREADataGridViewTextBoxColumn.DataPropertyName = "DAREA";
+            this.dAREADataGridViewTextBoxColumn.HeaderText = "DAREA";
+            this.dAREADataGridViewTextBoxColumn.Name = "dAREADataGridViewTextBoxColumn";
+            // 
+            // uSRNAMEDataGridViewTextBoxColumn
+            // 
+            this.uSRNAMEDataGridViewTextBoxColumn.DataPropertyName = "USRNAME";
+            this.uSRNAMEDataGridViewTextBoxColumn.HeaderText = "USRNAME";
+            this.uSRNAMEDataGridViewTextBoxColumn.Name = "uSRNAMEDataGridViewTextBoxColumn";
             // 
             // AM_Main_Form
             // 
@@ -540,6 +769,8 @@
             this.Text = "Asset Management";
             this.Load += new System.EventHandler(this.AM_Main_Form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qLVT_testDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dEVICESTBLBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -571,6 +802,9 @@
         private System.Windows.Forms.Button bt_Insert_MrC;
         private System.Windows.Forms.Button MrC_BT_Cancel;
         private System.Windows.Forms.Label label97;
+        private QLVT_testDataSet1 qLVT_testDataSet1;
+        private System.Windows.Forms.BindingSource dEVICESTBLBindingSource;
+        private QLVT_testDataSet1TableAdapters.DEVICES_TBLTableAdapter dEVICES_TBLTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_darea_MrC;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_devices_MrC;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_brand_MrC;
@@ -595,5 +829,27 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn col_defaultgw_MrC;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_logname_MrC;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_password_MrC;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sERIALDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hOSTNAMEDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bRANDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mODELDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iNVOICEDATEDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hANDOVERDATEDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn wARANTYDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sUPPLIESDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rEMARKDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn aSSETCODEDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mEMORYDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hDDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mACADDRDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iPADDRDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dNSDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dEFAULTGWDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pASSWRDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lOGNAMEDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dTYPEDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dSTATUSDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dAREADataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn uSRNAMEDataGridViewTextBoxColumn;
     }
 }
