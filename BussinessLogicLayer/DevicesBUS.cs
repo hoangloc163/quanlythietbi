@@ -31,6 +31,10 @@ namespace BussinessLogicLayer
         {
             return dao.GetData4Cb_Devices();
         }
+        public DataTable GetData4Cb_Devices_By_Area(Devices obj)
+        {
+            return dao.GetData4Cb_Devices_By_Area(obj);
+        }
         public DataTable GetData4Cb_Brand()
         {
             return dao.GetData4Cb_Brand();

@@ -31,7 +31,15 @@ namespace DataAccessLayer
         {
             return db.GetData("DEVICES_CB_Select_Dtype", null);
         }
-        
+        public DataTable GetData4Cb_Devices_By_Area(Devices obj)
+        {
+            SqlParameter[] para =
+            {
+                new SqlParameter("darea",obj.darea)
+            };
+            return db.GetData("DEVICES_CB_Select_Dtype_By_Area", para);
+        }
+
         public DataTable GetData4Cb_Brand()
         {
             return db.GetData("DEVICES_CB_Select_Brand", null);

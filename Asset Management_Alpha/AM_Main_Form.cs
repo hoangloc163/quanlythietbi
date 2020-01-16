@@ -48,10 +48,11 @@ namespace Asset_Management_Alpha
             // hien thi cb box
             loadcb_Area();
             loadcb_Brand();
-            loadcb_Devices();
+            //loadcb_Devices();
             loadcb_Position();
             loadcb_Supplier();
             loadcb_Status();
+            loadcb_Devices_By_Area();
         }
 
         void TestRegister()
@@ -101,6 +102,13 @@ namespace Asset_Management_Alpha
             cb_Devices_MrC.DataSource = busDevices.GetData4Cb_Devices();
             cb_Devices_MrC.DisplayMember = "dtype".Trim();
         }
+        public void loadcb_Devices_By_Area()
+        {
+            objDevices.darea = cb_Area_MrC.Text;
+            cb_Devices_MrC.DataSource = busDevices.GetData4Cb_Devices_By_Area(objDevices);
+            cb_Devices_MrC.DisplayMember = "dtype".Trim();
+        }
+
         public void loadcb_Supplier()
         {
             cb_Supplier_MrC.DataSource = busDevices.GetData4Cb_Supplier();
@@ -223,6 +231,7 @@ namespace Asset_Management_Alpha
 
         public void Refesh_dtgv()
         {
+            // co the se sua code lai
             HienThiDataGridView2(SQLQuery);
             dataGridView2.Refresh();
             label97.Text = dataGridView2.Rows.Count.ToString() + " Rows";
@@ -243,10 +252,13 @@ namespace Asset_Management_Alpha
                         filter += "DAREA" /*+ dataGridView2.Columns["col_mrc_area"].HeaderText.ToString()*/ + " LIKE '" + cb_Area_MrC.Text.Trim() + "' ";
                     }
                 }
-                if (!string.IsNullOrEmpty(cb_Devices_MrC.Text))
+                if (chk_Devices.Checked == false)
                 {
-                    if (filter.Length > 0) filter += "AND "; // dk AND
-                    filter += "DTYPE" + " LIKE '" + cb_Devices_MrC.Text.Trim() + "' ";
+                    if (!string.IsNullOrEmpty(cb_Devices_MrC.Text))
+                    {
+                        if (filter.Length > 0) filter += "AND "; // dk AND
+                        filter += "DTYPE" + " LIKE '" + cb_Devices_MrC.Text.Trim() + "' ";
+                    }
                 }
                 if (!string.IsNullOrEmpty(cb_Brand_MrC.Text))
                 {
@@ -359,10 +371,21 @@ namespace Asset_Management_Alpha
 
             loadcb_Area();
             loadcb_Brand();
-            loadcb_Devices();
             loadcb_Position();
             loadcb_Supplier();
             loadcb_Status();
+
+            // neu check thi hien thi het cac sheet cua cac area
+            if (chk_Area.Checked == true)
+            {
+                cb_Area_MrC.Enabled = false;
+                loadcb_Devices();
+            }
+            else
+            {
+                cb_Area_MrC.Enabled = true;
+                loadcb_Devices_By_Area();
+            }
         }
         private void txt_Serial_MrC_KeyDown(object sender, KeyEventArgs e)
         {
@@ -393,10 +416,30 @@ namespace Asset_Management_Alpha
             if(chk_Area.Checked == true)
             {
                 cb_Area_MrC.Enabled = false;
+                loadcb_Devices();
             }
             else
             {
                 cb_Area_MrC.Enabled = true;
+                loadcb_Devices_By_Area();
+            }
+        }
+
+        private void cb_Area_MrC_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            loadcb_Devices_By_Area();
+        }
+
+        private void chk_Devices_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chk_Devices.Checked == true)
+            {
+                cb_Devices_MrC.Enabled = false;    
+            }
+            else
+            {
+                cb_Devices_MrC.Enabled = true;
+                loadcb_Devices_By_Area();
             }
         }
     }

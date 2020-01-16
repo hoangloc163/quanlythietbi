@@ -82,6 +82,7 @@
             this.label97 = new System.Windows.Forms.Label();
             this.dEVICES_TBLTableAdapter = new Asset_Management_Alpha.QLVT_testDataSet1TableAdapters.DEVICES_TBLTableAdapter();
             this.chk_Area = new System.Windows.Forms.CheckBox();
+            this.chk_Devices = new System.Windows.Forms.CheckBox();
             qLVT_testDataSet1 = new Asset_Management_Alpha.QLVT_testDataSet1();
             ((System.ComponentModel.ISupportInitialize)(qLVT_testDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -502,9 +503,11 @@
             // 
             this.cb_Devices_MrC.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_Devices_MrC.FormattingEnabled = true;
+            this.cb_Devices_MrC.Items.AddRange(new object[] {
+            "ALL"});
             this.cb_Devices_MrC.Location = new System.Drawing.Point(66, 48);
             this.cb_Devices_MrC.Name = "cb_Devices_MrC";
-            this.cb_Devices_MrC.Size = new System.Drawing.Size(91, 21);
+            this.cb_Devices_MrC.Size = new System.Drawing.Size(83, 21);
             this.cb_Devices_MrC.TabIndex = 54;
             // 
             // cb_Area_MrC
@@ -515,6 +518,7 @@
             this.cb_Area_MrC.Name = "cb_Area_MrC";
             this.cb_Area_MrC.Size = new System.Drawing.Size(62, 21);
             this.cb_Area_MrC.TabIndex = 53;
+            this.cb_Area_MrC.SelectedIndexChanged += new System.EventHandler(this.cb_Area_MrC_SelectedIndexChanged);
             // 
             // txt_UserName_MrC
             // 
@@ -569,11 +573,22 @@
             this.chk_Area.UseVisualStyleBackColor = true;
             this.chk_Area.CheckedChanged += new System.EventHandler(this.chk_Area_CheckedChanged);
             // 
+            // chk_Devices
+            // 
+            this.chk_Devices.AutoSize = true;
+            this.chk_Devices.Location = new System.Drawing.Point(155, 51);
+            this.chk_Devices.Name = "chk_Devices";
+            this.chk_Devices.Size = new System.Drawing.Size(15, 14);
+            this.chk_Devices.TabIndex = 76;
+            this.chk_Devices.UseVisualStyleBackColor = true;
+            this.chk_Devices.CheckedChanged += new System.EventHandler(this.chk_Devices_CheckedChanged);
+            // 
             // AM_Main_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1229, 587);
+            this.Controls.Add(this.chk_Devices);
             this.Controls.Add(this.chk_Area);
             this.Controls.Add(this.label97);
             this.Controls.Add(this.bt_Insert_MrC);
@@ -665,5 +680,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn col_logname_MrC;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_password_MrC;
         private System.Windows.Forms.CheckBox chk_Area;
+        private System.Windows.Forms.CheckBox chk_Devices;
     }
 }
