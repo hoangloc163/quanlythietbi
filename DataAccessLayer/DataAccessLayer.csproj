@@ -69,6 +69,7 @@
     <Compile Include="NhanVienDAO.cs" />
     <Compile Include="PcDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServerDAO.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ValueObject\ValueObject.csproj">

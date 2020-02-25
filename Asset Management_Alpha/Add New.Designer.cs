@@ -54,24 +54,25 @@
             this.cb_Brand_MrC = new System.Windows.Forms.ComboBox();
             this.cb_Warranty_MrC = new System.Windows.Forms.ComboBox();
             this.cb_Devices_MrC = new System.Windows.Forms.ComboBox();
+            this.chk_addmore = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // bt_Add_Dev
             // 
-            this.bt_Add_Dev.Location = new System.Drawing.Point(571, 143);
+            this.bt_Add_Dev.Location = new System.Drawing.Point(525, 178);
             this.bt_Add_Dev.Name = "bt_Add_Dev";
-            this.bt_Add_Dev.Size = new System.Drawing.Size(75, 23);
-            this.bt_Add_Dev.TabIndex = 9;
+            this.bt_Add_Dev.Size = new System.Drawing.Size(80, 23);
+            this.bt_Add_Dev.TabIndex = 14;
             this.bt_Add_Dev.Text = "Add";
             this.bt_Add_Dev.UseVisualStyleBackColor = true;
             this.bt_Add_Dev.Click += new System.EventHandler(this.bt_Add_Dev_Click);
             // 
             // bt_Cancel_Dev
             // 
-            this.bt_Cancel_Dev.Location = new System.Drawing.Point(571, 179);
+            this.bt_Cancel_Dev.Location = new System.Drawing.Point(634, 178);
             this.bt_Cancel_Dev.Name = "bt_Cancel_Dev";
-            this.bt_Cancel_Dev.Size = new System.Drawing.Size(75, 23);
-            this.bt_Cancel_Dev.TabIndex = 10;
+            this.bt_Cancel_Dev.Size = new System.Drawing.Size(80, 23);
+            this.bt_Cancel_Dev.TabIndex = 15;
             this.bt_Cancel_Dev.Text = "Cancel";
             this.bt_Cancel_Dev.UseVisualStyleBackColor = true;
             this.bt_Cancel_Dev.Click += new System.EventHandler(this.bt_Cancel_Dev_Click);
@@ -97,7 +98,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 107);
+            this.label3.Location = new System.Drawing.Point(12, 142);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(45, 13);
             this.label3.TabIndex = 9;
@@ -106,7 +107,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 148);
+            this.label4.Location = new System.Drawing.Point(12, 107);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(35, 13);
             this.label4.TabIndex = 10;
@@ -115,7 +116,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(230, 68);
+            this.label5.Location = new System.Drawing.Point(258, 51);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(64, 13);
             this.label5.TabIndex = 11;
@@ -124,23 +125,24 @@
             // cb_Supplier
             // 
             this.cb_Supplier.FormattingEnabled = true;
-            this.cb_Supplier.Location = new System.Drawing.Point(72, 104);
+            this.cb_Supplier.Location = new System.Drawing.Point(72, 139);
             this.cb_Supplier.Name = "cb_Supplier";
-            this.cb_Supplier.Size = new System.Drawing.Size(121, 21);
-            this.cb_Supplier.TabIndex = 3;
+            this.cb_Supplier.Size = new System.Drawing.Size(130, 21);
+            this.cb_Supplier.TabIndex = 4;
             // 
             // cb_Area
             // 
             this.cb_Area.FormattingEnabled = true;
             this.cb_Area.Location = new System.Drawing.Point(72, 23);
             this.cb_Area.Name = "cb_Area";
-            this.cb_Area.Size = new System.Drawing.Size(121, 21);
+            this.cb_Area.Size = new System.Drawing.Size(80, 21);
             this.cb_Area.TabIndex = 1;
+            this.cb_Area.SelectedIndexChanged += new System.EventHandler(this.cb_Area_SelectedIndexChanged);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(230, 110);
+            this.label6.Location = new System.Drawing.Point(398, 52);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(79, 13);
             this.label6.TabIndex = 15;
@@ -149,7 +151,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(473, 26);
+            this.label7.Location = new System.Drawing.Point(522, 107);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(50, 13);
             this.label7.TabIndex = 16;
@@ -158,7 +160,7 @@
             // lb_serial
             // 
             this.lb_serial.AutoSize = true;
-            this.lb_serial.Location = new System.Drawing.Point(230, 26);
+            this.lb_serial.Location = new System.Drawing.Point(200, 26);
             this.lb_serial.Name = "lb_serial";
             this.lb_serial.Size = new System.Drawing.Size(33, 13);
             this.lb_serial.TabIndex = 17;
@@ -166,25 +168,25 @@
             // 
             // txt_remark
             // 
-            this.txt_remark.Location = new System.Drawing.Point(315, 145);
+            this.txt_remark.Location = new System.Drawing.Point(239, 104);
             this.txt_remark.Multiline = true;
             this.txt_remark.Name = "txt_remark";
-            this.txt_remark.Size = new System.Drawing.Size(213, 56);
-            this.txt_remark.TabIndex = 8;
+            this.txt_remark.Size = new System.Drawing.Size(252, 56);
+            this.txt_remark.TabIndex = 9;
             // 
             // txt_Serial
             // 
-            this.txt_Serial.Location = new System.Drawing.Point(315, 23);
+            this.txt_Serial.Location = new System.Drawing.Point(239, 23);
             this.txt_Serial.Name = "txt_Serial";
-            this.txt_Serial.Size = new System.Drawing.Size(142, 20);
-            this.txt_Serial.TabIndex = 18;
+            this.txt_Serial.Size = new System.Drawing.Size(252, 20);
+            this.txt_Serial.TabIndex = 6;
             this.txt_Serial.TextChanged += new System.EventHandler(this.txt_Serial_TextChanged);
             this.txt_Serial.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_Serial_KeyDown);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(230, 148);
+            this.label9.Location = new System.Drawing.Point(189, 107);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(44, 13);
             this.label9.TabIndex = 19;
@@ -192,18 +194,18 @@
             // 
             // txt_macaddr
             // 
-            this.txt_macaddr.Location = new System.Drawing.Point(544, 65);
+            this.txt_macaddr.Location = new System.Drawing.Point(593, 65);
             this.txt_macaddr.MaxLength = 17;
             this.txt_macaddr.Name = "txt_macaddr";
             this.txt_macaddr.Size = new System.Drawing.Size(121, 20);
-            this.txt_macaddr.TabIndex = 20;
+            this.txt_macaddr.TabIndex = 11;
             this.txt_macaddr.TextChanged += new System.EventHandler(this.txt_macaddr_TextChanged);
             this.txt_macaddr.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_macaddr_KeyDown);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(473, 68);
+            this.label8.Location = new System.Drawing.Point(522, 68);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(55, 13);
             this.label8.TabIndex = 22;
@@ -212,7 +214,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(473, 110);
+            this.label10.Location = new System.Drawing.Point(522, 142);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(37, 13);
             this.label10.TabIndex = 23;
@@ -221,17 +223,17 @@
             // cb_Status
             // 
             this.cb_Status.FormattingEnabled = true;
-            this.cb_Status.Location = new System.Drawing.Point(544, 107);
+            this.cb_Status.Location = new System.Drawing.Point(593, 139);
             this.cb_Status.Name = "cb_Status";
             this.cb_Status.Size = new System.Drawing.Size(121, 21);
-            this.cb_Status.TabIndex = 24;
+            this.cb_Status.TabIndex = 13;
             // 
             // txt_Model
             // 
             this.txt_Model.Location = new System.Drawing.Point(72, 181);
             this.txt_Model.Name = "txt_Model";
-            this.txt_Model.Size = new System.Drawing.Size(210, 20);
-            this.txt_Model.TabIndex = 25;
+            this.txt_Model.Size = new System.Drawing.Size(286, 20);
+            this.txt_Model.TabIndex = 5;
             this.txt_Model.TextChanged += new System.EventHandler(this.txt_Model_TextChanged);
             // 
             // label11
@@ -245,25 +247,25 @@
             // 
             // dt_invoice
             // 
-            this.dt_invoice.Location = new System.Drawing.Point(315, 64);
+            this.dt_invoice.Location = new System.Drawing.Point(239, 68);
             this.dt_invoice.Name = "dt_invoice";
-            this.dt_invoice.Size = new System.Drawing.Size(142, 20);
-            this.dt_invoice.TabIndex = 27;
+            this.dt_invoice.Size = new System.Drawing.Size(119, 20);
+            this.dt_invoice.TabIndex = 7;
             // 
             // dt_handover
             // 
-            this.dt_handover.Location = new System.Drawing.Point(315, 104);
+            this.dt_handover.Location = new System.Drawing.Point(372, 68);
             this.dt_handover.Name = "dt_handover";
-            this.dt_handover.Size = new System.Drawing.Size(142, 20);
-            this.dt_handover.TabIndex = 28;
+            this.dt_handover.Size = new System.Drawing.Size(119, 20);
+            this.dt_handover.TabIndex = 8;
             // 
             // cb_Brand_MrC
             // 
             this.cb_Brand_MrC.FormattingEnabled = true;
-            this.cb_Brand_MrC.Location = new System.Drawing.Point(72, 145);
+            this.cb_Brand_MrC.Location = new System.Drawing.Point(72, 104);
             this.cb_Brand_MrC.Name = "cb_Brand_MrC";
-            this.cb_Brand_MrC.Size = new System.Drawing.Size(121, 21);
-            this.cb_Brand_MrC.TabIndex = 29;
+            this.cb_Brand_MrC.Size = new System.Drawing.Size(97, 21);
+            this.cb_Brand_MrC.TabIndex = 3;
             this.cb_Brand_MrC.TextChanged += new System.EventHandler(this.cb_Brand_MrC_TextChanged);
             // 
             // cb_Warranty_MrC
@@ -280,25 +282,37 @@
             "10 Years",
             "Life Time",
             "No Warranty"});
-            this.cb_Warranty_MrC.Location = new System.Drawing.Point(544, 23);
+            this.cb_Warranty_MrC.Location = new System.Drawing.Point(593, 104);
             this.cb_Warranty_MrC.Name = "cb_Warranty_MrC";
             this.cb_Warranty_MrC.Size = new System.Drawing.Size(121, 21);
-            this.cb_Warranty_MrC.TabIndex = 30;
+            this.cb_Warranty_MrC.TabIndex = 12;
             // 
             // cb_Devices_MrC
             // 
             this.cb_Devices_MrC.FormattingEnabled = true;
             this.cb_Devices_MrC.Location = new System.Drawing.Point(72, 65);
             this.cb_Devices_MrC.Name = "cb_Devices_MrC";
-            this.cb_Devices_MrC.Size = new System.Drawing.Size(121, 21);
-            this.cb_Devices_MrC.TabIndex = 31;
+            this.cb_Devices_MrC.Size = new System.Drawing.Size(97, 21);
+            this.cb_Devices_MrC.TabIndex = 2;
             this.cb_Devices_MrC.TextChanged += new System.EventHandler(this.cb_Devices_MrC_TextChanged);
+            // 
+            // chk_addmore
+            // 
+            this.chk_addmore.AutoSize = true;
+            this.chk_addmore.Location = new System.Drawing.Point(525, 25);
+            this.chk_addmore.Name = "chk_addmore";
+            this.chk_addmore.Size = new System.Drawing.Size(71, 17);
+            this.chk_addmore.TabIndex = 10;
+            this.chk_addmore.Text = "Add more";
+            this.chk_addmore.UseVisualStyleBackColor = true;
             // 
             // Add_New
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(681, 213);
+            this.ClientSize = new System.Drawing.Size(726, 213);
+            this.ControlBox = false;
+            this.Controls.Add(this.chk_addmore);
             this.Controls.Add(this.cb_Devices_MrC);
             this.Controls.Add(this.cb_Warranty_MrC);
             this.Controls.Add(this.cb_Brand_MrC);
@@ -362,5 +376,6 @@
         private System.Windows.Forms.ComboBox cb_Brand_MrC;
         private System.Windows.Forms.ComboBox cb_Warranty_MrC;
         private System.Windows.Forms.ComboBox cb_Devices_MrC;
+        private System.Windows.Forms.CheckBox chk_addmore;
     }
 }

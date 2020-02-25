@@ -68,6 +68,7 @@
     <Compile Include="NhanVienBUS.cs" />
     <Compile Include="PcBUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServerBUS.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj">

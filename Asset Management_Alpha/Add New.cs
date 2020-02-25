@@ -34,8 +34,16 @@ namespace Asset_Management_Alpha
                 ViewToObj();
                 message = busDevices.Insert_Form(objDevices, message); // lấy ra message từ proc của sql
                 MessageBox.Show(message + " " + txt_Serial.Text);
-                cleartxt();
 
+                if(chk_addmore.Checked == true)
+                {
+                    txt_Serial.Clear();
+                }
+                else
+                {
+                    cleartxt();
+                }
+                
                 //// add qua form SGF
                 //SFG SGF_Form = new SFG();
                 //SGF_Form.UpdateForm("update");
@@ -89,6 +97,7 @@ namespace Asset_Management_Alpha
             txt_Serial.Clear();
             txt_macaddr.Clear();
             txt_remark.Clear();
+            txt_Model.Clear();
         }
 
         #region load Combobox
@@ -196,6 +205,9 @@ namespace Asset_Management_Alpha
                 cb_Devices_MrC.Text = upper;
         }
 
-        
+        private void cb_Area_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            loadcb_Devices_By_Area();
+        }
     }
 }

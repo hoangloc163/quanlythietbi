@@ -98,6 +98,12 @@
     <Compile Include="LogIn_Form.Designer.cs">
       <DependentUpon>LogIn_Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="Network_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Network_Form.Designer.cs">
+      <DependentUpon>Network_Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="QLVT_testDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -107,6 +113,22 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>QLVT_testDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLVT_testDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLVT_testDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLVT_testDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLVT_testDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Server_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Server_Form.Designer.cs">
+      <DependentUpon>Server_Form.cs</DependentUpon>
     </Compile>
     <Compile Include="SGF.cs">
       <SubType>Form</SubType>
@@ -130,6 +152,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LogIn_Form.resx">
       <DependentUpon>LogIn_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Network_Form.resx">
+      <DependentUpon>Network_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Server_Form.resx">
+      <DependentUpon>Server_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SGF.resx">
       <DependentUpon>SGF.cs</DependentUpon>
@@ -173,6 +201,28 @@
     </None>
     <None Include="QLVT_testDataSet1.xss">
       <DependentUpon>QLVT_testDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="QLVT_testDataSet2.xsc">
+      <DependentUpon>QLVT_testDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="QLVT_testDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLVT_testDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLVT_testDataSet2.xss">
+      <DependentUpon>QLVT_testDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="QLVT_testDataSet3.xsc">
+      <DependentUpon>QLVT_testDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="QLVT_testDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLVT_testDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLVT_testDataSet3.xss">
+      <DependentUpon>QLVT_testDataSet3.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

@@ -132,12 +132,21 @@ namespace Asset_Management_Alpha
         #endregion
 
         #region Function on Form
+
+        private void dataGridView2_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
+        {
+            // lam gon chuoi nvchar o SQL khi hien thi len dataGridView2
+            string str_name = null;
+            str_name = dataGridView2.Columns[e.ColumnIndex].Name.ToString().Trim();
+            dataGridView2.Rows[e.RowIndex].Cells[str_name].Value = dataGridView2.Rows[e.RowIndex].Cells[str_name].FormattedValue.ToString().Trim();
+        }
+
         private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             Current_Cell = "";
             //Check_Cell = dataGridView2.Rows[e.RowIndex].Cells[e.ColumnIndex].FormattedValue.ToString();
             Current_Cell = this.dataGridView2.CurrentCell.FormattedValue.ToString();
-
+            
             if (e.RowIndex >= 0)
             {
                 if (dataGridView2.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
@@ -171,6 +180,10 @@ namespace Asset_Management_Alpha
 
                     HeaderSelectedCell = dataGridView2.Columns[e.ColumnIndex].DataPropertyName.ToString().Trim();
                 }
+                if (dataGridView2.Rows[e.RowIndex].Cells[e.ColumnIndex].Value == null)
+                {
+                    HeaderSelectedCell = dataGridView2.Columns[e.ColumnIndex].DataPropertyName.ToString().Trim();
+                }
             }
         }
 
@@ -192,7 +205,9 @@ namespace Asset_Management_Alpha
         {
             Updated_Cell = "";
             Updated_Cell = this.dataGridView2.CurrentCell.FormattedValue.ToString();
-            if (HeaderSelectedCell != "SERIAL")
+            HeaderSelectedCell = dataGridView2.Columns[e.ColumnIndex].DataPropertyName.ToString().Trim();
+
+            if (HeaderSelectedCell != "SERIAL" && HeaderSelectedCell != null)
             {
                 if (Current_Cell != Updated_Cell)
                 {
@@ -391,21 +406,11 @@ namespace Asset_Management_Alpha
         {
             if (e.KeyCode == Keys.Enter)
             {
+                txt_Serial_MrC.CharacterCasing = CharacterCasing.Upper;
                 txt_Serial_MrC.Text = txt_Serial_MrC.Text.Trim();
                 // code dua con tro ve cuoi
                 txt_Serial_MrC.Focus();
                 txt_Serial_MrC.SelectionStart = txt_Serial_MrC.Text.Length;
-            }
-        }
-
-        private void txt_UserName_MrC_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                txt_UserName_MrC.Text = txt_UserName_MrC.Text.Trim();
-                // code dua con tro ve cuoi
-                txt_UserName_MrC.Focus();
-                txt_UserName_MrC.SelectionStart = txt_UserName_MrC.Text.Length;
             }
         }
 
@@ -442,5 +447,6 @@ namespace Asset_Management_Alpha
                 loadcb_Devices_By_Area();
             }
         }
+
     }
 }

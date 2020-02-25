@@ -83,6 +83,8 @@
             this.dEVICES_TBLTableAdapter = new Asset_Management_Alpha.QLVT_testDataSet1TableAdapters.DEVICES_TBLTableAdapter();
             this.chk_Area = new System.Windows.Forms.CheckBox();
             this.chk_Devices = new System.Windows.Forms.CheckBox();
+            this.btn_Server = new System.Windows.Forms.Button();
+            this.btn_Network = new System.Windows.Forms.Button();
             qLVT_testDataSet1 = new Asset_Management_Alpha.QLVT_testDataSet1();
             ((System.ComponentModel.ISupportInitialize)(qLVT_testDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -135,6 +137,7 @@
             this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView2.Size = new System.Drawing.Size(1205, 475);
             this.dataGridView2.TabIndex = 41;
+            this.dataGridView2.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dataGridView2_CellBeginEdit);
             this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
             this.dataGridView2.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellEndEdit);
             this.dataGridView2.UserDeletedRow += new System.Windows.Forms.DataGridViewRowEventHandler(this.dataGridView2_UserDeletedRow);
@@ -341,7 +344,7 @@
             this.cb_Status_MrC.Location = new System.Drawing.Point(675, 47);
             this.cb_Status_MrC.Name = "cb_Status_MrC";
             this.cb_Status_MrC.Size = new System.Drawing.Size(141, 21);
-            this.cb_Status_MrC.TabIndex = 71;
+            this.cb_Status_MrC.TabIndex = 8;
             // 
             // label98
             // 
@@ -368,7 +371,7 @@
             this.txt_Serial_MrC.Location = new System.Drawing.Point(675, 11);
             this.txt_Serial_MrC.Name = "txt_Serial_MrC";
             this.txt_Serial_MrC.Size = new System.Drawing.Size(141, 20);
-            this.txt_Serial_MrC.TabIndex = 68;
+            this.txt_Serial_MrC.TabIndex = 7;
             this.txt_Serial_MrC.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_Serial_MrC_KeyDown);
             // 
             // bt_Refresh_MrC
@@ -377,7 +380,7 @@
             this.bt_Refresh_MrC.Location = new System.Drawing.Point(835, 11);
             this.bt_Refresh_MrC.Name = "bt_Refresh_MrC";
             this.bt_Refresh_MrC.Size = new System.Drawing.Size(57, 57);
-            this.bt_Refresh_MrC.TabIndex = 67;
+            this.bt_Refresh_MrC.TabIndex = 9;
             this.bt_Refresh_MrC.Text = "Refesh";
             this.bt_Refresh_MrC.UseVisualStyleBackColor = true;
             this.bt_Refresh_MrC.Click += new System.EventHandler(this.bt_Refresh_MrC_Click);
@@ -388,7 +391,7 @@
             this.rbt_Or_Check.Location = new System.Drawing.Point(909, 46);
             this.rbt_Or_Check.Name = "rbt_Or_Check";
             this.rbt_Or_Check.Size = new System.Drawing.Size(94, 17);
-            this.rbt_Or_Check.TabIndex = 66;
+            this.rbt_Or_Check.TabIndex = 11;
             this.rbt_Or_Check.Text = "Relative Value";
             this.rbt_Or_Check.UseVisualStyleBackColor = true;
             // 
@@ -399,7 +402,7 @@
             this.rbt_And_Check.Location = new System.Drawing.Point(909, 17);
             this.rbt_And_Check.Name = "rbt_And_Check";
             this.rbt_And_Check.Size = new System.Drawing.Size(96, 17);
-            this.rbt_And_Check.TabIndex = 65;
+            this.rbt_And_Check.TabIndex = 10;
             this.rbt_And_Check.TabStop = true;
             this.rbt_And_Check.Text = "Absolute Value";
             this.rbt_And_Check.UseVisualStyleBackColor = true;
@@ -410,7 +413,7 @@
             this.MrC_BT_Search.Location = new System.Drawing.Point(1011, 12);
             this.MrC_BT_Search.Name = "MrC_BT_Search";
             this.MrC_BT_Search.Size = new System.Drawing.Size(75, 56);
-            this.MrC_BT_Search.TabIndex = 64;
+            this.MrC_BT_Search.TabIndex = 12;
             this.MrC_BT_Search.Text = "Search";
             this.MrC_BT_Search.UseVisualStyleBackColor = true;
             this.MrC_BT_Search.Click += new System.EventHandler(this.MrC_BT_Search_Click);
@@ -431,7 +434,7 @@
             this.cb_Position_MrC.Location = new System.Drawing.Point(433, 47);
             this.cb_Position_MrC.Name = "cb_Position_MrC";
             this.cb_Position_MrC.Size = new System.Drawing.Size(170, 21);
-            this.cb_Position_MrC.TabIndex = 62;
+            this.cb_Position_MrC.TabIndex = 6;
             // 
             // label94
             // 
@@ -489,7 +492,7 @@
             this.cb_Brand_MrC.Location = new System.Drawing.Point(237, 48);
             this.cb_Brand_MrC.Name = "cb_Brand_MrC";
             this.cb_Brand_MrC.Size = new System.Drawing.Size(103, 21);
-            this.cb_Brand_MrC.TabIndex = 56;
+            this.cb_Brand_MrC.TabIndex = 4;
             // 
             // cb_Supplier_MrC
             // 
@@ -497,7 +500,7 @@
             this.cb_Supplier_MrC.Location = new System.Drawing.Point(237, 12);
             this.cb_Supplier_MrC.Name = "cb_Supplier_MrC";
             this.cb_Supplier_MrC.Size = new System.Drawing.Size(103, 21);
-            this.cb_Supplier_MrC.TabIndex = 55;
+            this.cb_Supplier_MrC.TabIndex = 3;
             // 
             // cb_Devices_MrC
             // 
@@ -508,7 +511,7 @@
             this.cb_Devices_MrC.Location = new System.Drawing.Point(66, 48);
             this.cb_Devices_MrC.Name = "cb_Devices_MrC";
             this.cb_Devices_MrC.Size = new System.Drawing.Size(83, 21);
-            this.cb_Devices_MrC.TabIndex = 54;
+            this.cb_Devices_MrC.TabIndex = 2;
             // 
             // cb_Area_MrC
             // 
@@ -517,7 +520,7 @@
             this.cb_Area_MrC.Location = new System.Drawing.Point(66, 12);
             this.cb_Area_MrC.Name = "cb_Area_MrC";
             this.cb_Area_MrC.Size = new System.Drawing.Size(62, 21);
-            this.cb_Area_MrC.TabIndex = 53;
+            this.cb_Area_MrC.TabIndex = 1;
             this.cb_Area_MrC.SelectedIndexChanged += new System.EventHandler(this.cb_Area_MrC_SelectedIndexChanged);
             // 
             // txt_UserName_MrC
@@ -525,8 +528,7 @@
             this.txt_UserName_MrC.Location = new System.Drawing.Point(433, 11);
             this.txt_UserName_MrC.Name = "txt_UserName_MrC";
             this.txt_UserName_MrC.Size = new System.Drawing.Size(170, 20);
-            this.txt_UserName_MrC.TabIndex = 52;
-            this.txt_UserName_MrC.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_UserName_MrC_KeyDown);
+            this.txt_UserName_MrC.TabIndex = 5;
             // 
             // bt_Insert_MrC
             // 
@@ -534,7 +536,7 @@
             this.bt_Insert_MrC.Location = new System.Drawing.Point(1116, 14);
             this.bt_Insert_MrC.Name = "bt_Insert_MrC";
             this.bt_Insert_MrC.Size = new System.Drawing.Size(101, 23);
-            this.bt_Insert_MrC.TabIndex = 73;
+            this.bt_Insert_MrC.TabIndex = 13;
             this.bt_Insert_MrC.Text = "ADD";
             this.bt_Insert_MrC.UseVisualStyleBackColor = true;
             this.bt_Insert_MrC.Click += new System.EventHandler(this.bt_Insert_MrC_Click);
@@ -545,7 +547,7 @@
             this.MrC_BT_Cancel.Location = new System.Drawing.Point(1116, 43);
             this.MrC_BT_Cancel.Name = "MrC_BT_Cancel";
             this.MrC_BT_Cancel.Size = new System.Drawing.Size(101, 23);
-            this.MrC_BT_Cancel.TabIndex = 72;
+            this.MrC_BT_Cancel.TabIndex = 14;
             this.MrC_BT_Cancel.Text = "Cancel";
             this.MrC_BT_Cancel.UseVisualStyleBackColor = true;
             this.MrC_BT_Cancel.Click += new System.EventHandler(this.MrC_BT_Cancel_Click);
@@ -553,7 +555,7 @@
             // label97
             // 
             this.label97.AutoSize = true;
-            this.label97.Location = new System.Drawing.Point(1150, 565);
+            this.label97.Location = new System.Drawing.Point(1150, 570);
             this.label97.Name = "label97";
             this.label97.Size = new System.Drawing.Size(43, 13);
             this.label97.TabIndex = 74;
@@ -583,11 +585,31 @@
             this.chk_Devices.UseVisualStyleBackColor = true;
             this.chk_Devices.CheckedChanged += new System.EventHandler(this.chk_Devices_CheckedChanged);
             // 
+            // btn_Server
+            // 
+            this.btn_Server.Location = new System.Drawing.Point(13, 565);
+            this.btn_Server.Name = "btn_Server";
+            this.btn_Server.Size = new System.Drawing.Size(75, 23);
+            this.btn_Server.TabIndex = 77;
+            this.btn_Server.Text = "Server";
+            this.btn_Server.UseVisualStyleBackColor = true;
+            // 
+            // btn_Network
+            // 
+            this.btn_Network.Location = new System.Drawing.Point(119, 565);
+            this.btn_Network.Name = "btn_Network";
+            this.btn_Network.Size = new System.Drawing.Size(75, 23);
+            this.btn_Network.TabIndex = 78;
+            this.btn_Network.Text = "Network";
+            this.btn_Network.UseVisualStyleBackColor = true;
+            // 
             // AM_Main_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1229, 587);
+            this.ClientSize = new System.Drawing.Size(1229, 591);
+            this.Controls.Add(this.btn_Network);
+            this.Controls.Add(this.btn_Server);
             this.Controls.Add(this.chk_Devices);
             this.Controls.Add(this.chk_Area);
             this.Controls.Add(this.label97);
@@ -681,5 +703,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn col_password_MrC;
         private System.Windows.Forms.CheckBox chk_Area;
         private System.Windows.Forms.CheckBox chk_Devices;
+        private System.Windows.Forms.Button btn_Server;
+        private System.Windows.Forms.Button btn_Network;
     }
 }
