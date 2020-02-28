@@ -155,14 +155,14 @@ namespace Asset_Management_Alpha
                     objDevices.hostname = dataGridView2.Rows[e.RowIndex].Cells["col_hostname_MrC"].FormattedValue.ToString().Trim();
                     objDevices.brand = dataGridView2.Rows[e.RowIndex].Cells["col_brand_MrC"].FormattedValue.ToString().Trim();
                     objDevices.model = dataGridView2.Rows[e.RowIndex].Cells["col_model_MrC"].FormattedValue.ToString().Trim();
-                    objDevices.serial = dataGridView2.Rows[e.RowIndex].Cells["col_serial_MrC"].FormattedValue.ToString().Trim();
+                    txt_Serial_MrC.Text = objDevices.serial = dataGridView2.Rows[e.RowIndex].Cells["col_serial_MrC"].FormattedValue.ToString().Trim();
                     objDevices.invoice_date = dataGridView2.Rows[e.RowIndex].Cells["col_invoice_MrC"].FormattedValue.ToString().Trim();
                     objDevices.handover_date = dataGridView2.Rows[e.RowIndex].Cells["col_handover_MrC"].FormattedValue.ToString().Trim();
                     objDevices.warranty = dataGridView2.Rows[e.RowIndex].Cells["col_warranty_MrC"].FormattedValue.ToString().Trim();
                     objDevices.supplies = dataGridView2.Rows[e.RowIndex].Cells["col_supplies_MrC"].FormattedValue.ToString().Trim();
                     objDevices.location = dataGridView2.Rows[e.RowIndex].Cells["col_location_MrC"].FormattedValue.ToString().Trim();
                     objDevices.assetcode = dataGridView2.Rows[e.RowIndex].Cells["col_assetcode_MrC"].FormattedValue.ToString().Trim();
-                    objDevices.usrname = dataGridView2.Rows[e.RowIndex].Cells["col_username_MrC"].FormattedValue.ToString().Trim();
+                    txt_UserName_MrC.Text = objDevices.usrname = dataGridView2.Rows[e.RowIndex].Cells["col_username_MrC"].FormattedValue.ToString().Trim();
                     objDevices.position = dataGridView2.Rows[e.RowIndex].Cells["col_position_MrC"].FormattedValue.ToString().Trim();
                     objDevices.remark = dataGridView2.Rows[e.RowIndex].Cells["col_remark_MrC"].FormattedValue.ToString().Trim();
 
@@ -187,20 +187,6 @@ namespace Asset_Management_Alpha
             }
         }
 
-        private void dataGridView2_UserDeletedRow(object sender, DataGridViewRowEventArgs e)
-        {
-            // delete 1 dong
-            busDevices.Delete(objDevices);
-            dataGridView2.Refresh();
-            loadcb_Area();
-            loadcb_Brand();
-            loadcb_Devices();
-            loadcb_Position();
-            loadcb_Supplier();
-            loadcb_Status();
-            label97.Text = dataGridView2.Rows.Count.ToString() + " Rows";
-        }
-
         private void dataGridView2_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
             Updated_Cell = "";
@@ -209,23 +195,74 @@ namespace Asset_Management_Alpha
 
             if (HeaderSelectedCell != "SERIAL" && HeaderSelectedCell != null)
             {
-                if (Current_Cell != Updated_Cell)
+                if (Current_Cell.Trim() != Updated_Cell.Trim())
                 {
                     if (HeaderSelectedCell == "INVOICE_DATE" || HeaderSelectedCell == "HANDOVER_DATE")
                     {
-                        string ConvertDate = "convert(date,'" + Updated_Cell + "',105)";
-                        busDevices.Change("update [DEVICES_TBL] SET " + HeaderSelectedCell + " = " + ConvertDate + " where SERIAL = '" + objDevices.serial + "'");
+                        DialogResult dialogResult = MessageBox.Show("Are you sure you want to change " + HeaderSelectedCell + "\n from: [ " + Current_Cell.Trim() + " ] to: [ " + Updated_Cell + " ]\n which serial number: " + txt_Serial_MrC.Text, "Confirm", MessageBoxButtons.YesNo);
+                        if (dialogResult == DialogResult.Yes)
+                        {
+                          string ConvertDate = "convert(date,'" + Updated_Cell + "',105)";
+                          busDevices.Change("update [DEVICES_TBL] SET " + HeaderSelectedCell + " = " + ConvertDate + " where SERIAL = '" + objDevices.serial + "'");
+                          MessageBox.Show("Cập nhật " + HeaderSelectedCell + " thành công");
+                        }
+                        else if (dialogResult == DialogResult.No)
+                        {
+                            string str_name = null;
+                            str_name = dataGridView2.Columns[e.ColumnIndex].Name.ToString().Trim();
+                            dataGridView2.Rows[e.RowIndex].Cells[str_name].Value = Current_Cell.Trim();
+                        }
                     }
                     else
                     {
-                        busDevices.Change("update [DEVICES_TBL] SET " + HeaderSelectedCell + " = '" + Updated_Cell + "' where SERIAL = '" + objDevices.serial + "'");
-                    }
+                        DialogResult dialogResult = MessageBox.Show("Are you sure you want to change " + HeaderSelectedCell + "\n from: [ " + Current_Cell.Trim() + " ] to: [ " + Updated_Cell + " ]\n which serial number: " + txt_Serial_MrC.Text, "Confirm", MessageBoxButtons.YesNo);
+                        if (dialogResult == DialogResult.Yes)
+                        {
+                            busDevices.Change("update [DEVICES_TBL] SET " + HeaderSelectedCell + " = N'" + Updated_Cell + "' where SERIAL = '" + objDevices.serial + "'");
+                            MessageBox.Show("Cập nhật " + HeaderSelectedCell + " thành công");
+                        }
+                        else if (dialogResult == DialogResult.No)
+                        {
+                            string str_name = null;
+                            str_name = dataGridView2.Columns[e.ColumnIndex].Name.ToString().Trim();
+                            dataGridView2.Rows[e.RowIndex].Cells[str_name].Value = Current_Cell.Trim();
+                        }
+                    }               
                 }
             }
             else
             {
                 MessageBox.Show("Không được chỉnh sửa Serial của thiết bị");
                 dataGridView2.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = Current_Cell;
+            }
+        }
+
+        private void dataGridView2_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete)
+            {
+                // delete 1 dong
+                DialogResult dialogResult = MessageBox.Show("Bạn có muốn xóa thiết bị có Serial [" + objDevices.serial + "] Không?", "Confirm", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    foreach (DataGridViewRow row in dataGridView2.SelectedRows)
+                    {
+                        dataGridView2.Rows.RemoveAt(row.Index);
+                    }
+                    busDevices.Delete(objDevices);
+                    dataGridView2.Refresh();
+                    loadcb_Area();
+                    loadcb_Brand();
+                    loadcb_Devices();
+                    loadcb_Position();
+                    loadcb_Supplier();
+                    loadcb_Status();
+                    label97.Text = dataGridView2.Rows.Count.ToString() + " Rows";
+                }
+                else if (dialogResult == DialogResult.No)
+                {
+                    dataGridView2.Refresh();
+                }
             }
         }
 
@@ -448,5 +485,16 @@ namespace Asset_Management_Alpha
             }
         }
 
+        private void btn_Server_Click(object sender, EventArgs e)
+        {
+            Server_Form FormServer = new Server_Form();
+            FormServer.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form_Add_NV FrmNV = new Form_Add_NV();
+            FrmNV.Show();
+        }
     }
 }

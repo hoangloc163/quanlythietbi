@@ -8,12 +8,16 @@ namespace ValueObject
 {
     public class NhanVien
     {
-        public int manhanvien { get; set; }
+        public string manhanvien { get; set; }
 
         public string tennhanvien { get; set; }
 
         public string tendangnhap { get; set; } // dung de dang nhap
 
         public string matkhau { get; set; } // dung de dang nhap
+
+        public string phongban { get; set; } 
+
+        public string permission { get; set; } 
     }
 }

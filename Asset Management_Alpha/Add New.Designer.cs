@@ -232,7 +232,7 @@
             // 
             this.txt_Model.Location = new System.Drawing.Point(72, 181);
             this.txt_Model.Name = "txt_Model";
-            this.txt_Model.Size = new System.Drawing.Size(286, 20);
+            this.txt_Model.Size = new System.Drawing.Size(419, 20);
             this.txt_Model.TabIndex = 5;
             this.txt_Model.TextChanged += new System.EventHandler(this.txt_Model_TextChanged);
             // 
@@ -341,7 +341,7 @@
             this.Controls.Add(this.bt_Add_Dev);
             this.Name = "Add_New";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Add New";
+            this.Text = "Add New Devices";
             this.Load += new System.EventHandler(this.Add_New_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

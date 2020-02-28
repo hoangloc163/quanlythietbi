@@ -58,14 +58,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AP.cs" />
-    <Compile Include="CCTV.cs" />
     <Compile Include="ConnectObj.cs" />
     <Compile Include="Devices.cs" />
-    <Compile Include="FW.cs" />
-    <Compile Include="IPC.cs" />
-    <Compile Include="LBLPRT.cs" />
-    <Compile Include="MO.cs" />
     <Compile Include="NhanVien.cs" />
     <Compile Include="PC.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

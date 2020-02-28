@@ -52,12 +52,6 @@ namespace BussinessLogicLayer
             return dao.GetData4Cb_Status();
         }
 
-
-        public int Insert(Devices obj)
-        {
-            return dao.Insert(obj);
-        }
-
         public string Insert_Form(Devices obj, string mess)
         {
             return dao.Insert_Form(obj, mess);

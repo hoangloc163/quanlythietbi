@@ -85,6 +85,7 @@
             this.chk_Devices = new System.Windows.Forms.CheckBox();
             this.btn_Server = new System.Windows.Forms.Button();
             this.btn_Network = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             qLVT_testDataSet1 = new Asset_Management_Alpha.QLVT_testDataSet1();
             ((System.ComponentModel.ISupportInitialize)(qLVT_testDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -99,6 +100,7 @@
             // dataGridView2
             // 
             this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AllowUserToDeleteRows = false;
             this.dataGridView2.AutoGenerateColumns = false;
             this.dataGridView2.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -129,6 +131,7 @@
             this.col_logname_MrC,
             this.col_password_MrC});
             this.dataGridView2.DataSource = this.dEVICESTBLBindingSource;
+            this.dataGridView2.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke;
             this.dataGridView2.EnableHeadersVisualStyles = false;
             this.dataGridView2.Location = new System.Drawing.Point(12, 85);
             this.dataGridView2.MultiSelect = false;
@@ -140,7 +143,7 @@
             this.dataGridView2.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dataGridView2_CellBeginEdit);
             this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
             this.dataGridView2.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellEndEdit);
-            this.dataGridView2.UserDeletedRow += new System.Windows.Forms.DataGridViewRowEventHandler(this.dataGridView2_UserDeletedRow);
+            this.dataGridView2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGridView2_KeyDown);
             // 
             // col_darea_MrC
             // 
@@ -548,7 +551,7 @@
             this.MrC_BT_Cancel.Name = "MrC_BT_Cancel";
             this.MrC_BT_Cancel.Size = new System.Drawing.Size(101, 23);
             this.MrC_BT_Cancel.TabIndex = 14;
-            this.MrC_BT_Cancel.Text = "Cancel";
+            this.MrC_BT_Cancel.Text = "Close";
             this.MrC_BT_Cancel.UseVisualStyleBackColor = true;
             this.MrC_BT_Cancel.Click += new System.EventHandler(this.MrC_BT_Cancel_Click);
             // 
@@ -593,6 +596,7 @@
             this.btn_Server.TabIndex = 77;
             this.btn_Server.Text = "Server";
             this.btn_Server.UseVisualStyleBackColor = true;
+            this.btn_Server.Click += new System.EventHandler(this.btn_Server_Click);
             // 
             // btn_Network
             // 
@@ -603,11 +607,22 @@
             this.btn_Network.Text = "Network";
             this.btn_Network.UseVisualStyleBackColor = true;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(227, 565);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 79;
+            this.button1.Text = "Nhân Viên";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // AM_Main_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1229, 591);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_Network);
             this.Controls.Add(this.btn_Server);
             this.Controls.Add(this.chk_Devices);
@@ -705,5 +720,6 @@
         private System.Windows.Forms.CheckBox chk_Devices;
         private System.Windows.Forms.Button btn_Server;
         private System.Windows.Forms.Button btn_Network;
+        private System.Windows.Forms.Button button1;
     }
 }

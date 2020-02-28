@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using ValueObject;
 using BussinessLogicLayer;
 using Microsoft.Win32;
+using System.Security.Cryptography;
 
 namespace Asset_Management_Alpha
 {
@@ -36,8 +37,7 @@ namespace Asset_Management_Alpha
                 key.Close();
             }
         }
-
-
+     
         private void bt_Close_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -52,17 +52,14 @@ namespace Asset_Management_Alpha
             {
                 objnhanvien.tendangnhap = txt_tendangnhap.Text;
                 objnhanvien.matkhau = txt_matkhau.Text;
+                //ma hoa
+                objnhanvien.matkhau = busnhanvien.Mahoa(objnhanvien);
 
                 check = busnhanvien.LogIn(objnhanvien, check);
 
                 if (check == "True") //phai la True mới dc, con true la ko dc
                 {
                     MessageBox.Show("Chào mừng bạn");
-                
-                    //// mo form ke tiep (SGF)
-                    //SFG SGF_Form = new SFG();
-                    //SGF_Form.CheckTenDangNhap(txt_tendangnhap.Text.ToString());
-                    //SGF_Form.Show();
 
                     // mo form ke tiep (AM_Main_Form)
                     AM_Main_Form SGF_Form = new AM_Main_Form();

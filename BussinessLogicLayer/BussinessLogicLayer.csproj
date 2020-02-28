@@ -58,15 +58,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ApBUS.cs" />
-    <Compile Include="CctvBUS.cs" />
     <Compile Include="DevicesBUS.cs" />
-    <Compile Include="FwBUS.cs" />
-    <Compile Include="IpcBUS.cs" />
-    <Compile Include="LblprtBUS.cs" />
-    <Compile Include="MoBUS.cs" />
     <Compile Include="NhanVienBUS.cs" />
-    <Compile Include="PcBUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServerBUS.cs" />
   </ItemGroup>

@@ -65,7 +65,7 @@
             this.txt_matkhau.Name = "txt_matkhau";
             this.txt_matkhau.Size = new System.Drawing.Size(117, 20);
             this.txt_matkhau.TabIndex = 10;
-            this.txt_matkhau.Text = "123";
+            this.txt_matkhau.Text = "P@ssW0rd";
             this.txt_matkhau.UseSystemPasswordChar = true;
             // 
             // label3

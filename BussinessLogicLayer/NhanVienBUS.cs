@@ -18,5 +18,25 @@ namespace BussinessLogicLayer
             return dao.LogIn(obj, check);
         }
 
-    }
+        public string Mahoa(NhanVien obj)
+        {
+            return dao.Mahoa(obj);
+        }
+
+        public DataTable GetData()
+        {
+            return dao.GetData();
+        }
+
+        public string ResetPass(NhanVien obj, string mess)
+        {
+            return dao.ResetPass(obj, mess);
+        }
+
+        public string Add(NhanVien obj, string mess)
+        {
+            return dao.Add(obj, mess);
+        }
+
+     }
 }

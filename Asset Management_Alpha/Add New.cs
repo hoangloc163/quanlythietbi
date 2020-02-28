@@ -10,8 +10,7 @@ using System.Windows.Forms;
 using ValueObject;
 using BussinessLogicLayer;
 using Asset_Management_Alpha;
-using static Asset_Management_Alpha.AM_Main_Form;
-//using static Asset_Management_Alpha.SFG; // link ve form SGF
+using static Asset_Management_Alpha.AM_Main_Form;// link form 
 using System.Text.RegularExpressions;
 
 namespace Asset_Management_Alpha
@@ -44,11 +43,6 @@ namespace Asset_Management_Alpha
                     cleartxt();
                 }
                 
-                //// add qua form SGF
-                //SFG SGF_Form = new SFG();
-                //SGF_Form.UpdateForm("update");
-                //SGF_Form.Refesh_dtgv();
-
                 // add qua form AM_Main_Form
                 AM_Main_Form SGF_Form = new AM_Main_Form();
                 SGF_Form.UpdateForm("update");

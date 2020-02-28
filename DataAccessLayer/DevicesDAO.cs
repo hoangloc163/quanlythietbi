@@ -57,39 +57,6 @@ namespace DataAccessLayer
             return db.GetData("DEVICES_CB_Select_Status", null);
         }
 
-
-        public int Insert(Devices obj)
-        {
-            SqlParameter[] para =
-            {
-                new SqlParameter("darea",obj.darea),
-                new SqlParameter("dtype",obj.dtype),
-                new SqlParameter("hostname", obj.hostname),
-                new SqlParameter("brand", obj.brand),
-                new SqlParameter("model", obj.model),
-                new SqlParameter("serial", obj.serial),
-                new SqlParameter("invoice_date", obj.invoice_date),
-                new SqlParameter("handover_date", obj.handover_date),
-                new SqlParameter("warranty", obj.warranty),
-                new SqlParameter("supplies", obj.supplies),
-                new SqlParameter("remark", obj.remark),
-                new SqlParameter("location",obj.location),
-                new SqlParameter("assetcode", obj.assetcode),
-                new SqlParameter("usrname",obj.usrname),
-                new SqlParameter("position",obj.position),
-                new SqlParameter("memory", obj.memory),
-                new SqlParameter("hdd", obj.hdd),
-                new SqlParameter("dstatus",obj.dstatus),
-                new SqlParameter("log_name",obj.log_name),
-                new SqlParameter("passwrd", obj.passwrd),
-                new SqlParameter("dns", obj.dns),
-                new SqlParameter("default_gw", obj.default_gw),
-                new SqlParameter("ip_addr", obj.ip_addr),
-                new SqlParameter("mac_addr", obj.mac_addr),
-            };
-            return db.ExecuteSQL("Devices_Insert", para);
-        }
-
         public string Insert_Form(Devices obj, string mess)
         {
             SqlParameter[] para =

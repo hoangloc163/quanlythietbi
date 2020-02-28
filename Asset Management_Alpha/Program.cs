@@ -16,10 +16,9 @@ namespace Asset_Management_Alpha
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new SFG());
             //Application.Run(new ConnectToDataBaseForm());
-            //Application.Run(new LogIn_Form());
-            Application.Run(new Server_Form());
+            Application.Run(new LogIn_Form());
+            //Application.Run(new Form_Add_NV());
         }
     }
 }
