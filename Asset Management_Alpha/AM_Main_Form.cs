@@ -496,5 +496,11 @@ namespace Asset_Management_Alpha
             Form_Add_NV FrmNV = new Form_Add_NV();
             FrmNV.Show();
         }
+
+        private void btn_Network_Click(object sender, EventArgs e)
+        {
+            Network_Form frmNetwork = new Network_Form();
+            frmNetwork.Show();
+        }
     }
 }

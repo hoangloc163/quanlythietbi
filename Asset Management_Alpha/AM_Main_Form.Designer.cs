@@ -606,6 +606,7 @@
             this.btn_Network.TabIndex = 78;
             this.btn_Network.Text = "Network";
             this.btn_Network.UseVisualStyleBackColor = true;
+            this.btn_Network.Click += new System.EventHandler(this.btn_Network_Click);
             // 
             // button1
             // 

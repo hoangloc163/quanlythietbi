@@ -57,10 +57,17 @@
             this.label14 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btn_Add = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btn_Change = new System.Windows.Forms.Button();
+            this.btn_Delete = new System.Windows.Forms.Button();
+            this.btn_back = new System.Windows.Forms.Button();
+            this.rb_Wan = new System.Windows.Forms.RadioButton();
+            this.rb_LAN = new System.Windows.Forms.RadioButton();
+            this.rb_All = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Add)).BeginInit();
             this.SuspendLayout();
             // 
             // txt_Wan_IP
@@ -94,9 +101,9 @@
             // txt_Wan_SynologyPort
             // 
             this.txt_Wan_SynologyPort.Location = new System.Drawing.Point(422, 17);
-            this.txt_Wan_SynologyPort.MaxLength = 5;
+            this.txt_Wan_SynologyPort.MaxLength = 25;
             this.txt_Wan_SynologyPort.Name = "txt_Wan_SynologyPort";
-            this.txt_Wan_SynologyPort.Size = new System.Drawing.Size(69, 20);
+            this.txt_Wan_SynologyPort.Size = new System.Drawing.Size(86, 20);
             this.txt_Wan_SynologyPort.TabIndex = 4;
             // 
             // txt_Wan_PPOEUsrname
@@ -150,10 +157,10 @@
             // 
             // txt_Wan_Port
             // 
-            this.txt_Wan_Port.Location = new System.Drawing.Point(563, 17);
-            this.txt_Wan_Port.MaxLength = 5;
+            this.txt_Wan_Port.Location = new System.Drawing.Point(546, 17);
+            this.txt_Wan_Port.MaxLength = 25;
             this.txt_Wan_Port.Name = "txt_Wan_Port";
-            this.txt_Wan_Port.Size = new System.Drawing.Size(69, 20);
+            this.txt_Wan_Port.Size = new System.Drawing.Size(86, 20);
             this.txt_Wan_Port.TabIndex = 12;
             // 
             // label1
@@ -267,7 +274,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(516, 20);
+            this.label13.Location = new System.Drawing.Point(514, 20);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(29, 13);
             this.label13.TabIndex = 25;
@@ -327,31 +334,112 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "LAN";
             // 
-            // dataGridView1
+            // btn_Add
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 151);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(968, 214);
-            this.dataGridView1.TabIndex = 29;
+            this.btn_Add.AllowUserToAddRows = false;
+            this.btn_Add.AllowUserToDeleteRows = false;
+            this.btn_Add.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.btn_Add.Location = new System.Drawing.Point(12, 179);
+            this.btn_Add.Name = "btn_Add";
+            this.btn_Add.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.btn_Add.Size = new System.Drawing.Size(968, 186);
+            this.btn_Add.TabIndex = 29;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(540, 152);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 30;
+            this.button1.Text = "Add";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // btn_Change
+            // 
+            this.btn_Change.Location = new System.Drawing.Point(649, 152);
+            this.btn_Change.Name = "btn_Change";
+            this.btn_Change.Size = new System.Drawing.Size(75, 23);
+            this.btn_Change.TabIndex = 31;
+            this.btn_Change.Text = "Modify";
+            this.btn_Change.UseVisualStyleBackColor = true;
+            // 
+            // btn_Delete
+            // 
+            this.btn_Delete.Location = new System.Drawing.Point(763, 152);
+            this.btn_Delete.Name = "btn_Delete";
+            this.btn_Delete.Size = new System.Drawing.Size(75, 23);
+            this.btn_Delete.TabIndex = 32;
+            this.btn_Delete.Text = "Delete";
+            this.btn_Delete.UseVisualStyleBackColor = true;
+            // 
+            // btn_back
+            // 
+            this.btn_back.Location = new System.Drawing.Point(898, 152);
+            this.btn_back.Name = "btn_back";
+            this.btn_back.Size = new System.Drawing.Size(75, 23);
+            this.btn_back.TabIndex = 33;
+            this.btn_back.Text = "Back";
+            this.btn_back.UseVisualStyleBackColor = true;
+            this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
+            // 
+            // rb_Wan
+            // 
+            this.rb_Wan.AutoSize = true;
+            this.rb_Wan.Location = new System.Drawing.Point(78, 155);
+            this.rb_Wan.Name = "rb_Wan";
+            this.rb_Wan.Size = new System.Drawing.Size(51, 17);
+            this.rb_Wan.TabIndex = 34;
+            this.rb_Wan.TabStop = true;
+            this.rb_Wan.Text = "WAN";
+            this.rb_Wan.UseVisualStyleBackColor = true;
+            // 
+            // rb_LAN
+            // 
+            this.rb_LAN.AutoSize = true;
+            this.rb_LAN.Location = new System.Drawing.Point(224, 155);
+            this.rb_LAN.Name = "rb_LAN";
+            this.rb_LAN.Size = new System.Drawing.Size(46, 17);
+            this.rb_LAN.TabIndex = 35;
+            this.rb_LAN.TabStop = true;
+            this.rb_LAN.Text = "LAN";
+            this.rb_LAN.UseVisualStyleBackColor = true;
+            // 
+            // rb_All
+            // 
+            this.rb_All.AutoSize = true;
+            this.rb_All.Location = new System.Drawing.Point(374, 155);
+            this.rb_All.Name = "rb_All";
+            this.rb_All.Size = new System.Drawing.Size(44, 17);
+            this.rb_All.TabIndex = 36;
+            this.rb_All.TabStop = true;
+            this.rb_All.Text = "ALL";
+            this.rb_All.UseVisualStyleBackColor = true;
             // 
             // Network_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(992, 390);
-            this.Controls.Add(this.dataGridView1);
+            this.ControlBox = false;
+            this.Controls.Add(this.rb_All);
+            this.Controls.Add(this.rb_LAN);
+            this.Controls.Add(this.rb_Wan);
+            this.Controls.Add(this.btn_back);
+            this.Controls.Add(this.btn_Delete);
+            this.Controls.Add(this.btn_Change);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_Add);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label14);
             this.Name = "Network_Form";
-            this.Text = "Network_Form";
+            this.Text = "Delete";
             this.Load += new System.EventHandler(this.Network_Form_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Add)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -388,6 +476,13 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView btn_Add;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_Change;
+        private System.Windows.Forms.Button btn_Delete;
+        private System.Windows.Forms.Button btn_back;
+        private System.Windows.Forms.RadioButton rb_Wan;
+        private System.Windows.Forms.RadioButton rb_LAN;
+        private System.Windows.Forms.RadioButton rb_All;
     }
 }

@@ -60,6 +60,7 @@
   <ItemGroup>
     <Compile Include="ConnectObj.cs" />
     <Compile Include="Devices.cs" />
+    <Compile Include="Network.cs" />
     <Compile Include="NhanVien.cs" />
     <Compile Include="PC.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

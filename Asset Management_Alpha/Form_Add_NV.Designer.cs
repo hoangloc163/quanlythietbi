@@ -311,6 +311,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(870, 271);
+            this.ControlBox = false;
             this.Controls.Add(this.cb_permission);
             this.Controls.Add(this.txt_DefaultPassword);
             this.Controls.Add(this.lb_Rows);
