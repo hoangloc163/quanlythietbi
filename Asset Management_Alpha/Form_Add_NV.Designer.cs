@@ -53,7 +53,7 @@
             this.btn_Back = new System.Windows.Forms.Button();
             this.btn_Search = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.bt_Rows = new System.Windows.Forms.Label();
+            this.lb_Rows = new System.Windows.Forms.Label();
             this.txt_DefaultPassword = new System.Windows.Forms.TextBox();
             this.cb_permission = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -65,6 +65,7 @@
             this.txt_manhanvien.Name = "txt_manhanvien";
             this.txt_manhanvien.Size = new System.Drawing.Size(127, 20);
             this.txt_manhanvien.TabIndex = 0;
+            this.txt_manhanvien.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_manhanvien_KeyDown);
             // 
             // txt_tennhanvien
             // 
@@ -143,6 +144,7 @@
             this.dataGridView1.Size = new System.Drawing.Size(846, 158);
             this.dataGridView1.TabIndex = 8;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGridView1_KeyDown);
             // 
             // col_manhanvien
             // 
@@ -254,6 +256,7 @@
             this.btn_Back.TabIndex = 17;
             this.btn_Back.Text = "Trở về";
             this.btn_Back.UseVisualStyleBackColor = true;
+            this.btn_Back.Click += new System.EventHandler(this.btn_Back_Click);
             // 
             // btn_Search
             // 
@@ -263,6 +266,7 @@
             this.btn_Search.TabIndex = 18;
             this.btn_Search.Text = "Tìm";
             this.btn_Search.UseVisualStyleBackColor = true;
+            this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
             // 
             // label7
             // 
@@ -273,14 +277,14 @@
             this.label7.TabIndex = 19;
             this.label7.Text = "Số Nhân viên:";
             // 
-            // bt_Rows
+            // lb_Rows
             // 
-            this.bt_Rows.AutoSize = true;
-            this.bt_Rows.Location = new System.Drawing.Point(94, 247);
-            this.bt_Rows.Name = "bt_Rows";
-            this.bt_Rows.Size = new System.Drawing.Size(34, 13);
-            this.bt_Rows.TabIndex = 20;
-            this.bt_Rows.Text = "Rows";
+            this.lb_Rows.AutoSize = true;
+            this.lb_Rows.Location = new System.Drawing.Point(94, 247);
+            this.lb_Rows.Name = "lb_Rows";
+            this.lb_Rows.Size = new System.Drawing.Size(34, 13);
+            this.lb_Rows.TabIndex = 20;
+            this.lb_Rows.Text = "Rows";
             // 
             // txt_DefaultPassword
             // 
@@ -309,7 +313,7 @@
             this.ClientSize = new System.Drawing.Size(870, 271);
             this.Controls.Add(this.cb_permission);
             this.Controls.Add(this.txt_DefaultPassword);
-            this.Controls.Add(this.bt_Rows);
+            this.Controls.Add(this.lb_Rows);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.btn_Search);
             this.Controls.Add(this.btn_Back);
@@ -359,7 +363,7 @@
         private System.Windows.Forms.Button btn_Back;
         private System.Windows.Forms.Button btn_Search;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label bt_Rows;
+        private System.Windows.Forms.Label lb_Rows;
         private System.Windows.Forms.TextBox txt_DefaultPassword;
         private System.Windows.Forms.ComboBox cb_permission;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_manhanvien;

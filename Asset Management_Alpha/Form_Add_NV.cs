@@ -22,23 +22,25 @@ namespace Asset_Management_Alpha
 
         NhanVien objnhanvien = new NhanVien();
         NhanVienBUS busnhanvien = new NhanVienBUS();
-        string Current_Cell = "";
         int RowsIndex;
+        int ColumnsIndex;
 
         private void Form_Add_NV_Load(object sender, EventArgs e)
         {
             loadDataGridView();
-            bt_Rows.Text = dataGridView1.Rows.Count.ToString() + " Rows";
         }
         void loadDataGridView()
         {
             dataGridView1.DataSource = busnhanvien.GetData();
+            lb_Rows.Text = dataGridView1.Rows.Count.ToString() + " Rows";
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
+                txt_matkhau.Enabled = false;
+                btn_Add.Enabled = false;
                 if (dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
                 {
                     objnhanvien.manhanvien = txt_manhanvien.Text = dataGridView1.Rows[e.RowIndex].Cells["col_manhanvien"].FormattedValue.ToString().Trim();
@@ -49,6 +51,7 @@ namespace Asset_Management_Alpha
                     objnhanvien.permission = cb_permission.Text = dataGridView1.Rows[e.RowIndex].Cells["col_permission"].FormattedValue.ToString().Trim();
 
                     RowsIndex = e.RowIndex;
+                    ColumnsIndex = e.ColumnIndex;
                 }
             }
         }
@@ -88,17 +91,46 @@ namespace Asset_Management_Alpha
                 MessageBox.Show(messages);
                 loadDataGridView();
                 dataGridView1.Refresh();
+                lb_Rows.Text = dataGridView1.Rows.Count.ToString() + " Rows";
+            }
+            else
+            {
+                MessageBox.Show(messages);
             }
         }
 
         private void btn_Delete_Click(object sender, EventArgs e)
         {
-
+            DialogResult dialogResult = MessageBox.Show("Xóa User có mã: " + objnhanvien.manhanvien, "Confirm", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                string message = "";
+                objnhanvien.manhanvien = txt_manhanvien.Text;
+                message = busnhanvien.Delete(objnhanvien, message);
+                loadDataGridView();
+                dataGridView1.Refresh();
+                lb_Rows.Text = dataGridView1.Rows.Count.ToString() + " Rows";
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                
+            }
         }
 
         private void btn_Change_Click(object sender, EventArgs e)
         {
-
+            string messages = "";
+            objnhanvien.manhanvien = txt_manhanvien.Text;
+            objnhanvien.tennhanvien = txt_tennhanvien.Text;
+            objnhanvien.tendangnhap = txt_tendangnhap.Text;
+            objnhanvien.phongban = txt_phongban.Text;
+            objnhanvien.permission = cb_permission.Text;
+            messages = busnhanvien.Change(objnhanvien,messages);
+            if (messages == "Thay đổi thành công")
+            {
+                MessageBox.Show(messages);
+                loadDataGridView();
+            }
         }
 
         void txtboxToObj()
@@ -109,6 +141,62 @@ namespace Asset_Management_Alpha
             objnhanvien.matkhau = txt_matkhau.Text;
             objnhanvien.phongban = txt_phongban.Text;
             objnhanvien.permission = cb_permission.Text;
+        }
+
+        private void btn_Back_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void dataGridView1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete)
+            {
+                DialogResult dialogResult = MessageBox.Show("Xóa User có mã: " + objnhanvien.manhanvien, "Confirm", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    foreach (DataGridViewRow row in dataGridView1.SelectedRows)
+                    {
+                        dataGridView1.Rows.RemoveAt(row.Index);
+                    }
+                    string message = "";
+                    objnhanvien.manhanvien = txt_manhanvien.Text;
+                    message = busnhanvien.Delete(objnhanvien, message);
+                    dataGridView1.Refresh();
+                    lb_Rows.Text = dataGridView1.Rows.Count.ToString() + " Rows";
+                }
+                else if (dialogResult == DialogResult.No)
+                {
+                    dataGridView1.Refresh();
+                }
+            }
+            if (e.KeyCode == Keys.Escape)
+            {
+                txt_matkhau.Enabled = true;
+                btn_Add.Enabled = true;
+                txt_manhanvien.Clear();
+                txt_tennhanvien.Clear();
+                txt_tendangnhap.Clear();
+                txt_matkhau.Clear();
+                txt_phongban.Clear();
+            }
+        }
+
+        private void txt_manhanvien_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                objnhanvien.manhanvien = txt_manhanvien.Text;
+                dataGridView1.DataSource = busnhanvien.Search(objnhanvien);
+                dataGridView1.Refresh();
+            }
+        }
+
+        private void btn_Search_Click(object sender, EventArgs e)
+        {
+            objnhanvien.manhanvien = txt_manhanvien.Text;
+            dataGridView1.DataSource = busnhanvien.Search(objnhanvien);
+            dataGridView1.Refresh();
         }
     }
 }

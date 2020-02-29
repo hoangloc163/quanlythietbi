@@ -22,7 +22,7 @@ namespace DataAccessLayer
                 new SqlParameter("tendangnhap", obj.tendangnhap),
                 new SqlParameter("matkhau", obj.matkhau),
             };
-            return db.ExecuteSQL1("NhanVien_DangNhap", para, check);
+            return db.ExecuteSQL1("NHANVIEN_Login", para, check);
         }
 
         public string Mahoa(NhanVien obj)
@@ -41,7 +41,7 @@ namespace DataAccessLayer
 
         public DataTable GetData()
         {
-            return db.GetData("NhanVien_SelectAll", null);
+            return db.GetData("NHANVIEN_SelectAll", null);
         }
 
         public string ResetPass(NhanVien obj, string mess)
@@ -51,7 +51,7 @@ namespace DataAccessLayer
                 new SqlParameter("manhanvien",obj.manhanvien),
                 new SqlParameter("matkhau",obj.matkhau),
             };
-            return db.ExecuteSQL3("NhanVien_ResetPassword", para, mess);
+            return db.ExecuteSQL3("NHANVIEN_ResetPassword", para, mess);
         }
 
         public string Add(NhanVien obj, string mess)
@@ -65,7 +65,7 @@ namespace DataAccessLayer
                 new SqlParameter("phongban",obj.phongban),
                 new SqlParameter("permission",obj.permission),
             }; 
-            return db.ExecuteSQL3("NhanVien_ADD", para, mess);
+            return db.ExecuteSQL3("NHANVIEN_Add", para, mess);
         }
 
         public string Delete(NhanVien obj, string mess)
@@ -74,7 +74,30 @@ namespace DataAccessLayer
             {
                 new SqlParameter("manhanvien",obj.manhanvien),
             };
-            return db.ExecuteSQL3("NhanVien_Delete", para, mess);
+            return db.ExecuteSQL3("NHANVIEN_Delete", para, mess);
+        }
+
+        public string Change(NhanVien obj, string mess)
+        {
+            SqlParameter[] para =
+            {
+                new SqlParameter("manhanvien",obj.manhanvien),
+                new SqlParameter("matkhau",obj.matkhau),
+                new SqlParameter("tennhanvien",obj.tennhanvien),
+                new SqlParameter("tendangnhap",obj.tendangnhap),
+                new SqlParameter("phongban",obj.phongban),
+                new SqlParameter("permission",obj.permission),
+            };
+            return db.ExecuteSQL3("NHANVIEN_Change", para, mess);
+        }
+
+        public DataTable Search(NhanVien obj)
+        {
+            SqlParameter[] para =
+            {
+                new SqlParameter("manhanvien",obj.manhanvien)
+            };
+            return db.GetData("NHANVIEN_Search", para);
         }
     }
 }

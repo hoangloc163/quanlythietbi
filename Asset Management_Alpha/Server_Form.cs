@@ -123,24 +123,27 @@ namespace Asset_Management_Alpha
 
         private void dataGridView2_KeyDown(object sender, KeyEventArgs e)
         {
-            // delete 1 dong
-            DialogResult dialogResult = MessageBox.Show("Delete Server with serial number: " + objServer.serial, "Confirm", MessageBoxButtons.YesNo);
-            if (dialogResult == DialogResult.Yes)
+            if (e.KeyCode == Keys.Delete)
             {
-                foreach (DataGridViewRow row in dataGridView2.SelectedRows)
+                // delete 1 dong
+                DialogResult dialogResult = MessageBox.Show("Delete Server with serial number: " + objServer.serial, "Confirm", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
                 {
-                    dataGridView2.Rows.RemoveAt(row.Index);
+                    foreach (DataGridViewRow row in dataGridView2.SelectedRows)
+                    {
+                        dataGridView2.Rows.RemoveAt(row.Index);
+                    }
+                    busServer.Delete(objServer);
+                    dataGridView2.Refresh();
+                    loadcb_Area();
+                    loadcb_Brand();
+                    loadcb_Supplier();
+                    label97.Text = dataGridView2.Rows.Count.ToString() + " Rows";
                 }
-                busServer.Delete(objServer);
-                dataGridView2.Refresh();
-                loadcb_Area();
-                loadcb_Brand();
-                loadcb_Supplier();
-                label97.Text = dataGridView2.Rows.Count.ToString() + " Rows";
-            }
-            else if (dialogResult == DialogResult.No)
-            {
-                dataGridView2.Refresh();
+                else if (dialogResult == DialogResult.No)
+                {
+                    dataGridView2.Refresh();
+                }
             }
         }
 

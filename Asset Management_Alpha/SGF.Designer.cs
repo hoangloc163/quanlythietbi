@@ -606,7 +606,7 @@
             this.bt_Refresh_MrC.TabIndex = 45;
             this.bt_Refresh_MrC.Text = "Refesh";
             this.bt_Refresh_MrC.UseVisualStyleBackColor = true;
-            this.bt_Refresh_MrC.Click += new System.EventHandler(this.bt_Refresh_MrC_Click);
+            //this.bt_Refresh_MrC.Click += new System.EventHandler(this.bt_Refresh_MrC_Click);
             // 
             // bt_Insert_MrC
             // 
@@ -616,7 +616,7 @@
             this.bt_Insert_MrC.TabIndex = 44;
             this.bt_Insert_MrC.Text = "ADD";
             this.bt_Insert_MrC.UseVisualStyleBackColor = true;
-            this.bt_Insert_MrC.Click += new System.EventHandler(this.bt_Insert_MrC_Click);
+            //this.bt_Insert_MrC.Click += new System.EventHandler(this.bt_Insert_MrC_Click);
             // 
             // MrC_BT_Cancel
             // 
@@ -626,7 +626,7 @@
             this.MrC_BT_Cancel.TabIndex = 43;
             this.MrC_BT_Cancel.Text = "Cancel";
             this.MrC_BT_Cancel.UseVisualStyleBackColor = true;
-            this.MrC_BT_Cancel.Click += new System.EventHandler(this.MrC_BT_Cancel_Click);
+            //this.MrC_BT_Cancel.Click += new System.EventHandler(this.MrC_BT_Cancel_Click);
             // 
             // rbt_Or_Check
             // 
@@ -691,9 +691,9 @@
             this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView2.Size = new System.Drawing.Size(1202, 408);
             this.dataGridView2.TabIndex = 40;
-            this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
-            this.dataGridView2.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellEndEdit);
-            this.dataGridView2.UserDeletedRow += new System.Windows.Forms.DataGridViewRowEventHandler(this.dataGridView2_UserDeletedRow);
+            //this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
+            //this.dataGridView2.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellEndEdit);
+            //this.dataGridView2.UserDeletedRow += new System.Windows.Forms.DataGridViewRowEventHandler(this.dataGridView2_UserDeletedRow);
             // 
             // col_darea_MrC
             // 
@@ -893,7 +893,7 @@
             this.MrC_BT_Search.TabIndex = 39;
             this.MrC_BT_Search.Text = "Search";
             this.MrC_BT_Search.UseVisualStyleBackColor = true;
-            this.MrC_BT_Search.Click += new System.EventHandler(this.MrC_BT_Search_Click);
+            //this.MrC_BT_Search.Click += new System.EventHandler(this.MrC_BT_Search_Click);
             // 
             // label95
             // 
@@ -1256,7 +1256,7 @@
             this.PC_dtgv.ReadOnly = true;
             this.PC_dtgv.Size = new System.Drawing.Size(333, 158);
             this.PC_dtgv.TabIndex = 38;
-            this.PC_dtgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.PC_dtgv_CellClick);
+            //this.PC_dtgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.PC_dtgv_CellClick);
             // 
             // col_area_pc
             // 
@@ -1385,7 +1385,7 @@
             this.PC_BT_Delete.TabIndex = 37;
             this.PC_BT_Delete.Text = "Delete";
             this.PC_BT_Delete.UseVisualStyleBackColor = true;
-            this.PC_BT_Delete.Click += new System.EventHandler(this.PC_BT_Delete_Click);
+            //this.PC_BT_Delete.Click += new System.EventHandler(this.PC_BT_Delete_Click);
             // 
             // PC_BT_Change
             // 
@@ -1395,7 +1395,7 @@
             this.PC_BT_Change.TabIndex = 36;
             this.PC_BT_Change.Text = "Change";
             this.PC_BT_Change.UseVisualStyleBackColor = true;
-            this.PC_BT_Change.Click += new System.EventHandler(this.PC_BT_Change_Click);
+            //this.PC_BT_Change.Click += new System.EventHandler(this.PC_BT_Change_Click);
             // 
             // PC_BT_Insert
             // 
@@ -1405,7 +1405,7 @@
             this.PC_BT_Insert.TabIndex = 35;
             this.PC_BT_Insert.Text = "Insert";
             this.PC_BT_Insert.UseVisualStyleBackColor = true;
-            this.PC_BT_Insert.Click += new System.EventHandler(this.PC_BT_Insert_Click);
+            //this.PC_BT_Insert.Click += new System.EventHandler(this.PC_BT_Insert_Click);
             // 
             // PC_DEVICES_dtgv
             // 
@@ -1435,7 +1435,7 @@
             this.PC_DEVICES_dtgv.ReadOnly = true;
             this.PC_DEVICES_dtgv.Size = new System.Drawing.Size(333, 130);
             this.PC_DEVICES_dtgv.TabIndex = 34;
-            this.PC_DEVICES_dtgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.PC_DEVICES_dtgv_CellClick);
+            //this.PC_DEVICES_dtgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.PC_DEVICES_dtgv_CellClick);
             // 
             // col_area_pcdev
             // 
@@ -1881,7 +1881,7 @@
             this.MO_DEVICES_dtgv.ReadOnly = true;
             this.MO_DEVICES_dtgv.Size = new System.Drawing.Size(333, 130);
             this.MO_DEVICES_dtgv.TabIndex = 73;
-            this.MO_DEVICES_dtgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.MO_DEVICES_dtgv_CellClick);
+            //this.MO_DEVICES_dtgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.MO_DEVICES_dtgv_CellClick);
             // 
             // col_area_modev
             // 
@@ -2014,7 +2014,7 @@
             this.MO_dtgv.ReadOnly = true;
             this.MO_dtgv.Size = new System.Drawing.Size(333, 158);
             this.MO_dtgv.TabIndex = 72;
-            this.MO_dtgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.MO_dtgv_CellClick);
+            //this.MO_dtgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.MO_dtgv_CellClick);
             // 
             // col_area_mo
             // 
@@ -2129,7 +2129,7 @@
             this.MO_BT_Delete.TabIndex = 70;
             this.MO_BT_Delete.Text = "Delete";
             this.MO_BT_Delete.UseVisualStyleBackColor = true;
-            this.MO_BT_Delete.Click += new System.EventHandler(this.MO_BT_Delete_Click);
+            //this.MO_BT_Delete.Click += new System.EventHandler(this.MO_BT_Delete_Click);
             // 
             // MO_BT_Change
             // 
@@ -2139,7 +2139,7 @@
             this.MO_BT_Change.TabIndex = 69;
             this.MO_BT_Change.Text = "Confirm";
             this.MO_BT_Change.UseVisualStyleBackColor = true;
-            this.MO_BT_Change.Click += new System.EventHandler(this.MO_BT_Change_Click);
+            //this.MO_BT_Change.Click += new System.EventHandler(this.MO_BT_Change_Click);
             // 
             // MO_BT_Insert
             // 
@@ -2149,7 +2149,7 @@
             this.MO_BT_Insert.TabIndex = 68;
             this.MO_BT_Insert.Text = "Insert";
             this.MO_BT_Insert.UseVisualStyleBackColor = true;
-            this.MO_BT_Insert.Click += new System.EventHandler(this.MO_BT_Insert_Click);
+            //this.MO_BT_Insert.Click += new System.EventHandler(this.MO_BT_Insert_Click);
             // 
             // txt_position_mo
             // 
@@ -2442,7 +2442,7 @@
             this.AP_DEVICES_dtgv.ReadOnly = true;
             this.AP_DEVICES_dtgv.Size = new System.Drawing.Size(333, 145);
             this.AP_DEVICES_dtgv.TabIndex = 76;
-            this.AP_DEVICES_dtgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.AP_DEVICES_dtgv_CellClick);
+            //this.AP_DEVICES_dtgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.AP_DEVICES_dtgv_CellClick);
             // 
             // col_area_apdev
             // 
@@ -2621,7 +2621,7 @@
             this.AP_dtgv.ReadOnly = true;
             this.AP_dtgv.Size = new System.Drawing.Size(333, 145);
             this.AP_dtgv.TabIndex = 71;
-            this.AP_dtgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.AP_dtgv_CellClick);
+            //this.AP_dtgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.AP_dtgv_CellClick);
             // 
             // col_area_ap
             // 
@@ -2750,7 +2750,7 @@
             this.AP_BT_Delete.TabIndex = 70;
             this.AP_BT_Delete.Text = "Delete";
             this.AP_BT_Delete.UseVisualStyleBackColor = true;
-            this.AP_BT_Delete.Click += new System.EventHandler(this.AP_BT_Delete_Click);
+            //this.AP_BT_Delete.Click += new System.EventHandler(this.AP_BT_Delete_Click);
             // 
             // AP_BT_Change
             // 
@@ -2760,7 +2760,7 @@
             this.AP_BT_Change.TabIndex = 69;
             this.AP_BT_Change.Text = "Confirm";
             this.AP_BT_Change.UseVisualStyleBackColor = true;
-            this.AP_BT_Change.Click += new System.EventHandler(this.AP_BT_Change_Click);
+            //this.AP_BT_Change.Click += new System.EventHandler(this.AP_BT_Change_Click);
             // 
             // AP_BT_Insert
             // 
@@ -2770,7 +2770,7 @@
             this.AP_BT_Insert.TabIndex = 68;
             this.AP_BT_Insert.Text = "Insert";
             this.AP_BT_Insert.UseVisualStyleBackColor = true;
-            this.AP_BT_Insert.Click += new System.EventHandler(this.AP_BT_Insert_Click);
+            //this.AP_BT_Insert.Click += new System.EventHandler(this.AP_BT_Insert_Click);
             // 
             // txt_position_ap
             // 
@@ -3369,7 +3369,7 @@
             this.CCTV_BT_Delete.TabIndex = 70;
             this.CCTV_BT_Delete.Text = "Delete";
             this.CCTV_BT_Delete.UseVisualStyleBackColor = true;
-            this.CCTV_BT_Delete.Click += new System.EventHandler(this.CCTV_BT_Delete_Click);
+            //this.CCTV_BT_Delete.Click += new System.EventHandler(this.CCTV_BT_Delete_Click);
             // 
             // CCTV_BT_Change
             // 
@@ -3379,7 +3379,7 @@
             this.CCTV_BT_Change.TabIndex = 69;
             this.CCTV_BT_Change.Text = "Confirm";
             this.CCTV_BT_Change.UseVisualStyleBackColor = true;
-            this.CCTV_BT_Change.Click += new System.EventHandler(this.CCTV_BT_Change_Click);
+            //this.CCTV_BT_Change.Click += new System.EventHandler(this.CCTV_BT_Change_Click);
             // 
             // CCTV_BT_Insert
             // 
@@ -3389,7 +3389,7 @@
             this.CCTV_BT_Insert.TabIndex = 68;
             this.CCTV_BT_Insert.Text = "Insert";
             this.CCTV_BT_Insert.UseVisualStyleBackColor = true;
-            this.CCTV_BT_Insert.Click += new System.EventHandler(this.CCTV_BT_Insert_Click);
+            //this.CCTV_BT_Insert.Click += new System.EventHandler(this.CCTV_BT_Insert_Click);
             // 
             // txt_ipaddr_cctv
             // 

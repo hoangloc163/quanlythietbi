@@ -16,5 +16,11 @@ namespace Asset_Management_Alpha
         {
             InitializeComponent();
         }
+
+        private void Network_Form_Load(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

@@ -38,5 +38,17 @@ namespace BussinessLogicLayer
             return dao.Add(obj, mess);
         }
 
-     }
+        public string Change(NhanVien obj, string mess)
+        {
+            return dao.Change(obj, mess);
+        }
+        public string Delete(NhanVien obj, string mess)
+        {
+            return dao.Delete(obj, mess);
+        }
+        public DataTable Search(NhanVien obj)
+        {
+            return dao.Search(obj);
+        }
+    }
 }
