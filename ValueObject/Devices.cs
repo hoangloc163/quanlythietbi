@@ -55,5 +55,7 @@ namespace ValueObject
         public string darea { get; set; }
 
         public string usrname { get; set; }
+
+        public string barcode { get; set; }
     }
 }

@@ -83,19 +83,26 @@ namespace Asset_Management_Alpha
 
         private void btn_Add_Click(object sender, EventArgs e)
         {
-            txtboxToObj();
-            string messages = "";
-            messages = busnhanvien.Add(objnhanvien, messages);
-            if (messages == "Đã nhập thành công")
-            {
-                MessageBox.Show(messages);
-                loadDataGridView();
-                dataGridView1.Refresh();
-                lb_Rows.Text = dataGridView1.Rows.Count.ToString() + " Rows";
+            if(txt_manhanvien.Text != null && txt_manhanvien.Text != "")
+            { 
+                txtboxToObj();
+                string messages = "";
+                messages = busnhanvien.Add(objnhanvien, messages);
+                if (messages == "Đã nhập thành công")
+                {
+                    MessageBox.Show(messages);
+                    loadDataGridView();
+                    dataGridView1.Refresh();
+                    lb_Rows.Text = dataGridView1.Rows.Count.ToString() + " Rows";
+                }
+                else
+                {
+                    MessageBox.Show(messages);
+                }
             }
             else
             {
-                MessageBox.Show(messages);
+                MessageBox.Show("Nhập mã Nhân Viên");
             }
         }
 
