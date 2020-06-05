@@ -56,6 +56,9 @@
             this.col_defaultgw_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_logname_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_password_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_barcode_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_deliverydate_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_ram_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dEVICESTBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cb_Status_MrC = new System.Windows.Forms.ComboBox();
             this.label98 = new System.Windows.Forms.Label();
@@ -129,7 +132,10 @@
             this.col_dns_MrC,
             this.col_defaultgw_MrC,
             this.col_logname_MrC,
-            this.col_password_MrC});
+            this.col_password_MrC,
+            this.col_barcode_MrC,
+            this.col_deliverydate_MrC,
+            this.col_ram_MrC});
             this.dataGridView2.DataSource = this.dEVICESTBLBindingSource;
             this.dataGridView2.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke;
             this.dataGridView2.EnableHeadersVisualStyles = false;
@@ -337,6 +343,24 @@
             this.col_password_MrC.HeaderText = "PASSWORD";
             this.col_password_MrC.Name = "col_password_MrC";
             // 
+            // col_barcode_MrC
+            // 
+            this.col_barcode_MrC.DataPropertyName = "BARCODE";
+            this.col_barcode_MrC.HeaderText = "BARCODE";
+            this.col_barcode_MrC.Name = "col_barcode_MrC";
+            // 
+            // col_deliverydate_MrC
+            // 
+            this.col_deliverydate_MrC.DataPropertyName = "DELIVERYDATE";
+            this.col_deliverydate_MrC.HeaderText = "DELIVERY DATE";
+            this.col_deliverydate_MrC.Name = "col_deliverydate_MrC";
+            // 
+            // col_ram_MrC
+            // 
+            this.col_ram_MrC.DataPropertyName = "RAM";
+            this.col_ram_MrC.HeaderText = "RAM";
+            this.col_ram_MrC.Name = "col_ram_MrC";
+            // 
             // dEVICESTBLBindingSource
             // 
             this.dEVICESTBLBindingSource.AllowNew = false;
@@ -491,6 +515,7 @@
             // 
             // cb_Brand_MrC
             // 
+            this.cb_Brand_MrC.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_Brand_MrC.FormattingEnabled = true;
             this.cb_Brand_MrC.Location = new System.Drawing.Point(237, 48);
             this.cb_Brand_MrC.Name = "cb_Brand_MrC";
@@ -515,6 +540,7 @@
             this.cb_Devices_MrC.Name = "cb_Devices_MrC";
             this.cb_Devices_MrC.Size = new System.Drawing.Size(83, 21);
             this.cb_Devices_MrC.TabIndex = 2;
+            this.cb_Devices_MrC.SelectedIndexChanged += new System.EventHandler(this.cb_Devices_MrC_SelectedIndexChanged);
             // 
             // cb_Area_MrC
             // 
@@ -693,6 +719,11 @@
         private System.Windows.Forms.Label label97;
         private System.Windows.Forms.BindingSource dEVICESTBLBindingSource;
         private QLVT_testDataSet1TableAdapters.DEVICES_TBLTableAdapter dEVICES_TBLTableAdapter;
+        private System.Windows.Forms.CheckBox chk_Area;
+        private System.Windows.Forms.CheckBox chk_Devices;
+        private System.Windows.Forms.Button btn_Server;
+        private System.Windows.Forms.Button btn_Network;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_darea_MrC;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_devices_MrC;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_brand_MrC;
@@ -717,10 +748,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn col_defaultgw_MrC;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_logname_MrC;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_password_MrC;
-        private System.Windows.Forms.CheckBox chk_Area;
-        private System.Windows.Forms.CheckBox chk_Devices;
-        private System.Windows.Forms.Button btn_Server;
-        private System.Windows.Forms.Button btn_Network;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_barcode_MrC;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_deliverydate_MrC;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_ram_MrC;
     }
 }

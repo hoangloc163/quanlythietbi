@@ -28,7 +28,7 @@ namespace ValueObject
 
         public string assetcode { get; set; }
 
-        public string memory { get; set; }
+        //public string memory { get; set; }
 
         public string hdd { get; set; }
 
@@ -57,5 +57,9 @@ namespace ValueObject
         public string usrname { get; set; }
 
         public string barcode { get; set; }
+
+        public string delivery_date { get; set; }
+
+        public string ram { get; set; }
     }
 }

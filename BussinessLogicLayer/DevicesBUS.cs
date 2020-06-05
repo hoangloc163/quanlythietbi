@@ -35,6 +35,10 @@ namespace BussinessLogicLayer
         {
             return dao.GetData4Cb_Devices_By_Area(obj);
         }
+        public DataTable GetData4Cb_Brand_By_Dtype(Devices obj)
+        {
+            return dao.GetData4Cb_Brand_By_Dtype(obj);
+        }
         public DataTable GetData4Cb_Brand()
         {
             return dao.GetData4Cb_Brand();
@@ -67,9 +71,9 @@ namespace BussinessLogicLayer
             return dao.Delete(obj);
         }
 
-        public string connect(string sername, string databasename, string message)
+        public string connect(string sername, string databasename,string username, string password, string message)
         {
-            return dao.Connect(sername, databasename, message);
+            return dao.Connect(sername, databasename, username, password, message);
         }
     }
 }

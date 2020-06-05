@@ -75,7 +75,7 @@ namespace Asset_Management_Alpha
                 ConnectObj ObjConnect = new ConnectObj();
                 DevicesBUS busDevices = new DevicesBUS();
 
-                message = busDevices.connect(cbx_sername.SelectedItem.ToString(), txt_DatabaseName.Text, message);
+                message = busDevices.connect(cbx_sername.SelectedItem.ToString(), txt_DatabaseName.Text, txt_Username.Text, txt_Password.Text, message);
                 MessageBox.Show(message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             finally

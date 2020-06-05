@@ -11,5 +11,9 @@ namespace ValueObject
         public string servername { get; set; }
 
         public string databasename { get; set; }
+
+        public string username { get; set; }
+
+        public string password { get; set; }
     }
 }

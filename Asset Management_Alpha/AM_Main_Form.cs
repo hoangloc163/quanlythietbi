@@ -47,12 +47,13 @@ namespace Asset_Management_Alpha
 
             // hien thi cb box
             loadcb_Area();
-            loadcb_Brand();
+            loadcb_Devices_By_Area();
+            loadcb_Brand_By_DType();
+            //loadcb_Brand();
             //loadcb_Devices();
             loadcb_Position();
             loadcb_Supplier();
-            loadcb_Status();
-            loadcb_Devices_By_Area();
+            loadcb_Status(); 
         }
 
         void TestRegister()
@@ -100,19 +101,26 @@ namespace Asset_Management_Alpha
         public void loadcb_Devices()
         {
             cb_Devices_MrC.DataSource = busDevices.GetData4Cb_Devices();
-            cb_Devices_MrC.DisplayMember = "dtype".Trim();
+            cb_Devices_MrC.DisplayMember = "DEVICE_TYPE".Trim();
         }
         public void loadcb_Devices_By_Area()
         {
             objDevices.darea = cb_Area_MrC.Text;
             cb_Devices_MrC.DataSource = busDevices.GetData4Cb_Devices_By_Area(objDevices);
-            cb_Devices_MrC.DisplayMember = "dtype".Trim();
+            cb_Devices_MrC.DisplayMember = "DEVICE_TYPE".Trim();
+        }
+
+        public void loadcb_Brand_By_DType()
+        {
+            objDevices.dtype = cb_Devices_MrC.Text;
+            cb_Brand_MrC.DataSource = busDevices.GetData4Cb_Brand_By_Dtype(objDevices);
+            cb_Brand_MrC.DisplayMember = "BRAND".Trim();
         }
 
         public void loadcb_Supplier()
         {
             cb_Supplier_MrC.DataSource = busDevices.GetData4Cb_Supplier();
-            cb_Supplier_MrC.DisplayMember = "supplies".Trim();
+            cb_Supplier_MrC.DisplayMember = "SUPPLIER".Trim();
         }
         public void loadcb_Brand()
         {
@@ -122,7 +130,7 @@ namespace Asset_Management_Alpha
         public void loadcb_Position()
         {
             cb_Position_MrC.DataSource = busDevices.GetData4Cb_Position();
-            cb_Position_MrC.DisplayMember = "position".Trim();
+            cb_Position_MrC.DisplayMember = "DEPARTMENT".Trim();
         }
         public void loadcb_Status()
         {
@@ -166,7 +174,7 @@ namespace Asset_Management_Alpha
                     cb_Position_MrC.Text = objDevices.position = dataGridView2.Rows[e.RowIndex].Cells["col_position_MrC"].FormattedValue.ToString().Trim();
                     objDevices.remark = dataGridView2.Rows[e.RowIndex].Cells["col_remark_MrC"].FormattedValue.ToString().Trim();
 
-                    objDevices.memory = dataGridView2.Rows[e.RowIndex].Cells["col_memory_MrC"].FormattedValue.ToString().Trim();
+                    objDevices.ram = dataGridView2.Rows[e.RowIndex].Cells["col_memory_MrC"].FormattedValue.ToString().Trim();//memory > ram
                     objDevices.hdd = dataGridView2.Rows[e.RowIndex].Cells["col_hdd_MrC"].FormattedValue.ToString().Trim();
                     cb_Area_MrC.Text = objDevices.darea = dataGridView2.Rows[e.RowIndex].Cells["col_darea_MrC"].FormattedValue.ToString().Trim();
                     cb_Status_MrC.Text = objDevices.dstatus = dataGridView2.Rows[e.RowIndex].Cells["col_dstatus_MrC"].FormattedValue.ToString().Trim();
@@ -309,7 +317,7 @@ namespace Asset_Management_Alpha
                     if (!string.IsNullOrEmpty(cb_Devices_MrC.Text))
                     {
                         if (filter.Length > 0) filter += "AND "; // dk AND
-                        filter += "DTYPE" + " LIKE '" + cb_Devices_MrC.Text.Trim() + "' ";
+                        filter += "DEVICE_TYPE" + " LIKE '" + cb_Devices_MrC.Text.Trim() + "' ";
                     }
                 }
                 if (!string.IsNullOrEmpty(cb_Brand_MrC.Text))
@@ -325,7 +333,7 @@ namespace Asset_Management_Alpha
                     if (!string.IsNullOrWhiteSpace(cb_Supplier_MrC.Text))
                     {
                         if (filter.Length > 0) filter += "AND ";
-                        filter += "SUPPLIES" + " LIKE '" + cb_Supplier_MrC.Text.Trim() + "' ";
+                        filter += "SUPPLIER" + " LIKE '" + cb_Supplier_MrC.Text.Trim() + "' ";
                     }
                 }
                 if (!string.IsNullOrEmpty(cb_Position_MrC.Text))
@@ -333,7 +341,7 @@ namespace Asset_Management_Alpha
                     if (!string.IsNullOrWhiteSpace(cb_Position_MrC.Text))
                     {
                         if (filter.Length > 0) filter += "AND ";
-                        filter += /*dataGridView2.Columns["col_mrc_position"].HeaderText.ToString()*/ "POSITION" + " LIKE '" + cb_Position_MrC.Text.Trim() + "' ";
+                        filter += /*dataGridView2.Columns["col_mrc_position"].HeaderText.ToString()*/ "DEPARTMENT" + " LIKE '" + cb_Position_MrC.Text.Trim() + "' ";
                     }
                 }
                 if (!string.IsNullOrEmpty(txt_UserName_MrC.Text))
@@ -341,7 +349,7 @@ namespace Asset_Management_Alpha
                     if (!string.IsNullOrWhiteSpace(txt_UserName_MrC.Text))
                     {
                         if (filter.Length > 0) filter += "AND ";
-                        filter += "USRNAME" + " LIKE '%" + txt_UserName_MrC.Text.Trim() + "%' ";
+                        filter += "USERNAME" + " LIKE '%" + txt_UserName_MrC.Text.Trim() + "%' ";
                     }
                 }
                 if (!string.IsNullOrEmpty(txt_Serial_MrC.Text))
@@ -372,7 +380,7 @@ namespace Asset_Management_Alpha
                 if (!string.IsNullOrEmpty(cb_Devices_MrC.Text))
                 {
                     if (filter.Length > 0) filter += "OR "; // dk AND
-                    filter += "DTYPE" + " LIKE '" + cb_Devices_MrC.Text.Trim() + "' ";
+                    filter += "DEVICE_TYPE" + " LIKE '" + cb_Devices_MrC.Text.Trim() + "' ";
                 }
                 if (!string.IsNullOrEmpty(cb_Brand_MrC.Text))
                 {
@@ -382,17 +390,17 @@ namespace Asset_Management_Alpha
                 if (!string.IsNullOrEmpty(cb_Supplier_MrC.Text))
                 {
                     if (filter.Length > 0) filter += "OR ";
-                    filter += "SUPPLIES" + " LIKE '" + cb_Supplier_MrC.Text.Trim() + "' ";
+                    filter += "SUPPLIER" + " LIKE '" + cb_Supplier_MrC.Text.Trim() + "' ";
                 }
                 if (!string.IsNullOrEmpty(cb_Position_MrC.Text))
                 {
                     if (filter.Length > 0) filter += "OR ";
-                    filter += /*dataGridView2.Columns["col_mrc_position"].HeaderText.ToString()*/ "POSITION" + " LIKE '" + cb_Position_MrC.Text.Trim() + "' ";
+                    filter += /*dataGridView2.Columns["col_mrc_position"].HeaderText.ToString()*/ "DEPARTMENT" + " LIKE '" + cb_Position_MrC.Text.Trim() + "' ";
                 }
                 if (!string.IsNullOrEmpty(txt_UserName_MrC.Text))
                 {
                     if (filter.Length > 0) filter += "OR ";
-                    filter += "USRNAME" + " LIKE '%" + txt_UserName_MrC.Text.Trim() + "%' ";
+                    filter += "USERNAME" + " LIKE '%" + txt_UserName_MrC.Text.Trim() + "%' ";
                 }
                 if (!string.IsNullOrEmpty(txt_Serial_MrC.Text))
                 {
@@ -472,6 +480,11 @@ namespace Asset_Management_Alpha
             loadcb_Devices_By_Area();
         }
 
+        private void cb_Devices_MrC_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            loadcb_Brand_By_DType();
+        }
+
         private void chk_Devices_CheckedChanged(object sender, EventArgs e)
         {
             if (chk_Devices.Checked == true)
@@ -502,5 +515,6 @@ namespace Asset_Management_Alpha
             Network_Form frmNetwork = new Network_Form();
             frmNetwork.Show();
         }
+
     }
 }

@@ -30,7 +30,7 @@ namespace DataAccessLayer
             }
         }
 
-        public string Connect2DB(string sername, string DatabaseName, string message)
+        public string Connect2DB(string sername, string DatabaseName,string UserName, string Passwords, string message)
         {
             try
             {
@@ -42,6 +42,8 @@ namespace DataAccessLayer
                 
                 key.SetValue("ServerName", sername);
                 key.SetValue("DatabaseName", DatabaseName);
+                key.SetValue("UserName", UserName);
+                key.SetValue("Passwords", Passwords);
                 key.SetValue("ComputerName", sername.Substring(0,sername.IndexOf("\\")));
                 key.SetValue("WSLCheck", "Off");
                 key.SetValue("WSLValue", "100");

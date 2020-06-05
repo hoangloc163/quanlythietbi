@@ -40,6 +40,15 @@ namespace DataAccessLayer
             return db.GetData("DEVICES_CB_Select_Dtype_By_Area", para);
         }
 
+        public DataTable GetData4Cb_Brand_By_Dtype(Devices obj)
+        {
+            SqlParameter[] para =
+            {
+                new SqlParameter("dtype",obj.darea)
+            };
+            return db.GetData("DEVICES_CB_Select_Brand_By_Dtype", para);
+        }
+
         public DataTable GetData4Cb_Brand()
         {
             return db.GetData("DEVICES_CB_Select_Brand", null);
@@ -92,9 +101,9 @@ namespace DataAccessLayer
             return db.ExecuteSQL("Devices_Delete", para);
         }
 
-        public string Connect(string sername, string databasename, string message)
+        public string Connect(string sername, string databasename, string username, string password, string message)
         {
-            return db.Connect2DB(sername, databasename, message);
+            return db.Connect2DB(sername, databasename, username, password, message);
         }
     }
 }
