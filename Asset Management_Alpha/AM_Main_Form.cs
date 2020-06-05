@@ -52,7 +52,8 @@ namespace Asset_Management_Alpha
             //loadcb_Brand();
             //loadcb_Devices();
             loadcb_Position();
-            loadcb_Supplier();
+            //loadcb_Supplier();
+            loadcb_Supplier_By_DType();
             loadcb_Status(); 
         }
 
@@ -110,10 +111,23 @@ namespace Asset_Management_Alpha
             cb_Devices_MrC.DisplayMember = "DEVICE_TYPE".Trim();
         }
 
+        public void loadcb_Brand()
+        {
+            cb_Brand_MrC.DataSource = busDevices.GetData4Cb_Brand();
+            cb_Brand_MrC.DisplayMember = "brand".Trim();
+        }
+
         public void loadcb_Brand_By_DType()
         {
             objDevices.dtype = cb_Devices_MrC.Text;
             cb_Brand_MrC.DataSource = busDevices.GetData4Cb_Brand_By_Dtype(objDevices);
+            cb_Brand_MrC.DisplayMember = "BRAND".Trim();
+        }
+
+        public void loadcb_Brand_By_Area()
+        {
+            objDevices.darea = cb_Area_MrC.Text;
+            cb_Brand_MrC.DataSource = busDevices.GetData4Cb_Brand_By_Area(objDevices);
             cb_Brand_MrC.DisplayMember = "BRAND".Trim();
         }
 
@@ -122,11 +136,20 @@ namespace Asset_Management_Alpha
             cb_Supplier_MrC.DataSource = busDevices.GetData4Cb_Supplier();
             cb_Supplier_MrC.DisplayMember = "SUPPLIER".Trim();
         }
-        public void loadcb_Brand()
+
+        public void loadcb_Supplier_By_DType()
         {
-            cb_Brand_MrC.DataSource = busDevices.GetData4Cb_Brand();
-            cb_Brand_MrC.DisplayMember = "brand".Trim();
+            objDevices.dtype = cb_Devices_MrC.Text;
+            cb_Supplier_MrC.DataSource = busDevices.GetData4Cb_Supplier_By_Dtype(objDevices);
+            cb_Supplier_MrC.DisplayMember = "SUPPLIER".Trim();
         }
+        public void loadcb_Suppier_By_Area()
+        {
+            objDevices.darea = cb_Area_MrC.Text;
+            cb_Supplier_MrC.DataSource = busDevices.GetData4Cb_Supplier_By_Area(objDevices);
+            cb_Supplier_MrC.DisplayMember = "SUPPLIER".Trim();
+        }
+
         public void loadcb_Position()
         {
             cb_Position_MrC.DataSource = busDevices.GetData4Cb_Position();
@@ -170,7 +193,7 @@ namespace Asset_Management_Alpha
                     cb_Supplier_MrC.Text = objDevices.supplies = dataGridView2.Rows[e.RowIndex].Cells["col_supplies_MrC"].FormattedValue.ToString().Trim();
                     objDevices.location = dataGridView2.Rows[e.RowIndex].Cells["col_location_MrC"].FormattedValue.ToString().Trim();
                     objDevices.assetcode = dataGridView2.Rows[e.RowIndex].Cells["col_assetcode_MrC"].FormattedValue.ToString().Trim();
-                    txt_UserName_MrC.Text = objDevices.usrname = dataGridView2.Rows[e.RowIndex].Cells["col_username_MrC"].FormattedValue.ToString().Trim();
+                    txt_UserName_MrC.Text = objDevices.username = dataGridView2.Rows[e.RowIndex].Cells["col_username_MrC"].FormattedValue.ToString().Trim();
                     cb_Position_MrC.Text = objDevices.position = dataGridView2.Rows[e.RowIndex].Cells["col_position_MrC"].FormattedValue.ToString().Trim();
                     objDevices.remark = dataGridView2.Rows[e.RowIndex].Cells["col_remark_MrC"].FormattedValue.ToString().Trim();
 
@@ -179,7 +202,7 @@ namespace Asset_Management_Alpha
                     cb_Area_MrC.Text = objDevices.darea = dataGridView2.Rows[e.RowIndex].Cells["col_darea_MrC"].FormattedValue.ToString().Trim();
                     cb_Status_MrC.Text = objDevices.dstatus = dataGridView2.Rows[e.RowIndex].Cells["col_dstatus_MrC"].FormattedValue.ToString().Trim();
                     objDevices.log_name = dataGridView2.Rows[e.RowIndex].Cells["col_logname_MrC"].FormattedValue.ToString().Trim();
-                    objDevices.passwrd = dataGridView2.Rows[e.RowIndex].Cells["col_password_MrC"].FormattedValue.ToString().Trim();
+                    objDevices.password = dataGridView2.Rows[e.RowIndex].Cells["col_password_MrC"].FormattedValue.ToString().Trim();
                     objDevices.mac_addr = dataGridView2.Rows[e.RowIndex].Cells["col_macaddr_MrC"].FormattedValue.ToString().Trim();
                     objDevices.ip_addr = dataGridView2.Rows[e.RowIndex].Cells["col_ipaddr_MrC"].FormattedValue.ToString().Trim();
                     objDevices.dns = dataGridView2.Rows[e.RowIndex].Cells["col_dns_MrC"].FormattedValue.ToString().Trim();
@@ -260,10 +283,13 @@ namespace Asset_Management_Alpha
                     busDevices.Delete(objDevices);
                     dataGridView2.Refresh();
                     loadcb_Area();
-                    loadcb_Brand();
-                    loadcb_Devices();
+                    loadcb_Brand_By_DType();
+                    //loadcb_Brand();
+                    loadcb_Devices_By_Area();
+                    //loadcb_Devices();
                     loadcb_Position();
-                    loadcb_Supplier();
+                    loadcb_Supplier_By_DType();
+                    //loadcb_Supplier();
                     loadcb_Status();
                     label97.Text = dataGridView2.Rows.Count.ToString() + " Rows";
                 }
@@ -320,20 +346,26 @@ namespace Asset_Management_Alpha
                         filter += "DEVICE_TYPE" + " LIKE '" + cb_Devices_MrC.Text.Trim() + "' ";
                     }
                 }
-                if (!string.IsNullOrEmpty(cb_Brand_MrC.Text))
+                if(chk_Brand.Checked == false)
                 {
-                    if (!string.IsNullOrWhiteSpace(cb_Brand_MrC.Text))
+                    if (!string.IsNullOrEmpty(cb_Brand_MrC.Text))
                     {
-                        if (filter.Length > 0) filter += "AND ";
-                        filter += "BRAND" /*dataGridView2.Columns["col_mrc_brand"].HeaderText.ToString()*/ + " LIKE '" + cb_Brand_MrC.Text.Trim() + "' ";
+                        if (!string.IsNullOrWhiteSpace(cb_Brand_MrC.Text))
+                        {
+                            if (filter.Length > 0) filter += "AND ";
+                            filter += "BRAND" /*dataGridView2.Columns["col_mrc_brand"].HeaderText.ToString()*/ + " LIKE '" + cb_Brand_MrC.Text.Trim() + "' ";
+                        }
                     }
                 }
-                if (!string.IsNullOrEmpty(cb_Supplier_MrC.Text))
+                if(chk_Supplier.Checked == false)
                 {
-                    if (!string.IsNullOrWhiteSpace(cb_Supplier_MrC.Text))
+                    if (!string.IsNullOrEmpty(cb_Supplier_MrC.Text))
                     {
-                        if (filter.Length > 0) filter += "AND ";
-                        filter += "SUPPLIER" + " LIKE '" + cb_Supplier_MrC.Text.Trim() + "' ";
+                        if (!string.IsNullOrWhiteSpace(cb_Supplier_MrC.Text))
+                        {
+                            if (filter.Length > 0) filter += "AND ";
+                            filter += "SUPPLIER" + " LIKE '" + cb_Supplier_MrC.Text.Trim() + "' ";
+                        }
                     }
                 }
                 if (!string.IsNullOrEmpty(cb_Position_MrC.Text))
@@ -430,9 +462,11 @@ namespace Asset_Management_Alpha
             label97.Text = dataGridView2.Rows.Count.ToString() + " Rows";
 
             loadcb_Area();
-            loadcb_Brand();
+            loadcb_Brand_By_DType();
+            //loadcb_Brand();
             loadcb_Position();
-            loadcb_Supplier();
+            loadcb_Supplier_By_DType();
+            //loadcb_Supplier();
             loadcb_Status();
 
             // neu check thi hien thi het cac sheet cua cac area
@@ -467,29 +501,44 @@ namespace Asset_Management_Alpha
             {
                 cb_Area_MrC.Enabled = false;
                 loadcb_Devices();
+                chk_Brand.Checked = true;
+                chk_Supplier.Checked = true;
             }
             else
             {
                 cb_Area_MrC.Enabled = true;
                 loadcb_Devices_By_Area();
+                chk_Brand.Checked = false;
+                chk_Supplier.Checked = false;
             }
         }
 
         private void cb_Area_MrC_SelectedIndexChanged(object sender, EventArgs e)
         {
-            loadcb_Devices_By_Area();
+            if(chk_Devices.Checked == false)
+            {
+                loadcb_Devices_By_Area();
+            }
+            else
+            {
+                loadcb_Brand_By_Area();
+                loadcb_Suppier_By_Area();
+            }
         }
 
         private void cb_Devices_MrC_SelectedIndexChanged(object sender, EventArgs e)
         {
             loadcb_Brand_By_DType();
+            loadcb_Supplier_By_DType();
         }
 
         private void chk_Devices_CheckedChanged(object sender, EventArgs e)
         {
             if (chk_Devices.Checked == true)
             {
-                cb_Devices_MrC.Enabled = false;    
+                cb_Devices_MrC.Enabled = false;
+                loadcb_Brand_By_Area();
+                loadcb_Suppier_By_Area();
             }
             else
             {

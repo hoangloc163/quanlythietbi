@@ -25,8 +25,10 @@ namespace DataAccessLayer
                 var rk = localMachine.OpenSubKey("SOFTWARE\\Asset Management");
                 var DataBaseName = rk.GetValue("DatabaseName");
                 var ComputerName = rk.GetValue("ComputerName");
+                var UserName = rk.GetValue("UserName");
+                var Passwords = rk.GetValue("Passwords");
                 var ServerSQL = rk.GetValue("ServerName");
-                conn = new SqlConnection("Data Source=" + ServerSQL.ToString() + ";Initial Catalog=" + DataBaseName.ToString() + ";Integrated Security=True");
+                conn = new SqlConnection("Data Source=" + ServerSQL.ToString() + ";Initial Catalog=" + DataBaseName.ToString() +";Persist Security Info=True;User ID=" + UserName + ";Password=" + Passwords+";Integrated Security=True");
             }
         }
 

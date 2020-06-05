@@ -40,7 +40,7 @@ namespace ValueObject
 
         public string default_gw { get; set; }
 
-        public string passwrd { get; set; }
+        public string password { get; set; }
 
         public string log_name { get; set; }
 
@@ -54,7 +54,7 @@ namespace ValueObject
 
         public string darea { get; set; }
 
-        public string usrname { get; set; }
+        public string username { get; set; }
 
         public string barcode { get; set; }
 

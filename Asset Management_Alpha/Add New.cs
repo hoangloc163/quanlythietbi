@@ -108,7 +108,7 @@ namespace Asset_Management_Alpha
         public void loadcb_Supplier()
         {
             cb_Supplier.DataSource = busDevices.GetData4Cb_Supplier();
-            cb_Supplier.DisplayMember = "supplies".Trim();
+            cb_Supplier.DisplayMember = "supplier".Trim();
         }
         public void loadcb_Status()
         {
@@ -119,7 +119,7 @@ namespace Asset_Management_Alpha
         {
             objDevices.darea = cb_Area.Text;
             cb_Devices_MrC.DataSource = busDevices.GetData4Cb_Devices_By_Area(objDevices);
-            cb_Devices_MrC.DisplayMember = "dtype".Trim();
+            cb_Devices_MrC.DisplayMember = "DEVICE_TYPE".Trim();
         }
         #endregion
 

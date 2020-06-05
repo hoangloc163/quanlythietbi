@@ -40,11 +40,20 @@ namespace DataAccessLayer
             return db.GetData("DEVICES_CB_Select_Dtype_By_Area", para);
         }
 
+        public DataTable GetData4Cb_Brand_By_Area(Devices obj)
+        {
+            SqlParameter[] para =
+            {
+                new SqlParameter("darea",obj.darea)
+            };
+            return db.GetData("DEVICES_CB_Select_Brand_By_Area", para);
+        }
+
         public DataTable GetData4Cb_Brand_By_Dtype(Devices obj)
         {
             SqlParameter[] para =
             {
-                new SqlParameter("dtype",obj.darea)
+                new SqlParameter("dtype",obj.dtype)
             };
             return db.GetData("DEVICES_CB_Select_Brand_By_Dtype", para);
         }
@@ -53,6 +62,23 @@ namespace DataAccessLayer
         {
             return db.GetData("DEVICES_CB_Select_Brand", null);
         }
+        public DataTable GetData4Cb_Supplier_By_Area(Devices obj)
+        {
+            SqlParameter[] para =
+            {
+                new SqlParameter("darea",obj.darea)
+            };
+            return db.GetData("DEVICES_CB_Select_Supplier_By_Area", para);
+        }
+        public DataTable GetData4Cb_Supplier_By_Dtype(Devices obj)
+        {
+            SqlParameter[] para =
+            {
+                new SqlParameter("dtype",obj.dtype)
+            };
+            return db.GetData("DEVICES_CB_Select_Supplier_By_Dtype", para);
+        }
+        
         public DataTable GetData4Cb_Supplier()
         {
             return db.GetData("DEVICES_CB_Select_Supplier", null);

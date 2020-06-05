@@ -35,6 +35,10 @@ namespace BussinessLogicLayer
         {
             return dao.GetData4Cb_Devices_By_Area(obj);
         }
+        public DataTable GetData4Cb_Brand_By_Area(Devices obj)
+        {
+            return dao.GetData4Cb_Brand_By_Area(obj);
+        }
         public DataTable GetData4Cb_Brand_By_Dtype(Devices obj)
         {
             return dao.GetData4Cb_Brand_By_Dtype(obj);
@@ -42,6 +46,14 @@ namespace BussinessLogicLayer
         public DataTable GetData4Cb_Brand()
         {
             return dao.GetData4Cb_Brand();
+        }
+        public DataTable GetData4Cb_Supplier_By_Area(Devices obj)
+        {
+            return dao.GetData4Cb_Supplier_By_Area(obj);
+        }
+        public DataTable GetData4Cb_Supplier_By_Dtype(Devices obj)
+        {
+            return dao.GetData4Cb_Supplier_By_Dtype(obj);
         }
         public DataTable GetData4Cb_Supplier()
         {
