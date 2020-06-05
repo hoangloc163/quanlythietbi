@@ -105,7 +105,7 @@ namespace DataAccessLayer
                 new SqlParameter("handover_date", obj.handover_date),
                 new SqlParameter("warranty", obj.warranty),
                 new SqlParameter("supplies", obj.supplies),
-                new SqlParameter("remark", obj.remark),
+                new SqlParameter("remark", obj.remarks),
                 new SqlParameter("dstatus",obj.dstatus),
                 new SqlParameter("mac_addr", obj.mac_addr),
             };

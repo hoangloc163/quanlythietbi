@@ -81,7 +81,7 @@ namespace Asset_Management_Alpha
             objDevices.handover_date = dt_handover.Value.ToString("yyyy/MM/dd");
             objDevices.warranty = cb_Warranty_MrC.Text;
             objDevices.supplies = cb_Supplier.Text;
-            objDevices.remark = txt_remark.Text;
+            objDevices.remarks = txt_remark.Text;
             objDevices.mac_addr = txt_macaddr.Text;
             objDevices.dstatus = cb_Status.Text;
         }
@@ -188,8 +188,8 @@ namespace Asset_Management_Alpha
         private void cb_Brand_MrC_TextChanged(object sender, EventArgs e)
         {
             string upper = cb_Brand_MrC.Text.ToUpper();
-            if (upper != cb_Brand_MrC.Text)
-                cb_Brand_MrC.Text = upper;
+            //if (upper != cb_Brand_MrC.Text)
+            //    cb_Brand_MrC.Text = upper;
         }
 
         private void cb_Devices_MrC_TextChanged(object sender, EventArgs e)

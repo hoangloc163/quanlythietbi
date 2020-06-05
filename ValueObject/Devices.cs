@@ -24,7 +24,7 @@ namespace ValueObject
 
         public string supplies { get; set; }
 
-        public string remark { get; set; }
+        public string remarks { get; set; }
 
         public string assetcode { get; set; }
 
