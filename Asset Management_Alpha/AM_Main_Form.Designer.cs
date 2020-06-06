@@ -30,9 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             Asset_Management_Alpha.QLVT_testDataSet1 qLVT_testDataSet1;
+            System.Windows.Forms.BindingSource dEVICESTBLBindingSource;
+            Asset_Management_Alpha.QLVT_testDataSet1TableAdapters.DEVICES_TBLTableAdapter dEVICES_TBLTableAdapter;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AM_Main_Form));
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dEVICESTBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cb_Status_MrC = new System.Windows.Forms.ComboBox();
             this.label98 = new System.Windows.Forms.Label();
             this.label96 = new System.Windows.Forms.Label();
@@ -56,7 +57,6 @@
             this.bt_Insert_MrC = new System.Windows.Forms.Button();
             this.MrC_BT_Cancel = new System.Windows.Forms.Button();
             this.label97 = new System.Windows.Forms.Label();
-            this.dEVICES_TBLTableAdapter = new Asset_Management_Alpha.QLVT_testDataSet1TableAdapters.DEVICES_TBLTableAdapter();
             this.chk_Area = new System.Windows.Forms.CheckBox();
             this.chk_Devices = new System.Windows.Forms.CheckBox();
             this.btn_Server = new System.Windows.Forms.Button();
@@ -64,24 +64,26 @@
             this.button1 = new System.Windows.Forms.Button();
             this.chk_Supplier = new System.Windows.Forms.CheckBox();
             this.chk_Brand = new System.Windows.Forms.CheckBox();
+            this.btn_Export = new System.Windows.Forms.Button();
             this.col_darea_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_devices_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_barcode_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_serial_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_brand_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_Supplies_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_model_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_serial_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_dstatus_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_hostname_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_invoice_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_handover_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_Warranty_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_dstatus_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_barcode_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_deliverydate_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_remark_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_location_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_Price_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_assetcode_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_username_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_location_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_position_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_username_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_remark_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_memory_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_hdd_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_macaddr_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -90,10 +92,13 @@
             this.col_defaultgw_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_logname_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_password_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lb_Loading2Excel = new System.Windows.Forms.Label();
             qLVT_testDataSet1 = new Asset_Management_Alpha.QLVT_testDataSet1();
+            dEVICESTBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            dEVICES_TBLTableAdapter = new Asset_Management_Alpha.QLVT_testDataSet1TableAdapters.DEVICES_TBLTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(qLVT_testDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dEVICESTBLBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(dEVICESTBLBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // qLVT_testDataSet1
@@ -112,22 +117,23 @@
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.col_darea_MrC,
             this.col_devices_MrC,
+            this.col_barcode_MrC,
+            this.col_serial_MrC,
             this.col_brand_MrC,
             this.col_Supplies_MrC,
             this.col_model_MrC,
-            this.col_serial_MrC,
+            this.col_dstatus_MrC,
             this.col_hostname_MrC,
             this.col_invoice_MrC,
             this.col_handover_MrC,
             this.col_Warranty_MrC,
-            this.col_dstatus_MrC,
-            this.col_barcode_MrC,
             this.col_deliverydate_MrC,
-            this.col_remark_MrC,
-            this.col_location_MrC,
+            this.col_Price_MrC,
             this.col_assetcode_MrC,
-            this.col_username_MrC,
+            this.col_location_MrC,
             this.col_position_MrC,
+            this.col_username_MrC,
+            this.col_remark_MrC,
             this.col_memory_MrC,
             this.col_hdd_MrC,
             this.col_macaddr_MrC,
@@ -136,7 +142,7 @@
             this.col_defaultgw_MrC,
             this.col_logname_MrC,
             this.col_password_MrC});
-            this.dataGridView2.DataSource = this.dEVICESTBLBindingSource;
+            this.dataGridView2.DataSource = dEVICESTBLBindingSource;
             this.dataGridView2.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke;
             this.dataGridView2.EnableHeadersVisualStyles = false;
             this.dataGridView2.Location = new System.Drawing.Point(12, 85);
@@ -153,7 +159,7 @@
             // 
             // dEVICESTBLBindingSource
             // 
-            this.dEVICESTBLBindingSource.AllowNew = false;
+            dEVICESTBLBindingSource.AllowNew = false;
             // 
             // cb_Status_MrC
             // 
@@ -383,7 +389,7 @@
             // 
             // dEVICES_TBLTableAdapter
             // 
-            this.dEVICES_TBLTableAdapter.ClearBeforeFill = true;
+            dEVICES_TBLTableAdapter.ClearBeforeFill = true;
             // 
             // chk_Area
             // 
@@ -455,6 +461,16 @@
             this.chk_Brand.TabIndex = 81;
             this.chk_Brand.UseVisualStyleBackColor = true;
             // 
+            // btn_Export
+            // 
+            this.btn_Export.Location = new System.Drawing.Point(352, 565);
+            this.btn_Export.Name = "btn_Export";
+            this.btn_Export.Size = new System.Drawing.Size(75, 23);
+            this.btn_Export.TabIndex = 82;
+            this.btn_Export.Text = "Export";
+            this.btn_Export.UseVisualStyleBackColor = true;
+            this.btn_Export.Click += new System.EventHandler(this.btn_Export_Click);
+            // 
             // col_darea_MrC
             // 
             this.col_darea_MrC.DataPropertyName = "DAREA";
@@ -472,6 +488,24 @@
             this.col_devices_MrC.MaxInputLength = 20;
             this.col_devices_MrC.Name = "col_devices_MrC";
             this.col_devices_MrC.Width = 68;
+            // 
+            // col_barcode_MrC
+            // 
+            this.col_barcode_MrC.DataPropertyName = "DEVICE_CODE";
+            this.col_barcode_MrC.Frozen = true;
+            this.col_barcode_MrC.HeaderText = "DEVICE CODE";
+            this.col_barcode_MrC.MaxInputLength = 12;
+            this.col_barcode_MrC.Name = "col_barcode_MrC";
+            // 
+            // col_serial_MrC
+            // 
+            this.col_serial_MrC.DataPropertyName = "SERIAL";
+            this.col_serial_MrC.Frozen = true;
+            this.col_serial_MrC.HeaderText = "SERIAL";
+            this.col_serial_MrC.MaxInputLength = 50;
+            this.col_serial_MrC.Name = "col_serial_MrC";
+            this.col_serial_MrC.ReadOnly = true;
+            this.col_serial_MrC.Width = 70;
             // 
             // col_brand_MrC
             // 
@@ -500,20 +534,18 @@
             this.col_model_MrC.Name = "col_model_MrC";
             this.col_model_MrC.Width = 70;
             // 
-            // col_serial_MrC
+            // col_dstatus_MrC
             // 
-            this.col_serial_MrC.DataPropertyName = "SERIAL";
-            this.col_serial_MrC.Frozen = true;
-            this.col_serial_MrC.HeaderText = "SERIAL";
-            this.col_serial_MrC.MaxInputLength = 50;
-            this.col_serial_MrC.Name = "col_serial_MrC";
-            this.col_serial_MrC.ReadOnly = true;
-            this.col_serial_MrC.Width = 70;
+            this.col_dstatus_MrC.DataPropertyName = "DSTATUS";
+            this.col_dstatus_MrC.Frozen = true;
+            this.col_dstatus_MrC.HeaderText = "STATUS";
+            this.col_dstatus_MrC.MaxInputLength = 10;
+            this.col_dstatus_MrC.Name = "col_dstatus_MrC";
+            this.col_dstatus_MrC.Width = 70;
             // 
             // col_hostname_MrC
             // 
             this.col_hostname_MrC.DataPropertyName = "HOSTNAME";
-            this.col_hostname_MrC.Frozen = true;
             this.col_hostname_MrC.HeaderText = "HOST NAME";
             this.col_hostname_MrC.MaxInputLength = 20;
             this.col_hostname_MrC.Name = "col_hostname_MrC";
@@ -543,40 +575,21 @@
             this.col_Warranty_MrC.Name = "col_Warranty_MrC";
             this.col_Warranty_MrC.Width = 85;
             // 
-            // col_dstatus_MrC
-            // 
-            this.col_dstatus_MrC.DataPropertyName = "DSTATUS";
-            this.col_dstatus_MrC.HeaderText = "STATUS";
-            this.col_dstatus_MrC.MaxInputLength = 5;
-            this.col_dstatus_MrC.Name = "col_dstatus_MrC";
-            // 
-            // col_barcode_MrC
-            // 
-            this.col_barcode_MrC.DataPropertyName = "DEVICE_CODE";
-            this.col_barcode_MrC.HeaderText = "DEVICE CODE";
-            this.col_barcode_MrC.Name = "col_barcode_MrC";
-            // 
             // col_deliverydate_MrC
             // 
             this.col_deliverydate_MrC.DataPropertyName = "DELIVERY_DATE";
             this.col_deliverydate_MrC.HeaderText = "DELIVERY DATE";
+            this.col_deliverydate_MrC.MaxInputLength = 10;
             this.col_deliverydate_MrC.Name = "col_deliverydate_MrC";
+            this.col_deliverydate_MrC.Width = 80;
             // 
-            // col_remark_MrC
+            // col_Price_MrC
             // 
-            this.col_remark_MrC.DataPropertyName = "REMARK";
-            this.col_remark_MrC.HeaderText = "REMARKS";
-            this.col_remark_MrC.MaxInputLength = 150;
-            this.col_remark_MrC.Name = "col_remark_MrC";
-            this.col_remark_MrC.Width = 78;
-            // 
-            // col_location_MrC
-            // 
-            this.col_location_MrC.DataPropertyName = "LOCATION";
-            this.col_location_MrC.HeaderText = "LOCATION";
-            this.col_location_MrC.MaxInputLength = 30;
-            this.col_location_MrC.Name = "col_location_MrC";
-            this.col_location_MrC.Width = 86;
+            this.col_Price_MrC.DataPropertyName = "PRICE";
+            this.col_Price_MrC.HeaderText = "PRICE";
+            this.col_Price_MrC.MaxInputLength = 15;
+            this.col_Price_MrC.Name = "col_Price_MrC";
+            this.col_Price_MrC.Width = 65;
             // 
             // col_assetcode_MrC
             // 
@@ -586,13 +599,13 @@
             this.col_assetcode_MrC.Name = "col_assetcode_MrC";
             this.col_assetcode_MrC.Width = 92;
             // 
-            // col_username_MrC
+            // col_location_MrC
             // 
-            this.col_username_MrC.DataPropertyName = "USERNAME";
-            this.col_username_MrC.HeaderText = "USER NAME";
-            this.col_username_MrC.MaxInputLength = 50;
-            this.col_username_MrC.Name = "col_username_MrC";
-            this.col_username_MrC.Width = 93;
+            this.col_location_MrC.DataPropertyName = "LOCATION";
+            this.col_location_MrC.HeaderText = "LOCATION";
+            this.col_location_MrC.MaxInputLength = 30;
+            this.col_location_MrC.Name = "col_location_MrC";
+            this.col_location_MrC.Width = 86;
             // 
             // col_position_MrC
             // 
@@ -601,6 +614,22 @@
             this.col_position_MrC.MaxInputLength = 30;
             this.col_position_MrC.Name = "col_position_MrC";
             this.col_position_MrC.Width = 83;
+            // 
+            // col_username_MrC
+            // 
+            this.col_username_MrC.DataPropertyName = "USERNAME";
+            this.col_username_MrC.HeaderText = "USER NAME";
+            this.col_username_MrC.MaxInputLength = 50;
+            this.col_username_MrC.Name = "col_username_MrC";
+            this.col_username_MrC.Width = 93;
+            // 
+            // col_remark_MrC
+            // 
+            this.col_remark_MrC.DataPropertyName = "REMARK";
+            this.col_remark_MrC.HeaderText = "REMARKS";
+            this.col_remark_MrC.MaxInputLength = 150;
+            this.col_remark_MrC.Name = "col_remark_MrC";
+            this.col_remark_MrC.Width = 78;
             // 
             // col_memory_MrC
             // 
@@ -657,13 +686,24 @@
             // 
             this.col_password_MrC.DataPropertyName = "PASSWORD";
             this.col_password_MrC.HeaderText = "PASSWORDS";
+            this.col_password_MrC.MaxInputLength = 20;
             this.col_password_MrC.Name = "col_password_MrC";
+            // 
+            // lb_Loading2Excel
+            // 
+            this.lb_Loading2Excel.AutoSize = true;
+            this.lb_Loading2Excel.Location = new System.Drawing.Point(478, 570);
+            this.lb_Loading2Excel.Name = "lb_Loading2Excel";
+            this.lb_Loading2Excel.Size = new System.Drawing.Size(0, 13);
+            this.lb_Loading2Excel.TabIndex = 83;
             // 
             // AM_Main_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1277, 591);
+            this.Controls.Add(this.lb_Loading2Excel);
+            this.Controls.Add(this.btn_Export);
             this.Controls.Add(this.chk_Brand);
             this.Controls.Add(this.chk_Supplier);
             this.Controls.Add(this.button1);
@@ -702,7 +742,7 @@
             this.Load += new System.EventHandler(this.AM_Main_Form_Load);
             ((System.ComponentModel.ISupportInitialize)(qLVT_testDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dEVICESTBLBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(dEVICESTBLBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -734,8 +774,6 @@
         private System.Windows.Forms.Button bt_Insert_MrC;
         private System.Windows.Forms.Button MrC_BT_Cancel;
         private System.Windows.Forms.Label label97;
-        private System.Windows.Forms.BindingSource dEVICESTBLBindingSource;
-        private QLVT_testDataSet1TableAdapters.DEVICES_TBLTableAdapter dEVICES_TBLTableAdapter;
         private System.Windows.Forms.CheckBox chk_Area;
         private System.Windows.Forms.CheckBox chk_Devices;
         private System.Windows.Forms.Button btn_Server;
@@ -743,24 +781,26 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.CheckBox chk_Supplier;
         private System.Windows.Forms.CheckBox chk_Brand;
+        private System.Windows.Forms.Button btn_Export;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_darea_MrC;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_devices_MrC;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_barcode_MrC;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_serial_MrC;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_brand_MrC;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_Supplies_MrC;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_model_MrC;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col_serial_MrC;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_dstatus_MrC;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_hostname_MrC;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_invoice_MrC;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_handover_MrC;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_Warranty_MrC;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col_dstatus_MrC;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col_barcode_MrC;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_deliverydate_MrC;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col_remark_MrC;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col_location_MrC;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_Price_MrC;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_assetcode_MrC;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col_username_MrC;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_location_MrC;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_position_MrC;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_username_MrC;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_remark_MrC;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_memory_MrC;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_hdd_MrC;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_macaddr_MrC;
@@ -769,5 +809,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn col_defaultgw_MrC;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_logname_MrC;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_password_MrC;
+        private System.Windows.Forms.Label lb_Loading2Excel;
     }
 }

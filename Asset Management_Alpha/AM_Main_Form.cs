@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using ValueObject;
 using BussinessLogicLayer;
 using Microsoft.Win32;
+using Microsoft.Office.Interop.Excel;
 
 namespace Asset_Management_Alpha
 {
@@ -209,6 +210,7 @@ namespace Asset_Management_Alpha
                     objDevices.dns = dataGridView2.Rows[e.RowIndex].Cells["col_dns_MrC"].FormattedValue.ToString().Trim();
                     objDevices.default_gw = dataGridView2.Rows[e.RowIndex].Cells["col_defaultgw_MrC"].FormattedValue.ToString().Trim();
                     objDevices.dtype = dataGridView2.Rows[e.RowIndex].Cells["col_devices_MrC"].FormattedValue.ToString().Trim();
+                    objDevices.Price = dataGridView2.Rows[e.RowIndex].Cells["col_Price_MrC"].FormattedValue.ToString().Trim();
 
                     HeaderSelectedCell = dataGridView2.Columns[e.ColumnIndex].DataPropertyName.ToString().Trim();
                 }
@@ -466,7 +468,7 @@ namespace Asset_Management_Alpha
 
         private void MrC_BT_Cancel_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            System.Windows.Forms.Application.Exit(); // do co Excel nene them "System.Windows.Forms"
         }
 
         private void bt_Refresh_MrC_Click(object sender, EventArgs e)
@@ -578,5 +580,46 @@ namespace Asset_Management_Alpha
             frmNetwork.Show();
         }
 
+        private void btn_Export_Click(object sender, EventArgs e)
+        {
+            Microsoft.Office.Interop.Excel._Application app = new Microsoft.Office.Interop.Excel.Application();
+            Microsoft.Office.Interop.Excel._Workbook workbook = app.Workbooks.Add(Type.Missing);
+            Microsoft.Office.Interop.Excel._Worksheet worksheet = null;
+            worksheet = workbook.Sheets["Sheet1"]; //hien thi ten sheet theo ten combobox Device
+            worksheet = workbook.ActiveSheet;
+            worksheet.Name = cb_Devices_MrC.Text;
+            
+            for (int i = 1; i < dataGridView2.Columns.Count + 1; i++)
+            {
+                worksheet.Cells[1, i] = dataGridView2.Columns[i - 1].HeaderCell.Value;
+            }
+            for (int i = 0; i < dataGridView2.Rows.Count; i++)
+            {
+                for (int j = 0; j < dataGridView2.Columns.Count; j++)
+                {
+                    if (dataGridView2.Rows[i].Cells[j].Value != null)
+                    {
+                        worksheet.Cells[i + 2, j + 1] = dataGridView2.Rows[i].Cells[j].Value.ToString();
+                    }
+                    else
+                    {
+                        worksheet.Cells[i + 2, j + 1] = String.Empty;
+                    }
+                }
+                lb_Loading2Excel.Text = "Loading: " + i;
+            }
+
+            lb_Loading2Excel.Text = "Done";
+            var saveFileDialog = new SaveFileDialog();
+            saveFileDialog.FileName = "ASSET MANAGEMENT EXCEL";
+            saveFileDialog.DefaultExt = ".xlsx";
+            saveFileDialog.Filter = "Excel Worksheets 2007(*.xlsx)|*.xlsx|Excel Worksheets 2003(*.xls)|*.xls|Word Documents(*.doc)|*.doc";
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                workbook.SaveAs(saveFileDialog.FileName, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Microsoft.Office.Interop.Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
+            }
+            app.Quit();
+            lb_Loading2Excel.Text = "";
+        }
     }
 }

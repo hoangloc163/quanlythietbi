@@ -61,5 +61,7 @@ namespace ValueObject
         public string delivery_date { get; set; }
 
         public string ram { get; set; }
+
+        public string Price { get; set; }
     }
 }
