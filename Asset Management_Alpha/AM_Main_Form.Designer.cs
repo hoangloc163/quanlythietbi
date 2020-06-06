@@ -407,6 +407,7 @@
             // 
             // btn_Server
             // 
+            this.btn_Server.Enabled = false;
             this.btn_Server.Location = new System.Drawing.Point(13, 565);
             this.btn_Server.Name = "btn_Server";
             this.btn_Server.Size = new System.Drawing.Size(75, 23);
@@ -417,6 +418,7 @@
             // 
             // btn_Network
             // 
+            this.btn_Network.Enabled = false;
             this.btn_Network.Location = new System.Drawing.Point(119, 565);
             this.btn_Network.Name = "btn_Network";
             this.btn_Network.Size = new System.Drawing.Size(75, 23);
@@ -551,7 +553,7 @@
             // col_barcode_MrC
             // 
             this.col_barcode_MrC.DataPropertyName = "DEVICE_CODE";
-            this.col_barcode_MrC.HeaderText = "BARCODE";
+            this.col_barcode_MrC.HeaderText = "DEVICE CODE";
             this.col_barcode_MrC.Name = "col_barcode_MrC";
             // 
             // col_deliverydate_MrC
@@ -563,7 +565,7 @@
             // col_remark_MrC
             // 
             this.col_remark_MrC.DataPropertyName = "REMARK";
-            this.col_remark_MrC.HeaderText = "REMARK";
+            this.col_remark_MrC.HeaderText = "REMARKS";
             this.col_remark_MrC.MaxInputLength = 150;
             this.col_remark_MrC.Name = "col_remark_MrC";
             this.col_remark_MrC.Width = 78;
@@ -595,7 +597,7 @@
             // col_position_MrC
             // 
             this.col_position_MrC.DataPropertyName = "DEPARTMENT";
-            this.col_position_MrC.HeaderText = "POSITION";
+            this.col_position_MrC.HeaderText = "DEPARTMENT";
             this.col_position_MrC.MaxInputLength = 30;
             this.col_position_MrC.Name = "col_position_MrC";
             this.col_position_MrC.Width = 83;
@@ -603,7 +605,7 @@
             // col_memory_MrC
             // 
             this.col_memory_MrC.DataPropertyName = "RAM";
-            this.col_memory_MrC.HeaderText = "MEMORY";
+            this.col_memory_MrC.HeaderText = "RAM";
             this.col_memory_MrC.MaxInputLength = 5;
             this.col_memory_MrC.Name = "col_memory_MrC";
             this.col_memory_MrC.Width = 80;
@@ -654,7 +656,7 @@
             // col_password_MrC
             // 
             this.col_password_MrC.DataPropertyName = "PASSWORD";
-            this.col_password_MrC.HeaderText = "PASSWORD";
+            this.col_password_MrC.HeaderText = "PASSWORDS";
             this.col_password_MrC.Name = "col_password_MrC";
             // 
             // AM_Main_Form

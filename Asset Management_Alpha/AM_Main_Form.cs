@@ -160,6 +160,7 @@ namespace Asset_Management_Alpha
             cb_Status_MrC.DataSource = busDevices.GetData4Cb_Status();
             cb_Status_MrC.DisplayMember = "dstatus".Trim();
         }
+
         #endregion
 
         #region Function on Form
@@ -389,7 +390,7 @@ namespace Asset_Management_Alpha
                     if (!string.IsNullOrWhiteSpace(txt_Serial_MrC.Text))
                     {
                         if (filter.Length > 0) filter += "AND ";
-                        filter += "SERIAL" + " LIKE '%" + txt_Serial_MrC.Text.Trim() + "%' ";
+                        filter += "SERIAL" + " LIKE '" + txt_Serial_MrC.Text.Trim() + "' ";
                     }
                 }
                 if (!string.IsNullOrEmpty(cb_Status_MrC.Text))
@@ -405,24 +406,36 @@ namespace Asset_Management_Alpha
             // radiobutton search tuong doi
             if (rbt_Or_Check.Checked == true)
             {
-                if (!string.IsNullOrEmpty(cb_Area_MrC.Text))
+                if (chk_Area.Checked == false)
                 {
-                    filter += "DAREA" /*+ dataGridView2.Columns["col_mrc_area"].HeaderText.ToString()*/ + " LIKE '" + cb_Area_MrC.Text.Trim() + "' ";
+                    if (!string.IsNullOrEmpty(cb_Area_MrC.Text))
+                    {
+                        filter += "DAREA" /*+ dataGridView2.Columns["col_mrc_area"].HeaderText.ToString()*/ + " LIKE '" + cb_Area_MrC.Text.Trim() + "' ";
+                    }
                 }
-                if (!string.IsNullOrEmpty(cb_Devices_MrC.Text))
+                if (chk_Devices.Checked == false)
                 {
-                    if (filter.Length > 0) filter += "OR "; // dk AND
-                    filter += "DEVICE_TYPE" + " LIKE '" + cb_Devices_MrC.Text.Trim() + "' ";
+                    if (!string.IsNullOrEmpty(cb_Devices_MrC.Text))
+                    {
+                        if (filter.Length > 0) filter += "AND "; // dk AND
+                        filter += "DEVICE_TYPE" + " LIKE '" + cb_Devices_MrC.Text.Trim() + "' ";
+                    }
                 }
-                if (!string.IsNullOrEmpty(cb_Brand_MrC.Text))
+                if (chk_Brand.Checked == false)
                 {
-                    if (filter.Length > 0) filter += "OR ";
-                    filter += "BRAND" /*dataGridView2.Columns["col_mrc_brand"].HeaderText.ToString()*/ + " LIKE '" + cb_Brand_MrC.Text.Trim() + "' ";
+                    if (!string.IsNullOrEmpty(cb_Brand_MrC.Text))
+                    {
+                        if (filter.Length > 0) filter += "OR ";
+                        filter += "BRAND" /*dataGridView2.Columns["col_mrc_brand"].HeaderText.ToString()*/ + " LIKE '" + cb_Brand_MrC.Text.Trim() + "' ";
+                    }
                 }
-                if (!string.IsNullOrEmpty(cb_Supplier_MrC.Text))
+                if (chk_Supplier.Checked == false)
                 {
-                    if (filter.Length > 0) filter += "OR ";
-                    filter += "SUPPLIER" + " LIKE '" + cb_Supplier_MrC.Text.Trim() + "' ";
+                    if (!string.IsNullOrEmpty(cb_Supplier_MrC.Text))
+                    {
+                        if (filter.Length > 0) filter += "OR ";
+                        filter += "SUPPLIER" + " LIKE '" + cb_Supplier_MrC.Text.Trim() + "' ";
+                    }
                 }
                 if (!string.IsNullOrEmpty(cb_Position_MrC.Text))
                 {

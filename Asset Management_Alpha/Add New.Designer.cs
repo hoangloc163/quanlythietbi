@@ -223,6 +223,13 @@
             // cb_Status
             // 
             this.cb_Status.FormattingEnabled = true;
+            this.cb_Status.Items.AddRange(new object[] {
+            "Unassigned",
+            "Assigned",
+            "Online",
+            "Offline",
+            "Disposal",
+            "Ordering"});
             this.cb_Status.Location = new System.Drawing.Point(593, 139);
             this.cb_Status.Name = "cb_Status";
             this.cb_Status.Size = new System.Drawing.Size(121, 21);
