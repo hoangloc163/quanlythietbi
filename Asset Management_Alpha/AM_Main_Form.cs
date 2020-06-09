@@ -29,6 +29,7 @@ namespace Asset_Management_Alpha
         string Current_Cell;
         string Updated_Cell;
         string HeaderSelectedCell;
+        int countrow;
         #endregion
 
         #region Check on Form
@@ -44,6 +45,7 @@ namespace Asset_Management_Alpha
 
             //MrC_XuLi();
             HienThiDataGridView2(SQLQuery);
+            countrow = dataGridView2.Rows.Count;
             label97.Text = dataGridView2.Rows.Count.ToString() + " Rows";
 
             // hien thi cb box
@@ -294,6 +296,7 @@ namespace Asset_Management_Alpha
                     loadcb_Supplier_By_DType();
                     //loadcb_Supplier();
                     loadcb_Status();
+                    countrow = dataGridView2.Rows.Count;
                     label97.Text = dataGridView2.Rows.Count.ToString() + " Rows";
                 }
                 else if (dialogResult == DialogResult.No)
@@ -315,6 +318,7 @@ namespace Asset_Management_Alpha
         private void Refresh_dtgv_Fn()
         {
             Refesh_dtgv();
+            countrow = dataGridView2.Rows.Count;
             label97.Text = dataGridView2.Rows.Count.ToString() + " Rows";
         }
 
@@ -323,6 +327,7 @@ namespace Asset_Management_Alpha
             // co the se sua code lai
             HienThiDataGridView2(SQLQuery);
             dataGridView2.Refresh();
+            countrow = dataGridView2.Rows.Count;
             label97.Text = dataGridView2.Rows.Count.ToString() + " Rows";
         }
 
@@ -463,6 +468,7 @@ namespace Asset_Management_Alpha
             bs.Filter = filter;
             dataGridView2.DataSource = bs;
             // dem dong
+            countrow = dataGridView2.Rows.Count;
             label97.Text = dataGridView2.Rows.Count.ToString() + " Rows";
         }
 
@@ -474,6 +480,7 @@ namespace Asset_Management_Alpha
         private void bt_Refresh_MrC_Click(object sender, EventArgs e)
         {
             Refesh_dtgv();
+            countrow = dataGridView2.Rows.Count;
             label97.Text = dataGridView2.Rows.Count.ToString() + " Rows";
 
             loadcb_Area();
@@ -599,14 +606,15 @@ namespace Asset_Management_Alpha
                 {
                     if (dataGridView2.Rows[i].Cells[j].Value != null)
                     {
-                        worksheet.Cells[i + 2, j + 1] = dataGridView2.Rows[i].Cells[j].Value.ToString();
+                        worksheet.Cells[i + 2, j + 1] = "'" + dataGridView2.Rows[i].Cells[j].Value.ToString();
                     }
                     else
                     {
                         worksheet.Cells[i + 2, j + 1] = String.Empty;
                     }
                 }
-                lb_Loading2Excel.Text = "Loading: " + i;
+                int percent = i * 100 / countrow;
+                lb_Loading2Excel.Text = "Loading: " + percent + " %";
             }
 
             lb_Loading2Excel.Text = "Done";

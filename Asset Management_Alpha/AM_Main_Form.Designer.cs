@@ -65,6 +65,7 @@
             this.chk_Supplier = new System.Windows.Forms.CheckBox();
             this.chk_Brand = new System.Windows.Forms.CheckBox();
             this.btn_Export = new System.Windows.Forms.Button();
+            this.lb_Loading2Excel = new System.Windows.Forms.Label();
             this.col_darea_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_devices_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_barcode_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -92,19 +93,26 @@
             this.col_defaultgw_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_logname_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_password_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lb_Loading2Excel = new System.Windows.Forms.Label();
             qLVT_testDataSet1 = new Asset_Management_Alpha.QLVT_testDataSet1();
             dEVICESTBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
             dEVICES_TBLTableAdapter = new Asset_Management_Alpha.QLVT_testDataSet1TableAdapters.DEVICES_TBLTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(qLVT_testDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(dEVICESTBLBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // qLVT_testDataSet1
             // 
             qLVT_testDataSet1.DataSetName = "QLVT_testDataSet1";
             qLVT_testDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dEVICESTBLBindingSource
+            // 
+            dEVICESTBLBindingSource.AllowNew = false;
+            // 
+            // dEVICES_TBLTableAdapter
+            // 
+            dEVICES_TBLTableAdapter.ClearBeforeFill = true;
             // 
             // dataGridView2
             // 
@@ -156,10 +164,6 @@
             this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
             this.dataGridView2.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellEndEdit);
             this.dataGridView2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGridView2_KeyDown);
-            // 
-            // dEVICESTBLBindingSource
-            // 
-            dEVICESTBLBindingSource.AllowNew = false;
             // 
             // cb_Status_MrC
             // 
@@ -387,10 +391,6 @@
             this.label97.TabIndex = 74;
             this.label97.Text = "0 Rows";
             // 
-            // dEVICES_TBLTableAdapter
-            // 
-            dEVICES_TBLTableAdapter.ClearBeforeFill = true;
-            // 
             // chk_Area
             // 
             this.chk_Area.AutoSize = true;
@@ -470,6 +470,14 @@
             this.btn_Export.Text = "Export";
             this.btn_Export.UseVisualStyleBackColor = true;
             this.btn_Export.Click += new System.EventHandler(this.btn_Export_Click);
+            // 
+            // lb_Loading2Excel
+            // 
+            this.lb_Loading2Excel.AutoSize = true;
+            this.lb_Loading2Excel.Location = new System.Drawing.Point(478, 570);
+            this.lb_Loading2Excel.Name = "lb_Loading2Excel";
+            this.lb_Loading2Excel.Size = new System.Drawing.Size(0, 13);
+            this.lb_Loading2Excel.TabIndex = 83;
             // 
             // col_darea_MrC
             // 
@@ -625,7 +633,7 @@
             // 
             // col_remark_MrC
             // 
-            this.col_remark_MrC.DataPropertyName = "REMARK";
+            this.col_remark_MrC.DataPropertyName = "REMARKS";
             this.col_remark_MrC.HeaderText = "REMARKS";
             this.col_remark_MrC.MaxInputLength = 150;
             this.col_remark_MrC.Name = "col_remark_MrC";
@@ -689,14 +697,6 @@
             this.col_password_MrC.MaxInputLength = 20;
             this.col_password_MrC.Name = "col_password_MrC";
             // 
-            // lb_Loading2Excel
-            // 
-            this.lb_Loading2Excel.AutoSize = true;
-            this.lb_Loading2Excel.Location = new System.Drawing.Point(478, 570);
-            this.lb_Loading2Excel.Name = "lb_Loading2Excel";
-            this.lb_Loading2Excel.Size = new System.Drawing.Size(0, 13);
-            this.lb_Loading2Excel.TabIndex = 83;
-            // 
             // AM_Main_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -741,8 +741,8 @@
             this.Text = "Asset Management";
             this.Load += new System.EventHandler(this.AM_Main_Form_Load);
             ((System.ComponentModel.ISupportInitialize)(qLVT_testDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(dEVICESTBLBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -782,6 +782,7 @@
         private System.Windows.Forms.CheckBox chk_Supplier;
         private System.Windows.Forms.CheckBox chk_Brand;
         private System.Windows.Forms.Button btn_Export;
+        private System.Windows.Forms.Label lb_Loading2Excel;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_darea_MrC;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_devices_MrC;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_barcode_MrC;
@@ -809,6 +810,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn col_defaultgw_MrC;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_logname_MrC;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_password_MrC;
-        private System.Windows.Forms.Label lb_Loading2Excel;
     }
 }

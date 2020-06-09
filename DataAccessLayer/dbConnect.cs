@@ -36,7 +36,8 @@ namespace DataAccessLayer
         {
             try
             {
-                ConnectString = "Data Source=" + sername + ";Initial Catalog=" + DatabaseName + ";Integrated Security=True";
+                //ConnectString = "Data Source=" + sername + ";Network Library=DBMSSOCN; Initial Catalog=" + DatabaseName + "; User ID=" + UserName + "; Password=" + Passwords;// + ";Integrated Security=True";
+                ConnectString = "Data Source=" + sername + "; Initial Catalog=" + DatabaseName + "; User ID=" + UserName + "; Password=" + Passwords +";Integrated Security=True";
                 conn = new SqlConnection(ConnectString);
                 conn.Open();
 
@@ -46,7 +47,7 @@ namespace DataAccessLayer
                 key.SetValue("DatabaseName", DatabaseName);
                 key.SetValue("UserName", UserName);
                 key.SetValue("Passwords", Passwords);
-                key.SetValue("ComputerName", sername.Substring(0,sername.IndexOf("\\")));
+                //key.SetValue("ComputerName", sername.Substring(0,sername.IndexOf("\\")));
                 key.SetValue("WSLCheck", "Off");
                 key.SetValue("WSLValue", "100");
                 key.SetValue("WHSDCheck", "Off");
