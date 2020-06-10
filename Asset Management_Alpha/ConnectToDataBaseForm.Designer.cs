@@ -39,19 +39,21 @@
             this.txt_Username = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txt_Password = new System.Windows.Forms.TextBox();
+            this.rb_OverInternet = new System.Windows.Forms.RadioButton();
+            this.rb_Local = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // cbx_sername
             // 
             this.cbx_sername.FormattingEnabled = true;
-            this.cbx_sername.Location = new System.Drawing.Point(120, 14);
+            this.cbx_sername.Location = new System.Drawing.Point(120, 12);
             this.cbx_sername.Name = "cbx_sername";
             this.cbx_sername.Size = new System.Drawing.Size(163, 21);
             this.cbx_sername.TabIndex = 0;
             // 
             // txt_DatabaseName
             // 
-            this.txt_DatabaseName.Location = new System.Drawing.Point(120, 54);
+            this.txt_DatabaseName.Location = new System.Drawing.Point(120, 70);
             this.txt_DatabaseName.Name = "txt_DatabaseName";
             this.txt_DatabaseName.Size = new System.Drawing.Size(163, 20);
             this.txt_DatabaseName.TabIndex = 2;
@@ -60,7 +62,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(15, 17);
+            this.label1.Location = new System.Drawing.Point(15, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(69, 13);
             this.label1.TabIndex = 4;
@@ -69,7 +71,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 57);
+            this.label2.Location = new System.Drawing.Point(15, 73);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(84, 13);
             this.label2.TabIndex = 5;
@@ -77,7 +79,7 @@
             // 
             // btn_ok
             // 
-            this.btn_ok.Location = new System.Drawing.Point(44, 191);
+            this.btn_ok.Location = new System.Drawing.Point(41, 178);
             this.btn_ok.Name = "btn_ok";
             this.btn_ok.Size = new System.Drawing.Size(75, 23);
             this.btn_ok.TabIndex = 8;
@@ -87,7 +89,7 @@
             // 
             // btn_huy
             // 
-            this.btn_huy.Location = new System.Drawing.Point(177, 191);
+            this.btn_huy.Location = new System.Drawing.Point(174, 178);
             this.btn_huy.Name = "btn_huy";
             this.btn_huy.Size = new System.Drawing.Size(75, 23);
             this.btn_huy.TabIndex = 9;
@@ -102,7 +104,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_thongbao.AutoSize = true;
             this.lbl_thongbao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_thongbao.Location = new System.Drawing.Point(54, 158);
+            this.lbl_thongbao.Location = new System.Drawing.Point(61, 39);
             this.lbl_thongbao.Name = "lbl_thongbao";
             this.lbl_thongbao.Size = new System.Drawing.Size(0, 20);
             this.lbl_thongbao.TabIndex = 10;
@@ -110,7 +112,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(15, 92);
+            this.label3.Location = new System.Drawing.Point(15, 108);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 13);
             this.label3.TabIndex = 12;
@@ -118,7 +120,7 @@
             // 
             // txt_Username
             // 
-            this.txt_Username.Location = new System.Drawing.Point(120, 89);
+            this.txt_Username.Location = new System.Drawing.Point(120, 105);
             this.txt_Username.Name = "txt_Username";
             this.txt_Username.Size = new System.Drawing.Size(163, 20);
             this.txt_Username.TabIndex = 11;
@@ -127,7 +129,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(15, 128);
+            this.label4.Location = new System.Drawing.Point(15, 144);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(53, 13);
             this.label4.TabIndex = 14;
@@ -135,18 +137,42 @@
             // 
             // txt_Password
             // 
-            this.txt_Password.Location = new System.Drawing.Point(120, 125);
+            this.txt_Password.Location = new System.Drawing.Point(120, 141);
             this.txt_Password.Name = "txt_Password";
             this.txt_Password.Size = new System.Drawing.Size(163, 20);
             this.txt_Password.TabIndex = 13;
             this.txt_Password.Text = "@P@ssW0rd@";
             this.txt_Password.UseSystemPasswordChar = true;
             // 
+            // rb_OverInternet
+            // 
+            this.rb_OverInternet.AutoSize = true;
+            this.rb_OverInternet.Location = new System.Drawing.Point(40, 39);
+            this.rb_OverInternet.Name = "rb_OverInternet";
+            this.rb_OverInternet.Size = new System.Drawing.Size(102, 17);
+            this.rb_OverInternet.TabIndex = 15;
+            this.rb_OverInternet.Text = "DB OverInternet";
+            this.rb_OverInternet.UseVisualStyleBackColor = true;
+            // 
+            // rb_Local
+            // 
+            this.rb_Local.AutoSize = true;
+            this.rb_Local.Checked = true;
+            this.rb_Local.Location = new System.Drawing.Point(174, 39);
+            this.rb_Local.Name = "rb_Local";
+            this.rb_Local.Size = new System.Drawing.Size(69, 17);
+            this.rb_Local.TabIndex = 16;
+            this.rb_Local.TabStop = true;
+            this.rb_Local.Text = "DB Local";
+            this.rb_Local.UseVisualStyleBackColor = true;
+            // 
             // ConnectToDataBaseForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(295, 226);
+            this.ClientSize = new System.Drawing.Size(295, 213);
+            this.Controls.Add(this.rb_Local);
+            this.Controls.Add(this.rb_OverInternet);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txt_Password);
             this.Controls.Add(this.label3);
@@ -180,5 +206,7 @@
         private System.Windows.Forms.TextBox txt_Username;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txt_Password;
+        private System.Windows.Forms.RadioButton rb_OverInternet;
+        private System.Windows.Forms.RadioButton rb_Local;
     }
 }

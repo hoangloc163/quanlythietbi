@@ -83,9 +83,9 @@ namespace BussinessLogicLayer
             return dao.Delete(obj);
         }
 
-        public string connect(string sername, string databasename,string username, string password, string message)
+        public string connect(bool checklocalDB, string sername, string databasename,string username, string password, string message)
         {
-            return dao.Connect(sername, databasename, username, password, message);
+            return dao.Connect(checklocalDB, sername, databasename, username, password, message);
         }
     }
 }

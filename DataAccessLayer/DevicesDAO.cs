@@ -127,9 +127,9 @@ namespace DataAccessLayer
             return db.ExecuteSQL("Devices_Delete", para);
         }
 
-        public string Connect(string sername, string databasename, string username, string password, string message)
+        public string Connect(bool checklocalDB, string sername, string databasename, string username, string password, string message)
         {
-            return db.Connect2DB(sername, databasename, username, password, message);
+            return db.Connect2DB(checklocalDB, sername, databasename, username, password, message);
         }
     }
 }

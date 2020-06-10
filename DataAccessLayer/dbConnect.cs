@@ -32,12 +32,20 @@ namespace DataAccessLayer
             }
         }
 
-        public string Connect2DB(string sername, string DatabaseName,string UserName, string Passwords, string message)
+        public string Connect2DB(bool checklocalDB, string sername, string DatabaseName,string UserName, string Passwords, string message)
         {
             try
             {
-                //ConnectString = "Data Source=" + sername + ";Network Library=DBMSSOCN; Initial Catalog=" + DatabaseName + "; User ID=" + UserName + "; Password=" + Passwords;// + ";Integrated Security=True";
-                ConnectString = "Data Source=" + sername + "; Initial Catalog=" + DatabaseName + "; User ID=" + UserName + "; Password=" + Passwords +";Integrated Security=True";
+                if(checklocalDB != true)
+                {
+                    ConnectString = "Data Source=" + sername + ";Network Library=DBMSSOCN; Initial Catalog=" + DatabaseName + "; User ID=" + UserName + "; Password=" + Passwords;// + ";Integrated Security=True";
+                }
+                else
+                {
+                    ConnectString = "Data Source=" + sername + "; Initial Catalog=" + DatabaseName + "; User ID=" + UserName + "; Password=" + Passwords + ";Integrated Security=True";
+                }
+                
+                
                 conn = new SqlConnection(ConnectString);
                 conn.Open();
 
