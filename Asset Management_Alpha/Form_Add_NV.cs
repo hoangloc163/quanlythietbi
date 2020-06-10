@@ -47,6 +47,7 @@ namespace Asset_Management_Alpha
                     objnhanvien.tennhanvien = txt_tennhanvien.Text = dataGridView1.Rows[e.RowIndex].Cells["col_tennhanvien"].FormattedValue.ToString().Trim();
                     objnhanvien.tendangnhap= txt_tendangnhap.Text = dataGridView1.Rows[e.RowIndex].Cells["col_tendangnhap"].FormattedValue.ToString().Trim();
                     objnhanvien.matkhau = txt_matkhau.Text = dataGridView1.Rows[e.RowIndex].Cells["col_matkhau"].FormattedValue.ToString().Trim();
+                    //objnhanvien.matkhau = busnhanvien.Mahoa(objnhanvien);
                     objnhanvien.phongban = txt_phongban.Text = dataGridView1.Rows[e.RowIndex].Cells["col_phongban"].FormattedValue.ToString().Trim();
                     objnhanvien.permission = cb_permission.Text = dataGridView1.Rows[e.RowIndex].Cells["col_permission"].FormattedValue.ToString().Trim();
 

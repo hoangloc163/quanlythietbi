@@ -28,7 +28,8 @@ namespace DataAccessLayer
                 var UserName = rk.GetValue("UserName");
                 var Passwords = rk.GetValue("Passwords");
                 var ServerSQL = rk.GetValue("ServerName");
-                conn = new SqlConnection("Data Source=" + ServerSQL.ToString() + ";Initial Catalog=" + DataBaseName.ToString() +";Persist Security Info=True;User ID=" + UserName + ";Password=" + Passwords+";Integrated Security=True");
+                var CheckLocal = rk.GetValue("LocalCheck");
+                conn = new SqlConnection("Data Source=" + ServerSQL.ToString() + ";Initial Catalog=" + DataBaseName.ToString() +";Persist Security Info=True;User ID=" + UserName + ";Password=" + Passwords+";Integrated Security=" + CheckLocal + "");
             }
         }
 
@@ -36,26 +37,34 @@ namespace DataAccessLayer
         {
             try
             {
-                if(checklocalDB != true)
+                if (checklocalDB != true)
                 {
                     ConnectString = "Data Source=" + sername + ";Network Library=DBMSSOCN; Initial Catalog=" + DatabaseName + "; User ID=" + UserName + "; Password=" + Passwords;// + ";Integrated Security=True";
                 }
                 else
                 {
-                    ConnectString = "Data Source=" + sername + "; Initial Catalog=" + DatabaseName + "; User ID=" + UserName + "; Password=" + Passwords + ";Integrated Security=True";
+                    ConnectString = "Data Source=" + sername + "; Initial Catalog=" + DatabaseName + "; User ID=" + UserName + "; Password=" + Passwords + ";Integrated Security=false";
                 }
-                
-                
+
+
                 conn = new SqlConnection(ConnectString);
                 conn.Open();
 
                 RegistryKey key = Registry.CurrentUser.CreateSubKey("Software\\Asset Management");
-                
+
                 key.SetValue("ServerName", sername);
                 key.SetValue("DatabaseName", DatabaseName);
                 key.SetValue("UserName", UserName);
                 key.SetValue("Passwords", Passwords);
-                //key.SetValue("ComputerName", sername.Substring(0,sername.IndexOf("\\")));
+                key.SetValue("ComputerName", sername.Substring(0, sername.IndexOf("\\")));
+                if (checklocalDB != true)
+                {
+                    key.SetValue("LocalCheck", "false");
+                }
+                else
+                {
+                    key.SetValue("LocalCheck", "True");
+                }
                 key.SetValue("WSLCheck", "Off");
                 key.SetValue("WSLValue", "100");
                 key.SetValue("WHSDCheck", "Off");
