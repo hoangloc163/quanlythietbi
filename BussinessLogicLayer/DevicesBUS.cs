@@ -63,6 +63,10 @@ namespace BussinessLogicLayer
         {
             return dao.GetData4Cb_Position();
         }
+        public DataTable GetData4Cb_Position_By_Area(Devices obj)
+        {
+            return dao.GetData4Cb_Position_By_Area(obj);
+        }
         public DataTable GetData4Cb_Status()
         {
             return dao.GetData4Cb_Status();

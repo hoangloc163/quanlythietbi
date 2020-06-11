@@ -85,7 +85,15 @@ namespace DataAccessLayer
         }
         public DataTable GetData4Cb_Position()
         {
-            return db.GetData("DEVICES_CB_Select_Position", null);
+            return db.GetData("DEVICES_CB_Select_Dept", null);
+        }
+        public DataTable GetData4Cb_Position_By_Area(Devices obj)
+        {
+            SqlParameter[] para =
+            {
+                new SqlParameter("darea",obj.darea)
+            };
+            return db.GetData("DEVICES_CB_Select_Dept_By_Area", para);
         }
         public DataTable GetData4Cb_Status()
         {

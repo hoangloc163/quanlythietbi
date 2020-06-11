@@ -34,6 +34,33 @@
             Asset_Management_Alpha.QLVT_testDataSet1TableAdapters.DEVICES_TBLTableAdapter dEVICES_TBLTableAdapter;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AM_Main_Form));
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.col_darea_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_devices_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_barcode_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_serial_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_brand_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_Supplies_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_model_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_dstatus_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_hostname_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_invoice_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_handover_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_Warranty_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_deliverydate_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_Price_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_assetcode_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_location_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_position_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_username_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_remark_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_memory_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_hdd_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_macaddr_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_ipaddr_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_dns_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_defaultgw_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_logname_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_password_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cb_Status_MrC = new System.Windows.Forms.ComboBox();
             this.label98 = new System.Windows.Forms.Label();
             this.label96 = new System.Windows.Forms.Label();
@@ -66,33 +93,6 @@
             this.chk_Brand = new System.Windows.Forms.CheckBox();
             this.btn_Export = new System.Windows.Forms.Button();
             this.lb_Loading2Excel = new System.Windows.Forms.Label();
-            this.col_darea_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_devices_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_barcode_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_serial_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_brand_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_Supplies_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_model_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_dstatus_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_hostname_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_invoice_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_handover_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_Warranty_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_deliverydate_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_Price_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_assetcode_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_location_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_position_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_username_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_remark_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_memory_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_hdd_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_macaddr_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_ipaddr_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_dns_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_defaultgw_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_logname_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_password_MrC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             qLVT_testDataSet1 = new Asset_Management_Alpha.QLVT_testDataSet1();
             dEVICESTBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
             dEVICES_TBLTableAdapter = new Asset_Management_Alpha.QLVT_testDataSet1TableAdapters.DEVICES_TBLTableAdapter();
@@ -164,320 +164,6 @@
             this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
             this.dataGridView2.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellEndEdit);
             this.dataGridView2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGridView2_KeyDown);
-            // 
-            // cb_Status_MrC
-            // 
-            this.cb_Status_MrC.FormattingEnabled = true;
-            this.cb_Status_MrC.Location = new System.Drawing.Point(723, 48);
-            this.cb_Status_MrC.Name = "cb_Status_MrC";
-            this.cb_Status_MrC.Size = new System.Drawing.Size(141, 21);
-            this.cb_Status_MrC.TabIndex = 8;
-            // 
-            // label98
-            // 
-            this.label98.AutoSize = true;
-            this.label98.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label98.Location = new System.Drawing.Point(680, 51);
-            this.label98.Name = "label98";
-            this.label98.Size = new System.Drawing.Size(43, 13);
-            this.label98.TabIndex = 70;
-            this.label98.Text = "Status";
-            // 
-            // label96
-            // 
-            this.label96.AutoSize = true;
-            this.label96.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label96.Location = new System.Drawing.Point(680, 16);
-            this.label96.Name = "label96";
-            this.label96.Size = new System.Drawing.Size(39, 13);
-            this.label96.TabIndex = 69;
-            this.label96.Text = "Serial";
-            // 
-            // txt_Serial_MrC
-            // 
-            this.txt_Serial_MrC.Location = new System.Drawing.Point(723, 12);
-            this.txt_Serial_MrC.Name = "txt_Serial_MrC";
-            this.txt_Serial_MrC.Size = new System.Drawing.Size(141, 20);
-            this.txt_Serial_MrC.TabIndex = 7;
-            this.txt_Serial_MrC.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_Serial_MrC_KeyDown);
-            // 
-            // bt_Refresh_MrC
-            // 
-            this.bt_Refresh_MrC.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_Refresh_MrC.Location = new System.Drawing.Point(883, 12);
-            this.bt_Refresh_MrC.Name = "bt_Refresh_MrC";
-            this.bt_Refresh_MrC.Size = new System.Drawing.Size(57, 57);
-            this.bt_Refresh_MrC.TabIndex = 9;
-            this.bt_Refresh_MrC.Text = "Refesh";
-            this.bt_Refresh_MrC.UseVisualStyleBackColor = true;
-            this.bt_Refresh_MrC.Click += new System.EventHandler(this.bt_Refresh_MrC_Click);
-            // 
-            // rbt_Or_Check
-            // 
-            this.rbt_Or_Check.AutoSize = true;
-            this.rbt_Or_Check.Location = new System.Drawing.Point(957, 47);
-            this.rbt_Or_Check.Name = "rbt_Or_Check";
-            this.rbt_Or_Check.Size = new System.Drawing.Size(94, 17);
-            this.rbt_Or_Check.TabIndex = 11;
-            this.rbt_Or_Check.Text = "Relative Value";
-            this.rbt_Or_Check.UseVisualStyleBackColor = true;
-            // 
-            // rbt_And_Check
-            // 
-            this.rbt_And_Check.AutoSize = true;
-            this.rbt_And_Check.Checked = true;
-            this.rbt_And_Check.Location = new System.Drawing.Point(957, 18);
-            this.rbt_And_Check.Name = "rbt_And_Check";
-            this.rbt_And_Check.Size = new System.Drawing.Size(96, 17);
-            this.rbt_And_Check.TabIndex = 10;
-            this.rbt_And_Check.TabStop = true;
-            this.rbt_And_Check.Text = "Absolute Value";
-            this.rbt_And_Check.UseVisualStyleBackColor = true;
-            // 
-            // MrC_BT_Search
-            // 
-            this.MrC_BT_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MrC_BT_Search.Location = new System.Drawing.Point(1059, 13);
-            this.MrC_BT_Search.Name = "MrC_BT_Search";
-            this.MrC_BT_Search.Size = new System.Drawing.Size(75, 56);
-            this.MrC_BT_Search.TabIndex = 12;
-            this.MrC_BT_Search.Text = "Search";
-            this.MrC_BT_Search.UseVisualStyleBackColor = true;
-            this.MrC_BT_Search.Click += new System.EventHandler(this.MrC_BT_Search_Click);
-            // 
-            // label95
-            // 
-            this.label95.AutoSize = true;
-            this.label95.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label95.Location = new System.Drawing.Point(191, 51);
-            this.label95.Name = "label95";
-            this.label95.Size = new System.Drawing.Size(40, 13);
-            this.label95.TabIndex = 63;
-            this.label95.Text = "Brand";
-            // 
-            // cb_Position_MrC
-            // 
-            this.cb_Position_MrC.FormattingEnabled = true;
-            this.cb_Position_MrC.Location = new System.Drawing.Point(481, 48);
-            this.cb_Position_MrC.Name = "cb_Position_MrC";
-            this.cb_Position_MrC.Size = new System.Drawing.Size(170, 21);
-            this.cb_Position_MrC.TabIndex = 6;
-            // 
-            // label94
-            // 
-            this.label94.AutoSize = true;
-            this.label94.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label94.Location = new System.Drawing.Point(406, 16);
-            this.label94.Name = "label94";
-            this.label94.Size = new System.Drawing.Size(69, 13);
-            this.label94.TabIndex = 61;
-            this.label94.Text = "User Name";
-            // 
-            // label93
-            // 
-            this.label93.AutoSize = true;
-            this.label93.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label93.Location = new System.Drawing.Point(415, 51);
-            this.label93.Name = "label93";
-            this.label93.Size = new System.Drawing.Size(52, 13);
-            this.label93.TabIndex = 60;
-            this.label93.Text = "Position";
-            // 
-            // label92
-            // 
-            this.label92.AutoSize = true;
-            this.label92.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label92.Location = new System.Drawing.Point(180, 15);
-            this.label92.Name = "label92";
-            this.label92.Size = new System.Drawing.Size(53, 13);
-            this.label92.TabIndex = 59;
-            this.label92.Text = "Supplier";
-            // 
-            // label91
-            // 
-            this.label91.AutoSize = true;
-            this.label91.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label91.Location = new System.Drawing.Point(10, 51);
-            this.label91.Name = "label91";
-            this.label91.Size = new System.Drawing.Size(53, 13);
-            this.label91.TabIndex = 58;
-            this.label91.Text = "Devices";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(10, 15);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(37, 13);
-            this.label17.TabIndex = 57;
-            this.label17.Text = " Area";
-            // 
-            // cb_Brand_MrC
-            // 
-            this.cb_Brand_MrC.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb_Brand_MrC.FormattingEnabled = true;
-            this.cb_Brand_MrC.Location = new System.Drawing.Point(246, 48);
-            this.cb_Brand_MrC.Name = "cb_Brand_MrC";
-            this.cb_Brand_MrC.Size = new System.Drawing.Size(116, 21);
-            this.cb_Brand_MrC.TabIndex = 4;
-            // 
-            // cb_Supplier_MrC
-            // 
-            this.cb_Supplier_MrC.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb_Supplier_MrC.FormattingEnabled = true;
-            this.cb_Supplier_MrC.Location = new System.Drawing.Point(246, 12);
-            this.cb_Supplier_MrC.Name = "cb_Supplier_MrC";
-            this.cb_Supplier_MrC.Size = new System.Drawing.Size(116, 21);
-            this.cb_Supplier_MrC.TabIndex = 3;
-            // 
-            // cb_Devices_MrC
-            // 
-            this.cb_Devices_MrC.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb_Devices_MrC.FormattingEnabled = true;
-            this.cb_Devices_MrC.Items.AddRange(new object[] {
-            "ALL"});
-            this.cb_Devices_MrC.Location = new System.Drawing.Point(66, 48);
-            this.cb_Devices_MrC.Name = "cb_Devices_MrC";
-            this.cb_Devices_MrC.Size = new System.Drawing.Size(83, 21);
-            this.cb_Devices_MrC.TabIndex = 2;
-            this.cb_Devices_MrC.SelectedIndexChanged += new System.EventHandler(this.cb_Devices_MrC_SelectedIndexChanged);
-            // 
-            // cb_Area_MrC
-            // 
-            this.cb_Area_MrC.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb_Area_MrC.FormattingEnabled = true;
-            this.cb_Area_MrC.Location = new System.Drawing.Point(66, 12);
-            this.cb_Area_MrC.Name = "cb_Area_MrC";
-            this.cb_Area_MrC.Size = new System.Drawing.Size(83, 21);
-            this.cb_Area_MrC.TabIndex = 1;
-            this.cb_Area_MrC.SelectedIndexChanged += new System.EventHandler(this.cb_Area_MrC_SelectedIndexChanged);
-            // 
-            // txt_UserName_MrC
-            // 
-            this.txt_UserName_MrC.Location = new System.Drawing.Point(481, 12);
-            this.txt_UserName_MrC.Name = "txt_UserName_MrC";
-            this.txt_UserName_MrC.Size = new System.Drawing.Size(170, 20);
-            this.txt_UserName_MrC.TabIndex = 5;
-            // 
-            // bt_Insert_MrC
-            // 
-            this.bt_Insert_MrC.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_Insert_MrC.Location = new System.Drawing.Point(1164, 15);
-            this.bt_Insert_MrC.Name = "bt_Insert_MrC";
-            this.bt_Insert_MrC.Size = new System.Drawing.Size(101, 23);
-            this.bt_Insert_MrC.TabIndex = 13;
-            this.bt_Insert_MrC.Text = "ADD";
-            this.bt_Insert_MrC.UseVisualStyleBackColor = true;
-            this.bt_Insert_MrC.Click += new System.EventHandler(this.bt_Insert_MrC_Click);
-            // 
-            // MrC_BT_Cancel
-            // 
-            this.MrC_BT_Cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MrC_BT_Cancel.Location = new System.Drawing.Point(1164, 44);
-            this.MrC_BT_Cancel.Name = "MrC_BT_Cancel";
-            this.MrC_BT_Cancel.Size = new System.Drawing.Size(101, 23);
-            this.MrC_BT_Cancel.TabIndex = 14;
-            this.MrC_BT_Cancel.Text = "Close";
-            this.MrC_BT_Cancel.UseVisualStyleBackColor = true;
-            this.MrC_BT_Cancel.Click += new System.EventHandler(this.MrC_BT_Cancel_Click);
-            // 
-            // label97
-            // 
-            this.label97.AutoSize = true;
-            this.label97.Location = new System.Drawing.Point(1150, 570);
-            this.label97.Name = "label97";
-            this.label97.Size = new System.Drawing.Size(43, 13);
-            this.label97.TabIndex = 74;
-            this.label97.Text = "0 Rows";
-            // 
-            // chk_Area
-            // 
-            this.chk_Area.AutoSize = true;
-            this.chk_Area.Location = new System.Drawing.Point(155, 17);
-            this.chk_Area.Name = "chk_Area";
-            this.chk_Area.Size = new System.Drawing.Size(15, 14);
-            this.chk_Area.TabIndex = 75;
-            this.chk_Area.UseVisualStyleBackColor = true;
-            this.chk_Area.CheckedChanged += new System.EventHandler(this.chk_Area_CheckedChanged);
-            // 
-            // chk_Devices
-            // 
-            this.chk_Devices.AutoSize = true;
-            this.chk_Devices.Location = new System.Drawing.Point(155, 51);
-            this.chk_Devices.Name = "chk_Devices";
-            this.chk_Devices.Size = new System.Drawing.Size(15, 14);
-            this.chk_Devices.TabIndex = 76;
-            this.chk_Devices.UseVisualStyleBackColor = true;
-            this.chk_Devices.CheckedChanged += new System.EventHandler(this.chk_Devices_CheckedChanged);
-            // 
-            // btn_Server
-            // 
-            this.btn_Server.Enabled = false;
-            this.btn_Server.Location = new System.Drawing.Point(13, 565);
-            this.btn_Server.Name = "btn_Server";
-            this.btn_Server.Size = new System.Drawing.Size(75, 23);
-            this.btn_Server.TabIndex = 77;
-            this.btn_Server.Text = "Server";
-            this.btn_Server.UseVisualStyleBackColor = true;
-            this.btn_Server.Click += new System.EventHandler(this.btn_Server_Click);
-            // 
-            // btn_Network
-            // 
-            this.btn_Network.Enabled = false;
-            this.btn_Network.Location = new System.Drawing.Point(119, 565);
-            this.btn_Network.Name = "btn_Network";
-            this.btn_Network.Size = new System.Drawing.Size(75, 23);
-            this.btn_Network.TabIndex = 78;
-            this.btn_Network.Text = "Network";
-            this.btn_Network.UseVisualStyleBackColor = true;
-            this.btn_Network.Click += new System.EventHandler(this.btn_Network_Click);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(227, 565);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 79;
-            this.button1.Text = "Nhân Viên";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // chk_Supplier
-            // 
-            this.chk_Supplier.AutoSize = true;
-            this.chk_Supplier.Location = new System.Drawing.Point(377, 17);
-            this.chk_Supplier.Name = "chk_Supplier";
-            this.chk_Supplier.Size = new System.Drawing.Size(15, 14);
-            this.chk_Supplier.TabIndex = 80;
-            this.chk_Supplier.UseVisualStyleBackColor = true;
-            // 
-            // chk_Brand
-            // 
-            this.chk_Brand.AutoSize = true;
-            this.chk_Brand.Location = new System.Drawing.Point(377, 51);
-            this.chk_Brand.Name = "chk_Brand";
-            this.chk_Brand.Size = new System.Drawing.Size(15, 14);
-            this.chk_Brand.TabIndex = 81;
-            this.chk_Brand.UseVisualStyleBackColor = true;
-            // 
-            // btn_Export
-            // 
-            this.btn_Export.Location = new System.Drawing.Point(352, 565);
-            this.btn_Export.Name = "btn_Export";
-            this.btn_Export.Size = new System.Drawing.Size(75, 23);
-            this.btn_Export.TabIndex = 82;
-            this.btn_Export.Text = "Export";
-            this.btn_Export.UseVisualStyleBackColor = true;
-            this.btn_Export.Click += new System.EventHandler(this.btn_Export_Click);
-            // 
-            // lb_Loading2Excel
-            // 
-            this.lb_Loading2Excel.AutoSize = true;
-            this.lb_Loading2Excel.Location = new System.Drawing.Point(478, 570);
-            this.lb_Loading2Excel.Name = "lb_Loading2Excel";
-            this.lb_Loading2Excel.Size = new System.Drawing.Size(0, 13);
-            this.lb_Loading2Excel.TabIndex = 83;
             // 
             // col_darea_MrC
             // 
@@ -696,6 +382,320 @@
             this.col_password_MrC.HeaderText = "PASSWORDS";
             this.col_password_MrC.MaxInputLength = 20;
             this.col_password_MrC.Name = "col_password_MrC";
+            // 
+            // cb_Status_MrC
+            // 
+            this.cb_Status_MrC.FormattingEnabled = true;
+            this.cb_Status_MrC.Location = new System.Drawing.Point(723, 48);
+            this.cb_Status_MrC.Name = "cb_Status_MrC";
+            this.cb_Status_MrC.Size = new System.Drawing.Size(141, 21);
+            this.cb_Status_MrC.TabIndex = 8;
+            // 
+            // label98
+            // 
+            this.label98.AutoSize = true;
+            this.label98.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label98.Location = new System.Drawing.Point(680, 51);
+            this.label98.Name = "label98";
+            this.label98.Size = new System.Drawing.Size(43, 13);
+            this.label98.TabIndex = 70;
+            this.label98.Text = "Status";
+            // 
+            // label96
+            // 
+            this.label96.AutoSize = true;
+            this.label96.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label96.Location = new System.Drawing.Point(680, 16);
+            this.label96.Name = "label96";
+            this.label96.Size = new System.Drawing.Size(39, 13);
+            this.label96.TabIndex = 69;
+            this.label96.Text = "Serial";
+            // 
+            // txt_Serial_MrC
+            // 
+            this.txt_Serial_MrC.Location = new System.Drawing.Point(723, 12);
+            this.txt_Serial_MrC.Name = "txt_Serial_MrC";
+            this.txt_Serial_MrC.Size = new System.Drawing.Size(141, 20);
+            this.txt_Serial_MrC.TabIndex = 7;
+            this.txt_Serial_MrC.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_Serial_MrC_KeyDown);
+            // 
+            // bt_Refresh_MrC
+            // 
+            this.bt_Refresh_MrC.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_Refresh_MrC.Location = new System.Drawing.Point(883, 12);
+            this.bt_Refresh_MrC.Name = "bt_Refresh_MrC";
+            this.bt_Refresh_MrC.Size = new System.Drawing.Size(57, 57);
+            this.bt_Refresh_MrC.TabIndex = 9;
+            this.bt_Refresh_MrC.Text = "Refesh";
+            this.bt_Refresh_MrC.UseVisualStyleBackColor = true;
+            this.bt_Refresh_MrC.Click += new System.EventHandler(this.bt_Refresh_MrC_Click);
+            // 
+            // rbt_Or_Check
+            // 
+            this.rbt_Or_Check.AutoSize = true;
+            this.rbt_Or_Check.Location = new System.Drawing.Point(957, 47);
+            this.rbt_Or_Check.Name = "rbt_Or_Check";
+            this.rbt_Or_Check.Size = new System.Drawing.Size(94, 17);
+            this.rbt_Or_Check.TabIndex = 11;
+            this.rbt_Or_Check.Text = "Relative Value";
+            this.rbt_Or_Check.UseVisualStyleBackColor = true;
+            // 
+            // rbt_And_Check
+            // 
+            this.rbt_And_Check.AutoSize = true;
+            this.rbt_And_Check.Checked = true;
+            this.rbt_And_Check.Location = new System.Drawing.Point(957, 18);
+            this.rbt_And_Check.Name = "rbt_And_Check";
+            this.rbt_And_Check.Size = new System.Drawing.Size(96, 17);
+            this.rbt_And_Check.TabIndex = 10;
+            this.rbt_And_Check.TabStop = true;
+            this.rbt_And_Check.Text = "Absolute Value";
+            this.rbt_And_Check.UseVisualStyleBackColor = true;
+            // 
+            // MrC_BT_Search
+            // 
+            this.MrC_BT_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MrC_BT_Search.Location = new System.Drawing.Point(1059, 13);
+            this.MrC_BT_Search.Name = "MrC_BT_Search";
+            this.MrC_BT_Search.Size = new System.Drawing.Size(75, 56);
+            this.MrC_BT_Search.TabIndex = 12;
+            this.MrC_BT_Search.Text = "Search";
+            this.MrC_BT_Search.UseVisualStyleBackColor = true;
+            this.MrC_BT_Search.Click += new System.EventHandler(this.MrC_BT_Search_Click);
+            // 
+            // label95
+            // 
+            this.label95.AutoSize = true;
+            this.label95.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label95.Location = new System.Drawing.Point(191, 51);
+            this.label95.Name = "label95";
+            this.label95.Size = new System.Drawing.Size(40, 13);
+            this.label95.TabIndex = 63;
+            this.label95.Text = "Brand";
+            // 
+            // cb_Position_MrC
+            // 
+            this.cb_Position_MrC.FormattingEnabled = true;
+            this.cb_Position_MrC.Location = new System.Drawing.Point(494, 48);
+            this.cb_Position_MrC.Name = "cb_Position_MrC";
+            this.cb_Position_MrC.Size = new System.Drawing.Size(170, 21);
+            this.cb_Position_MrC.TabIndex = 6;
+            // 
+            // label94
+            // 
+            this.label94.AutoSize = true;
+            this.label94.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label94.Location = new System.Drawing.Point(419, 15);
+            this.label94.Name = "label94";
+            this.label94.Size = new System.Drawing.Size(69, 13);
+            this.label94.TabIndex = 61;
+            this.label94.Text = "User Name";
+            // 
+            // label93
+            // 
+            this.label93.AutoSize = true;
+            this.label93.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label93.Location = new System.Drawing.Point(419, 51);
+            this.label93.Name = "label93";
+            this.label93.Size = new System.Drawing.Size(72, 13);
+            this.label93.TabIndex = 60;
+            this.label93.Text = "Department";
+            // 
+            // label92
+            // 
+            this.label92.AutoSize = true;
+            this.label92.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label92.Location = new System.Drawing.Point(180, 15);
+            this.label92.Name = "label92";
+            this.label92.Size = new System.Drawing.Size(53, 13);
+            this.label92.TabIndex = 59;
+            this.label92.Text = "Supplier";
+            // 
+            // label91
+            // 
+            this.label91.AutoSize = true;
+            this.label91.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label91.Location = new System.Drawing.Point(10, 51);
+            this.label91.Name = "label91";
+            this.label91.Size = new System.Drawing.Size(53, 13);
+            this.label91.TabIndex = 58;
+            this.label91.Text = "Devices";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(10, 15);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(37, 13);
+            this.label17.TabIndex = 57;
+            this.label17.Text = " Area";
+            // 
+            // cb_Brand_MrC
+            // 
+            this.cb_Brand_MrC.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_Brand_MrC.FormattingEnabled = true;
+            this.cb_Brand_MrC.Location = new System.Drawing.Point(246, 48);
+            this.cb_Brand_MrC.Name = "cb_Brand_MrC";
+            this.cb_Brand_MrC.Size = new System.Drawing.Size(116, 21);
+            this.cb_Brand_MrC.TabIndex = 4;
+            // 
+            // cb_Supplier_MrC
+            // 
+            this.cb_Supplier_MrC.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_Supplier_MrC.FormattingEnabled = true;
+            this.cb_Supplier_MrC.Location = new System.Drawing.Point(246, 12);
+            this.cb_Supplier_MrC.Name = "cb_Supplier_MrC";
+            this.cb_Supplier_MrC.Size = new System.Drawing.Size(116, 21);
+            this.cb_Supplier_MrC.TabIndex = 3;
+            // 
+            // cb_Devices_MrC
+            // 
+            this.cb_Devices_MrC.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_Devices_MrC.FormattingEnabled = true;
+            this.cb_Devices_MrC.Items.AddRange(new object[] {
+            "ALL"});
+            this.cb_Devices_MrC.Location = new System.Drawing.Point(66, 48);
+            this.cb_Devices_MrC.Name = "cb_Devices_MrC";
+            this.cb_Devices_MrC.Size = new System.Drawing.Size(83, 21);
+            this.cb_Devices_MrC.TabIndex = 2;
+            this.cb_Devices_MrC.SelectedIndexChanged += new System.EventHandler(this.cb_Devices_MrC_SelectedIndexChanged);
+            // 
+            // cb_Area_MrC
+            // 
+            this.cb_Area_MrC.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_Area_MrC.FormattingEnabled = true;
+            this.cb_Area_MrC.Location = new System.Drawing.Point(66, 12);
+            this.cb_Area_MrC.Name = "cb_Area_MrC";
+            this.cb_Area_MrC.Size = new System.Drawing.Size(83, 21);
+            this.cb_Area_MrC.TabIndex = 1;
+            this.cb_Area_MrC.SelectedIndexChanged += new System.EventHandler(this.cb_Area_MrC_SelectedIndexChanged);
+            // 
+            // txt_UserName_MrC
+            // 
+            this.txt_UserName_MrC.Location = new System.Drawing.Point(494, 12);
+            this.txt_UserName_MrC.Name = "txt_UserName_MrC";
+            this.txt_UserName_MrC.Size = new System.Drawing.Size(170, 20);
+            this.txt_UserName_MrC.TabIndex = 5;
+            // 
+            // bt_Insert_MrC
+            // 
+            this.bt_Insert_MrC.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_Insert_MrC.Location = new System.Drawing.Point(1164, 15);
+            this.bt_Insert_MrC.Name = "bt_Insert_MrC";
+            this.bt_Insert_MrC.Size = new System.Drawing.Size(101, 23);
+            this.bt_Insert_MrC.TabIndex = 13;
+            this.bt_Insert_MrC.Text = "ADD";
+            this.bt_Insert_MrC.UseVisualStyleBackColor = true;
+            this.bt_Insert_MrC.Click += new System.EventHandler(this.bt_Insert_MrC_Click);
+            // 
+            // MrC_BT_Cancel
+            // 
+            this.MrC_BT_Cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MrC_BT_Cancel.Location = new System.Drawing.Point(1164, 44);
+            this.MrC_BT_Cancel.Name = "MrC_BT_Cancel";
+            this.MrC_BT_Cancel.Size = new System.Drawing.Size(101, 23);
+            this.MrC_BT_Cancel.TabIndex = 14;
+            this.MrC_BT_Cancel.Text = "Close";
+            this.MrC_BT_Cancel.UseVisualStyleBackColor = true;
+            this.MrC_BT_Cancel.Click += new System.EventHandler(this.MrC_BT_Cancel_Click);
+            // 
+            // label97
+            // 
+            this.label97.AutoSize = true;
+            this.label97.Location = new System.Drawing.Point(1150, 570);
+            this.label97.Name = "label97";
+            this.label97.Size = new System.Drawing.Size(43, 13);
+            this.label97.TabIndex = 74;
+            this.label97.Text = "0 Rows";
+            // 
+            // chk_Area
+            // 
+            this.chk_Area.AutoSize = true;
+            this.chk_Area.Location = new System.Drawing.Point(155, 17);
+            this.chk_Area.Name = "chk_Area";
+            this.chk_Area.Size = new System.Drawing.Size(15, 14);
+            this.chk_Area.TabIndex = 75;
+            this.chk_Area.UseVisualStyleBackColor = true;
+            this.chk_Area.CheckedChanged += new System.EventHandler(this.chk_Area_CheckedChanged);
+            // 
+            // chk_Devices
+            // 
+            this.chk_Devices.AutoSize = true;
+            this.chk_Devices.Location = new System.Drawing.Point(155, 51);
+            this.chk_Devices.Name = "chk_Devices";
+            this.chk_Devices.Size = new System.Drawing.Size(15, 14);
+            this.chk_Devices.TabIndex = 76;
+            this.chk_Devices.UseVisualStyleBackColor = true;
+            this.chk_Devices.CheckedChanged += new System.EventHandler(this.chk_Devices_CheckedChanged);
+            // 
+            // btn_Server
+            // 
+            this.btn_Server.Enabled = false;
+            this.btn_Server.Location = new System.Drawing.Point(13, 565);
+            this.btn_Server.Name = "btn_Server";
+            this.btn_Server.Size = new System.Drawing.Size(75, 23);
+            this.btn_Server.TabIndex = 77;
+            this.btn_Server.Text = "Server";
+            this.btn_Server.UseVisualStyleBackColor = true;
+            this.btn_Server.Click += new System.EventHandler(this.btn_Server_Click);
+            // 
+            // btn_Network
+            // 
+            this.btn_Network.Enabled = false;
+            this.btn_Network.Location = new System.Drawing.Point(119, 565);
+            this.btn_Network.Name = "btn_Network";
+            this.btn_Network.Size = new System.Drawing.Size(75, 23);
+            this.btn_Network.TabIndex = 78;
+            this.btn_Network.Text = "Network";
+            this.btn_Network.UseVisualStyleBackColor = true;
+            this.btn_Network.Click += new System.EventHandler(this.btn_Network_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(227, 565);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 79;
+            this.button1.Text = "Nhân Viên";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // chk_Supplier
+            // 
+            this.chk_Supplier.AutoSize = true;
+            this.chk_Supplier.Location = new System.Drawing.Point(377, 17);
+            this.chk_Supplier.Name = "chk_Supplier";
+            this.chk_Supplier.Size = new System.Drawing.Size(15, 14);
+            this.chk_Supplier.TabIndex = 80;
+            this.chk_Supplier.UseVisualStyleBackColor = true;
+            // 
+            // chk_Brand
+            // 
+            this.chk_Brand.AutoSize = true;
+            this.chk_Brand.Location = new System.Drawing.Point(377, 51);
+            this.chk_Brand.Name = "chk_Brand";
+            this.chk_Brand.Size = new System.Drawing.Size(15, 14);
+            this.chk_Brand.TabIndex = 81;
+            this.chk_Brand.UseVisualStyleBackColor = true;
+            // 
+            // btn_Export
+            // 
+            this.btn_Export.Location = new System.Drawing.Point(352, 565);
+            this.btn_Export.Name = "btn_Export";
+            this.btn_Export.Size = new System.Drawing.Size(75, 23);
+            this.btn_Export.TabIndex = 82;
+            this.btn_Export.Text = "Export";
+            this.btn_Export.UseVisualStyleBackColor = true;
+            this.btn_Export.Click += new System.EventHandler(this.btn_Export_Click);
+            // 
+            // lb_Loading2Excel
+            // 
+            this.lb_Loading2Excel.AutoSize = true;
+            this.lb_Loading2Excel.Location = new System.Drawing.Point(478, 570);
+            this.lb_Loading2Excel.Name = "lb_Loading2Excel";
+            this.lb_Loading2Excel.Size = new System.Drawing.Size(0, 13);
+            this.lb_Loading2Excel.TabIndex = 83;
             // 
             // AM_Main_Form
             // 

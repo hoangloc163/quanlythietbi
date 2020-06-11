@@ -54,8 +54,9 @@ namespace Asset_Management_Alpha
             loadcb_Brand_By_DType();
             //loadcb_Brand();
             //loadcb_Devices();
-            loadcb_Position();
+            //loadcb_Position();
             //loadcb_Supplier();
+            loadcb_Position_By_Area();
             loadcb_Supplier_By_DType();
             loadcb_Status(); 
         }
@@ -158,6 +159,14 @@ namespace Asset_Management_Alpha
             cb_Position_MrC.DataSource = busDevices.GetData4Cb_Position();
             cb_Position_MrC.DisplayMember = "DEPARTMENT".Trim();
         }
+
+        public void loadcb_Position_By_Area()
+        {
+            objDevices.darea = cb_Area_MrC.Text;
+            cb_Position_MrC.DataSource = busDevices.GetData4Cb_Position_By_Area(objDevices);
+            cb_Position_MrC.DisplayMember = "DEPARTMENT".Trim();
+        }
+
         public void loadcb_Status()
         {
             cb_Status_MrC.DataSource = busDevices.GetData4Cb_Status();
@@ -486,7 +495,7 @@ namespace Asset_Management_Alpha
             loadcb_Area();
             loadcb_Brand_By_DType();
             //loadcb_Brand();
-            loadcb_Position();
+            //
             loadcb_Supplier_By_DType();
             //loadcb_Supplier();
             loadcb_Status();
@@ -496,11 +505,13 @@ namespace Asset_Management_Alpha
             {
                 cb_Area_MrC.Enabled = false;
                 loadcb_Devices();
+                loadcb_Position();
             }
             else
             {
                 cb_Area_MrC.Enabled = true;
                 loadcb_Devices_By_Area();
+                loadcb_Position_By_Area();
             }
         }
         private void txt_Serial_MrC_KeyDown(object sender, KeyEventArgs e)
@@ -519,12 +530,13 @@ namespace Asset_Management_Alpha
 
         private void chk_Area_CheckedChanged(object sender, EventArgs e)
         {
-            if(chk_Area.Checked == true)
+            if (chk_Area.Checked == true)
             {
                 cb_Area_MrC.Enabled = false;
                 loadcb_Devices();
                 chk_Brand.Checked = true;
                 chk_Supplier.Checked = true;
+                loadcb_Position();
             }
             else
             {
@@ -532,12 +544,15 @@ namespace Asset_Management_Alpha
                 loadcb_Devices_By_Area();
                 chk_Brand.Checked = false;
                 chk_Supplier.Checked = false;
+                loadcb_Position_By_Area();
             }
         }
 
         private void cb_Area_MrC_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(chk_Devices.Checked == false)
+            loadcb_Position_By_Area();
+
+            if (chk_Devices.Checked == false)
             {
                 loadcb_Devices_By_Area();
             }
