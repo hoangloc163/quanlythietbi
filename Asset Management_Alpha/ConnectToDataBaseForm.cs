@@ -25,8 +25,17 @@ namespace Asset_Management_Alpha
 
         private void ConnectToDataBaseForm_Load(object sender, EventArgs e)
         {
-            LoadTenSRV();
-            cbx_sername.SelectedIndex = 0;
+            DialogResult dialogResult = MessageBox.Show("Bạn có SQL Server cài sẵn trên máy tính này?", "Xin Chào", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                LoadTenSRV();
+                cbx_sername.SelectedIndex = 0;
+                rb_Local.Checked = true;
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                rb_OverInternet.Checked = true;
+            }
         }
 
         void LoadTenSRV()
@@ -52,7 +61,7 @@ namespace Asset_Management_Alpha
             }
             catch
             {
-                MessageBox.Show("Có lỗi xảy ra, không tìm thấy Server nào của Microsoft SQL Server trong máy tính của bạn");
+                MessageBox.Show("Không tìm thấy Server nào của Microsoft SQL Server trong máy tính của bạn");
             }
         }
 
@@ -63,7 +72,7 @@ namespace Asset_Management_Alpha
 
         private void btn_ok_Click(object sender, EventArgs e)
         {
-            bool checklocalDB = true;
+            bool checklocalDB = rb_Local.Checked;
             string message = "";
             if (txt_DatabaseName.Text == "")
             {

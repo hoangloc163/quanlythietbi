@@ -56,7 +56,7 @@ namespace DataAccessLayer
                 key.SetValue("DatabaseName", DatabaseName);
                 key.SetValue("UserName", UserName);
                 key.SetValue("Passwords", Passwords);
-                key.SetValue("ComputerName", sername.Substring(0, sername.IndexOf("\\")));
+                //key.SetValue("ComputerName", sername.Substring(0, sername.IndexOf("\\")));
                 if (checklocalDB != true)
                 {
                     key.SetValue("LocalCheck", "false");
