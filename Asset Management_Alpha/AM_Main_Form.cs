@@ -159,14 +159,12 @@ namespace Asset_Management_Alpha
             cb_Position_MrC.DataSource = busDevices.GetData4Cb_Position();
             cb_Position_MrC.DisplayMember = "DEPARTMENT".Trim();
         }
-
         public void loadcb_Position_By_Area()
         {
             objDevices.darea = cb_Area_MrC.Text;
             cb_Position_MrC.DataSource = busDevices.GetData4Cb_Position_By_Area(objDevices);
             cb_Position_MrC.DisplayMember = "DEPARTMENT".Trim();
         }
-
         public void loadcb_Status()
         {
             cb_Status_MrC.DataSource = busDevices.GetData4Cb_Status();
@@ -495,7 +493,7 @@ namespace Asset_Management_Alpha
             loadcb_Area();
             loadcb_Brand_By_DType();
             //loadcb_Brand();
-            //
+            //loadcb_Position();
             loadcb_Supplier_By_DType();
             //loadcb_Supplier();
             loadcb_Status();
