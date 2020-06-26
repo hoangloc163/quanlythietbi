@@ -72,6 +72,11 @@ namespace BussinessLogicLayer
             return dao.GetData4Cb_Status();
         }
 
+        public DataTable GenerateBarcode4Dev_TBL()
+        {
+            return dao.GenerateBarcode4Dev_TBL();
+        }
+
         public string Insert_Form(Devices obj, string mess)
         {
             return dao.Insert_Form(obj, mess);
@@ -90,6 +95,16 @@ namespace BussinessLogicLayer
         public string connect(bool checklocalDB, string sername, string databasename,string username, string password, string message)
         {
             return dao.Connect(checklocalDB, sername, databasename, username, password, message);
+        }
+
+        public string Mahoa(ConnectObj obj)
+        {
+            return dao.Mahoa(obj);
+        }
+
+        public string MahoaConnect(string objConnect)
+        {
+            return dao.MahoaConnect(objConnect);
         }
     }
 }

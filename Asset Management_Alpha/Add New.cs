@@ -43,6 +43,7 @@ namespace Asset_Management_Alpha
                     cleartxt();
                 }
                 
+                
                 // add qua form AM_Main_Form
                 AM_Main_Form SGF_Form = new AM_Main_Form();
                 SGF_Form.UpdateForm("update");
@@ -79,11 +80,15 @@ namespace Asset_Management_Alpha
             objDevices.serial = txt_Serial.Text.Trim();// han che viec de rong
             objDevices.invoice_date = dt_invoice.Value.ToString("yyyy/MM/dd");
             objDevices.handover_date = dt_handover.Value.ToString("yyyy/MM/dd");
+            objDevices.delivery_date = dt_delivery.Value.ToString("yyyy/MM/dd");
             objDevices.warranty = cb_Warranty_MrC.Text;
             objDevices.supplies = cb_Supplier.Text;
             objDevices.remarks = txt_remark.Text;
             objDevices.mac_addr = txt_macaddr.Text;
             objDevices.dstatus = cb_Status.Text;
+            objDevices.Price = txt_Price.Text;
+            objDevices.hdd = cb_HDD.Text;
+            objDevices.ram = cb_RAM.Text;
         }
 
         void cleartxt()

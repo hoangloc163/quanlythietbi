@@ -88,6 +88,8 @@ namespace Asset_Management_Alpha
             { 
                 txtboxToObj();
                 string messages = "";
+                objnhanvien.matkhau = txt_matkhau.Text;
+                objnhanvien.matkhau = busnhanvien.Mahoa(objnhanvien);
                 messages = busnhanvien.Add(objnhanvien, messages);
                 if (messages == "Đã nhập thành công")
                 {

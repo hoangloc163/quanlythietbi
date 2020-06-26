@@ -124,7 +124,6 @@
             this.txt_Username.Name = "txt_Username";
             this.txt_Username.Size = new System.Drawing.Size(163, 20);
             this.txt_Username.TabIndex = 11;
-            this.txt_Username.Text = "sa";
             // 
             // label4
             // 
@@ -141,7 +140,6 @@
             this.txt_Password.Name = "txt_Password";
             this.txt_Password.Size = new System.Drawing.Size(163, 20);
             this.txt_Password.TabIndex = 13;
-            this.txt_Password.Text = "@P@ssW0rd@";
             this.txt_Password.UseSystemPasswordChar = true;
             // 
             // rb_OverInternet

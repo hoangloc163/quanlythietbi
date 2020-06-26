@@ -7,6 +7,8 @@ using System.Data.SqlClient;
 using System.Data;
 using ValueObject;
 using System.Security.Cryptography;
+using System.Diagnostics;
+//using System.IO;
 
 
 namespace DataAccessLayer
@@ -25,17 +27,51 @@ namespace DataAccessLayer
             return db.ExecuteSQL1("NHANVIEN_Login", para, check);
         }
 
+        
         public string Mahoa(NhanVien obj)
         {
-            byte[] temp = ASCIIEncoding.ASCII.GetBytes(obj.matkhau.ToString());
-            byte[] hasData = new MD5CryptoServiceProvider().ComputeHash(temp);
+            //code ma hoa cu
+            //byte[] temp = ASCIIEncoding.ASCII.GetBytes(obj.matkhau.ToString());
+            //byte[] hasData = new MD5CryptoServiceProvider().ComputeHash(temp);
+
+            //string hasPass = "";
+            //foreach (byte item in hasData)
+            //{
+            //    hasPass += item;
+            //}
+            //obj.matkhau = hasPass;
             
-            string hasPass = "";
-            foreach (byte item in hasData)
+            //encrypt new
+            byte[] data_encrypt = UTF8Encoding.UTF8.GetBytes(obj.matkhau.ToString());
+            using (MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider())
             {
-                hasPass += item;
+                byte[] keys = md5.ComputeHash(UTF8Encoding.UTF8.GetBytes(obj.matkhau.ToString()));
+                using (TripleDESCryptoServiceProvider tripDes = new TripleDESCryptoServiceProvider() { Key = keys, Mode = CipherMode.ECB, Padding = PaddingMode.PKCS7 })
+                {
+                    ICryptoTransform transform = tripDes.CreateEncryptor();
+                    byte[] results = transform.TransformFinalBlock(data_encrypt, 0, data_encrypt.Length);
+                    obj.matkhau = Convert.ToBase64String(results, 0, results.Length);
+                }
+            }      
+            // giu nguyen
+            return obj.matkhau;
+        }
+
+        public string GiaiMa(NhanVien obj)
+        {
+            //decrypt new
+            byte[] data_decrypt = Convert.FromBase64String(obj.matkhau.ToString()); // decrypt the incrypted text
+            using (MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider())
+            {
+                byte[] keys = md5.ComputeHash(UTF8Encoding.UTF8.GetBytes(obj.matkhau.ToString()));
+                using (TripleDESCryptoServiceProvider tripDes = new TripleDESCryptoServiceProvider() { Key = keys, Mode = CipherMode.ECB, Padding = PaddingMode.PKCS7 })
+                {
+                    ICryptoTransform transform = tripDes.CreateDecryptor();
+                    byte[] results = transform.TransformFinalBlock(data_decrypt, 0, data_decrypt.Length);
+                    obj.matkhau = UTF8Encoding.UTF8.GetString(results);
+                }
             }
-            obj.matkhau = hasPass;
+            // giu nguyen
             return obj.matkhau;
         }
 

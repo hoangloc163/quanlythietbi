@@ -5,10 +5,19 @@
     <Setting Name="QLVT_testConnectionString" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;Data Source=JR163\SQLEXPRESS;Initial Catalog=QLVT_test;Integrated Security=True&lt;/ConnectionString&gt;
+  &lt;ConnectionString&gt;Data Source=172.16.4.2,1433;Network Library=DBMSSOCN;Initial Catalog=ASSET_MANAGEMENT;Integrated Security=True&lt;/ConnectionString&gt;
   &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Data Source=JR163\SQLEXPRESS;Initial Catalog=QLVT_test;Integrated Security=True</Value>
+      <Value Profile="(Default)">Data Source=172.16.4.2,1433;Network Library=DBMSSOCN;Initial Catalog=ASSET_MANAGEMENT;Integrated Security=True</Value>
+    </Setting>
+    <Setting Name="S_DBpassword" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="S_DBusername" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="S_ServerName" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
     </Setting>
   </Settings>
 </SettingsFile>

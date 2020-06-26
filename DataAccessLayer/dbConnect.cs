@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
 using Microsoft.Win32;
+using ValueObject;
 
 namespace DataAccessLayer
 {
@@ -23,11 +24,23 @@ namespace DataAccessLayer
             {
                 var localMachine = RegistryKey.OpenBaseKey(RegistryHive.CurrentUser, RegistryView.Registry64);
                 var rk = localMachine.OpenSubKey("SOFTWARE\\Asset Management");
+               
                 var DataBaseName = rk.GetValue("DatabaseName");
                 var ComputerName = rk.GetValue("ComputerName");
-                var UserName = rk.GetValue("UserName");
-                var Passwords = rk.GetValue("Passwords");
-                var ServerSQL = rk.GetValue("ServerName");
+
+                var Encrypt_Key = "b14ca5898a4e4133bbce2ea2315a1916"; // key giai ma doi xung
+                var UserNameEncrytped = Convert.ToString(rk.GetValue("UserName"));
+                var UserName_decryptedString = EncryptSymectricKey_AesOperation.DecryptString(Encrypt_Key, UserNameEncrytped);
+                var UserName = UserName_decryptedString;
+
+                var PasswordsEncrytped = Convert.ToString(rk.GetValue("Passwords"));
+                var Passwords_decryptedString = EncryptSymectricKey_AesOperation.DecryptString(Encrypt_Key, PasswordsEncrytped);
+                var Passwords = Passwords_decryptedString;
+
+                var ServerSQLEncrytped = Convert.ToString(rk.GetValue("ServerName"));
+                var ServerSQL_decryptedString = EncryptSymectricKey_AesOperation.DecryptString(Encrypt_Key, ServerSQLEncrytped);
+                var ServerSQL = ServerSQL_decryptedString;
+
                 var CheckLocal = rk.GetValue("LocalCheck");
                 conn = new SqlConnection("Data Source=" + ServerSQL.ToString() + ";Initial Catalog=" + DataBaseName.ToString() +";Persist Security Info=True;User ID=" + UserName + ";Password=" + Passwords+";Integrated Security=" + CheckLocal + "");
             }
@@ -43,7 +56,7 @@ namespace DataAccessLayer
                 }
                 else
                 {
-                    ConnectString = "Data Source=" + sername + "; Initial Catalog=" + DatabaseName + "; User ID=" + UserName + "; Password=" + Passwords + ";Integrated Security=false";
+                    ConnectString = "Data Source=" + sername + "; Initial Catalog=" + DatabaseName + ";Persist Security Info=True; User ID=" + UserName + "; Password=" + Passwords + ";Integrated Security=" + checklocalDB + "";
                 }
 
 
@@ -51,12 +64,23 @@ namespace DataAccessLayer
                 conn.Open();
 
                 RegistryKey key = Registry.CurrentUser.CreateSubKey("Software\\Asset Management");
-
-                key.SetValue("ServerName", sername);
+                // ma hoa & luu servername trong regedit
+                var Encrypt_Key = "b14ca5898a4e4133bbce2ea2315a1916"; // key "ma hoa" & "giai ma" doi xung              
+                var Sername_Encrypt = sername.ToString();
+                var Servername_encryptedString = EncryptSymectricKey_AesOperation.EncryptString(Encrypt_Key, Sername_Encrypt);
+                key.SetValue("ServerName", Servername_encryptedString);
+                // khong ma hoa databasename trong regedit
                 key.SetValue("DatabaseName", DatabaseName);
-                key.SetValue("UserName", UserName);
-                key.SetValue("Passwords", Passwords);
-                //key.SetValue("ComputerName", sername.Substring(0, sername.IndexOf("\\")));
+                // ma hoa & luu username trong regedit
+                var UserName_Encrypt = UserName.ToString();
+                var UserName_encryptedString = EncryptSymectricKey_AesOperation.EncryptString(Encrypt_Key, UserName_Encrypt);
+                key.SetValue("UserName", UserName_encryptedString);
+                // ma hoa & luu passwords trong regedit
+                var Passwords_Encrypt = Passwords.ToString();
+                var Passwords_encryptedPasswords = EncryptSymectricKey_AesOperation.EncryptString(Encrypt_Key, Passwords_Encrypt);
+                key.SetValue("Passwords", Passwords_encryptedPasswords);
+                //key.SetValue("ComputerName", sername.Substring(0, sername.IndexOf("\\")));         
+
                 if (checklocalDB != true)
                 {
                     key.SetValue("LocalCheck", "false");

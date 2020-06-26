@@ -22,6 +22,10 @@ namespace BussinessLogicLayer
         {
             return dao.Mahoa(obj);
         }
+        public string GiaiMa(NhanVien obj)
+        {
+            return dao.GiaiMa(obj);
+        }
 
         public DataTable GetData()
         {

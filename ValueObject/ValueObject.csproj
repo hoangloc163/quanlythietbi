@@ -58,6 +58,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EncryptSymectricKey_AesOperation.cs" />
     <Compile Include="ConnectObj.cs" />
     <Compile Include="Devices.cs" />
     <Compile Include="Network.cs" />

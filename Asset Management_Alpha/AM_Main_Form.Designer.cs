@@ -93,6 +93,8 @@
             this.chk_Brand = new System.Windows.Forms.CheckBox();
             this.btn_Export = new System.Windows.Forms.Button();
             this.lb_Loading2Excel = new System.Windows.Forms.Label();
+            this.btn_RecountDeviceCode = new System.Windows.Forms.Button();
+            this.btn_CheckUpdate = new System.Windows.Forms.Button();
             qLVT_testDataSet1 = new Asset_Management_Alpha.QLVT_testDataSet1();
             dEVICESTBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
             dEVICES_TBLTableAdapter = new Asset_Management_Alpha.QLVT_testDataSet1TableAdapters.DEVICES_TBLTableAdapter();
@@ -287,7 +289,7 @@
             // 
             // col_assetcode_MrC
             // 
-            this.col_assetcode_MrC.DataPropertyName = "ASSETCODE";
+            this.col_assetcode_MrC.DataPropertyName = "ASSET_CODE";
             this.col_assetcode_MrC.HeaderText = "ASSET CODE";
             this.col_assetcode_MrC.MaxInputLength = 20;
             this.col_assetcode_MrC.Name = "col_assetcode_MrC";
@@ -553,8 +555,6 @@
             // 
             this.cb_Devices_MrC.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_Devices_MrC.FormattingEnabled = true;
-            this.cb_Devices_MrC.Items.AddRange(new object[] {
-            "ALL"});
             this.cb_Devices_MrC.Location = new System.Drawing.Point(66, 48);
             this.cb_Devices_MrC.Name = "cb_Devices_MrC";
             this.cb_Devices_MrC.Size = new System.Drawing.Size(83, 21);
@@ -565,11 +565,13 @@
             // 
             this.cb_Area_MrC.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_Area_MrC.FormattingEnabled = true;
+            this.cb_Area_MrC.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.cb_Area_MrC.Location = new System.Drawing.Point(66, 12);
             this.cb_Area_MrC.Name = "cb_Area_MrC";
             this.cb_Area_MrC.Size = new System.Drawing.Size(83, 21);
             this.cb_Area_MrC.TabIndex = 1;
             this.cb_Area_MrC.SelectedIndexChanged += new System.EventHandler(this.cb_Area_MrC_SelectedIndexChanged);
+            this.cb_Area_MrC.SelectedValueChanged += new System.EventHandler(this.cb_Area_MrC_SelectedValueChanged);
             // 
             // txt_UserName_MrC
             // 
@@ -657,7 +659,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 79;
-            this.button1.Text = "Nhân Viên";
+            this.button1.Text = "Users";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -683,9 +685,9 @@
             // 
             this.btn_Export.Location = new System.Drawing.Point(352, 565);
             this.btn_Export.Name = "btn_Export";
-            this.btn_Export.Size = new System.Drawing.Size(75, 23);
+            this.btn_Export.Size = new System.Drawing.Size(66, 23);
             this.btn_Export.TabIndex = 82;
-            this.btn_Export.Text = "Export";
+            this.btn_Export.Text = "Export List";
             this.btn_Export.UseVisualStyleBackColor = true;
             this.btn_Export.Click += new System.EventHandler(this.btn_Export_Click);
             // 
@@ -697,11 +699,32 @@
             this.lb_Loading2Excel.Size = new System.Drawing.Size(0, 13);
             this.lb_Loading2Excel.TabIndex = 83;
             // 
+            // btn_RecountDeviceCode
+            // 
+            this.btn_RecountDeviceCode.Location = new System.Drawing.Point(981, 565);
+            this.btn_RecountDeviceCode.Name = "btn_RecountDeviceCode";
+            this.btn_RecountDeviceCode.Size = new System.Drawing.Size(127, 23);
+            this.btn_RecountDeviceCode.TabIndex = 84;
+            this.btn_RecountDeviceCode.Text = "Recount-DevicesCode";
+            this.btn_RecountDeviceCode.UseVisualStyleBackColor = true;
+            this.btn_RecountDeviceCode.Click += new System.EventHandler(this.btn_RecountDeviceCode_Click);
+            // 
+            // btn_CheckUpdate
+            // 
+            this.btn_CheckUpdate.Location = new System.Drawing.Point(862, 565);
+            this.btn_CheckUpdate.Name = "btn_CheckUpdate";
+            this.btn_CheckUpdate.Size = new System.Drawing.Size(87, 23);
+            this.btn_CheckUpdate.TabIndex = 85;
+            this.btn_CheckUpdate.Text = "Check Update";
+            this.btn_CheckUpdate.UseVisualStyleBackColor = true;
+            // 
             // AM_Main_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1277, 591);
+            this.Controls.Add(this.btn_CheckUpdate);
+            this.Controls.Add(this.btn_RecountDeviceCode);
             this.Controls.Add(this.lb_Loading2Excel);
             this.Controls.Add(this.btn_Export);
             this.Controls.Add(this.chk_Brand);
@@ -810,5 +833,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn col_defaultgw_MrC;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_logname_MrC;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_password_MrC;
+        private System.Windows.Forms.Button btn_RecountDeviceCode;
+        private System.Windows.Forms.Button btn_CheckUpdate;
     }
 }

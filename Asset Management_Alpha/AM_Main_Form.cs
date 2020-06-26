@@ -52,10 +52,6 @@ namespace Asset_Management_Alpha
             loadcb_Area();
             loadcb_Devices_By_Area();
             loadcb_Brand_By_DType();
-            //loadcb_Brand();
-            //loadcb_Devices();
-            //loadcb_Position();
-            //loadcb_Supplier();
             loadcb_Position_By_Area();
             loadcb_Supplier_By_DType();
             loadcb_Status(); 
@@ -194,24 +190,28 @@ namespace Asset_Management_Alpha
                 if (dataGridView2.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
                 {
                     dataGridView2.CurrentRow.Selected = true;
-                    objDevices.hostname = dataGridView2.Rows[e.RowIndex].Cells["col_hostname_MrC"].FormattedValue.ToString().Trim();
-                    cb_Brand_MrC.Text = objDevices.brand = dataGridView2.Rows[e.RowIndex].Cells["col_brand_MrC"].FormattedValue.ToString().Trim();
-                    objDevices.model = dataGridView2.Rows[e.RowIndex].Cells["col_model_MrC"].FormattedValue.ToString().Trim();
+                    cb_Area_MrC.Text = objDevices.darea = dataGridView2.Rows[e.RowIndex].Cells["col_darea_MrC"].FormattedValue.ToString();
+                    cb_Devices_MrC.Text = dataGridView2.Rows[e.RowIndex].Cells["col_devices_MrC"].FormattedValue.ToString().Trim();                   
+                    cb_Brand_MrC.Text = dataGridView2.Rows[e.RowIndex].Cells["col_brand_MrC"].FormattedValue.ToString();                   
+                    cb_Supplier_MrC.Text = dataGridView2.Rows[e.RowIndex].Cells["col_Supplies_MrC"].FormattedValue.ToString();
                     txt_Serial_MrC.Text = objDevices.serial = dataGridView2.Rows[e.RowIndex].Cells["col_serial_MrC"].FormattedValue.ToString().Trim();
+                    cb_Position_MrC.Text = objDevices.position = dataGridView2.Rows[e.RowIndex].Cells["col_position_MrC"].FormattedValue.ToString().Trim();
+                    txt_UserName_MrC.Text = objDevices.username = dataGridView2.Rows[e.RowIndex].Cells["col_username_MrC"].FormattedValue.ToString().Trim();
+                    cb_Status_MrC.Text = objDevices.dstatus = dataGridView2.Rows[e.RowIndex].Cells["col_dstatus_MrC"].FormattedValue.ToString().Trim();
+
+                    objDevices.supplies = dataGridView2.Rows[e.RowIndex].Cells["col_Supplies_MrC"].FormattedValue.ToString().Trim();
+                    objDevices.brand = dataGridView2.Rows[e.RowIndex].Cells["col_brand_MrC"].FormattedValue.ToString().Trim();
+                    objDevices.hostname = dataGridView2.Rows[e.RowIndex].Cells["col_hostname_MrC"].FormattedValue.ToString().Trim();                   
+                    objDevices.model = dataGridView2.Rows[e.RowIndex].Cells["col_model_MrC"].FormattedValue.ToString().Trim();                   
                     objDevices.invoice_date = dataGridView2.Rows[e.RowIndex].Cells["col_invoice_MrC"].FormattedValue.ToString().Trim();
                     objDevices.handover_date = dataGridView2.Rows[e.RowIndex].Cells["col_handover_MrC"].FormattedValue.ToString().Trim();
-                    objDevices.warranty = dataGridView2.Rows[e.RowIndex].Cells["col_warranty_MrC"].FormattedValue.ToString().Trim();
-                    cb_Supplier_MrC.Text = objDevices.supplies = dataGridView2.Rows[e.RowIndex].Cells["col_supplies_MrC"].FormattedValue.ToString().Trim();
+                    objDevices.delivery_date = dataGridView2.Rows[e.RowIndex].Cells["col_deliverydate_MrC"].FormattedValue.ToString().Trim();
+                    objDevices.warranty = dataGridView2.Rows[e.RowIndex].Cells["col_Warranty_MrC"].FormattedValue.ToString().Trim();                    
                     objDevices.location = dataGridView2.Rows[e.RowIndex].Cells["col_location_MrC"].FormattedValue.ToString().Trim();
-                    objDevices.assetcode = dataGridView2.Rows[e.RowIndex].Cells["col_assetcode_MrC"].FormattedValue.ToString().Trim();
-                    txt_UserName_MrC.Text = objDevices.username = dataGridView2.Rows[e.RowIndex].Cells["col_username_MrC"].FormattedValue.ToString().Trim();
-                    cb_Position_MrC.Text = objDevices.position = dataGridView2.Rows[e.RowIndex].Cells["col_position_MrC"].FormattedValue.ToString().Trim();
-                    objDevices.remarks = dataGridView2.Rows[e.RowIndex].Cells["col_remark_MrC"].FormattedValue.ToString().Trim();
-
+                    objDevices.assetcode = dataGridView2.Rows[e.RowIndex].Cells["col_assetcode_MrC"].FormattedValue.ToString().Trim();                   
+                    objDevices.remarks = dataGridView2.Rows[e.RowIndex].Cells["col_remark_MrC"].FormattedValue.ToString().Trim();                   
                     objDevices.ram = dataGridView2.Rows[e.RowIndex].Cells["col_memory_MrC"].FormattedValue.ToString().Trim();//memory > ram
-                    objDevices.hdd = dataGridView2.Rows[e.RowIndex].Cells["col_hdd_MrC"].FormattedValue.ToString().Trim();
-                    cb_Area_MrC.Text = objDevices.darea = dataGridView2.Rows[e.RowIndex].Cells["col_darea_MrC"].FormattedValue.ToString().Trim();
-                    cb_Status_MrC.Text = objDevices.dstatus = dataGridView2.Rows[e.RowIndex].Cells["col_dstatus_MrC"].FormattedValue.ToString().Trim();
+                    objDevices.hdd = dataGridView2.Rows[e.RowIndex].Cells["col_hdd_MrC"].FormattedValue.ToString().Trim(); 
                     objDevices.log_name = dataGridView2.Rows[e.RowIndex].Cells["col_logname_MrC"].FormattedValue.ToString().Trim();
                     objDevices.password = dataGridView2.Rows[e.RowIndex].Cells["col_password_MrC"].FormattedValue.ToString().Trim();
                     objDevices.mac_addr = dataGridView2.Rows[e.RowIndex].Cells["col_macaddr_MrC"].FormattedValue.ToString().Trim();
@@ -296,12 +296,9 @@ namespace Asset_Management_Alpha
                     dataGridView2.Refresh();
                     loadcb_Area();
                     loadcb_Brand_By_DType();
-                    //loadcb_Brand();
                     loadcb_Devices_By_Area();
-                    //loadcb_Devices();
                     loadcb_Position();
                     loadcb_Supplier_By_DType();
-                    //loadcb_Supplier();
                     loadcb_Status();
                     countrow = dataGridView2.Rows.Count;
                     label97.Text = dataGridView2.Rows.Count.ToString() + " Rows";
@@ -487,17 +484,14 @@ namespace Asset_Management_Alpha
         private void bt_Refresh_MrC_Click(object sender, EventArgs e)
         {
             Refesh_dtgv();
+            txt_UserName_MrC.Clear();
+            txt_Serial_MrC.Clear();
+            loadcb_Position_By_Area();
             countrow = dataGridView2.Rows.Count;
             label97.Text = dataGridView2.Rows.Count.ToString() + " Rows";
 
             loadcb_Area();
-            loadcb_Brand_By_DType();
-            //loadcb_Brand();
-            //loadcb_Position();
-            loadcb_Supplier_By_DType();
-            //loadcb_Supplier();
-            loadcb_Status();
-
+            
             // neu check thi hien thi het cac sheet cua cac area
             if (chk_Area.Checked == true)
             {
@@ -511,6 +505,10 @@ namespace Asset_Management_Alpha
                 loadcb_Devices_By_Area();
                 loadcb_Position_By_Area();
             }
+
+            loadcb_Brand_By_DType();
+            loadcb_Supplier_By_DType();
+            loadcb_Status();
         }
         private void txt_Serial_MrC_KeyDown(object sender, KeyEventArgs e)
         {
@@ -641,6 +639,16 @@ namespace Asset_Management_Alpha
             }
             app.Quit();
             lb_Loading2Excel.Text = "";
+        }
+
+        private void cb_Area_MrC_SelectedValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_RecountDeviceCode_Click(object sender, EventArgs e)
+        {
+            busDevices.GenerateBarcode4Dev_TBL();
         }
     }
 }

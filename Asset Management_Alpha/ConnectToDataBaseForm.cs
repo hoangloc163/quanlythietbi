@@ -93,6 +93,10 @@ namespace Asset_Management_Alpha
                 //if (conn.State == ConnectionState.Open)
                     //conn.Close();
                 this.Close();
+                // save user setting
+                Properties.Settings.Default.S_ServerName = cbx_sername.Text;
+                Properties.Settings.Default.S_DBusername = txt_Username.Text;
+                Properties.Settings.Default.S_DBpassword = txt_Password.Text;
             }
         }
     }

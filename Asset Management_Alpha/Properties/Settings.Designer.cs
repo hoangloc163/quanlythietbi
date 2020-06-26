@@ -26,10 +26,47 @@ namespace Asset_Management_Alpha.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=JR163\\SQLEXPRESS;Initial Catalog=QLVT_test;Integrated Security=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=172.16.4.2,1433;Network Library=DBMSSOCN;Initial Catalog=ASSET_MANAGE" +
+            "MENT;Integrated Security=True")]
         public string QLVT_testConnectionString {
             get {
                 return ((string)(this["QLVT_testConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string S_DBpassword {
+            get {
+                return ((string)(this["S_DBpassword"]));
+            }
+            set {
+                this["S_DBpassword"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string S_DBusername {
+            get {
+                return ((string)(this["S_DBusername"]));
+            }
+            set {
+                this["S_DBusername"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string S_ServerName {
+            get {
+                return ((string)(this["S_ServerName"]));
+            }
+            set {
+                this["S_ServerName"] = value;
             }
         }
     }
