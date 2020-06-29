@@ -42,8 +42,7 @@ namespace Asset_Management_Alpha
                 {
                     cleartxt();
                 }
-                
-                
+                                
                 // add qua form AM_Main_Form
                 AM_Main_Form SGF_Form = new AM_Main_Form();
                 SGF_Form.UpdateForm("update");

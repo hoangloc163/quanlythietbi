@@ -126,7 +126,7 @@ namespace DataAccessLayer
                 new SqlParameter("ram",obj.ram),
                 new SqlParameter("hdd", obj.hdd),
             };
-            return db.ExecuteSQL3("Devices_Insert_Form", para, mess);
+            return db.ExecuteSQL3("DEVICES_Insert_GenerateBarcode", para, mess);
         }
 
       

@@ -88,7 +88,7 @@
             this.chk_Devices = new System.Windows.Forms.CheckBox();
             this.btn_Server = new System.Windows.Forms.Button();
             this.btn_Network = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_Users = new System.Windows.Forms.Button();
             this.chk_Supplier = new System.Windows.Forms.CheckBox();
             this.chk_Brand = new System.Windows.Forms.CheckBox();
             this.btn_Export = new System.Windows.Forms.Button();
@@ -653,15 +653,15 @@
             this.btn_Network.UseVisualStyleBackColor = true;
             this.btn_Network.Click += new System.EventHandler(this.btn_Network_Click);
             // 
-            // button1
+            // btn_Users
             // 
-            this.button1.Location = new System.Drawing.Point(227, 565);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 79;
-            this.button1.Text = "Users";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btn_Users.Location = new System.Drawing.Point(227, 565);
+            this.btn_Users.Name = "btn_Users";
+            this.btn_Users.Size = new System.Drawing.Size(75, 23);
+            this.btn_Users.TabIndex = 79;
+            this.btn_Users.Text = "Users";
+            this.btn_Users.UseVisualStyleBackColor = true;
+            this.btn_Users.Click += new System.EventHandler(this.button1_Click);
             // 
             // chk_Supplier
             // 
@@ -717,6 +717,7 @@
             this.btn_CheckUpdate.TabIndex = 85;
             this.btn_CheckUpdate.Text = "Check Update";
             this.btn_CheckUpdate.UseVisualStyleBackColor = true;
+            this.btn_CheckUpdate.Click += new System.EventHandler(this.btn_CheckUpdate_Click);
             // 
             // AM_Main_Form
             // 
@@ -729,7 +730,7 @@
             this.Controls.Add(this.btn_Export);
             this.Controls.Add(this.chk_Brand);
             this.Controls.Add(this.chk_Supplier);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_Users);
             this.Controls.Add(this.btn_Network);
             this.Controls.Add(this.btn_Server);
             this.Controls.Add(this.chk_Devices);
@@ -801,7 +802,7 @@
         private System.Windows.Forms.CheckBox chk_Devices;
         private System.Windows.Forms.Button btn_Server;
         private System.Windows.Forms.Button btn_Network;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_Users;
         private System.Windows.Forms.CheckBox chk_Supplier;
         private System.Windows.Forms.CheckBox chk_Brand;
         private System.Windows.Forms.Button btn_Export;

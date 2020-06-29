@@ -11,6 +11,7 @@ using ValueObject;
 using BussinessLogicLayer;
 using Microsoft.Win32;
 using Microsoft.Office.Interop.Excel;
+using System.Deployment.Application;
 
 namespace Asset_Management_Alpha
 {
@@ -293,6 +294,7 @@ namespace Asset_Management_Alpha
                         dataGridView2.Rows.RemoveAt(row.Index);
                     }
                     busDevices.Delete(objDevices);
+                    txt_Serial_MrC.Clear();
                     dataGridView2.Refresh();
                     loadcb_Area();
                     loadcb_Brand_By_DType();
@@ -588,6 +590,7 @@ namespace Asset_Management_Alpha
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //btn_user
             Form_Add_NV FrmNV = new Form_Add_NV();
             FrmNV.Show();
         }
@@ -648,7 +651,93 @@ namespace Asset_Management_Alpha
 
         private void btn_RecountDeviceCode_Click(object sender, EventArgs e)
         {
-            busDevices.GenerateBarcode4Dev_TBL();
+            DialogResult dialogResult = MessageBox.Show("Việc làm này sẽ đánh dấu lại Barcode của thiết bị, nó là một bước trong quá trình thống kê lại thiết bị thông qua barcode. Bạn đã suy nghĩ kỹ ?", "Warning", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                busDevices.GenerateBarcode4Dev_TBL();
+                Refesh_dtgv();
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                //do something else
+            }          
         }
+
+        private void btn_CheckUpdate_Click(object sender, EventArgs e)
+        {
+            InstallUpdateSyncWithInfo();
+        }
+
+        // code check update của Microsoft
+        /* https://docs.microsoft.com/en-us/visualstudio/deployment/how-to-check-for-application-updates-programmatically-using-the-clickonce-deployment-api?view=vs-2015&redirectedfrom=MSDN */
+        private void InstallUpdateSyncWithInfo()
+        {
+            UpdateCheckInfo info = null;
+
+            if (ApplicationDeployment.IsNetworkDeployed)
+            {
+                ApplicationDeployment ad = ApplicationDeployment.CurrentDeployment;
+
+                try
+                {
+                    info = ad.CheckForDetailedUpdate();
+
+                }
+                catch (DeploymentDownloadException dde)
+                {
+                    MessageBox.Show("The new version of the application cannot be downloaded at this time. \n\nPlease check your network connection, or try again later. Error: " + dde.Message);
+                    return;
+                }
+                catch (InvalidDeploymentException ide)
+                {
+                    MessageBox.Show("Cannot check for a new version of the application. The ClickOnce deployment is corrupt. Please redeploy the application and try again. Error: " + ide.Message);
+                    return;
+                }
+                catch (InvalidOperationException ioe)
+                {
+                    MessageBox.Show("This application cannot be updated. It is likely not a ClickOnce application. Error: " + ioe.Message);
+                    return;
+                }
+
+                if (info.UpdateAvailable)
+                {
+                    Boolean doUpdate = true;
+
+                    if (!info.IsUpdateRequired)
+                    {
+                        DialogResult dr = MessageBox.Show("An update is available. Would you like to update the application now?", "Update Available", MessageBoxButtons.OKCancel);
+                        if (!(DialogResult.OK == dr))
+                        {
+                            doUpdate = false;
+                        }
+                    }
+                    else
+                    {
+                        // Display a message that the app MUST reboot. Display the minimum required version.
+                        MessageBox.Show("This application has detected a mandatory update from your current " +
+                            "version to version " + info.MinimumRequiredVersion.ToString() +
+                            ". The application will now install the update and restart.",
+                            "Update Available", MessageBoxButtons.OK,
+                            MessageBoxIcon.Information);
+                    }
+
+                    if (doUpdate)
+                    {
+                        try
+                        {
+                            ad.Update();
+                            MessageBox.Show("The application has been upgraded, and will now restart.");
+                            System.Windows.Forms.Application.Restart();
+                        }
+                        catch (DeploymentDownloadException dde)
+                        {
+                            MessageBox.Show("Cannot install the latest version of the application. \n\nPlease check your network connection, or try again later. Error: " + dde);
+                            return;
+                        }
+                    }
+                }
+            }
+        }
+        // het code check update
     }
 }
