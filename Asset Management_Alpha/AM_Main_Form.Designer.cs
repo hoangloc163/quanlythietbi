@@ -95,6 +95,7 @@
             this.lb_Loading2Excel = new System.Windows.Forms.Label();
             this.btn_RecountDeviceCode = new System.Windows.Forms.Button();
             this.btn_CheckUpdate = new System.Windows.Forms.Button();
+            this.btn_Update = new System.Windows.Forms.Button();
             qLVT_testDataSet1 = new Asset_Management_Alpha.QLVT_testDataSet1();
             dEVICESTBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
             dEVICES_TBLTableAdapter = new Asset_Management_Alpha.QLVT_testDataSet1TableAdapters.DEVICES_TBLTableAdapter();
@@ -120,6 +121,9 @@
             // 
             this.dataGridView2.AllowUserToAddRows = false;
             this.dataGridView2.AllowUserToDeleteRows = false;
+            this.dataGridView2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView2.AutoGenerateColumns = false;
             this.dataGridView2.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -387,6 +391,7 @@
             // 
             // cb_Status_MrC
             // 
+            this.cb_Status_MrC.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cb_Status_MrC.FormattingEnabled = true;
             this.cb_Status_MrC.Location = new System.Drawing.Point(723, 48);
             this.cb_Status_MrC.Name = "cb_Status_MrC";
@@ -395,6 +400,7 @@
             // 
             // label98
             // 
+            this.label98.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label98.AutoSize = true;
             this.label98.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label98.Location = new System.Drawing.Point(680, 51);
@@ -405,6 +411,7 @@
             // 
             // label96
             // 
+            this.label96.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label96.AutoSize = true;
             this.label96.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label96.Location = new System.Drawing.Point(680, 16);
@@ -415,6 +422,7 @@
             // 
             // txt_Serial_MrC
             // 
+            this.txt_Serial_MrC.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_Serial_MrC.Location = new System.Drawing.Point(723, 12);
             this.txt_Serial_MrC.Name = "txt_Serial_MrC";
             this.txt_Serial_MrC.Size = new System.Drawing.Size(141, 20);
@@ -423,6 +431,7 @@
             // 
             // bt_Refresh_MrC
             // 
+            this.bt_Refresh_MrC.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bt_Refresh_MrC.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_Refresh_MrC.Location = new System.Drawing.Point(883, 12);
             this.bt_Refresh_MrC.Name = "bt_Refresh_MrC";
@@ -434,6 +443,7 @@
             // 
             // rbt_Or_Check
             // 
+            this.rbt_Or_Check.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.rbt_Or_Check.AutoSize = true;
             this.rbt_Or_Check.Location = new System.Drawing.Point(957, 47);
             this.rbt_Or_Check.Name = "rbt_Or_Check";
@@ -444,6 +454,7 @@
             // 
             // rbt_And_Check
             // 
+            this.rbt_And_Check.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.rbt_And_Check.AutoSize = true;
             this.rbt_And_Check.Checked = true;
             this.rbt_And_Check.Location = new System.Drawing.Point(957, 18);
@@ -456,6 +467,7 @@
             // 
             // MrC_BT_Search
             // 
+            this.MrC_BT_Search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.MrC_BT_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MrC_BT_Search.Location = new System.Drawing.Point(1059, 13);
             this.MrC_BT_Search.Name = "MrC_BT_Search";
@@ -477,6 +489,8 @@
             // 
             // cb_Position_MrC
             // 
+            this.cb_Position_MrC.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cb_Position_MrC.FormattingEnabled = true;
             this.cb_Position_MrC.Location = new System.Drawing.Point(494, 48);
             this.cb_Position_MrC.Name = "cb_Position_MrC";
@@ -575,6 +589,8 @@
             // 
             // txt_UserName_MrC
             // 
+            this.txt_UserName_MrC.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_UserName_MrC.Location = new System.Drawing.Point(494, 12);
             this.txt_UserName_MrC.Name = "txt_UserName_MrC";
             this.txt_UserName_MrC.Size = new System.Drawing.Size(170, 20);
@@ -582,6 +598,7 @@
             // 
             // bt_Insert_MrC
             // 
+            this.bt_Insert_MrC.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bt_Insert_MrC.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_Insert_MrC.Location = new System.Drawing.Point(1164, 15);
             this.bt_Insert_MrC.Name = "bt_Insert_MrC";
@@ -593,6 +610,7 @@
             // 
             // MrC_BT_Cancel
             // 
+            this.MrC_BT_Cancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.MrC_BT_Cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MrC_BT_Cancel.Location = new System.Drawing.Point(1164, 44);
             this.MrC_BT_Cancel.Name = "MrC_BT_Cancel";
@@ -604,6 +622,7 @@
             // 
             // label97
             // 
+            this.label97.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label97.AutoSize = true;
             this.label97.Location = new System.Drawing.Point(1150, 570);
             this.label97.Name = "label97";
@@ -633,6 +652,7 @@
             // 
             // btn_Server
             // 
+            this.btn_Server.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_Server.Enabled = false;
             this.btn_Server.Location = new System.Drawing.Point(13, 565);
             this.btn_Server.Name = "btn_Server";
@@ -644,6 +664,7 @@
             // 
             // btn_Network
             // 
+            this.btn_Network.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_Network.Enabled = false;
             this.btn_Network.Location = new System.Drawing.Point(119, 565);
             this.btn_Network.Name = "btn_Network";
@@ -655,6 +676,7 @@
             // 
             // btn_Users
             // 
+            this.btn_Users.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_Users.Location = new System.Drawing.Point(227, 565);
             this.btn_Users.Name = "btn_Users";
             this.btn_Users.Size = new System.Drawing.Size(75, 23);
@@ -683,6 +705,7 @@
             // 
             // btn_Export
             // 
+            this.btn_Export.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_Export.Location = new System.Drawing.Point(352, 565);
             this.btn_Export.Name = "btn_Export";
             this.btn_Export.Size = new System.Drawing.Size(66, 23);
@@ -693,6 +716,9 @@
             // 
             // lb_Loading2Excel
             // 
+            this.lb_Loading2Excel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lb_Loading2Excel.AutoSize = true;
             this.lb_Loading2Excel.Location = new System.Drawing.Point(478, 570);
             this.lb_Loading2Excel.Name = "lb_Loading2Excel";
@@ -701,6 +727,7 @@
             // 
             // btn_RecountDeviceCode
             // 
+            this.btn_RecountDeviceCode.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_RecountDeviceCode.Location = new System.Drawing.Point(981, 565);
             this.btn_RecountDeviceCode.Name = "btn_RecountDeviceCode";
             this.btn_RecountDeviceCode.Size = new System.Drawing.Size(127, 23);
@@ -711,6 +738,7 @@
             // 
             // btn_CheckUpdate
             // 
+            this.btn_CheckUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_CheckUpdate.Location = new System.Drawing.Point(862, 565);
             this.btn_CheckUpdate.Name = "btn_CheckUpdate";
             this.btn_CheckUpdate.Size = new System.Drawing.Size(87, 23);
@@ -719,11 +747,23 @@
             this.btn_CheckUpdate.UseVisualStyleBackColor = true;
             this.btn_CheckUpdate.Click += new System.EventHandler(this.btn_CheckUpdate_Click);
             // 
+            // btn_Update
+            // 
+            this.btn_Update.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Update.Location = new System.Drawing.Point(754, 565);
+            this.btn_Update.Name = "btn_Update";
+            this.btn_Update.Size = new System.Drawing.Size(87, 23);
+            this.btn_Update.TabIndex = 86;
+            this.btn_Update.Text = "Update";
+            this.btn_Update.UseVisualStyleBackColor = true;
+            this.btn_Update.Click += new System.EventHandler(this.btn_Update_Click);
+            // 
             // AM_Main_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1277, 591);
+            this.Controls.Add(this.btn_Update);
             this.Controls.Add(this.btn_CheckUpdate);
             this.Controls.Add(this.btn_RecountDeviceCode);
             this.Controls.Add(this.lb_Loading2Excel);
@@ -836,5 +876,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn col_password_MrC;
         private System.Windows.Forms.Button btn_RecountDeviceCode;
         private System.Windows.Forms.Button btn_CheckUpdate;
+        private System.Windows.Forms.Button btn_Update;
     }
 }

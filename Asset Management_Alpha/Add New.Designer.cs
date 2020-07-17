@@ -449,6 +449,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.bt_Cancel_Dev);
             this.Controls.Add(this.bt_Add_Dev);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Add_New";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add New Devices";

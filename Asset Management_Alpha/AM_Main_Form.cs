@@ -12,14 +12,18 @@ using BussinessLogicLayer;
 using Microsoft.Win32;
 using Microsoft.Office.Interop.Excel;
 using System.Deployment.Application;
+using System.Reflection;
+//using SharpUpdate;
 
 namespace Asset_Management_Alpha
 {
-    public partial class AM_Main_Form : Form
+    public partial class AM_Main_Form : Form, ISharpUpdatable
     {
         public AM_Main_Form()
         {
             InitializeComponent();
+
+            this.btn_Update.Text = this.ApplicationAssembly.GetName().Version.ToString();
         }
 
         #region Var and Object
@@ -476,6 +480,14 @@ namespace Asset_Management_Alpha
             // dem dong
             countrow = dataGridView2.Rows.Count;
             label97.Text = dataGridView2.Rows.Count.ToString() + " Rows";
+            if(countrow == 0)
+            {
+                btn_Export.Enabled = false;
+            }
+            else
+            {
+                btn_Export.Enabled = true;
+            }
         }
 
         private void MrC_BT_Cancel_Click(object sender, EventArgs e)
@@ -739,5 +751,57 @@ namespace Asset_Management_Alpha
             }
         }
         // het code check update
+        private void btn_Update_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        public string ApplicationName
+        {
+            get
+            {
+                return "test App";
+            }
+        }
+
+        public string ApplicationID
+        {
+            get
+            {
+                return "test App";
+            }
+        }
+
+        public Assembly ApplicationAssembly
+        {
+            get
+            {
+                return Assembly.GetExecutingAssembly();
+            }
+        }
+
+        public System.Drawing.Icon ApplicationIcon
+        {
+            get
+            {
+                return this.Icon;
+            }
+        }
+
+        public Uri UpdateXmlLocation
+        {
+            get
+            {
+                return new Uri("");
+            }
+        }
+
+        public Form context
+        {
+            get
+            {
+                return this;
+            }
+        } 
     }
 }

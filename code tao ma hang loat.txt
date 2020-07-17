@@ -1,0 +1,15 @@
+create TABLE #temptbl (
+    bcode nchar(12),
+    serial nchar(50)
+);
+insert into #temptbl(bcode,serial) select bcode,SERIAL from(select ROW_NUMBER() OVER (PARTITION BY dtype ORDER BY DTYPE)bcode,SERIAL 
+FROM dbo.DEVICES_TBL)bcode
+select * from #temptbl
+
+update DEVICES_TBL set BARCODE = #temptbl.bcode
+from DEVICES_TBL
+join #temptbl
+on DEVICES_TBL.SERIAL = #temptbl.serial
+
+insert into DEVICES_TBL(BARCODE) select bcode from(select ROW_NUMBER() OVER (PARTITION BY dtype ORDER BY DTYPE)bcode 
+FROM dbo.DEVICES_TBL)bcode

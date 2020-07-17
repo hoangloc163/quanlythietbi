@@ -1,0 +1,1 @@
+select DEVICE_CODE,(RIGHT(DEVICE_CODE,9)) as abc from DEVICES_TBL where DEVICE_TYPE = 'PRT' order by DEVICE_CODE desc
